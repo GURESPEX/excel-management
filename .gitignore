@@ -2,5 +2,16 @@
 # Beads / Dolt files (added by bd init)
 .dolt/
 *.db
+*.db-shm
+*.db-wal
 .beads-credential-key
 .beads/proxieddb/
+
+# .NET
+excel-management-api/**/bin/
+excel-management-api/**/obj/
+
+# Node
+excel-management-web/node_modules/
+excel-management-web/dist/
+excel-management-web/src/routeTree.gen.ts
