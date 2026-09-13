@@ -1,4 +1,6 @@
+import { Link } from '@tanstack/react-router'
 import { Badge } from '@/components/ui/badge'
+import { buttonVariants } from '@/components/ui/button'
 import {
   Table,
   TableBody,
@@ -7,6 +9,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { DeleteEmployeeDialog } from './DeleteEmployeeDialog'
 import { useEmployees } from './api'
 
 export function EmployeeListPage() {
@@ -22,7 +25,12 @@ export function EmployeeListPage() {
 
   return (
     <div className="p-6">
-      <h1 className="mb-4 text-2xl font-semibold">Employees</h1>
+      <div className="mb-4 flex items-center justify-between">
+        <h1 className="text-2xl font-semibold">Employees</h1>
+        <Link to="/employees/new" className={buttonVariants({})}>
+          New Employee
+        </Link>
+      </div>
       <Table>
         <TableHeader>
           <TableRow>
@@ -32,6 +40,7 @@ export function EmployeeListPage() {
             <TableHead>Salary</TableHead>
             <TableHead>Join Date</TableHead>
             <TableHead>Status</TableHead>
+            <TableHead className="text-right">Actions</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -51,6 +60,16 @@ export function EmployeeListPage() {
                 <Badge variant={employee.isActive ? 'default' : 'secondary'}>
                   {employee.isActive ? 'Active' : 'Inactive'}
                 </Badge>
+              </TableCell>
+              <TableCell className="flex justify-end gap-2">
+                <Link
+                  to="/employees/$employeeId"
+                  params={{ employeeId: String(employee.id) }}
+                  className={buttonVariants({ variant: 'outline', size: 'sm' })}
+                >
+                  Edit
+                </Link>
+                <DeleteEmployeeDialog employeeId={employee.id!} employeeName={employee.name ?? 'this employee'} />
               </TableCell>
             </TableRow>
           ))}

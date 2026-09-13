@@ -1,14 +1,8 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { render, screen } from '@testing-library/react'
+import { screen } from '@testing-library/react'
 import { http, HttpResponse } from 'msw'
 import { describe, expect, it } from 'vitest'
+import { renderApp } from '@/test/renderApp'
 import { server } from '@/test/server'
-import { EmployeeListPage } from './EmployeeListPage'
-
-function renderWithClient(ui: React.ReactElement) {
-  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } })
-  return render(<QueryClientProvider client={queryClient}>{ui}</QueryClientProvider>)
-}
 
 describe('EmployeeListPage', () => {
   it('renders seeded employees from the API', async () => {
@@ -42,7 +36,7 @@ describe('EmployeeListPage', () => {
       ),
     )
 
-    renderWithClient(<EmployeeListPage />)
+    await renderApp('/')
 
     expect(await screen.findByText('John Doe')).toBeInTheDocument()
     expect(screen.getByText('Bob Brown')).toBeInTheDocument()

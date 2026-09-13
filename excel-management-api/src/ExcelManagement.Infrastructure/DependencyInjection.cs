@@ -1,3 +1,4 @@
+using ExcelManagement.Application.Departments;
 using ExcelManagement.Application.Employees;
 using ExcelManagement.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
@@ -27,6 +28,7 @@ public static class DependencyInjection
         });
 
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+        services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 
         return services;
     }
