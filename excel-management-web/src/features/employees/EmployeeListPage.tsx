@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { Badge } from '@/components/ui/badge'
-import { buttonVariants } from '@/components/ui/button'
+import { Button, buttonVariants } from '@/components/ui/button'
 import {
   Table,
   TableBody,
@@ -9,11 +9,15 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { useLogout } from '@/features/auth/api'
+import { useIsAdmin } from '@/features/auth/store'
 import { DeleteEmployeeDialog } from './DeleteEmployeeDialog'
 import { useEmployees } from './api'
 
 export function EmployeeListPage() {
   const { data, isLoading, isError } = useEmployees()
+  const isAdmin = useIsAdmin()
+  const logout = useLogout()
 
   if (isLoading) {
     return <p className="p-6">Loading employees...</p>
@@ -31,9 +35,14 @@ export function EmployeeListPage() {
           <Link to="/departments" className={buttonVariants({ variant: 'outline' })}>
             Departments
           </Link>
-          <Link to="/employees/new" className={buttonVariants({})}>
-            New Employee
-          </Link>
+          {isAdmin && (
+            <Link to="/employees/new" className={buttonVariants({})}>
+              New Employee
+            </Link>
+          )}
+          <Button variant="outline" onClick={() => logout.mutate()}>
+            Log out
+          </Button>
         </div>
       </div>
       <Table>
@@ -67,14 +76,18 @@ export function EmployeeListPage() {
                 </Badge>
               </TableCell>
               <TableCell className="flex justify-end gap-2">
-                <Link
-                  to="/employees/$employeeId"
-                  params={{ employeeId: String(employee.id) }}
-                  className={buttonVariants({ variant: 'outline', size: 'sm' })}
-                >
-                  Edit
-                </Link>
-                <DeleteEmployeeDialog employeeId={employee.id!} employeeName={employee.name ?? 'this employee'} />
+                {isAdmin && (
+                  <>
+                    <Link
+                      to="/employees/$employeeId"
+                      params={{ employeeId: String(employee.id) }}
+                      className={buttonVariants({ variant: 'outline', size: 'sm' })}
+                    >
+                      Edit
+                    </Link>
+                    <DeleteEmployeeDialog employeeId={employee.id!} employeeName={employee.name ?? 'this employee'} />
+                  </>
+                )}
               </TableCell>
             </TableRow>
           ))}

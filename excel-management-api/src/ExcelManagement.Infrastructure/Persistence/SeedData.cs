@@ -1,3 +1,4 @@
+using ExcelManagement.Application.Auth;
 using ExcelManagement.Domain;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +8,14 @@ public static class SeedData
 {
     public static async Task SeedAsync(AppDbContext db)
     {
+        if (!await db.Users.AnyAsync())
+        {
+            db.Users.AddRange(
+                new User { Username = "admin", PasswordHash = PasswordHasher.Hash("admin123"), Role = UserRole.Admin },
+                new User { Username = "viewer", PasswordHash = PasswordHasher.Hash("viewer123"), Role = UserRole.Viewer });
+            await db.SaveChangesAsync();
+        }
+
         if (await db.Departments.AnyAsync())
         {
             return;

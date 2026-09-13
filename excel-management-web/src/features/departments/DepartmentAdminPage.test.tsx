@@ -3,10 +3,15 @@ import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { http, HttpResponse } from 'msw'
 import { describe, expect, it } from 'vitest'
+import { useAuthStore } from '@/features/auth/store'
 import { server } from '@/test/server'
 import { DepartmentAdminPage } from './DepartmentAdminPage'
 
 function renderPage() {
+  // This page is rendered directly (no router), so bootstrapAuth's beforeLoad
+  // never runs — set the Admin session it needs to see edit/create controls.
+  useAuthStore.setState({ user: { id: 1, username: 'admin', role: 'Admin' }, status: 'authenticated' })
+
   const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } })
   return render(
     <QueryClientProvider client={queryClient}>

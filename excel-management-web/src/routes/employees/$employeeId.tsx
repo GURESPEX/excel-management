@@ -1,8 +1,10 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
+import { requireAdmin } from '@/features/auth/guards'
 import { EmployeeForm } from '@/features/employees/EmployeeForm'
 import { useEmployee, useUpdateEmployee } from '@/features/employees/api'
 
 export const Route = createFileRoute('/employees/$employeeId')({
+  beforeLoad: requireAdmin,
   component: EditEmployeePage,
 })
 

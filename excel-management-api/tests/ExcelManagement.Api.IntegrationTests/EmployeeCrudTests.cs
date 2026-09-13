@@ -7,9 +7,13 @@ using Xunit;
 
 namespace ExcelManagement.Api.IntegrationTests;
 
-public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture<ApiWebApplicationFactory>
+public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture<ApiWebApplicationFactory>, IAsyncLifetime
 {
     private readonly HttpClient _client = factory.CreateClient();
+
+    public Task InitializeAsync() => AuthTestHelper.LoginAsAdminAsync(_client);
+
+    public Task DisposeAsync() => Task.CompletedTask;
 
     private async Task<int> GetAnyDepartmentIdAsync()
     {

@@ -12,6 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { useIsAdmin } from '@/features/auth/store'
 import { useCreateDepartment, useDepartments, useUpdateDepartment } from './api'
 
 interface DepartmentRow {
@@ -24,6 +25,7 @@ function DepartmentTableRow({ department }: { department: DepartmentRow }) {
   const [name, setName] = useState(department.name ?? '')
   const [error, setError] = useState<string | null>(null)
   const updateDepartment = useUpdateDepartment()
+  const isAdmin = useIsAdmin()
 
   // Resync the edit buffer with the server value after a refetch (e.g.
   // another admin renamed this department), so a stale local value can't be
@@ -47,6 +49,7 @@ function DepartmentTableRow({ department }: { department: DepartmentRow }) {
         <Input
           aria-label={`Name for ${department.name}`}
           value={name}
+          disabled={!isAdmin}
           onChange={(event) => setName(event.target.value)}
         />
         {error && <p className="text-sm text-destructive">{error}</p>}
@@ -57,17 +60,21 @@ function DepartmentTableRow({ department }: { department: DepartmentRow }) {
         </Badge>
       </TableCell>
       <TableCell className="flex items-center gap-3">
-        <Button size="sm" onClick={() => save(name, department.isActive ?? true)}>
-          Save
-        </Button>
-        <div className="flex items-center gap-2">
-          <Checkbox
-            id={`active-${department.id}`}
-            checked={department.isActive ?? true}
-            onCheckedChange={(checked) => save(department.name ?? '', checked === true)}
-          />
-          <Label htmlFor={`active-${department.id}`}>Active</Label>
-        </div>
+        {isAdmin && (
+          <>
+            <Button size="sm" onClick={() => save(name, department.isActive ?? true)}>
+              Save
+            </Button>
+            <div className="flex items-center gap-2">
+              <Checkbox
+                id={`active-${department.id}`}
+                checked={department.isActive ?? true}
+                onCheckedChange={(checked) => save(department.name ?? '', checked === true)}
+              />
+              <Label htmlFor={`active-${department.id}`}>Active</Label>
+            </div>
+          </>
+        )}
       </TableCell>
     </TableRow>
   )
@@ -78,6 +85,7 @@ export function DepartmentAdminPage() {
   const createDepartment = useCreateDepartment()
   const [newName, setNewName] = useState('')
   const [createError, setCreateError] = useState<string | null>(null)
+  const isAdmin = useIsAdmin()
 
   const handleCreate = async () => {
     setCreateError(null)
@@ -97,17 +105,19 @@ export function DepartmentAdminPage() {
     <div className="p-6">
       <h1 className="mb-4 text-2xl font-semibold">Departments</h1>
 
-      <div className="mb-6 flex items-end gap-2">
-        <div className="flex flex-col gap-1">
-          <Label htmlFor="new-department-name">New department</Label>
-          <Input
-            id="new-department-name"
-            value={newName}
-            onChange={(event) => setNewName(event.target.value)}
-          />
+      {isAdmin && (
+        <div className="mb-6 flex items-end gap-2">
+          <div className="flex flex-col gap-1">
+            <Label htmlFor="new-department-name">New department</Label>
+            <Input
+              id="new-department-name"
+              value={newName}
+              onChange={(event) => setNewName(event.target.value)}
+            />
+          </div>
+          <Button onClick={handleCreate}>Add Department</Button>
         </div>
-        <Button onClick={handleCreate}>Add Department</Button>
-      </div>
+      )}
       {createError && <p className="mb-4 text-sm text-destructive">{createError}</p>}
 
       <Table>

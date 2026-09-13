@@ -4,14 +4,18 @@ using Xunit;
 
 namespace ExcelManagement.Api.IntegrationTests;
 
-public class EmployeesEndpointTests(ApiWebApplicationFactory factory) : IClassFixture<ApiWebApplicationFactory>
+public class EmployeesEndpointTests(ApiWebApplicationFactory factory) : IClassFixture<ApiWebApplicationFactory>, IAsyncLifetime
 {
+    private readonly HttpClient _client = factory.CreateClient();
+
+    public Task InitializeAsync() => AuthTestHelper.LoginAsAdminAsync(_client);
+
+    public Task DisposeAsync() => Task.CompletedTask;
+
     [Fact]
     public async Task GetEmployees_ReturnsSeededPagedResult()
     {
-        var client = factory.CreateClient();
-
-        var response = await client.GetAsync("/employees");
+        var response = await _client.GetAsync("/employees");
         response.EnsureSuccessStatusCode();
 
         var result = await response.Content.ReadFromJsonAsync<PagedResult<EmployeeListItemDto>>();
@@ -25,9 +29,7 @@ public class EmployeesEndpointTests(ApiWebApplicationFactory factory) : IClassFi
     [Fact]
     public async Task GetEmployees_RespectsPageSize()
     {
-        var client = factory.CreateClient();
-
-        var response = await client.GetAsync("/employees?page=1&pageSize=2");
+        var response = await _client.GetAsync("/employees?page=1&pageSize=2");
         response.EnsureSuccessStatusCode();
 
         var result = await response.Content.ReadFromJsonAsync<PagedResult<EmployeeListItemDto>>();
@@ -40,9 +42,7 @@ public class EmployeesEndpointTests(ApiWebApplicationFactory factory) : IClassFi
     [Fact]
     public async Task GetEmployees_ClampsOutOfRangePaging()
     {
-        var client = factory.CreateClient();
-
-        var response = await client.GetAsync("/employees?page=0&pageSize=-5");
+        var response = await _client.GetAsync("/employees?page=0&pageSize=-5");
         response.EnsureSuccessStatusCode();
 
         var result = await response.Content.ReadFromJsonAsync<PagedResult<EmployeeListItemDto>>();
