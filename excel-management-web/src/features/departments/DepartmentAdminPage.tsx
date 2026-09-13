@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
@@ -24,6 +24,13 @@ function DepartmentTableRow({ department }: { department: DepartmentRow }) {
   const [name, setName] = useState(department.name ?? '')
   const [error, setError] = useState<string | null>(null)
   const updateDepartment = useUpdateDepartment()
+
+  // Resync the edit buffer with the server value after a refetch (e.g.
+  // another admin renamed this department), so a stale local value can't be
+  // silently persisted the next time this row saves.
+  useEffect(() => {
+    setName(department.name ?? '')
+  }, [department.name])
 
   const save = async (nextName: string, nextIsActive: boolean) => {
     setError(null)
@@ -57,7 +64,7 @@ function DepartmentTableRow({ department }: { department: DepartmentRow }) {
           <Checkbox
             id={`active-${department.id}`}
             checked={department.isActive ?? true}
-            onCheckedChange={(checked) => save(name, checked === true)}
+            onCheckedChange={(checked) => save(department.name ?? '', checked === true)}
           />
           <Label htmlFor={`active-${department.id}`}>Active</Label>
         </div>
