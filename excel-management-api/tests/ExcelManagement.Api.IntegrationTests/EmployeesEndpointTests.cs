@@ -36,4 +36,19 @@ public class EmployeesEndpointTests(ApiWebApplicationFactory factory) : IClassFi
         Assert.Equal(2, result!.Items.Count);
         Assert.Equal(5, result.TotalCount);
     }
+
+    [Fact]
+    public async Task GetEmployees_ClampsOutOfRangePaging()
+    {
+        var client = factory.CreateClient();
+
+        var response = await client.GetAsync("/employees?page=0&pageSize=-5");
+        response.EnsureSuccessStatusCode();
+
+        var result = await response.Content.ReadFromJsonAsync<PagedResult<EmployeeListItemDto>>();
+
+        Assert.NotNull(result);
+        Assert.Equal(1, result!.Page);
+        Assert.Equal(1, result.PageSize);
+    }
 }

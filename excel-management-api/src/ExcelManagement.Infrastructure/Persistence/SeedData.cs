@@ -1,4 +1,5 @@
 using ExcelManagement.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace ExcelManagement.Infrastructure.Persistence;
 
@@ -6,7 +7,7 @@ public static class SeedData
 {
     public static async Task SeedAsync(AppDbContext db)
     {
-        if (await Task.FromResult(db.Departments.Any()))
+        if (await db.Departments.AnyAsync())
         {
             return;
         }

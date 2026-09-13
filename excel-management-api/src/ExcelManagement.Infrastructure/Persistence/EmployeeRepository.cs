@@ -7,6 +7,9 @@ public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
 {
     public async Task<PagedResult<EmployeeListItemDto>> GetPagedAsync(int page, int pageSize, CancellationToken ct)
     {
+        page = Math.Max(page, 1);
+        pageSize = Math.Clamp(pageSize, 1, 200);
+
         var query = db.Employees
             .AsNoTracking()
             .OrderBy(e => e.Id)
