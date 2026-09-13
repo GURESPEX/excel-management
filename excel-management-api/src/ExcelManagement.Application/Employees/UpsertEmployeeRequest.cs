@@ -4,5 +4,5 @@ public record UpsertEmployeeRequest(
     string Name,
     int DepartmentId,
     decimal Salary,
-    DateOnly JoinDate,
+    string JoinDate,
     bool IsActive);

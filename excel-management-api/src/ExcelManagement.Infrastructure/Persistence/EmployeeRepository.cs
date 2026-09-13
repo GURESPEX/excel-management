@@ -1,3 +1,4 @@
+using System.Globalization;
 using ExcelManagement.Application.Employees;
 using ExcelManagement.Domain;
 using Microsoft.EntityFrameworkCore;
@@ -45,7 +46,7 @@ public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
             Name = request.Name,
             DepartmentId = request.DepartmentId,
             Salary = request.Salary,
-            JoinDate = request.JoinDate,
+            JoinDate = DateOnly.ParseExact(request.JoinDate, EmployeeValidator.JoinDateFormat, CultureInfo.InvariantCulture),
             IsActive = request.IsActive,
             UpdatedAt = DateTime.UtcNow,
         };
@@ -67,7 +68,7 @@ public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
         employee.Name = request.Name;
         employee.DepartmentId = request.DepartmentId;
         employee.Salary = request.Salary;
-        employee.JoinDate = request.JoinDate;
+        employee.JoinDate = DateOnly.ParseExact(request.JoinDate, EmployeeValidator.JoinDateFormat, CultureInfo.InvariantCulture);
         employee.IsActive = request.IsActive;
         employee.UpdatedAt = DateTime.UtcNow;
 

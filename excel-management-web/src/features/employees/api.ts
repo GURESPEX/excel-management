@@ -18,6 +18,20 @@ export class ValidationError extends Error {
   }
 }
 
+function throwOnMutationError(
+  error: { errors?: Record<string, string[]> | null } | undefined,
+  status: number,
+  fallbackMessage: string,
+): void {
+  if (!error) {
+    return
+  }
+  if (status === 400) {
+    throw new ValidationError(error.errors ?? {})
+  }
+  throw new Error(fallbackMessage)
+}
+
 export function useEmployees(page = 1, pageSize = 20) {
   return useQuery({
     queryKey: ['employees', page, pageSize],
@@ -67,12 +81,7 @@ export function useCreateEmployee() {
   return useMutation({
     mutationFn: async (input: EmployeeFormValues) => {
       const { data, error, response } = await apiClient.POST('/employees', { body: input })
-      if (error) {
-        if (response.status === 400) {
-          throw new ValidationError(error.errors ?? {})
-        }
-        throw new Error('Failed to create employee')
-      }
+      throwOnMutationError(error, response.status, 'Failed to create employee')
       return data
     },
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['employees'] }),
@@ -87,12 +96,7 @@ export function useUpdateEmployee(id: number) {
         params: { path: { id } },
         body: input,
       })
-      if (error) {
-        if (response.status === 400) {
-          throw new ValidationError(error.errors ?? {})
-        }
-        throw new Error('Failed to update employee')
-      }
+      throwOnMutationError(error, response.status, 'Failed to update employee')
     },
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['employees'] }),
   })

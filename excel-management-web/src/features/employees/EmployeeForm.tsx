@@ -18,7 +18,10 @@ const employeeFormSchema = z.object({
   name: z.string().min(1, 'Name is required'),
   departmentId: z.number().int().positive('Department is required'),
   salary: z.number().min(0, 'Salary must be non-negative'),
-  joinDate: z.string().min(1, 'Join date is required'),
+  joinDate: z
+    .string()
+    .min(1, 'Join date is required')
+    .refine((value) => !Number.isNaN(Date.parse(value)), 'Join Date is not a valid date'),
   isActive: z.boolean(),
 }) satisfies z.ZodType<EmployeeFormValues>
 

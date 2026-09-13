@@ -21,7 +21,7 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
     public async Task CreateEmployee_PersistsAndReturnsCreated()
     {
         var departmentId = await GetAnyDepartmentIdAsync();
-        var request = new UpsertEmployeeRequest("Test Employee", departmentId, 1000m, new DateOnly(2024, 1, 1), true);
+        var request = new UpsertEmployeeRequest("Test Employee", departmentId, 1000m, "2024-01-01", true);
 
         var response = await _client.PostAsJsonAsync("/employees", request);
 
@@ -29,6 +29,11 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
         var created = await response.Content.ReadFromJsonAsync<EmployeeDetailDto>();
         Assert.NotNull(created);
         Assert.Equal("Test Employee", created!.Name);
+        // Regression guard: DateOnly.Parse is culture-sensitive (e.g. th-TH's
+        // Buddhist calendar reads "2024" as year 2024 B.E. == 1481 C.E.), so
+        // the persisted date must exactly match what was sent regardless of
+        // server locale.
+        Assert.Equal(new DateOnly(2024, 1, 1), created.JoinDate);
 
         var getResponse = await _client.GetAsync($"/employees/{created.Id}");
         getResponse.EnsureSuccessStatusCode();
@@ -38,7 +43,7 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
     public async Task CreateEmployee_MissingName_ReturnsValidationProblem()
     {
         var departmentId = await GetAnyDepartmentIdAsync();
-        var request = new UpsertEmployeeRequest("", departmentId, 1000m, new DateOnly(2024, 1, 1), true);
+        var request = new UpsertEmployeeRequest("", departmentId, 1000m, "2024-01-01", true);
 
         var response = await _client.PostAsJsonAsync("/employees", request);
 
@@ -50,7 +55,7 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
     [Fact]
     public async Task CreateEmployee_UnknownDepartment_ReturnsValidationProblem()
     {
-        var request = new UpsertEmployeeRequest("Someone", 999_999, 1000m, new DateOnly(2024, 1, 1), true);
+        var request = new UpsertEmployeeRequest("Someone", 999_999, 1000m, "2024-01-01", true);
 
         var response = await _client.PostAsJsonAsync("/employees", request);
 
@@ -63,7 +68,7 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
     public async Task CreateEmployee_NegativeSalary_ReturnsValidationProblem()
     {
         var departmentId = await GetAnyDepartmentIdAsync();
-        var request = new UpsertEmployeeRequest("Someone", departmentId, -1m, new DateOnly(2024, 1, 1), true);
+        var request = new UpsertEmployeeRequest("Someone", departmentId, -1m, "2024-01-01", true);
 
         var response = await _client.PostAsJsonAsync("/employees", request);
 
@@ -73,14 +78,27 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
     }
 
     [Fact]
+    public async Task CreateEmployee_InvalidJoinDate_ReturnsValidationProblem()
+    {
+        var departmentId = await GetAnyDepartmentIdAsync();
+        var request = new UpsertEmployeeRequest("Someone", departmentId, 1000m, "not-a-date", true);
+
+        var response = await _client.PostAsJsonAsync("/employees", request);
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        var problem = await response.Content.ReadFromJsonAsync<HttpValidationProblemDetails>();
+        Assert.Contains("JoinDate", problem!.Errors.Keys);
+    }
+
+    [Fact]
     public async Task UpdateEmployee_ChangesFieldsAndPersists()
     {
         var departmentId = await GetAnyDepartmentIdAsync();
-        var createRequest = new UpsertEmployeeRequest("Original Name", departmentId, 1000m, new DateOnly(2024, 1, 1), true);
+        var createRequest = new UpsertEmployeeRequest("Original Name", departmentId, 1000m, "2024-01-01", true);
         var createResponse = await _client.PostAsJsonAsync("/employees", createRequest);
         var created = await createResponse.Content.ReadFromJsonAsync<EmployeeDetailDto>();
 
-        var updateRequest = new UpsertEmployeeRequest("Updated Name", departmentId, 2000m, new DateOnly(2024, 2, 2), false);
+        var updateRequest = new UpsertEmployeeRequest("Updated Name", departmentId, 2000m, "2024-02-02", false);
         var updateResponse = await _client.PutAsJsonAsync($"/employees/{created!.Id}", updateRequest);
 
         Assert.Equal(HttpStatusCode.NoContent, updateResponse.StatusCode);
@@ -97,7 +115,7 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
     public async Task UpdateEmployee_NotFound_Returns404()
     {
         var departmentId = await GetAnyDepartmentIdAsync();
-        var request = new UpsertEmployeeRequest("Nobody", departmentId, 1000m, new DateOnly(2024, 1, 1), true);
+        var request = new UpsertEmployeeRequest("Nobody", departmentId, 1000m, "2024-01-01", true);
 
         var response = await _client.PutAsJsonAsync("/employees/999999", request);
 
@@ -108,7 +126,7 @@ public class EmployeeCrudTests(ApiWebApplicationFactory factory) : IClassFixture
     public async Task DeleteEmployee_RemovesRecord()
     {
         var departmentId = await GetAnyDepartmentIdAsync();
-        var createRequest = new UpsertEmployeeRequest("To Delete", departmentId, 1000m, new DateOnly(2024, 1, 1), true);
+        var createRequest = new UpsertEmployeeRequest("To Delete", departmentId, 1000m, "2024-01-01", true);
         var createResponse = await _client.PostAsJsonAsync("/employees", createRequest);
         var created = await createResponse.Content.ReadFromJsonAsync<EmployeeDetailDto>();
 

@@ -53,11 +53,10 @@ app.MapGet("/employees/{id:int}", async (int id, IEmployeeRepository repository,
 
 app.MapPost("/employees", async (UpsertEmployeeRequest request, IEmployeeRepository employees, IDepartmentRepository departments, CancellationToken ct) =>
 {
-    var departmentExists = await departments.ExistsAsync(request.DepartmentId, ct);
-    var errors = EmployeeValidator.Validate(request, departmentExists);
-    if (errors.Count > 0)
+    var validationError = await ValidateEmployeeRequestAsync(request, departments, ct);
+    if (validationError is not null)
     {
-        return Results.ValidationProblem(errors);
+        return validationError;
     }
 
     var created = await employees.CreateAsync(request, ct);
@@ -69,11 +68,10 @@ app.MapPost("/employees", async (UpsertEmployeeRequest request, IEmployeeReposit
 
 app.MapPut("/employees/{id:int}", async (int id, UpsertEmployeeRequest request, IEmployeeRepository employees, IDepartmentRepository departments, CancellationToken ct) =>
 {
-    var departmentExists = await departments.ExistsAsync(request.DepartmentId, ct);
-    var errors = EmployeeValidator.Validate(request, departmentExists);
-    if (errors.Count > 0)
+    var validationError = await ValidateEmployeeRequestAsync(request, departments, ct);
+    if (validationError is not null)
     {
-        return Results.ValidationProblem(errors);
+        return validationError;
     }
 
     var updated = await employees.UpdateAsync(id, request, ct);
@@ -102,5 +100,12 @@ app.MapGet("/departments", async (IDepartmentRepository repository, Cancellation
 .Produces<IReadOnlyList<DepartmentDto>>(StatusCodes.Status200OK);
 
 app.Run();
+
+static async Task<IResult?> ValidateEmployeeRequestAsync(UpsertEmployeeRequest request, IDepartmentRepository departments, CancellationToken ct)
+{
+    var departmentExists = await departments.ExistsAsync(request.DepartmentId, ct);
+    var errors = EmployeeValidator.Validate(request, departmentExists);
+    return errors.Count > 0 ? Results.ValidationProblem(errors) : null;
+}
 
 public partial class Program;

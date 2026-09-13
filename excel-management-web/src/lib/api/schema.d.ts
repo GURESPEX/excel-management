@@ -116,8 +116,7 @@ export interface components {
             departmentId?: number;
             /** Format: double */
             salary?: number;
-            /** Format: date */
-            joinDate?: string;
+            joinDate?: string | null;
             isActive?: boolean;
         };
     };
