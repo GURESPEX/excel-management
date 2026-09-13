@@ -45,6 +45,22 @@ export interface paths {
         };
         get: operations["GetDepartments"];
         put?: never;
+        post: operations["CreateDepartment"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/departments/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put: operations["UpdateDepartment"];
         post?: never;
         delete?: never;
         options?: never;
@@ -56,10 +72,14 @@ export interface paths {
 export type webhooks = Record<string, never>;
 export interface components {
     schemas: {
+        CreateDepartmentRequest: {
+            name?: string | null;
+        };
         DepartmentDto: {
             /** Format: int32 */
             id?: number;
             name?: string | null;
+            isActive?: boolean;
         };
         EmployeeDetailDto: {
             /** Format: int32 */
@@ -109,6 +129,10 @@ export interface components {
             } | null;
         } & {
             [key: string]: unknown;
+        };
+        UpdateDepartmentRequest: {
+            name?: string | null;
+            isActive?: boolean;
         };
         UpsertEmployeeRequest: {
             name?: string | null;
@@ -282,7 +306,9 @@ export interface operations {
     };
     GetDepartments: {
         parameters: {
-            query?: never;
+            query?: {
+                includeInactive?: boolean;
+            };
             header?: never;
             path?: never;
             cookie?: never;
@@ -297,6 +323,81 @@ export interface operations {
                 content: {
                     "application/json": components["schemas"]["DepartmentDto"][];
                 };
+            };
+        };
+    };
+    CreateDepartment: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["CreateDepartmentRequest"];
+            };
+        };
+        responses: {
+            /** @description Created */
+            201: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DepartmentDto"];
+                };
+            };
+            /** @description Bad Request */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["HttpValidationProblemDetails"];
+                };
+            };
+        };
+    };
+    UpdateDepartment: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path: {
+                id: number;
+            };
+            cookie?: never;
+        };
+        requestBody: {
+            content: {
+                "application/json": components["schemas"]["UpdateDepartmentRequest"];
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["DepartmentDto"];
+                };
+            };
+            /** @description Bad Request */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/problem+json": components["schemas"]["HttpValidationProblemDetails"];
+                };
+            };
+            /** @description Not Found */
+            404: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
             };
         };
     };

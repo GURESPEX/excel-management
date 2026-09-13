@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { apiClient } from '@/lib/api/client'
+import { throwOnMutationError } from '@/lib/api/mutationError'
 
 export interface EmployeeFormValues {
   name: string
@@ -9,28 +10,7 @@ export interface EmployeeFormValues {
   isActive: boolean
 }
 
-export class ValidationError extends Error {
-  fieldErrors: Record<string, string[]>
-
-  constructor(fieldErrors: Record<string, string[]>) {
-    super('Validation failed')
-    this.fieldErrors = fieldErrors
-  }
-}
-
-function throwOnMutationError(
-  error: { errors?: Record<string, string[]> | null } | undefined,
-  status: number,
-  fallbackMessage: string,
-): void {
-  if (!error) {
-    return
-  }
-  if (status === 400) {
-    throw new ValidationError(error.errors ?? {})
-  }
-  throw new Error(fallbackMessage)
-}
+export { ValidationError } from '@/lib/api/mutationError'
 
 export function useEmployees(page = 1, pageSize = 20) {
   return useQuery({
@@ -57,19 +37,6 @@ export function useEmployee(id: number | undefined) {
       })
       if (error) {
         throw new Error('Failed to load employee')
-      }
-      return data
-    },
-  })
-}
-
-export function useDepartments() {
-  return useQuery({
-    queryKey: ['departments'],
-    queryFn: async () => {
-      const { data, error } = await apiClient.GET('/departments')
-      if (error) {
-        throw new Error('Failed to load departments')
       }
       return data
     },

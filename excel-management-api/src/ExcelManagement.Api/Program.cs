@@ -91,13 +91,46 @@ app.MapDelete("/employees/{id:int}", async (int id, IEmployeeRepository employee
 .Produces(StatusCodes.Status204NoContent)
 .Produces(StatusCodes.Status404NotFound);
 
-app.MapGet("/departments", async (IDepartmentRepository repository, CancellationToken ct) =>
+app.MapGet("/departments", async (IDepartmentRepository repository, bool includeInactive = false, CancellationToken ct = default) =>
 {
-    var departments = await repository.GetAllAsync(ct);
+    var departments = await repository.GetAllAsync(includeInactive, ct);
     return Results.Ok(departments);
 })
 .WithName("GetDepartments")
 .Produces<IReadOnlyList<DepartmentDto>>(StatusCodes.Status200OK);
+
+app.MapPost("/departments", async (CreateDepartmentRequest request, IDepartmentRepository departments, CancellationToken ct) =>
+{
+    var nameConflict = await departments.NameExistsAsync(request.Name, null, ct);
+    var errors = DepartmentValidator.Validate(request.Name, nameConflict);
+    if (errors.Count > 0)
+    {
+        return Results.ValidationProblem(errors);
+    }
+
+    var created = await departments.CreateAsync(request.Name, ct);
+    return Results.Created($"/departments/{created.Id}", created);
+})
+.WithName("CreateDepartment")
+.Produces<DepartmentDto>(StatusCodes.Status201Created)
+.ProducesValidationProblem();
+
+app.MapPut("/departments/{id:int}", async (int id, UpdateDepartmentRequest request, IDepartmentRepository departments, CancellationToken ct) =>
+{
+    var nameConflict = await departments.NameExistsAsync(request.Name, id, ct);
+    var errors = DepartmentValidator.Validate(request.Name, nameConflict);
+    if (errors.Count > 0)
+    {
+        return Results.ValidationProblem(errors);
+    }
+
+    var updated = await departments.UpdateAsync(id, request.Name, request.IsActive, ct);
+    return updated is not null ? Results.Ok(updated) : Results.NotFound();
+})
+.WithName("UpdateDepartment")
+.Produces<DepartmentDto>(StatusCodes.Status200OK)
+.Produces(StatusCodes.Status404NotFound)
+.ProducesValidationProblem();
 
 app.Run();
 

@@ -6,8 +6,8 @@ import { renderApp } from '@/test/renderApp'
 import { server } from '@/test/server'
 
 const departments = [
-  { id: 1, name: 'Engineering' },
-  { id: 2, name: 'Marketing' },
+  { id: 1, name: 'Engineering', isActive: true },
+  { id: 2, name: 'Marketing', isActive: true },
 ]
 
 describe('create employee flow', () => {
@@ -68,6 +68,37 @@ describe('create employee flow', () => {
 })
 
 describe('edit employee flow', () => {
+  it('shows a disabled department as the current selection, but omits it from the option list', async () => {
+    server.use(
+      http.get('http://localhost:5289/departments', () =>
+        HttpResponse.json([
+          { id: 1, name: 'Engineering', isActive: true },
+          { id: 3, name: 'Legacy Dept', isActive: false },
+        ]),
+      ),
+      http.get('http://localhost:5289/employees/2', () =>
+        HttpResponse.json({
+          id: 2,
+          name: 'Long Timer',
+          departmentId: 3,
+          salary: 1000,
+          joinDate: '2024-01-01',
+          isActive: true,
+          updatedAt: '2026-01-01T00:00:00Z',
+        }),
+      ),
+    )
+
+    const user = userEvent.setup()
+    await renderApp('/employees/2')
+
+    expect(await screen.findByRole('combobox', { name: /department/i })).toHaveTextContent('Legacy Dept')
+
+    await user.click(screen.getByRole('combobox'))
+    expect(screen.getByRole('option', { name: 'Engineering' })).toBeInTheDocument()
+    expect(screen.queryByRole('option', { name: 'Legacy Dept' })).not.toBeInTheDocument()
+  })
+
   it('loads existing values and submits an update', async () => {
     server.use(
       http.get('http://localhost:5289/departments', () => HttpResponse.json(departments)),

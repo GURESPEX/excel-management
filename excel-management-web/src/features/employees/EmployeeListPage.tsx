@@ -27,9 +27,14 @@ export function EmployeeListPage() {
     <div className="p-6">
       <div className="mb-4 flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Employees</h1>
-        <Link to="/employees/new" className={buttonVariants({})}>
-          New Employee
-        </Link>
+        <div className="flex gap-2">
+          <Link to="/departments" className={buttonVariants({ variant: 'outline' })}>
+            Departments
+          </Link>
+          <Link to="/employees/new" className={buttonVariants({})}>
+            New Employee
+          </Link>
+        </div>
       </div>
       <Table>
         <TableHeader>

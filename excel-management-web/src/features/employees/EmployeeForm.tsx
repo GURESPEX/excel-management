@@ -12,7 +12,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { type EmployeeFormValues, useDepartments, ValidationError } from './api'
+import { useDepartments } from '@/features/departments/api'
+import { type EmployeeFormValues, ValidationError } from './api'
 
 const employeeFormSchema = z.object({
   name: z.string().min(1, 'Name is required'),
@@ -38,11 +39,22 @@ export function EmployeeForm({
   onSubmit: (values: EmployeeFormValues) => Promise<void>
   submitLabel: string
 }) {
-  const { data: departments } = useDepartments()
+  // Fetch all departments (including disabled) so a disabled department the
+  // employee already references still resolves to a label; only active ones
+  // are offered as selectable options below.
+  const { data: departments, isLoading: departmentsLoading } = useDepartments(true)
+  const selectableDepartments = departments?.filter((department) => department.isActive)
   const form = useForm<EmployeeFormValues>({
     resolver: zodResolver(employeeFormSchema),
     defaultValues,
   })
+
+  // The Select only resolves a value's label from `items` at the moment it
+  // first receives a non-empty value, so it must not mount until the
+  // department list (and therefore `items`) is already populated.
+  if (departmentsLoading) {
+    return <p className="p-6">Loading form...</p>
+  }
 
   const handleSubmit = form.handleSubmit(async (values) => {
     try {
@@ -79,7 +91,7 @@ export function EmployeeForm({
             <SelectValue placeholder="Select a department" />
           </SelectTrigger>
           <SelectContent>
-            {departments?.map((department) => (
+            {selectableDepartments?.map((department) => (
               <SelectItem key={department.id} value={String(department.id)}>
                 {department.name}
               </SelectItem>
