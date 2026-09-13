@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\ExcelManagement.Api\ExcelManagement.Api.csproj" />
+    <ProjectReference Include="..\..\src\ExcelManagement.McpServer\ExcelManagement.McpServer.csproj" />
   </ItemGroup>
 
 </Project>
