@@ -122,9 +122,9 @@ app.MapPost("/auth/logout", (HttpContext http) =>
 .Produces(StatusCodes.Status204NoContent)
 .AllowAnonymous();
 
-app.MapGet("/employees", async (IEmployeeRepository repository, int page = 1, int pageSize = 20, CancellationToken ct = default) =>
+app.MapGet("/employees", async ([AsParameters] EmployeeListQuery query, IEmployeeRepository repository, CancellationToken ct) =>
 {
-    var result = await repository.GetPagedAsync(page, pageSize, ct);
+    var result = await repository.GetPagedAsync(query, ct);
     return Results.Ok(result);
 })
 .WithName("GetEmployees")

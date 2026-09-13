@@ -1,4 +1,4 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { keepPreviousData, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { apiClient } from '@/lib/api/client'
 import { throwOnMutationError } from '@/lib/api/mutationError'
 
@@ -12,18 +12,47 @@ export interface EmployeeFormValues {
 
 export { ValidationError } from '@/lib/api/mutationError'
 
-export function useEmployees(page = 1, pageSize = 20) {
+export interface EmployeeFilters {
+  page?: number
+  pageSize?: number
+  name?: string
+  departmentId?: number
+  isActive?: boolean
+  minSalary?: number
+  maxSalary?: number
+  joinDateFrom?: string
+  joinDateTo?: string
+}
+
+export function useEmployees(filters: EmployeeFilters = {}) {
   return useQuery({
-    queryKey: ['employees', page, pageSize],
+    queryKey: ['employees', filters],
     queryFn: async () => {
       const { data, error } = await apiClient.GET('/employees', {
-        params: { query: { page, pageSize } },
+        params: {
+          query: {
+            Page: filters.page ?? 1,
+            PageSize: filters.pageSize ?? 20,
+            Name: filters.name,
+            DepartmentId: filters.departmentId,
+            IsActive: filters.isActive,
+            MinSalary: filters.minSalary,
+            MaxSalary: filters.maxSalary,
+            JoinDateFrom: filters.joinDateFrom,
+            JoinDateTo: filters.joinDateTo,
+          },
+        },
       })
       if (error) {
         throw new Error('Failed to load employees')
       }
       return data
     },
+    // Keep showing the previous filter's results while a new filter's query
+    // is in flight, instead of flashing the whole page back to a loading
+    // state on every keystroke (which would also unmount the filter inputs
+    // themselves, dropping focus mid-type).
+    placeholderData: keepPreviousData,
   })
 }
 

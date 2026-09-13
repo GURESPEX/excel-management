@@ -289,8 +289,15 @@ export interface operations {
     GetEmployees: {
         parameters: {
             query?: {
-                page?: number;
-                pageSize?: number;
+                Page?: number;
+                PageSize?: number;
+                Name?: string;
+                DepartmentId?: number;
+                IsActive?: boolean;
+                MinSalary?: number;
+                MaxSalary?: number;
+                JoinDateFrom?: string;
+                JoinDateTo?: string;
             };
             header?: never;
             path?: never;

@@ -2,7 +2,7 @@ namespace ExcelManagement.Application.Employees;
 
 public interface IEmployeeRepository
 {
-    Task<PagedResult<EmployeeListItemDto>> GetPagedAsync(int page, int pageSize, CancellationToken ct);
+    Task<PagedResult<EmployeeListItemDto>> GetPagedAsync(EmployeeListQuery query, CancellationToken ct);
 
     Task<EmployeeDetailDto?> GetByIdAsync(int id, CancellationToken ct);
 

@@ -19,7 +19,7 @@ public static class EmployeeTools
         [Description("Rows per page. Server clamps to the 1-200 range. Defaults to 20.")] int pageSize = 20,
         CancellationToken ct = default)
     {
-        return await employees.GetPagedAsync(page, pageSize, ct);
+        return await employees.GetPagedAsync(new EmployeeListQuery(page, pageSize), ct);
     }
 
     [McpServerTool(Name = "get_employee"), Description(
@@ -115,7 +115,7 @@ public static class EmployeeTools
         var page = 1;
         while (true)
         {
-            var result = await employees.GetPagedAsync(page, pageSize, ct);
+            var result = await employees.GetPagedAsync(new EmployeeListQuery(page, pageSize), ct);
             all.AddRange(result.Items);
             if (all.Count >= result.TotalCount || result.Items.Count == 0)
             {

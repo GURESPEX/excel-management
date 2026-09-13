@@ -7,13 +7,53 @@ namespace ExcelManagement.Infrastructure.Persistence;
 
 public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
 {
-    public async Task<PagedResult<EmployeeListItemDto>> GetPagedAsync(int page, int pageSize, CancellationToken ct)
+    public async Task<PagedResult<EmployeeListItemDto>> GetPagedAsync(EmployeeListQuery filter, CancellationToken ct)
     {
-        page = Math.Max(page, 1);
-        pageSize = Math.Clamp(pageSize, 1, 200);
+        var page = Math.Max(filter.Page, 1);
+        var pageSize = Math.Clamp(filter.PageSize, 1, 200);
 
-        var query = db.Employees
-            .AsNoTracking()
+        var query = db.Employees.AsNoTracking().AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(filter.Name))
+        {
+            // ToLower() on both sides translates to SQL LOWER(...), keeping the
+            // partial match case-insensitive on Postgres too — plain .Contains()
+            // is only case-insensitive by accident on SQLite's default collation.
+            var name = filter.Name.ToLower();
+            query = query.Where(e => e.Name.ToLower().Contains(name));
+        }
+
+        if (filter.DepartmentId is { } departmentId)
+        {
+            query = query.Where(e => e.DepartmentId == departmentId);
+        }
+
+        if (filter.IsActive is { } isActive)
+        {
+            query = query.Where(e => e.IsActive == isActive);
+        }
+
+        if (filter.MinSalary is { } minSalary)
+        {
+            query = query.Where(e => e.Salary >= minSalary);
+        }
+
+        if (filter.MaxSalary is { } maxSalary)
+        {
+            query = query.Where(e => e.Salary <= maxSalary);
+        }
+
+        if (TryParseJoinDate(filter.JoinDateFrom, out var joinDateFrom))
+        {
+            query = query.Where(e => e.JoinDate >= joinDateFrom);
+        }
+
+        if (TryParseJoinDate(filter.JoinDateTo, out var joinDateTo))
+        {
+            query = query.Where(e => e.JoinDate <= joinDateTo);
+        }
+
+        var projected = query
             .OrderBy(e => e.Id)
             .Select(e => new EmployeeListItemDto(
                 e.Id,
@@ -24,10 +64,21 @@ public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
                 e.IsActive,
                 e.UpdatedAt));
 
-        var totalCount = await query.CountAsync(ct);
-        var items = await query.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(ct);
+        var totalCount = await projected.CountAsync(ct);
+        var items = await projected.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(ct);
 
         return new PagedResult<EmployeeListItemDto>(items, page, pageSize, totalCount);
+    }
+
+    private static bool TryParseJoinDate(string? value, out DateOnly date)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            date = default;
+            return false;
+        }
+
+        return DateOnly.TryParseExact(value, EmployeeValidator.JoinDateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out date);
     }
 
     public async Task<EmployeeDetailDto?> GetByIdAsync(int id, CancellationToken ct)
