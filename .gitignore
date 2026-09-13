@@ -4,3 +4,11 @@
 *.db
 .beads-credential-key
 .beads/proxieddb/
+
+# .NET
+bin/
+obj/
+
+# Node
+node_modules/
+dist/
