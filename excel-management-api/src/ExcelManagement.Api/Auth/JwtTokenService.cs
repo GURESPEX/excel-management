@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using ExcelManagement.Domain;
 using Microsoft.IdentityModel.Tokens;
@@ -20,6 +21,10 @@ public class JwtTokenService(IConfiguration configuration)
     public (string Token, DateTime ExpiresAt) CreateRefreshToken(AuthPrincipal principal) =>
         CreateToken(principal, TimeSpan.FromDays(_refreshDays), "refresh");
 
+    /// <summary>SHA256 hex hash of a refresh token string, for server-side lookup/revocation without storing the raw JWT.</summary>
+    public static string HashToken(string token) =>
+        Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(token)));
+
     private (string, DateTime) CreateToken(AuthPrincipal principal, TimeSpan lifetime, string tokenType)
     {
         var expires = DateTime.UtcNow.Add(lifetime);
@@ -29,6 +34,11 @@ public class JwtTokenService(IConfiguration configuration)
             new Claim(ClaimTypes.Name, principal.Username),
             new Claim(ClaimTypes.Role, principal.Role.ToString()),
             new Claim("typ", tokenType),
+            // Without a nonce, two tokens minted for the same user within the same
+            // second-precision `exp` window are byte-identical JWTs — harmless when
+            // refresh tokens were purely stateless, but it collides against the
+            // RefreshTokens.TokenHash unique index now that tokens are persisted.
+            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         };
         var credentials = new SigningCredentials(_key, SecurityAlgorithms.HmacSha256);
         var token = new JwtSecurityToken(claims: claims, expires: expires, signingCredentials: credentials);
