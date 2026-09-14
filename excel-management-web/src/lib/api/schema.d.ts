@@ -84,6 +84,38 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/employees/export": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: operations["ExportEmployees"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/employees/import": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: operations["ImportEmployees"];
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/departments": {
         parameters: {
             query?: never;
@@ -149,6 +181,11 @@ export interface components {
             /** Format: date-time */
             updatedAt?: string;
         };
+        EmployeeImportResult: {
+            /** Format: int32 */
+            importedCount?: number;
+            errors?: components["schemas"]["ImportRowError"][] | null;
+        };
         EmployeeListItemDto: {
             /** Format: int32 */
             id?: number;
@@ -183,6 +220,12 @@ export interface components {
             } | null;
         } & {
             [key: string]: unknown;
+        };
+        ImportRowError: {
+            /** Format: int32 */
+            row?: number;
+            field?: string | null;
+            reason?: string | null;
         };
         LoginRequest: {
             username?: string | null;
@@ -442,6 +485,78 @@ export interface operations {
                     [name: string]: unknown;
                 };
                 content?: never;
+            };
+        };
+    };
+    ExportEmployees: {
+        parameters: {
+            query: {
+                Page?: number;
+                PageSize?: number;
+                Name?: string;
+                DepartmentId?: number;
+                IsActive?: boolean;
+                MinSalary?: number;
+                MaxSalary?: number;
+                JoinDateFrom?: string;
+                JoinDateTo?: string;
+                format: string;
+            };
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+            /** @description Bad Request */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content?: never;
+            };
+        };
+    };
+    ImportEmployees: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: {
+            content: {
+                "multipart/form-data": {
+                    /** Format: binary */
+                    file: string;
+                };
+            };
+        };
+        responses: {
+            /** @description OK */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EmployeeImportResult"];
+                };
+            };
+            /** @description Bad Request */
+            400: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["EmployeeImportResult"];
+                };
             };
         };
     };

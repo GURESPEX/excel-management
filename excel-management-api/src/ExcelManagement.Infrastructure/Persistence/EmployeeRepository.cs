@@ -12,6 +12,35 @@ public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
         var page = Math.Max(filter.Page, 1);
         var pageSize = Math.Clamp(filter.PageSize, 1, 200);
 
+        var projected = ProjectListItems(filter);
+
+        var totalCount = await projected.CountAsync(ct);
+        var items = await projected.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(ct);
+
+        return new PagedResult<EmployeeListItemDto>(items, page, pageSize, totalCount);
+    }
+
+    public async Task<IReadOnlyList<EmployeeListItemDto>> GetAllAsync(EmployeeListQuery filter, CancellationToken ct)
+    {
+        return await ProjectListItems(filter).ToListAsync(ct);
+    }
+
+    private IQueryable<EmployeeListItemDto> ProjectListItems(EmployeeListQuery filter)
+    {
+        return BuildFilteredQuery(filter)
+            .OrderBy(e => e.Id)
+            .Select(e => new EmployeeListItemDto(
+                e.Id,
+                e.Name,
+                e.Department!.Name,
+                e.Salary,
+                e.JoinDate,
+                e.IsActive,
+                e.UpdatedAt));
+    }
+
+    private IQueryable<Employee> BuildFilteredQuery(EmployeeListQuery filter)
+    {
         var query = db.Employees.AsNoTracking().AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(filter.Name))
@@ -53,21 +82,7 @@ public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
             query = query.Where(e => e.JoinDate <= joinDateTo);
         }
 
-        var projected = query
-            .OrderBy(e => e.Id)
-            .Select(e => new EmployeeListItemDto(
-                e.Id,
-                e.Name,
-                e.Department!.Name,
-                e.Salary,
-                e.JoinDate,
-                e.IsActive,
-                e.UpdatedAt));
-
-        var totalCount = await projected.CountAsync(ct);
-        var items = await projected.Skip((page - 1) * pageSize).Take(pageSize).ToListAsync(ct);
-
-        return new PagedResult<EmployeeListItemDto>(items, page, pageSize, totalCount);
+        return query;
     }
 
     private static bool TryParseJoinDate(string? value, out DateOnly date)
@@ -138,6 +153,25 @@ public class EmployeeRepository(AppDbContext db) : IEmployeeRepository
         db.Employees.Remove(employee);
         await db.SaveChangesAsync(ct);
         return true;
+    }
+
+    public async Task<int> ImportAsync(IReadOnlyList<UpsertEmployeeRequest> requests, CancellationToken ct)
+    {
+        var now = DateTime.UtcNow;
+        var entities = requests.Select(r => new Employee
+        {
+            Name = r.Name,
+            DepartmentId = r.DepartmentId,
+            Salary = r.Salary,
+            JoinDate = DateOnly.ParseExact(r.JoinDate, EmployeeValidator.JoinDateFormat, CultureInfo.InvariantCulture),
+            IsActive = r.IsActive,
+            UpdatedAt = now,
+        }).ToList();
+
+        db.Employees.AddRange(entities);
+        await db.SaveChangesAsync(ct);
+
+        return entities.Count;
     }
 
     private static EmployeeDetailDto ToDetailDto(Employee e) =>

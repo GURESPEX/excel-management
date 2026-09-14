@@ -1,4 +1,5 @@
 import { Link, useNavigate, useSearch } from '@tanstack/react-router'
+import { useRef, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -16,7 +17,7 @@ import { useLogout } from '@/features/auth/api'
 import { useIsAdmin } from '@/features/auth/store'
 import { useDepartments } from '@/features/departments/api'
 import { DeleteEmployeeDialog } from './DeleteEmployeeDialog'
-import { useEmployees } from './api'
+import { exportEmployees, useEmployees, useImportEmployees } from './api'
 
 function EmployeeFilterPanel() {
   const search = useSearch({ from: '/' })
@@ -136,6 +137,90 @@ function EmployeeFilterPanel() {
   )
 }
 
+function EmployeeImportExportControls() {
+  const search = useSearch({ from: '/' })
+  const fileInputRef = useRef<HTMLInputElement>(null)
+  const importMutation = useImportEmployees()
+  const [exportError, setExportError] = useState<string | null>(null)
+
+  const handleExport = async (format: 'excel' | 'csv') => {
+    setExportError(null)
+    try {
+      await exportEmployees(format, search)
+    } catch {
+      setExportError('Failed to export employees.')
+    }
+  }
+
+  const handleFileChosen = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0]
+    event.target.value = ''
+    if (file) {
+      importMutation.mutate(file)
+    }
+  }
+
+  const result = importMutation.data
+  const hasErrors = !!result?.errors && result.errors.length > 0
+
+  return (
+    <div className="mb-4 flex flex-col gap-2">
+      <div className="flex flex-wrap gap-2">
+        <Button variant="outline" onClick={() => handleExport('excel')}>
+          Export Excel
+        </Button>
+        <Button variant="outline" onClick={() => handleExport('csv')}>
+          Export CSV
+        </Button>
+        <Button variant="outline" onClick={() => fileInputRef.current?.click()} disabled={importMutation.isPending}>
+          {importMutation.isPending ? 'Importing...' : 'Import Excel'}
+        </Button>
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".xlsx,.xls"
+          className="hidden"
+          onChange={handleFileChosen}
+        />
+      </div>
+
+      {exportError && <p className="text-sm text-destructive">{exportError}</p>}
+
+      {importMutation.isSuccess && result && !hasErrors && (
+        <p className="text-sm text-muted-foreground">
+          Imported {result.importedCount} employee(s) successfully.
+        </p>
+      )}
+
+      {hasErrors && (
+        <div className="rounded-md border border-destructive/50 p-3">
+          <p className="mb-2 text-sm font-medium text-destructive">
+            Import failed — no rows were saved. Fix the following and try again:
+          </p>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Row</TableHead>
+                <TableHead>Field</TableHead>
+                <TableHead>Reason</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {result.errors!.map((error, index) => (
+                <TableRow key={index}>
+                  <TableCell>{error.row}</TableCell>
+                  <TableCell>{error.field}</TableCell>
+                  <TableCell>{error.reason}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function EmployeeListPage() {
   const search = useSearch({ from: '/' })
   const { data, isLoading, isError } = useEmployees(search)
@@ -169,6 +254,7 @@ export function EmployeeListPage() {
         </div>
       </div>
       <EmployeeFilterPanel />
+      {isAdmin && <EmployeeImportExportControls />}
       <Table>
         <TableHeader>
           <TableRow>
