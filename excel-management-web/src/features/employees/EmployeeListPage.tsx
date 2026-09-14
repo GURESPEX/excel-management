@@ -1,7 +1,9 @@
 import { Link, useNavigate, useSearch } from '@tanstack/react-router'
+import { Download, Filter, Pencil, Plus, Upload, UserCheck, Users, UserX } from 'lucide-react'
 import { useRef, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
@@ -13,7 +15,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import { useLogout } from '@/features/auth/api'
 import { useIsAdmin } from '@/features/auth/store'
 import { useDepartments } from '@/features/departments/api'
 import { DeleteEmployeeDialog } from './DeleteEmployeeDialog'
@@ -41,7 +42,7 @@ function EmployeeFilterPanel() {
   const departmentItems = Object.fromEntries((departments ?? []).map((d) => [String(d.id), d.name]))
 
   return (
-    <div className="mb-4 flex flex-wrap items-end gap-3">
+    <div className="flex flex-wrap items-end gap-3">
       <div className="flex flex-col gap-1">
         <Label htmlFor="filter-name">Name</Label>
         <Input
@@ -164,16 +165,16 @@ function EmployeeImportExportControls() {
   const hasErrors = !!result?.errors && result.errors.length > 0
 
   return (
-    <div className="mb-4 flex flex-col gap-2">
+    <div className="flex flex-col gap-2">
       <div className="flex flex-wrap gap-2">
         <Button variant="outline" onClick={() => handleExport('excel')}>
-          Export Excel
+          <Download /> Export Excel
         </Button>
         <Button variant="outline" onClick={() => handleExport('csv')}>
-          Export CSV
+          <Download /> Export CSV
         </Button>
         <Button variant="outline" onClick={() => fileInputRef.current?.click()} disabled={importMutation.isPending}>
-          {importMutation.isPending ? 'Importing...' : 'Import Excel'}
+          <Upload /> {importMutation.isPending ? 'Importing...' : 'Import Excel'}
         </Button>
         <input
           ref={fileInputRef}
@@ -225,7 +226,6 @@ export function EmployeeListPage() {
   const search = useSearch({ from: '/' })
   const { data, isLoading, isError } = useEmployees(search)
   const isAdmin = useIsAdmin()
-  const logout = useLogout()
 
   if (isLoading) {
     return <p className="p-6">Loading employees...</p>
@@ -235,79 +235,113 @@ export function EmployeeListPage() {
     return <p className="p-6 text-destructive">Failed to load employees.</p>
   }
 
+  const employees = data.items ?? []
+  const activeCount = employees.filter((employee) => employee.isActive).length
+
   return (
-    <div className="p-6">
-      <div className="mb-4 flex items-center justify-between">
-        <h1 className="text-2xl font-semibold">Employees</h1>
-        <div className="flex gap-2">
-          <Link to="/departments" className={buttonVariants({ variant: 'outline' })}>
-            Departments
-          </Link>
-          {isAdmin && (
-            <Link to="/audit-log" className={buttonVariants({ variant: 'outline' })}>
-              Audit Log
-            </Link>
-          )}
-          {isAdmin && (
-            <Link to="/employees/new" className={buttonVariants({})}>
-              New Employee
-            </Link>
-          )}
-          <Button variant="outline" onClick={() => logout.mutate()}>
-            Log out
-          </Button>
+    <div className="flex flex-col gap-6 p-6 md:p-10">
+      <div className="flex items-start justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold">Employees</h1>
+          <p className="mt-1 text-sm text-muted-foreground">Manage every employee record for Chememan.</p>
         </div>
+        {isAdmin && (
+          <Link to="/employees/new" className={buttonVariants({})}>
+            <Plus /> New Employee
+          </Link>
+        )}
       </div>
-      <EmployeeFilterPanel />
+
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <Card className="flex items-center gap-3 p-4">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+            <Users className="size-5" />
+          </div>
+          <div>
+            <div className="text-xl leading-none font-semibold">{employees.length}</div>
+            <div className="mt-1 text-xs text-muted-foreground">Total employees</div>
+          </div>
+        </Card>
+        <Card className="flex items-center gap-3 p-4">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <UserCheck className="size-5" />
+          </div>
+          <div>
+            <div className="text-xl leading-none font-semibold">{activeCount}</div>
+            <div className="mt-1 text-xs text-muted-foreground">Active employees</div>
+          </div>
+        </Card>
+        <Card className="flex items-center gap-3 p-4">
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-muted text-muted-foreground">
+            <UserX className="size-5" />
+          </div>
+          <div>
+            <div className="text-xl leading-none font-semibold">{employees.length - activeCount}</div>
+            <div className="mt-1 text-xs text-muted-foreground">Inactive employees</div>
+          </div>
+        </Card>
+      </div>
+
+      <Card className="p-6">
+        <div className="mb-4 flex items-center gap-2 text-sm font-semibold">
+          <Filter className="size-4" />
+          Filters
+        </div>
+        <EmployeeFilterPanel />
+      </Card>
+
       {isAdmin && <EmployeeImportExportControls />}
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>ID</TableHead>
-            <TableHead>Name</TableHead>
-            <TableHead>Department</TableHead>
-            <TableHead>Salary</TableHead>
-            <TableHead>Join Date</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead className="text-right">Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {data.items?.map((employee) => (
-            <TableRow key={employee.id}>
-              <TableCell>{employee.id}</TableCell>
-              <TableCell>{employee.name}</TableCell>
-              <TableCell>{employee.departmentName}</TableCell>
-              <TableCell>
-                {employee.salary?.toLocaleString(undefined, {
-                  minimumFractionDigits: 2,
-                  maximumFractionDigits: 2,
-                })}
-              </TableCell>
-              <TableCell>{employee.joinDate}</TableCell>
-              <TableCell>
-                <Badge variant={employee.isActive ? 'default' : 'secondary'}>
-                  {employee.isActive ? 'Active' : 'Inactive'}
-                </Badge>
-              </TableCell>
-              <TableCell className="flex justify-end gap-2">
-                {isAdmin && (
-                  <>
-                    <Link
-                      to="/employees/$employeeId"
-                      params={{ employeeId: String(employee.id) }}
-                      className={buttonVariants({ variant: 'outline', size: 'sm' })}
-                    >
-                      Edit
-                    </Link>
-                    <DeleteEmployeeDialog employeeId={employee.id!} employeeName={employee.name ?? 'this employee'} />
-                  </>
-                )}
-              </TableCell>
+
+      <Card className="overflow-hidden">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>ID</TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Department</TableHead>
+              <TableHead>Salary</TableHead>
+              <TableHead>Join Date</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {data.items?.map((employee) => (
+              <TableRow key={employee.id}>
+                <TableCell>{employee.id}</TableCell>
+                <TableCell>{employee.name}</TableCell>
+                <TableCell>{employee.departmentName}</TableCell>
+                <TableCell>
+                  {employee.salary?.toLocaleString(undefined, {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  })}
+                </TableCell>
+                <TableCell>{employee.joinDate}</TableCell>
+                <TableCell>
+                  <Badge variant={employee.isActive ? 'default' : 'secondary'}>
+                    {employee.isActive ? 'Active' : 'Inactive'}
+                  </Badge>
+                </TableCell>
+                <TableCell className="flex justify-end gap-2">
+                  {isAdmin && (
+                    <>
+                      <Link
+                        to="/employees/$employeeId"
+                        params={{ employeeId: String(employee.id) }}
+                        className={buttonVariants({ variant: 'outline', size: 'sm' })}
+                      >
+                        <Pencil /> Edit
+                      </Link>
+                      <DeleteEmployeeDialog employeeId={employee.id!} employeeName={employee.name ?? 'this employee'} />
+                    </>
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Card>
     </div>
   )
 }

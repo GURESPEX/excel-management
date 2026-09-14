@@ -71,7 +71,7 @@ export function EmployeeForm({
   })
 
   return (
-    <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4 p-6">
+    <form onSubmit={handleSubmit} className="flex max-w-md flex-col gap-4 rounded-xl border bg-card p-6 shadow-sm">
       <div className="flex flex-col gap-1">
         <Label htmlFor="name">Name</Label>
         <Input id="name" {...form.register('name')} />

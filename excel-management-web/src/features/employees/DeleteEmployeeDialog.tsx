@@ -1,3 +1,4 @@
+import { Trash2 } from 'lucide-react'
 import {
   AlertDialog,
   AlertDialogAction,
@@ -20,7 +21,7 @@ export function DeleteEmployeeDialog({ employeeId, employeeName }: { employeeId:
       <AlertDialogTrigger
         render={
           <Button variant="destructive" size="sm">
-            Delete
+            <Trash2 /> Delete
           </Button>
         }
       />

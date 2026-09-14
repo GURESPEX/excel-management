@@ -1,4 +1,5 @@
 import { createFileRoute, useNavigate } from '@tanstack/react-router'
+import { AppShell } from '@/components/layout/AppShell'
 import { requireAdmin } from '@/features/auth/guards'
 import { EmployeeForm } from '@/features/employees/EmployeeForm'
 import { useCreateEmployee } from '@/features/employees/api'
@@ -13,16 +14,21 @@ function NewEmployeePage() {
   const createEmployee = useCreateEmployee()
 
   return (
-    <div>
-      <h1 className="p-6 pb-0 text-2xl font-semibold">New Employee</h1>
-      <EmployeeForm
-        submitLabel="Create"
-        defaultValues={{ name: '', departmentId: 0, salary: 0, joinDate: '', isActive: true }}
-        onSubmit={async (values) => {
-          await createEmployee.mutateAsync(values)
-          await navigate({ to: '/' })
-        }}
-      />
-    </div>
+    <AppShell>
+      <div className="flex flex-col gap-6 p-6 md:p-10">
+        <div>
+          <h1 className="text-2xl font-semibold">New Employee</h1>
+          <p className="mt-1 text-sm text-muted-foreground">Add a new employee record.</p>
+        </div>
+        <EmployeeForm
+          submitLabel="Create"
+          defaultValues={{ name: '', departmentId: 0, salary: 0, joinDate: '', isActive: true }}
+          onSubmit={async (values) => {
+            await createEmployee.mutateAsync(values)
+            await navigate({ to: '/' })
+          }}
+        />
+      </div>
+    </AppShell>
   )
 }

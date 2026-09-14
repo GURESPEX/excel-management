@@ -1,6 +1,8 @@
+import { Plus } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
@@ -102,38 +104,48 @@ export function DepartmentAdminPage() {
   }
 
   return (
-    <div className="p-6">
-      <h1 className="mb-4 text-2xl font-semibold">Departments</h1>
+    <div className="flex flex-col gap-6 p-6 md:p-10">
+      <div>
+        <h1 className="text-2xl font-semibold">Departments</h1>
+        <p className="mt-1 text-sm text-muted-foreground">Manage the list of departments and their status.</p>
+      </div>
 
       {isAdmin && (
-        <div className="mb-6 flex items-end gap-2">
-          <div className="flex flex-col gap-1">
-            <Label htmlFor="new-department-name">New department</Label>
-            <Input
-              id="new-department-name"
-              value={newName}
-              onChange={(event) => setNewName(event.target.value)}
-            />
+        <Card className="p-6">
+          <div className="mb-3 text-sm font-semibold">Add a new department</div>
+          <div className="flex items-end gap-2">
+            <div className="flex max-w-sm flex-1 flex-col gap-1">
+              <Label htmlFor="new-department-name">Name</Label>
+              <Input
+                id="new-department-name"
+                value={newName}
+                onChange={(event) => setNewName(event.target.value)}
+              />
+            </div>
+            <Button onClick={handleCreate}>
+              <Plus /> Add Department
+            </Button>
           </div>
-          <Button onClick={handleCreate}>Add Department</Button>
-        </div>
+          {createError && <p className="mt-3 text-sm text-destructive">{createError}</p>}
+        </Card>
       )}
-      {createError && <p className="mb-4 text-sm text-destructive">{createError}</p>}
 
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead>Name</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {departments?.map((department) => (
-            <DepartmentTableRow key={department.id} department={department} />
-          ))}
-        </TableBody>
-      </Table>
+      <Card className="overflow-hidden">
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead>Name</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {departments?.map((department) => (
+              <DepartmentTableRow key={department.id} department={department} />
+            ))}
+          </TableBody>
+        </Table>
+      </Card>
     </div>
   )
 }

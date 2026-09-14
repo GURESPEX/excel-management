@@ -1,5 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { z } from 'zod'
+import { AppShell } from '@/components/layout/AppShell'
 import { requireAuth } from '@/features/auth/guards'
 import { EmployeeListPage } from '@/features/employees/EmployeeListPage'
 
@@ -24,5 +25,9 @@ const employeeSearchSchema = z.object({
 export const Route = createFileRoute('/')({
   beforeLoad: requireAuth,
   validateSearch: employeeSearchSchema,
-  component: EmployeeListPage,
+  component: () => (
+    <AppShell>
+      <EmployeeListPage />
+    </AppShell>
+  ),
 })
