@@ -1,0 +1,190 @@
+{
+  "nodes": [
+    {
+      "id": "file:excel-management-web/.npmrc",
+      "type": "file",
+      "name": ".npmrc",
+      "filePath": "excel-management-web/.npmrc",
+      "summary": "npm configuration enabling legacy-peer-deps resolution so the frontend's dependency tree installs without peer-dependency conflicts.",
+      "tags": ["configuration", "npm", "dependency-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/nginx.conf",
+      "type": "file",
+      "name": "nginx.conf",
+      "filePath": "excel-management-web/nginx.conf",
+      "summary": "Nginx server config for the production frontend image: serves the built static SPA on port 80 and falls back to index.html for client-side routing.",
+      "tags": ["configuration", "nginx", "web-server", "spa-routing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "excel-management-web/src/index.css",
+      "summary": "Global stylesheet defining the Tailwind/shadcn design tokens (light and dark color variables, radius, chart and sidebar colors) applied across the whole frontend.",
+      "tags": ["styling", "css", "design-tokens", "theming"],
+      "complexity": "moderate",
+      "languageNotes": "Uses OKLCH color space CSS custom properties and Tailwind's @custom-variant for dark-mode targeting."
+    },
+    {
+      "id": "file:excel-management-web/src/lib/api/schema.d.ts",
+      "type": "file",
+      "name": "schema.d.ts",
+      "filePath": "excel-management-web/src/lib/api/schema.d.ts",
+      "summary": "Auto-generated TypeScript type definitions (via openapi-typescript) mirroring the backend's OpenAPI spec, covering paths and operations such as auth login/refresh/logout.",
+      "tags": ["type-definition", "api-schema", "generated", "typescript"],
+      "complexity": "complex",
+      "languageNotes": "Auto-generated file with a 'do not edit directly' header; regenerated from the API's OpenAPI document."
+    },
+    {
+      "id": "file:excel-management-web/src/lib/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "excel-management-web/src/lib/utils.ts",
+      "summary": "One-line barrel re-exporting the shared `cn` class-name utility for use throughout the frontend's UI components.",
+      "tags": ["utility", "barrel", "re-export"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "excel-management-web/src/main.tsx",
+      "summary": "Frontend entry point that mounts the React app, wiring up TanStack Query and the generated TanStack Router route tree.",
+      "tags": ["entry-point", "bootstrap", "react", "routing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/vite.config.ts",
+      "type": "file",
+      "name": "vite.config.ts",
+      "filePath": "excel-management-web/vite.config.ts",
+      "summary": "Vite build configuration wiring the TanStack Router plugin, React plugin, and Tailwind CSS plugin, plus a `@` src path alias and Vitest jsdom test setup.",
+      "tags": ["configuration", "build-system", "vite", "testing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:infra/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "infra/README.md",
+      "summary": "Explains how to bring up the full stack (frontend, backend, PostgreSQL) via docker-compose using prebuilt GHCR images, including ports, seeded accounts, and teardown commands.",
+      "tags": ["documentation", "infrastructure", "docker-compose", "deployment"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:infra/docker-compose.yml",
+      "type": "service",
+      "name": "docker-compose.yml",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "Docker Compose stack that orchestrates prebuilt postgres, api, and web images (published to GHCR by CI) with health-checked startup ordering and a durable Postgres volume.",
+      "tags": ["orchestration", "infrastructure", "docker-compose", "deployment"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "service:infra/docker-compose.yml:postgres",
+      "type": "service",
+      "name": "postgres",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "PostgreSQL 17 database service with a named volume for durable storage and a healthcheck used to gate startup of dependent services.",
+      "tags": ["database", "postgresql", "infrastructure"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:infra/docker-compose.yml:api",
+      "type": "service",
+      "name": "api",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "Backend API service running the ghcr.io excel-management-api image, configured to connect to the postgres service and waiting for it to report healthy before starting.",
+      "tags": ["backend", "api", "infrastructure", "deployment"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:infra/docker-compose.yml:web",
+      "type": "service",
+      "name": "web",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "Frontend service running the nginx-served static build image, published on port 5173 and depending on the api service.",
+      "tags": ["frontend", "nginx", "infrastructure", "deployment"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:requirements/Exam Data.xlsx",
+      "type": "file",
+      "name": "Exam Data.xlsx",
+      "filePath": "requirements/Exam Data.xlsx",
+      "summary": "Sample Excel workbook provided as project requirements input, likely used as sample/reference data for the employee Excel import/export feature.",
+      "tags": ["requirements", "sample-data", "excel"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:requirements/Exercise Before Interview.docx",
+      "type": "file",
+      "name": "Exercise Before Interview.docx",
+      "filePath": "requirements/Exercise Before Interview.docx",
+      "summary": "Word document containing the original pre-interview coding exercise instructions that this excel-management project was built to satisfy.",
+      "tags": ["requirements", "specification", "documentation"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:excel-management-web/src/main.tsx",
+      "target": "file:excel-management-web/src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/vite.config.ts",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:infra/docker-compose.yml",
+      "target": "service:infra/docker-compose.yml:postgres",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:infra/docker-compose.yml",
+      "target": "service:infra/docker-compose.yml:api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:infra/docker-compose.yml",
+      "target": "service:infra/docker-compose.yml:web",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:infra/docker-compose.yml:api",
+      "target": "service:infra/docker-compose.yml:postgres",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:infra/docker-compose.yml:web",
+      "target": "service:infra/docker-compose.yml:api",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:infra/README.md",
+      "target": "service:infra/docker-compose.yml",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

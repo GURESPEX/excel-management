@@ -1,0 +1,183 @@
+{
+  "batchIndex": 12,
+  "files": [
+    {
+      "path": ".agents/skills/beads/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 80,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/beads/agents/openai.yaml",
+      "language": "yaml",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".beads/hooks/post-checkout",
+      "language": "unknown",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".beads/hooks/post-merge",
+      "language": "unknown",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".beads/hooks/pre-commit",
+      "language": "unknown",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".beads/hooks/pre-push",
+      "language": "unknown",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".beads/hooks/prepare-commit-msg",
+      "language": "unknown",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".beads/interactions.jsonl",
+      "language": "jsonl",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".beads/issues.jsonl",
+      "language": "jsonl",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".claude/settings.json",
+      "language": "json",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codex/config.toml",
+      "language": "toml",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codex/hooks.json",
+      "language": "json",
+      "sizeLines": 51,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/.understandignore",
+      "language": "unknown",
+      "sizeLines": 84,
+      "fileCategory": "code"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 244,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "sizeLines": 77,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+      "language": "v2",
+      "sizeLines": 2061,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "language": "vsidx",
+      "sizeLines": 466,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+      "language": "v2",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/v17/.suo",
+      "language": "unknown",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json",
+      "language": "json",
+      "sizeLines": 95,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json",
+      "language": "json",
+      "sizeLines": 92,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+      "language": "bin",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+      "language": "bin",
+      "sizeLines": 3470,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+      "language": "bin",
+      "sizeLines": 1016,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/ExcelManagement.sln",
+      "language": "sln",
+      "sizeLines": 114,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    ".agents/skills/beads/SKILL.md": [],
+    ".agents/skills/beads/agents/openai.yaml": [],
+    ".beads/hooks/post-checkout": [],
+    ".beads/hooks/post-merge": [],
+    ".beads/hooks/pre-commit": [],
+    ".beads/hooks/pre-push": [],
+    ".beads/hooks/prepare-commit-msg": [],
+    ".beads/interactions.jsonl": [],
+    ".beads/issues.jsonl": [],
+    ".claude/settings.json": [],
+    ".codex/config.toml": [],
+    ".codex/hooks.json": [],
+    ".ua/.understandignore": [],
+    "AGENTS.md": [],
+    "CLAUDE.md": [],
+    "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2": [],
+    "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx": [],
+    "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2": [],
+    "excel-management-api/.vs/ExcelManagement/v17/.suo": [],
+    "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json": [],
+    "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json": [],
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin": [],
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin": [],
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin": [],
+    "excel-management-api/ExcelManagement.sln": []
+  },
+  "neighborMap": {}
+}

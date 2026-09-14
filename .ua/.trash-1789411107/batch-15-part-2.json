@@ -1,0 +1,855 @@
+{
+  "nodes": [
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.McpServer/appsettings.json",
+      "type": "config",
+      "name": "appsettings.json",
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/appsettings.json",
+      "summary": "Runtime configuration for the MCP server host, specifying logging levels and the PostgreSQL connection string used by the MCP server's EF Core DbContext.",
+      "tags": ["configuration", "mcp-server", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "file",
+      "name": "ApiWebApplicationFactory.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "summary": "xUnit WebApplicationFactory that opens a fresh in-memory SQLite database per test class and swaps it into the API's DI container, providing the shared test host used by all integration tests.",
+      "tags": ["test", "test-infrastructure", "sqlite"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs:ApiWebApplicationFactory",
+      "type": "class",
+      "name": "ApiWebApplicationFactory",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "lineRange": [11, 33],
+      "summary": "Custom WebApplicationFactory that opens an in-memory SQLite connection, replaces the app's AppDbContext registration with it, and disposes the connection after tests complete.",
+      "tags": ["test-infrastructure", "di-override"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "type": "file",
+      "name": "AuditLogTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "summary": "Integration tests verifying that create/update/delete operations on employees and departments produce correct audit log entries, and that the audit log query endpoint enforces date-range filtering and admin-only authorization.",
+      "tags": ["test", "integration-test", "audit-log"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:AuditLogTests",
+      "type": "class",
+      "name": "AuditLogTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "lineRange": [10, 138],
+      "summary": "Test suite covering audit trail creation for employee/department mutations and access control on the audit log query endpoint.",
+      "tags": ["test", "audit-log"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:CreateEmployee_WritesOneCreatedAuditEntry",
+      "type": "function",
+      "name": "CreateEmployee_WritesOneCreatedAuditEntry",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "lineRange": [30, 45],
+      "summary": "Verifies that creating an employee produces exactly one \"Created\" audit log entry containing the employee's name.",
+      "tags": ["test", "audit-log", "create"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:UpdateEmployee_WritesOneUpdatedAuditEntryWithDiff",
+      "type": "function",
+      "name": "UpdateEmployee_WritesOneUpdatedAuditEntryWithDiff",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "lineRange": [47, 67],
+      "summary": "Verifies that updating an employee's salary produces one \"Updated\" audit entry whose diff contains both the old and new salary values.",
+      "tags": ["test", "audit-log", "update"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:DeleteEmployee_WritesOneDeletedAuditEntry",
+      "type": "function",
+      "name": "DeleteEmployee_WritesOneDeletedAuditEntry",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "lineRange": [69, 84],
+      "summary": "Verifies that deleting an employee produces exactly one \"Deleted\" audit log entry.",
+      "tags": ["test", "audit-log", "delete"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:CreateAndUpdateDepartment_WritesAuditEntries",
+      "type": "function",
+      "name": "CreateAndUpdateDepartment_WritesAuditEntries",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "lineRange": [86, 99],
+      "summary": "Verifies that creating and then updating a department both produce audit log entries reflecting the change.",
+      "tags": ["test", "audit-log", "department"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:GetAuditLogs_FiltersByEntityNameAndDateRange",
+      "type": "function",
+      "name": "GetAuditLogs_FiltersByEntityNameAndDateRange",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "lineRange": [101, 116],
+      "summary": "Verifies the audit log query endpoint filters results by entity name and excludes entries outside a given date range.",
+      "tags": ["test", "audit-log", "filtering"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:GetAuditLogs_AsViewer_ReturnsForbidden",
+      "type": "function",
+      "name": "GetAuditLogs_AsViewer_ReturnsForbidden",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "lineRange": [118, 127],
+      "summary": "Verifies that a viewer-role user is forbidden from querying the audit log endpoint.",
+      "tags": ["test", "authorization", "audit-log"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "file",
+      "name": "AuthTestHelper.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "summary": "Shared test helper that logs a test HttpClient in as the seeded admin or viewer account, used across most integration test classes.",
+      "tags": ["test", "test-infrastructure", "auth"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs:AuthTestHelper",
+      "type": "class",
+      "name": "AuthTestHelper",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "lineRange": [6, 19],
+      "summary": "Static helper providing LoginAsAdminAsync/LoginAsViewerAsync methods that authenticate a test HttpClient against the seeded accounts.",
+      "tags": ["test-infrastructure", "auth"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "type": "file",
+      "name": "AuthTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "summary": "Integration tests covering login, refresh-token rotation and reuse detection, logout, and role-based authorization (admin vs viewer) across the employee and department endpoints.",
+      "tags": ["test", "integration-test", "auth", "authorization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:AuthTests",
+      "type": "class",
+      "name": "AuthTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [11, 251],
+      "summary": "Test suite covering the login/refresh/logout flow and role-based access control (admin vs viewer) on employee and department endpoints.",
+      "tags": ["test", "auth", "authorization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Login_ValidAdminCredentials_ReturnsOkWithUserInfo",
+      "type": "function",
+      "name": "Login_ValidAdminCredentials_ReturnsOkWithUserInfo",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [13, 24],
+      "summary": "Verifies that logging in with valid admin credentials returns 200 OK with the admin's user info.",
+      "tags": ["test", "auth", "login"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Refresh_WithValidRefreshCookie_RotatesAccessToken",
+      "type": "function",
+      "name": "Refresh_WithValidRefreshCookie_RotatesAccessToken",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [46, 61],
+      "summary": "Verifies that calling refresh with a valid refresh-token cookie issues a new access token.",
+      "tags": ["test", "auth", "refresh-tokens"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized",
+      "type": "function",
+      "name": "Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [73, 93],
+      "summary": "Verifies that reusing a refresh token which has already been rotated away is rejected with 401 Unauthorized, guarding against refresh-token replay.",
+      "tags": ["test", "auth", "refresh-tokens", "security"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Logout_ThenReusingRefreshToken_ReturnsUnauthorized",
+      "type": "function",
+      "name": "Logout_ThenReusingRefreshToken_ReturnsUnauthorized",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [95, 109],
+      "summary": "Verifies that after logout, the previously issued refresh token can no longer be used to obtain a new access token.",
+      "tags": ["test", "auth", "logout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:GetEmployees_AsViewer_Succeeds",
+      "type": "function",
+      "name": "GetEmployees_AsViewer_Succeeds",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [134, 143],
+      "summary": "Verifies that a viewer-role user can successfully list employees.",
+      "tags": ["test", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:CreateEmployee_AsViewer_ReturnsForbidden",
+      "type": "function",
+      "name": "CreateEmployee_AsViewer_ReturnsForbidden",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [145, 157],
+      "summary": "Verifies that a viewer-role user is forbidden from creating an employee.",
+      "tags": ["test", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:CreateDepartment_AsViewer_ReturnsForbidden",
+      "type": "function",
+      "name": "CreateDepartment_AsViewer_ReturnsForbidden",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [159, 168],
+      "summary": "Verifies that a viewer-role user is forbidden from creating a department.",
+      "tags": ["test", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:CreateEmployee_AsAdmin_Succeeds",
+      "type": "function",
+      "name": "CreateEmployee_AsAdmin_Succeeds",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [170, 182],
+      "summary": "Verifies that an admin-role user can successfully create an employee.",
+      "tags": ["test", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:UpdateEmployee_AsViewer_ReturnsForbidden",
+      "type": "function",
+      "name": "UpdateEmployee_AsViewer_ReturnsForbidden",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [184, 203],
+      "summary": "Verifies that a viewer-role user is forbidden from updating an employee created by an admin.",
+      "tags": ["test", "authorization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:DeleteEmployee_AsViewer_ReturnsForbidden",
+      "type": "function",
+      "name": "DeleteEmployee_AsViewer_ReturnsForbidden",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [205, 222],
+      "summary": "Verifies that a viewer-role user is forbidden from deleting an employee created by an admin.",
+      "tags": ["test", "authorization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:UpdateDepartment_AsViewer_ReturnsForbidden",
+      "type": "function",
+      "name": "UpdateDepartment_AsViewer_ReturnsForbidden",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [224, 239],
+      "summary": "Verifies that a viewer-role user is forbidden from updating a department created by an admin.",
+      "tags": ["test", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:GetEmployees_WithMalformedToken_ReturnsUnauthorized",
+      "type": "function",
+      "name": "GetEmployees_WithMalformedToken_ReturnsUnauthorized",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "lineRange": [241, 250],
+      "summary": "Verifies that supplying a malformed bearer token to the employees endpoint returns 401 Unauthorized.",
+      "tags": ["test", "auth", "security"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "type": "file",
+      "name": "DepartmentCrudTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "summary": "Integration tests covering department creation, duplicate-name and unique-constraint validation, updates including active-toggle, and default filtering of disabled departments.",
+      "tags": ["test", "integration-test", "department"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:DepartmentCrudTests",
+      "type": "class",
+      "name": "DepartmentCrudTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "lineRange": [13, 149],
+      "summary": "Test suite covering CRUD behavior and validation rules for the department endpoint, including disabled-department edge cases.",
+      "tags": ["test", "department"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:CreateDepartment_PersistsAsActiveByDefault",
+      "type": "function",
+      "name": "CreateDepartment_PersistsAsActiveByDefault",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "lineRange": [21, 31],
+      "summary": "Verifies that a newly created department defaults to active status.",
+      "tags": ["test", "department", "create"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:CreateDepartment_DuplicateName_ReturnsValidationProblem",
+      "type": "function",
+      "name": "CreateDepartment_DuplicateName_ReturnsValidationProblem",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "lineRange": [33, 43],
+      "summary": "Verifies that creating a department with a name that already exists returns a validation problem.",
+      "tags": ["test", "department", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500",
+      "type": "function",
+      "name": "CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "lineRange": [45, 70],
+      "summary": "Verifies that a race-condition unique-constraint violation at save time (simulated via a rebuilt web host) is translated into a 400 validation problem rather than surfacing as a 500 error.",
+      "tags": ["test", "department", "concurrency", "error-handling"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:UpdateDepartment_RenamesAndTogglesActive",
+      "type": "function",
+      "name": "UpdateDepartment_RenamesAndTogglesActive",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "lineRange": [88, 102],
+      "summary": "Verifies that updating a department can rename it and toggle its active flag in one request.",
+      "tags": ["test", "department", "update"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:GetDepartments_ExcludesDisabledByDefault_ButIncludesWhenRequested",
+      "type": "function",
+      "name": "GetDepartments_ExcludesDisabledByDefault_ButIncludesWhenRequested",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "lineRange": [112, 124],
+      "summary": "Verifies that listing departments excludes disabled ones by default but includes them when explicitly requested.",
+      "tags": ["test", "department", "filtering"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:ExistingEmployee_ReferencingDisabledDepartment_StillRendersAndSaves",
+      "type": "function",
+      "name": "ExistingEmployee_ReferencingDisabledDepartment_StillRendersAndSaves",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "lineRange": [126, 148],
+      "summary": "Verifies that an employee referencing a since-disabled department still renders correctly and can still be saved/updated.",
+      "tags": ["test", "department", "employee", "edge-case"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "type": "file",
+      "name": "EmployeeCrudTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "summary": "Integration tests covering employee creation, field validation (name, department, salary, join date), updates, and deletion.",
+      "tags": ["test", "integration-test", "employee"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:EmployeeCrudTests",
+      "type": "class",
+      "name": "EmployeeCrudTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [10, 150],
+      "summary": "Test suite covering CRUD behavior and field-level validation for the employee endpoint.",
+      "tags": ["test", "employee"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_PersistsAndReturnsCreated",
+      "type": "function",
+      "name": "CreateEmployee_PersistsAndReturnsCreated",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [24, 44],
+      "summary": "Verifies that creating a valid employee persists the record and returns a 201 Created response with the employee's data.",
+      "tags": ["test", "employee", "create"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_MissingName_ReturnsValidationProblem",
+      "type": "function",
+      "name": "CreateEmployee_MissingName_ReturnsValidationProblem",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [46, 57],
+      "summary": "Verifies that creating an employee without a name returns a validation problem.",
+      "tags": ["test", "employee", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_UnknownDepartment_ReturnsValidationProblem",
+      "type": "function",
+      "name": "CreateEmployee_UnknownDepartment_ReturnsValidationProblem",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [59, 69],
+      "summary": "Verifies that creating an employee with a department id that does not exist returns a validation problem.",
+      "tags": ["test", "employee", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_NegativeSalary_ReturnsValidationProblem",
+      "type": "function",
+      "name": "CreateEmployee_NegativeSalary_ReturnsValidationProblem",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [71, 82],
+      "summary": "Verifies that creating an employee with a negative salary returns a validation problem.",
+      "tags": ["test", "employee", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_InvalidJoinDate_ReturnsValidationProblem",
+      "type": "function",
+      "name": "CreateEmployee_InvalidJoinDate_ReturnsValidationProblem",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [84, 95],
+      "summary": "Verifies that creating an employee with an invalid join date returns a validation problem.",
+      "tags": ["test", "employee", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:UpdateEmployee_ChangesFieldsAndPersists",
+      "type": "function",
+      "name": "UpdateEmployee_ChangesFieldsAndPersists",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [97, 116],
+      "summary": "Verifies that updating an employee's fields persists the new values.",
+      "tags": ["test", "employee", "update"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:UpdateEmployee_NotFound_Returns404",
+      "type": "function",
+      "name": "UpdateEmployee_NotFound_Returns404",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [118, 127],
+      "summary": "Verifies that updating a non-existent employee id returns 404 Not Found.",
+      "tags": ["test", "employee", "not-found"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:DeleteEmployee_RemovesRecord",
+      "type": "function",
+      "name": "DeleteEmployee_RemovesRecord",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "lineRange": [129, 142],
+      "summary": "Verifies that deleting an employee removes the record so subsequent lookups fail.",
+      "tags": ["test", "employee", "delete"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "type": "file",
+      "name": "EmployeeImportExportTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "summary": "Integration tests covering Excel-based employee import (valid rows, native Excel date cells, mixed valid/invalid rows) and Excel/CSV export, including a round-trip export-then-reimport check and viewer-role authorization.",
+      "tags": ["test", "integration-test", "excel-import", "excel-export"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:EmployeeImportExportTests",
+      "type": "class",
+      "name": "EmployeeImportExportTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [10, 211],
+      "summary": "Test suite covering the Excel import/export endpoints, including row-level validation, native date parsing, and role-based access.",
+      "tags": ["test", "excel-import", "excel-export"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:BuildWorkbook",
+      "type": "function",
+      "name": "BuildWorkbook",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [18, 42],
+      "summary": "Test helper that builds an in-memory Excel workbook with a header row and given data rows, used to construct import test fixtures.",
+      "tags": ["test", "test-infrastructure", "excel"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Import_AllRowsValid_CommitsAllRows",
+      "type": "function",
+      "name": "Import_AllRowsValid_CommitsAllRows",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [53, 73],
+      "summary": "Verifies that importing a workbook where every row is valid commits all rows as employees.",
+      "tags": ["test", "excel-import"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly",
+      "type": "function",
+      "name": "Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [75, 109],
+      "summary": "Verifies that a join date supplied as a native Excel date cell (rather than a text string) is parsed correctly during import.",
+      "tags": ["test", "excel-import", "date-parsing"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow",
+      "type": "function",
+      "name": "Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [111, 142],
+      "summary": "Verifies that importing a workbook with a mix of valid and invalid rows commits nothing (all-or-nothing) and reports every failing row.",
+      "tags": ["test", "excel-import", "validation"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Export_Excel_ReturnsFilteredEmployeesWithStatusAsText",
+      "type": "function",
+      "name": "Export_Excel_ReturnsFilteredEmployeesWithStatusAsText",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [144, 161],
+      "summary": "Verifies that the Excel export endpoint returns only the filtered employees with their active/inactive status rendered as text.",
+      "tags": ["test", "excel-export"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Export_Csv_ReturnsFilteredEmployeesWithStatusAsText",
+      "type": "function",
+      "name": "Export_Csv_ReturnsFilteredEmployeesWithStatusAsText",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [163, 175],
+      "summary": "Verifies that the CSV export endpoint returns only the filtered employees with their active/inactive status rendered as text.",
+      "tags": ["test", "csv-export"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Export_RoundTrip_ExportedFileReimportsCleanly",
+      "type": "function",
+      "name": "Export_RoundTrip_ExportedFileReimportsCleanly",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [177, 190],
+      "summary": "Verifies that a file produced by the export endpoint can be fed straight back into the import endpoint without errors, confirming the two formats are compatible.",
+      "tags": ["test", "excel-export", "excel-import", "round-trip"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Viewer_Gets403_OnImportAndExport",
+      "type": "function",
+      "name": "Viewer_Gets403_OnImportAndExport",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "lineRange": [192, 204],
+      "summary": "Verifies that a viewer-role user receives 403 Forbidden on both the import and export endpoints.",
+      "tags": ["test", "authorization", "excel-import", "excel-export"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "type": "file",
+      "name": "EmployeeSearchTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "summary": "Integration tests covering employee search/filtering by name, department and status combined, salary range, and join-date range.",
+      "tags": ["test", "integration-test", "search", "employee"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:EmployeeSearchTests",
+      "type": "class",
+      "name": "EmployeeSearchTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "lineRange": [8, 67],
+      "summary": "Test suite covering the employee list endpoint's filtering and range-query behavior.",
+      "tags": ["test", "search", "employee"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:Department_AndStatus_Combine_ReturnsOnlyMatchingEmployees",
+      "type": "function",
+      "name": "Department_AndStatus_Combine_ReturnsOnlyMatchingEmployees",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "lineRange": [26, 42],
+      "summary": "Verifies that combining department and active-status filters returns only employees matching both criteria.",
+      "tags": ["test", "search", "filtering"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:SalaryRange_ReturnsOnlyEmployeesWithinRange",
+      "type": "function",
+      "name": "SalaryRange_ReturnsOnlyEmployeesWithinRange",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "lineRange": [44, 54],
+      "summary": "Verifies that filtering employees by a min/max salary range returns only employees within that range.",
+      "tags": ["test", "search", "filtering"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:JoinDateRange_ReturnsOnlyEmployeesWithinRange",
+      "type": "function",
+      "name": "JoinDateRange_ReturnsOnlyEmployeesWithinRange",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "lineRange": [56, 66],
+      "summary": "Verifies that filtering employees by a join-date range returns only employees who joined within that range.",
+      "tags": ["test", "search", "filtering"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "type": "file",
+      "name": "EmployeesEndpointTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "summary": "Integration tests covering the employee list endpoint's default paging, custom page size, and clamping of out-of-range paging parameters.",
+      "tags": ["test", "integration-test", "employee", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:EmployeesEndpointTests",
+      "type": "class",
+      "name": "EmployeesEndpointTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "lineRange": [7, 54],
+      "summary": "Test suite covering pagination behavior of the employee list endpoint.",
+      "tags": ["test", "pagination", "employee"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:GetEmployees_ReturnsSeededPagedResult",
+      "type": "function",
+      "name": "GetEmployees_ReturnsSeededPagedResult",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "lineRange": [15, 27],
+      "summary": "Verifies that the employee list endpoint returns a paged result containing the seeded employees by default.",
+      "tags": ["test", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:GetEmployees_RespectsPageSize",
+      "type": "function",
+      "name": "GetEmployees_RespectsPageSize",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "lineRange": [29, 40],
+      "summary": "Verifies that a custom page-size query parameter is respected by the employee list endpoint.",
+      "tags": ["test", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:GetEmployees_ClampsOutOfRangePaging",
+      "type": "function",
+      "name": "GetEmployees_ClampsOutOfRangePaging",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "lineRange": [42, 53],
+      "summary": "Verifies that out-of-range page/page-size query parameters are clamped to valid values rather than causing an error.",
+      "tags": ["test", "pagination", "edge-case"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Api.IntegrationTests.csproj",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj",
+      "summary": ".NET test project file for the API integration test suite, declaring the xUnit/test-SDK package references and a project reference to the API host being tested.",
+      "tags": ["configuration", "dotnet", "build-system", "test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "type": "file",
+      "name": "McpToolsTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "summary": "Integration tests exercising the MCP server tools (department listing, employee list/get/create/update/delete/export) directly against repositories backed by the test host's database scope.",
+      "tags": ["test", "integration-test", "mcp-server"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:McpToolsTests",
+      "type": "class",
+      "name": "McpToolsTests",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [14, 173],
+      "summary": "Test suite verifying that the MCP tool methods correctly dispatch to the employee and department repositories and handle not-found/validation cases.",
+      "tags": ["test", "mcp-server"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:ListDepartments_DispatchesToRepository_ReturnsSeededActiveDepartments",
+      "type": "function",
+      "name": "ListDepartments_DispatchesToRepository_ReturnsSeededActiveDepartments",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [24, 33],
+      "summary": "Verifies that the MCP ListDepartments tool dispatches to the department repository and returns the seeded active departments.",
+      "tags": ["test", "mcp-server", "department"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:ListEmployees_DispatchesToRepository_ReturnsPagedShape",
+      "type": "function",
+      "name": "ListEmployees_DispatchesToRepository_ReturnsPagedShape",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [35, 45],
+      "summary": "Verifies that the MCP ListEmployees tool dispatches to the employee repository and returns the expected paged shape.",
+      "tags": ["test", "mcp-server", "employee"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:GetEmployee_DispatchesToRepository_ReturnsDetailForSeededRow",
+      "type": "function",
+      "name": "GetEmployee_DispatchesToRepository_ReturnsDetailForSeededRow",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [47, 58],
+      "summary": "Verifies that the MCP GetEmployee tool dispatches to the repository and returns the correct detail for a seeded employee.",
+      "tags": ["test", "mcp-server", "employee"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:CreateEmployee_ValidRequest_PersistsThroughRepository",
+      "type": "function",
+      "name": "CreateEmployee_ValidRequest_PersistsThroughRepository",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [70, 88],
+      "summary": "Verifies that the MCP CreateEmployee tool persists a valid new employee through the repository.",
+      "tags": ["test", "mcp-server", "create"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:CreateEmployee_UnknownDepartment_ReturnsValidationErrorsAndDoesNotCreate",
+      "type": "function",
+      "name": "CreateEmployee_UnknownDepartment_ReturnsValidationErrorsAndDoesNotCreate",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [90, 101],
+      "summary": "Verifies that the MCP CreateEmployee tool returns validation errors and does not create a record when the department id is unknown.",
+      "tags": ["test", "mcp-server", "validation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:UpdateEmployee_ValidRequest_ChangesPersistedRow",
+      "type": "function",
+      "name": "UpdateEmployee_ValidRequest_ChangesPersistedRow",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [103, 120],
+      "summary": "Verifies that the MCP UpdateEmployee tool persists field changes to the underlying row.",
+      "tags": ["test", "mcp-server", "update"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:UpdateEmployee_UnknownId_ReturnsUpdatedFalse",
+      "type": "function",
+      "name": "UpdateEmployee_UnknownId_ReturnsUpdatedFalse",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [122, 133],
+      "summary": "Verifies that the MCP UpdateEmployee tool reports updated=false when given an unknown employee id.",
+      "tags": ["test", "mcp-server", "not-found"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:DeleteEmployee_ExistingRow_RemovesItAndReportsTrue",
+      "type": "function",
+      "name": "DeleteEmployee_ExistingRow_RemovesItAndReportsTrue",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [135, 147],
+      "summary": "Verifies that the MCP DeleteEmployee tool removes an existing employee row and reports success.",
+      "tags": ["test", "mcp-server", "delete"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:ExportEmployees_ReturnsEveryRowAcrossPages",
+      "type": "function",
+      "name": "ExportEmployees_ReturnsEveryRowAcrossPages",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "lineRange": [159, 172],
+      "summary": "Verifies that the MCP ExportEmployees tool paginates through the repository to return every employee row across pages.",
+      "tags": ["test", "mcp-server", "export"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs:ApiWebApplicationFactory", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:AuditLogTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:CreateEmployee_WritesOneCreatedAuditEntry", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:UpdateEmployee_WritesOneUpdatedAuditEntryWithDiff", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:DeleteEmployee_WritesOneDeletedAuditEntry", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:CreateAndUpdateDepartment_WritesAuditEntries", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:GetAuditLogs_FiltersByEntityNameAndDateRange", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs:GetAuditLogs_AsViewer_ReturnsForbidden", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs:AuthTestHelper", "type": "contains", "direction": "forward", "weight": 1.0 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:AuthTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Login_ValidAdminCredentials_ReturnsOkWithUserInfo", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Refresh_WithValidRefreshCookie_RotatesAccessToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:Logout_ThenReusingRefreshToken_ReturnsUnauthorized", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:GetEmployees_AsViewer_Succeeds", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:CreateEmployee_AsViewer_ReturnsForbidden", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:CreateDepartment_AsViewer_ReturnsForbidden", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:CreateEmployee_AsAdmin_Succeeds", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:UpdateEmployee_AsViewer_ReturnsForbidden", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:DeleteEmployee_AsViewer_ReturnsForbidden", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:UpdateDepartment_AsViewer_ReturnsForbidden", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs:GetEmployees_WithMalformedToken_ReturnsUnauthorized", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:DepartmentCrudTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:CreateDepartment_PersistsAsActiveByDefault", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:CreateDepartment_DuplicateName_ReturnsValidationProblem", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:UpdateDepartment_RenamesAndTogglesActive", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:GetDepartments_ExcludesDisabledByDefault_ButIncludesWhenRequested", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs:ExistingEmployee_ReferencingDisabledDepartment_StillRendersAndSaves", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:EmployeeCrudTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_PersistsAndReturnsCreated", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_MissingName_ReturnsValidationProblem", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_UnknownDepartment_ReturnsValidationProblem", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_NegativeSalary_ReturnsValidationProblem", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:CreateEmployee_InvalidJoinDate_ReturnsValidationProblem", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:UpdateEmployee_ChangesFieldsAndPersists", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:UpdateEmployee_NotFound_Returns404", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs:DeleteEmployee_RemovesRecord", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:EmployeeImportExportTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:BuildWorkbook", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Import_AllRowsValid_CommitsAllRows", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Export_Excel_ReturnsFilteredEmployeesWithStatusAsText", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Export_Csv_ReturnsFilteredEmployeesWithStatusAsText", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Export_RoundTrip_ExportedFileReimportsCleanly", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs:Viewer_Gets403_OnImportAndExport", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:EmployeeSearchTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:Department_AndStatus_Combine_ReturnsOnlyMatchingEmployees", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:SalaryRange_ReturnsOnlyEmployeesWithinRange", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs:JoinDateRange_ReturnsOnlyEmployeesWithinRange", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:EmployeesEndpointTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:GetEmployees_ReturnsSeededPagedResult", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:GetEmployees_RespectsPageSize", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs:GetEmployees_ClampsOutOfRangePaging", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "class:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:McpToolsTests", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:ListDepartments_DispatchesToRepository_ReturnsSeededActiveDepartments", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:ListEmployees_DispatchesToRepository_ReturnsPagedShape", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:GetEmployee_DispatchesToRepository_ReturnsDetailForSeededRow", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:CreateEmployee_ValidRequest_PersistsThroughRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:CreateEmployee_UnknownDepartment_ReturnsValidationErrorsAndDoesNotCreate", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:UpdateEmployee_ValidRequest_ChangesPersistedRow", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:UpdateEmployee_UnknownId_ReturnsUpdatedFalse", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:DeleteEmployee_ExistingRow_RemovesItAndReportsTrue", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "function:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs:ExportEmployees_ReturnsEveryRowAcrossPages", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+
+    { "source": "config:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj", "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs", "type": "configures", "direction": "forward", "weight": 0.6 }
+  ]
+}

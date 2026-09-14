@@ -1,0 +1,11 @@
+{
+  "projectRoot": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management",
+  "batchFiles": [
+    {"path": "excel-management-web/.dockerignore", "language": "unknown", "sizeLines": 2, "fileCategory": "infra"},
+    {"path": "excel-management-web/Dockerfile", "language": "dockerfile", "sizeLines": 14, "fileCategory": "infra"}
+  ],
+  "batchImportData": {
+    "excel-management-web/.dockerignore": [],
+    "excel-management-web/Dockerfile": []
+  }
+}

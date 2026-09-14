@@ -1,0 +1,72 @@
+{
+  "projectRoot": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management",
+  "batchFiles": [
+    {"path": "excel-management-web/src/components/ui/badge.tsx", "language": "typescript", "sizeLines": 51, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/calendar.tsx", "language": "typescript", "sizeLines": 112, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/card.tsx", "language": "typescript", "sizeLines": 13, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/checkbox.tsx", "language": "typescript", "sizeLines": 26, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/date-picker.tsx", "language": "typescript", "sizeLines": 66, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/input.tsx", "language": "typescript", "sizeLines": 19, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/label.tsx", "language": "typescript", "sizeLines": 17, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/popover.tsx", "language": "typescript", "sizeLines": 38, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/select.tsx", "language": "typescript", "sizeLines": 200, "fileCategory": "code"},
+    {"path": "excel-management-web/src/components/ui/table.tsx", "language": "typescript", "sizeLines": 113, "fileCategory": "code"},
+    {"path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx", "language": "typescript", "sizeLines": 116, "fileCategory": "code"},
+    {"path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx", "language": "typescript", "sizeLines": 151, "fileCategory": "code"},
+    {"path": "excel-management-web/src/features/employees/EmployeeForm.tsx", "language": "typescript", "sizeLines": 145, "fileCategory": "code"},
+    {"path": "excel-management-web/src/routes/login.tsx", "language": "typescript", "sizeLines": 83, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "excel-management-web/src/components/ui/badge.tsx": [],
+    "excel-management-web/src/components/ui/calendar.tsx": [],
+    "excel-management-web/src/components/ui/card.tsx": [],
+    "excel-management-web/src/components/ui/checkbox.tsx": [],
+    "excel-management-web/src/components/ui/date-picker.tsx": [
+      "excel-management-web/src/components/ui/calendar.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/popover.tsx"
+    ],
+    "excel-management-web/src/components/ui/input.tsx": [],
+    "excel-management-web/src/components/ui/label.tsx": [],
+    "excel-management-web/src/components/ui/popover.tsx": [],
+    "excel-management-web/src/components/ui/select.tsx": [],
+    "excel-management-web/src/components/ui/table.tsx": [],
+    "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": [
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/card.tsx",
+      "excel-management-web/src/components/ui/date-picker.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/components/ui/select.tsx",
+      "excel-management-web/src/components/ui/table.tsx",
+      "excel-management-web/src/features/auditLogs/api.ts"
+    ],
+    "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": [
+      "excel-management-web/src/components/ui/badge.tsx",
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/card.tsx",
+      "excel-management-web/src/components/ui/checkbox.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/components/ui/table.tsx",
+      "excel-management-web/src/features/auth/store.ts",
+      "excel-management-web/src/features/departments/api.ts"
+    ],
+    "excel-management-web/src/features/employees/EmployeeForm.tsx": [
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/checkbox.tsx",
+      "excel-management-web/src/components/ui/date-picker.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/components/ui/select.tsx",
+      "excel-management-web/src/features/departments/api.ts",
+      "excel-management-web/src/features/employees/api.ts"
+    ],
+    "excel-management-web/src/routes/login.tsx": [
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/features/auth/api.ts"
+    ]
+  }
+}

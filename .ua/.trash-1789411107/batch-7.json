@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "pipeline:.github/workflows/backend-ci.yml",
+      "type": "pipeline",
+      "name": "backend-ci.yml",
+      "filePath": ".github/workflows/backend-ci.yml",
+      "summary": "GitHub Actions workflow for the .NET API: on push/PR touching excel-management-api it restores, builds, and tests the solution with .NET 9, then on push builds and pushes a Docker image to GHCR tagged latest and by commit SHA.",
+      "tags": ["ci-cd", "deployment", "dotnet", "containerization", "github-actions"],
+      "complexity": "moderate",
+      "languageNotes": "The push-image job guards its `if:` with an explicit `success()` alongside the event check, since a job-level `if:` overrides the implicit success() gate GitHub Actions normally applies to `needs:`."
+    },
+    {
+      "id": "pipeline:.github/workflows/frontend-ci.yml",
+      "type": "pipeline",
+      "name": "frontend-ci.yml",
+      "filePath": ".github/workflows/frontend-ci.yml",
+      "summary": "GitHub Actions workflow for the React frontend: on push/PR touching excel-management-web it installs dependencies with npm, builds, and runs tests using Node 24, then on push builds and pushes a Docker image to GHCR tagged latest and by commit SHA.",
+      "tags": ["ci-cd", "deployment", "typescript", "containerization", "github-actions"],
+      "complexity": "moderate",
+      "languageNotes": "Uses `npm ci --legacy-peer-deps` to work around openapi-typescript's peer dependency on typescript ^5.x conflicting with the root devDependency typescript ~6.0.2, flagged with a ponytail comment to revisit once openapi-typescript supports typescript 6.x."
+    }
+  ],
+  "edges": []
+}

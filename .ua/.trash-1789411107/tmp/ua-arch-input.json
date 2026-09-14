@@ -1,0 +1,4258 @@
+{
+  "fileNodes": [
+    {
+      "id": "file:excel-management-web/src/components/ui/badge.tsx",
+      "type": "file",
+      "name": "badge.tsx",
+      "filePath": "excel-management-web/src/components/ui/badge.tsx",
+      "summary": "shadcn/ui-style Badge component that renders small status/label pills, styled via class-variance-authority variants.",
+      "tags": [
+        "ui-component",
+        "component",
+        "badge",
+        "design-system"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/calendar.tsx",
+      "type": "file",
+      "name": "calendar.tsx",
+      "filePath": "excel-management-web/src/components/ui/calendar.tsx",
+      "summary": "Lightweight hand-built month-grid calendar component for picking a single date, without a third-party date library.",
+      "tags": [
+        "ui-component",
+        "component",
+        "calendar",
+        "date"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/card.tsx",
+      "type": "file",
+      "name": "card.tsx",
+      "filePath": "excel-management-web/src/components/ui/card.tsx",
+      "summary": "Minimal Card container component providing consistent padding, border, and background styling for content sections.",
+      "tags": [
+        "ui-component",
+        "component",
+        "layout",
+        "design-system"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/checkbox.tsx",
+      "type": "file",
+      "name": "checkbox.tsx",
+      "filePath": "excel-management-web/src/components/ui/checkbox.tsx",
+      "summary": "Styled checkbox input wrapper used across forms for boolean fields.",
+      "tags": [
+        "ui-component",
+        "component",
+        "form",
+        "input"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "type": "file",
+      "name": "date-picker.tsx",
+      "filePath": "excel-management-web/src/components/ui/date-picker.tsx",
+      "summary": "Composite DatePicker combining a text Input, a Popover, and the custom Calendar so users can type or pick a YYYY-MM-DD date.",
+      "tags": [
+        "ui-component",
+        "component",
+        "date",
+        "form",
+        "composite-component"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "file",
+      "name": "input.tsx",
+      "filePath": "excel-management-web/src/components/ui/input.tsx",
+      "summary": "Styled text input wrapper providing consistent focus, border, and disabled styling for form fields.",
+      "tags": [
+        "ui-component",
+        "component",
+        "form",
+        "input"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "file",
+      "name": "label.tsx",
+      "filePath": "excel-management-web/src/components/ui/label.tsx",
+      "summary": "Styled form label component used to caption inputs, checkboxes, and selects consistently.",
+      "tags": [
+        "ui-component",
+        "component",
+        "form",
+        "label"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/popover.tsx",
+      "type": "file",
+      "name": "popover.tsx",
+      "filePath": "excel-management-web/src/components/ui/popover.tsx",
+      "summary": "Popover primitives (root, trigger, styled content) used to render floating panels such as the date picker's calendar.",
+      "tags": [
+        "ui-component",
+        "component",
+        "overlay",
+        "radix"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/select.tsx",
+      "type": "file",
+      "name": "select.tsx",
+      "filePath": "excel-management-web/src/components/ui/select.tsx",
+      "summary": "Full set of styled Select dropdown building blocks (trigger, content, items, groups, scroll buttons) used in forms and filters.",
+      "tags": [
+        "ui-component",
+        "component",
+        "form",
+        "dropdown",
+        "design-system"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/table.tsx",
+      "type": "file",
+      "name": "table.tsx",
+      "filePath": "excel-management-web/src/components/ui/table.tsx",
+      "summary": "Styled HTML table building blocks (Table, TableHeader, TableBody, TableRow, TableCell, etc.) providing consistent table layout across the app.",
+      "tags": [
+        "ui-component",
+        "component",
+        "table",
+        "design-system"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "type": "file",
+      "name": "AuditLogPage.tsx",
+      "filePath": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "summary": "Feature page that lists audit log entries in a table, with filters for entity type and date range.",
+      "tags": [
+        "feature-page",
+        "audit-log",
+        "component",
+        "filtering"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "type": "file",
+      "name": "DepartmentAdminPage.tsx",
+      "filePath": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "summary": "Admin page for viewing and managing departments, with inline-editable rows for admins and a form to create new departments.",
+      "tags": [
+        "feature-page",
+        "admin",
+        "department",
+        "crud",
+        "component",
+        "tested"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "file",
+      "name": "EmployeeForm.tsx",
+      "filePath": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "summary": "Reusable employee create/edit form built with react-hook-form and zod validation, including department selection and server-side validation error mapping.",
+      "tags": [
+        "feature-page",
+        "form",
+        "employee",
+        "validation",
+        "react-hook-form"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/routes/login.tsx",
+      "type": "file",
+      "name": "login.tsx",
+      "filePath": "excel-management-web/src/routes/login.tsx",
+      "summary": "Login route rendering a username/password form that authenticates via the auth API and redirects on success.",
+      "tags": [
+        "feature-page",
+        "auth",
+        "login",
+        "form",
+        "route"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "type": "file",
+      "name": "AuthFlows.test.tsx",
+      "filePath": "excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "summary": "Integration test suite covering the login and logout user flows by rendering the full app via the test harness and asserting against the mocked API server.",
+      "tags": [
+        "test",
+        "auth",
+        "integration-test"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "excel-management-web/src/features/auth/api.ts",
+      "summary": "Auth data-layer hooks (useLogin, useLogout, bootstrapAuth) that call the API client, normalize the returned user DTO, and sync results into the auth store.",
+      "tags": [
+        "api-handler",
+        "auth",
+        "hook",
+        "service",
+        "tested"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "file",
+      "name": "store.ts",
+      "filePath": "excel-management-web/src/features/auth/store.ts",
+      "summary": "Zustand store holding the current authenticated user and exposing a useIsAdmin selector hook used to gate admin-only UI.",
+      "tags": [
+        "data-model",
+        "auth",
+        "state-management",
+        "tested"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "type": "file",
+      "name": "DepartmentAdminPage.test.tsx",
+      "filePath": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "summary": "Test suite for the department admin page that seeds an admin auth state and verifies rendering/behavior against the mocked API server.",
+      "tags": [
+        "test",
+        "departments",
+        "integration-test"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "type": "file",
+      "name": "EmployeeCrudFlows.test.tsx",
+      "filePath": "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "summary": "Integration test suite exercising employee create/update/delete flows end-to-end against the mocked API server.",
+      "tags": [
+        "test",
+        "employees",
+        "integration-test"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "type": "file",
+      "name": "EmployeeListPage.test.tsx",
+      "filePath": "excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "summary": "Test suite for the employee list page covering rendering, filtering, and pagination behavior against the mocked API server.",
+      "tags": [
+        "test",
+        "employees",
+        "integration-test"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/routes/__root.tsx",
+      "type": "file",
+      "name": "__root.tsx",
+      "filePath": "excel-management-web/src/routes/__root.tsx",
+      "summary": "TanStack Router root route definition that anchors the route tree and wires in auth API/store dependencies for route-level context.",
+      "tags": [
+        "routing",
+        "entry-point",
+        "layout"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "file",
+      "name": "renderApp.tsx",
+      "filePath": "excel-management-web/src/test/renderApp.tsx",
+      "summary": "Shared test utility that boots the full router-backed app in memory with a given path and pre-seeded auth state, used by integration tests.",
+      "tags": [
+        "test",
+        "utility",
+        "test-harness"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/test/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "excel-management-web/src/test/server.ts",
+      "summary": "Mock Service Worker (MSW) server instance used to intercept and stub API calls during tests.",
+      "tags": [
+        "test",
+        "utility",
+        "mocking"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/test/setup.ts",
+      "type": "file",
+      "name": "setup.ts",
+      "filePath": "excel-management-web/src/test/setup.ts",
+      "summary": "Vitest global setup file that starts/resets/stops the mock API server around the test suite lifecycle.",
+      "tags": [
+        "test",
+        "configuration",
+        "test-harness"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/alert-dialog.tsx",
+      "type": "file",
+      "name": "alert-dialog.tsx",
+      "filePath": "excel-management-web/src/components/ui/alert-dialog.tsx",
+      "summary": "Radix-based alert dialog primitive components (trigger, content, header, footer, title, actions) used for confirmation dialogs such as employee deletion.",
+      "tags": [
+        "ui-component",
+        "dialog",
+        "component",
+        "radix"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "file",
+      "name": "button.tsx",
+      "filePath": "excel-management-web/src/components/ui/button.tsx",
+      "summary": "Reusable Button component with variant and size styling powered by class-variance-authority, used throughout the app for actions and links.",
+      "tags": [
+        "ui-component",
+        "component",
+        "button"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/auditLogs/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "excel-management-web/src/features/auditLogs/api.ts",
+      "summary": "React Query hook for fetching paginated audit log entries from the API with optional filters.",
+      "tags": [
+        "api-handler",
+        "hook",
+        "audit-log"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/departments/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "excel-management-web/src/features/departments/api.ts",
+      "summary": "React Query hooks for listing, creating, and updating departments, with mutation error handling and query cache invalidation.",
+      "tags": [
+        "api-handler",
+        "hook",
+        "department",
+        "data-model"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "type": "file",
+      "name": "DeleteEmployeeDialog.tsx",
+      "filePath": "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "summary": "Confirmation dialog component that triggers employee deletion via the useDeleteEmployee mutation hook.",
+      "tags": [
+        "component",
+        "dialog",
+        "employee"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "type": "file",
+      "name": "EmployeeListPage.tsx",
+      "filePath": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "summary": "Employee list page combining a URL-driven filter panel, admin-only Excel import/export controls, and a paginated employee table with view/edit/delete actions.",
+      "tags": [
+        "component",
+        "page",
+        "employee",
+        "table",
+        "tested"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "excel-management-web/src/features/employees/api.ts",
+      "summary": "React Query hooks and helpers for CRUD operations on employees plus Excel/CSV import and export, re-exporting ValidationError for form-level error handling.",
+      "tags": [
+        "api-handler",
+        "hook",
+        "employee",
+        "import-export"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "file",
+      "name": "client.ts",
+      "filePath": "excel-management-web/src/lib/api/client.ts",
+      "summary": "Exports a shared, typed API client instance used by all feature-level hooks to call the backend REST API.",
+      "tags": [
+        "utility",
+        "api-client",
+        "config"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/lib/api/mutationError.ts",
+      "type": "file",
+      "name": "mutationError.ts",
+      "filePath": "excel-management-web/src/lib/api/mutationError.ts",
+      "summary": "Defines a ValidationError class carrying field-level errors and a throwOnMutationError helper that converts failed mutation responses into typed errors.",
+      "tags": [
+        "utility",
+        "error-handling",
+        "validation"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "file",
+      "name": "AppShell.tsx",
+      "filePath": "excel-management-web/src/components/layout/AppShell.tsx",
+      "summary": "Application shell component rendering the top navigation bar, admin-only links, current user avatar, and logout control, wrapping page content passed as children.",
+      "tags": [
+        "component",
+        "layout",
+        "navigation",
+        "auth"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "file",
+      "name": "guards.ts",
+      "filePath": "excel-management-web/src/features/auth/guards.ts",
+      "summary": "Route guard functions used in TanStack Router's beforeLoad to redirect unauthenticated users to login and non-admin users away from admin-only routes.",
+      "tags": [
+        "auth",
+        "route-guard",
+        "middleware",
+        "utility"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/routes/audit-log.tsx",
+      "type": "file",
+      "name": "audit-log.tsx",
+      "filePath": "excel-management-web/src/routes/audit-log.tsx",
+      "summary": "TanStack Router file-route for /audit-log that gates access with requireAdmin and renders AuditLogPage inside AppShell.",
+      "tags": [
+        "route",
+        "admin",
+        "auth-gated",
+        "page"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/routes/departments.tsx",
+      "type": "file",
+      "name": "departments.tsx",
+      "filePath": "excel-management-web/src/routes/departments.tsx",
+      "summary": "TanStack Router file-route for /departments that requires authentication and renders DepartmentAdminPage inside AppShell.",
+      "tags": [
+        "route",
+        "page",
+        "auth-gated"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "type": "file",
+      "name": "$employeeId.tsx",
+      "filePath": "excel-management-web/src/routes/employees/$employeeId.tsx",
+      "summary": "Dynamic route for editing a single employee by numeric id: loads the employee via useEmployee, renders EmployeeForm, and submits updates through useUpdateEmployee before navigating back to the list.",
+      "tags": [
+        "route",
+        "page",
+        "form",
+        "employees"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/routes/employees/new.tsx",
+      "type": "file",
+      "name": "new.tsx",
+      "filePath": "excel-management-web/src/routes/employees/new.tsx",
+      "summary": "Route for creating a new employee: renders EmployeeForm in create mode and submits via useCreateEmployee, navigating to the employee list on success.",
+      "tags": [
+        "route",
+        "page",
+        "form",
+        "employees"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/routes/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "excel-management-web/src/routes/index.tsx",
+      "summary": "Root route (/) rendering the employee list page inside AppShell, requiring authentication and validating list filter search params (name, department, active status, salary range, join date range) with a zod schema.",
+      "tags": [
+        "route",
+        "entry-point",
+        "page",
+        "validation",
+        "employees"
+      ]
+    },
+    {
+      "id": "service:excel-management-api/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "excel-management-api/Dockerfile",
+      "summary": "Multi-stage Docker build for the .NET 9 ASP.NET Core API: compiles and publishes the ExcelManagement.Api project in an SDK image, then copies the published output into a slim ASP.NET runtime image and runs it via dotnet ExcelManagement.Api.dll.",
+      "tags": [
+        "containerization",
+        "infrastructure",
+        "deployment",
+        "dotnet",
+        "multi-stage-build"
+      ]
+    },
+    {
+      "id": "service:excel-management-api/Dockerfile:build",
+      "type": "service",
+      "name": "build",
+      "filePath": "excel-management-api/Dockerfile",
+      "summary": "Build stage based on the .NET 9 SDK image that restores and publishes the ExcelManagement.Api project from source.",
+      "tags": [
+        "containerization",
+        "build-stage",
+        "dotnet"
+      ]
+    },
+    {
+      "id": "service:excel-management-api/Dockerfile:runtime",
+      "type": "service",
+      "name": "runtime",
+      "filePath": "excel-management-api/Dockerfile",
+      "summary": "Runtime stage based on the .NET 9 ASP.NET image that copies the published build output and sets the container entrypoint to run the API.",
+      "tags": [
+        "containerization",
+        "runtime-stage",
+        "dotnet"
+      ]
+    },
+    {
+      "id": "service:excel-management-api/.dockerignore",
+      "type": "service",
+      "name": ".dockerignore",
+      "filePath": "excel-management-api/.dockerignore",
+      "summary": "Excludes build output directories (bin/, obj/) from the Docker build context for the API, keeping the image build fast and avoiding stale binaries from the host.",
+      "tags": [
+        "containerization",
+        "infrastructure",
+        "build-system",
+        "docker"
+      ]
+    },
+    {
+      "id": "service:excel-management-web/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "excel-management-web/Dockerfile",
+      "summary": "Multi-stage Docker build for the React/Vite frontend: builds the app with Node 24 and serves the compiled static assets via an Nginx runtime image.",
+      "tags": [
+        "containerization",
+        "infrastructure",
+        "deployment",
+        "build-system"
+      ]
+    },
+    {
+      "id": "service:excel-management-web/Dockerfile:build",
+      "type": "service",
+      "name": "build",
+      "summary": "Build stage using node:24-alpine: installs dependencies with npm ci and runs the Vite production build.",
+      "tags": [
+        "containerization",
+        "build-system"
+      ]
+    },
+    {
+      "id": "service:excel-management-web/Dockerfile:runtime",
+      "type": "service",
+      "name": "runtime",
+      "summary": "Runtime stage using nginx:alpine: serves the built static assets and a custom nginx.conf.",
+      "tags": [
+        "containerization",
+        "deployment"
+      ]
+    },
+    {
+      "id": "service:excel-management-web/.dockerignore",
+      "type": "service",
+      "name": ".dockerignore",
+      "filePath": "excel-management-web/.dockerignore",
+      "summary": "Excludes node_modules and dist from the Docker build context to keep frontend image builds fast and clean.",
+      "tags": [
+        "infrastructure",
+        "containerization",
+        "configuration"
+      ]
+    },
+    {
+      "id": "pipeline:.github/workflows/backend-ci.yml",
+      "type": "pipeline",
+      "name": "backend-ci.yml",
+      "filePath": ".github/workflows/backend-ci.yml",
+      "summary": "GitHub Actions workflow for the .NET API: on push/PR touching excel-management-api it restores, builds, and tests the solution with .NET 9, then on push builds and pushes a Docker image to GHCR tagged latest and by commit SHA.",
+      "tags": [
+        "ci-cd",
+        "deployment",
+        "dotnet",
+        "containerization",
+        "github-actions"
+      ]
+    },
+    {
+      "id": "pipeline:.github/workflows/frontend-ci.yml",
+      "type": "pipeline",
+      "name": "frontend-ci.yml",
+      "filePath": ".github/workflows/frontend-ci.yml",
+      "summary": "GitHub Actions workflow for the React frontend: on push/PR touching excel-management-web it installs dependencies with npm, builds, and runs tests using Node 24, then on push builds and pushes a Docker image to GHCR tagged latest and by commit SHA.",
+      "tags": [
+        "ci-cd",
+        "deployment",
+        "typescript",
+        "containerization",
+        "github-actions"
+      ]
+    },
+    {
+      "id": "document:.beads/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": ".beads/README.md",
+      "summary": "Introductory guide to the Beads (bd) AI-native issue tracker used by this project, covering what Beads is, quick-start commands, everyday issue workflow, and where to learn more.",
+      "tags": [
+        "documentation",
+        "issue-tracking",
+        "onboarding",
+        "entry-point"
+      ]
+    },
+    {
+      "id": "config:.beads/config.yaml",
+      "type": "config",
+      "name": "config.yaml",
+      "filePath": ".beads/config.yaml",
+      "summary": "Configures default behavior for the bd (Beads) CLI in this repository, including the Dolt git sync remote and automatic JSONL export; most options are documented but left commented out/disabled.",
+      "tags": [
+        "configuration",
+        "issue-tracking",
+        "sync",
+        "yaml"
+      ]
+    },
+    {
+      "id": "config:.beads/metadata.json",
+      "type": "config",
+      "name": "metadata.json",
+      "filePath": ".beads/metadata.json",
+      "summary": "Small metadata file identifying the Beads embedded Dolt database backend, database name, and project id for this repository's issue tracker.",
+      "tags": [
+        "configuration",
+        "issue-tracking",
+        "database",
+        "metadata"
+      ]
+    },
+    {
+      "id": "document:docs/architecture.html",
+      "type": "document",
+      "name": "architecture.html",
+      "filePath": "docs/architecture.html",
+      "summary": "Self-contained, interactive architecture diagram (generated by the archify tool) titled \"Excel Management System Architecture: Frontend & Backend Diagram\", visualizing how the React frontend and .NET API backend relate. Bundles inline fonts, SVG diagram markup, and a theme/pan/zoom viewer in a single large static HTML file.",
+      "tags": [
+        "documentation",
+        "architecture-diagram",
+        "generated",
+        "overview"
+      ]
+    },
+    {
+      "id": "document:docs/excel-management-api-architecture.html",
+      "type": "document",
+      "name": "excel-management-api-architecture.html",
+      "filePath": "docs/excel-management-api-architecture.html",
+      "summary": "Self-contained, interactive Clean Architecture diagram (generated by archify) for the excel-management-api .NET backend, showing its layered structure (API/Application/Domain/Infrastructure) as an explorable SVG diagram with dark/light theming.",
+      "tags": [
+        "documentation",
+        "architecture-diagram",
+        "clean-architecture",
+        "generated"
+      ]
+    },
+    {
+      "id": "document:docs/excel-management-api-architecture.visual-check.html",
+      "type": "document",
+      "name": "excel-management-api-architecture.visual-check.html",
+      "filePath": "docs/excel-management-api-architecture.visual-check.html",
+      "summary": "Small evidence page presenting side-by-side light/dark, multi-viewport screenshots captured by archify's automated visual-check pass over excel-management-api-architecture.html, confirming the diagram renders correctly (containment pass).",
+      "tags": [
+        "documentation",
+        "visual-testing",
+        "generated",
+        "screenshot-evidence"
+      ]
+    },
+    {
+      "id": "config:docs/excel-management-api-architecture.visual-check.json",
+      "type": "config",
+      "name": "excel-management-api-architecture.visual-check.json",
+      "filePath": "docs/excel-management-api-architecture.visual-check.json",
+      "summary": "Structured result/report data from archify's automated visual-check run against excel-management-api-architecture.html: pass/fail status, containment and readability diagnostics, viewer chrome checks, and capture metadata across multiple viewports and themes.",
+      "tags": [
+        "configuration",
+        "visual-testing",
+        "generated",
+        "diagnostics"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Api.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj",
+      "summary": "MSBuild project file for the ASP.NET Core Web API host, targeting .NET 9 with nullable/implicit usings enabled, referencing JWT bearer auth, EF Core Design, and Swashbuckle, and project-referencing the Application, Domain, and Infrastructure layers.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "dotnet",
+        "dependency-management",
+        "api"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "type": "config",
+      "name": "appsettings.json",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "summary": "Base ASP.NET Core configuration for the API: logging levels, allowed hosts, a Sqlite database provider with connection string, and JWT signing/token-lifetime settings.",
+      "tags": [
+        "configuration",
+        "database",
+        "security",
+        "logging",
+        "authentication"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "type": "config",
+      "name": "appsettings.Development.json",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "summary": "Development-environment override for the API's logging configuration, layered on top of the base appsettings.json when running locally.",
+      "tags": [
+        "configuration",
+        "development",
+        "logging"
+      ]
+    },
+    {
+      "id": "config:excel-management-web/.oxlintrc.json",
+      "type": "config",
+      "name": ".oxlintrc.json",
+      "filePath": "excel-management-web/.oxlintrc.json",
+      "summary": "Oxlint configuration for the frontend enabling the react, typescript, and oxc plugins with rules-of-hooks enforced as an error.",
+      "tags": [
+        "configuration",
+        "linting",
+        "oxlint",
+        "javascript"
+      ]
+    },
+    {
+      "id": "document:excel-management-web/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "excel-management-web/README.md",
+      "summary": "Default Vite React+TypeScript template README covering HMR plugins, the React Compiler opt-in, and how to expand the Oxlint configuration.",
+      "tags": [
+        "documentation",
+        "entry-point",
+        "vite",
+        "react"
+      ]
+    },
+    {
+      "id": "config:excel-management-web/components.json",
+      "type": "config",
+      "name": "components.json",
+      "filePath": "excel-management-web/components.json",
+      "summary": "shadcn/ui configuration defining the base-nova style, Tailwind CSS entry point, lucide icon library, and @/ path aliases for components, lib, hooks, and ui directories.",
+      "tags": [
+        "configuration",
+        "ui-components",
+        "shadcn",
+        "design-system"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "excel-management-web/index.html",
+      "summary": "Vite application HTML shell that mounts the React app into #root and loads the src/main.tsx entry module.",
+      "tags": [
+        "entry-point",
+        "html",
+        "vite",
+        "bootstrap"
+      ]
+    },
+    {
+      "id": "config:excel-management-web/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "excel-management-web/package.json",
+      "summary": "npm manifest for the excel-management-web frontend, defining dev/build/test/lint scripts and dependencies including React 19, TanStack Query/Router, react-hook-form, zod, zustand, and Tailwind/shadcn UI tooling.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "dependencies",
+        "npm"
+      ]
+    },
+    {
+      "id": "config:excel-management-web/tsconfig.app.json",
+      "type": "config",
+      "name": "tsconfig.app.json",
+      "filePath": "excel-management-web/tsconfig.app.json",
+      "summary": "TypeScript project config for the application source under src/, using bundler module resolution, react-jsx, and the @/* path alias.",
+      "tags": [
+        "configuration",
+        "typescript",
+        "build-system"
+      ]
+    },
+    {
+      "id": "config:excel-management-web/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "excel-management-web/tsconfig.json",
+      "summary": "Root TypeScript solution file that references tsconfig.app.json and tsconfig.node.json and declares the shared @/* path alias.",
+      "tags": [
+        "configuration",
+        "typescript",
+        "project-references"
+      ]
+    },
+    {
+      "id": "config:excel-management-web/tsconfig.node.json",
+      "type": "config",
+      "name": "tsconfig.node.json",
+      "filePath": "excel-management-web/tsconfig.node.json",
+      "summary": "TypeScript project config for Node-side tooling, scoped to vite.config.ts with nodenext module resolution.",
+      "tags": [
+        "configuration",
+        "typescript",
+        "build-system",
+        "tooling"
+      ]
+    },
+    {
+      "id": "document:.agents/skills/beads/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/beads/SKILL.md",
+      "summary": "Skill guide instructing AI agents on the Beads issue-tracking workflow: how to take the first step, the preferred route, core CLI commands, what belongs in Beads, and the rules for using it.",
+      "tags": [
+        "documentation",
+        "beads",
+        "workflow",
+        "task-tracking"
+      ]
+    },
+    {
+      "id": "config:.agents/skills/beads/agents/openai.yaml",
+      "type": "config",
+      "name": "openai.yaml",
+      "filePath": ".agents/skills/beads/agents/openai.yaml",
+      "summary": "Agent-interface declaration for the Beads skill under an OpenAI-compatible agent runtime, defining its display name, short description, and default prompt text.",
+      "tags": [
+        "configuration",
+        "beads",
+        "agent-interface"
+      ]
+    },
+    {
+      "id": "file:.beads/hooks/post-checkout",
+      "type": "file",
+      "name": "post-checkout",
+      "filePath": ".beads/hooks/post-checkout",
+      "summary": "Git post-checkout hook shim that delegates to `bd hooks run post-checkout`, wrapped with a cross-platform timeout guard (timeout/gtimeout/perl fallback) and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": [
+        "git-hook",
+        "automation",
+        "beads",
+        "shell-script"
+      ]
+    },
+    {
+      "id": "file:.beads/hooks/post-merge",
+      "type": "file",
+      "name": "post-merge",
+      "filePath": ".beads/hooks/post-merge",
+      "summary": "Git post-merge hook shim that delegates to `bd hooks run post-merge`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": [
+        "git-hook",
+        "automation",
+        "beads",
+        "shell-script"
+      ]
+    },
+    {
+      "id": "file:.beads/hooks/pre-commit",
+      "type": "file",
+      "name": "pre-commit",
+      "filePath": ".beads/hooks/pre-commit",
+      "summary": "Git pre-commit hook shim that delegates to `bd hooks run pre-commit`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": [
+        "git-hook",
+        "automation",
+        "beads",
+        "shell-script"
+      ]
+    },
+    {
+      "id": "file:.beads/hooks/pre-push",
+      "type": "file",
+      "name": "pre-push",
+      "filePath": ".beads/hooks/pre-push",
+      "summary": "Git pre-push hook shim that delegates to `bd hooks run pre-push`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": [
+        "git-hook",
+        "automation",
+        "beads",
+        "shell-script"
+      ]
+    },
+    {
+      "id": "file:.beads/hooks/prepare-commit-msg",
+      "type": "file",
+      "name": "prepare-commit-msg",
+      "filePath": ".beads/hooks/prepare-commit-msg",
+      "summary": "Git prepare-commit-msg hook shim that delegates to `bd hooks run prepare-commit-msg`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": [
+        "git-hook",
+        "automation",
+        "beads",
+        "shell-script"
+      ]
+    },
+    {
+      "id": "file:.beads/interactions.jsonl",
+      "type": "file",
+      "name": "interactions.jsonl",
+      "filePath": ".beads/interactions.jsonl",
+      "summary": "JSONL audit log recorded by the Beads issue tracker, capturing field-change events (status transitions with narrative close reasons) for the project's tickets.",
+      "tags": [
+        "data-log",
+        "beads",
+        "issue-tracking",
+        "audit"
+      ]
+    },
+    {
+      "id": "file:.beads/issues.jsonl",
+      "type": "file",
+      "name": "issues.jsonl",
+      "filePath": ".beads/issues.jsonl",
+      "summary": "JSONL export of the Beads issue database for this project: the parent epic plus its 15 child tickets (Walking Skeleton, Employee CRUD, Department Master Data, Auth/RBAC, Search & Filter, Audit Log, Import/Export, MCP Server, Multi-DB Verification, CI Pipelines, Infra Compose, and follow-up fixes) with full descriptions, acceptance criteria, and close reasons.",
+      "tags": [
+        "data-log",
+        "beads",
+        "issue-tracking",
+        "project-management"
+      ]
+    },
+    {
+      "id": "config:.claude/settings.json",
+      "type": "config",
+      "name": "settings.json",
+      "filePath": ".claude/settings.json",
+      "summary": "Claude Code settings configuring a SessionStart hook that runs `bd prime --hook-json` to load Beads task-tracking context at the start of each session.",
+      "tags": [
+        "configuration",
+        "claude-code",
+        "beads",
+        "hooks"
+      ]
+    },
+    {
+      "id": "config:.codex/config.toml",
+      "type": "config",
+      "name": "config.toml",
+      "filePath": ".codex/config.toml",
+      "summary": "Codex CLI feature-flag configuration enabling the hooks feature so Codex sessions can run the project's Beads hook commands.",
+      "tags": [
+        "configuration",
+        "codex",
+        "feature-flag"
+      ]
+    },
+    {
+      "id": "config:.codex/hooks.json",
+      "type": "config",
+      "name": "hooks.json",
+      "filePath": ".codex/hooks.json",
+      "summary": "Codex CLI hook configuration wiring SessionStart, PreCompact, PostCompact, and UserPromptSubmit events to `bd codex-hook` commands that load and refresh Beads task context during a Codex session.",
+      "tags": [
+        "configuration",
+        "codex",
+        "beads",
+        "hooks"
+      ]
+    },
+    {
+      "id": "file:.ua/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".ua/.understandignore",
+      "summary": "Understand-Anything ignore-pattern file (gitignore-style syntax) listing directories/files to exclude from codebase analysis; most entries are commented-out opt-in suggestions covering Dolt DB files, SQLite artifacts, a generated route-tree file, and common test-file conventions across languages.",
+      "tags": [
+        "configuration",
+        "ignore-file",
+        "tooling",
+        "understand-anything"
+      ]
+    },
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Root-level instructions for AI coding agents covering non-interactive shell command conventions, the Beads issue-tracker workflow (bd/bv CLI usage, triage, scoping and filtering), agent context profiles, and the session-completion/git-policy protocol for this repo.",
+      "tags": [
+        "documentation",
+        "agent-instructions",
+        "beads",
+        "workflow"
+      ]
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "Project-level instructions for AI coding agents mirroring the Beads issue-tracking workflow, agent context profiles, and session-completion/git protocol, plus placeholder sections for build/test commands and architecture notes.",
+      "tags": [
+        "documentation",
+        "agent-instructions",
+        "beads",
+        "workflow"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+      "type": "file",
+      "name": ".dtbcache.v2",
+      "filePath": "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+      "summary": "Auto-generated Visual Studio design-time build cache for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": [
+        "generated",
+        "ide-cache",
+        "binary",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "type": "file",
+      "name": "64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "filePath": "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "summary": "Auto-generated Visual Studio file-content search index for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": [
+        "generated",
+        "ide-cache",
+        "binary",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+      "type": "file",
+      "name": ".futdcache.v2",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+      "summary": "Auto-generated Visual Studio 'find up-to-date' cache for the ExcelManagement solution; empty/binary IDE state with no authored content.",
+      "tags": [
+        "generated",
+        "ide-cache",
+        "binary",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/v17/.suo",
+      "type": "file",
+      "name": ".suo",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/.suo",
+      "summary": "Auto-generated Visual Studio solution user-options file storing per-developer IDE state (window layout, breakpoints, open files) for the ExcelManagement solution; binary, not meant to be shared.",
+      "tags": [
+        "generated",
+        "ide-cache",
+        "binary",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json",
+      "type": "config",
+      "name": "DocumentLayout.backup.json",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json",
+      "summary": "Backup copy of Visual Studio's persisted editor document-layout state (open documents, document groups, workspace root path) for the ExcelManagement solution; auto-generated by the IDE.",
+      "tags": [
+        "ide-config",
+        "generated",
+        "visual-studio",
+        "editor-state"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json",
+      "type": "config",
+      "name": "DocumentLayout.json",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json",
+      "summary": "Visual Studio's persisted editor document-layout state (open documents, document groups, workspace root path) for the ExcelManagement solution; auto-generated by the IDE.",
+      "tags": [
+        "ide-config",
+        "generated",
+        "visual-studio",
+        "editor-state"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+      "type": "file",
+      "name": "excelmanagement.metadata.v9.bin",
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+      "summary": "Auto-generated Visual Studio project-evaluation metadata cache for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": [
+        "generated",
+        "ide-cache",
+        "binary",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+      "type": "file",
+      "name": "excelmanagement.projects.v9.bin",
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+      "summary": "Auto-generated Visual Studio project-evaluation cache holding evaluated MSBuild project data for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": [
+        "generated",
+        "ide-cache",
+        "binary",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+      "type": "file",
+      "name": "excelmanagement.strings.v9.bin",
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+      "summary": "Auto-generated Visual Studio project-evaluation string-interning cache for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": [
+        "generated",
+        "ide-cache",
+        "binary",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/ExcelManagement.sln",
+      "type": "config",
+      "name": "ExcelManagement.sln",
+      "filePath": "excel-management-api/ExcelManagement.sln",
+      "summary": "Visual Studio solution file wiring together the six ExcelManagement projects (Domain, Application, Infrastructure, Api, McpServer, and the Api integration test project) under a Clean Architecture layering, with Debug/Release build configurations across platforms.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "solution-file",
+        "dotnet"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "type": "file",
+      "name": "JwtTokenService.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "summary": "Issues and validates JWT access and refresh tokens for authenticated users and computes a storable hash of refresh tokens for the persistence layer.",
+      "tags": [
+        "authentication",
+        "jwt",
+        "security",
+        "service",
+        "token-management"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+      "type": "file",
+      "name": "ExcelManagement.Api.csproj.user",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+      "summary": "Visual Studio per-developer project settings file that records the active debug profile (https) for local runs; machine-specific and not meant to be shared.",
+      "tags": [
+        "ide-settings",
+        "user-specific",
+        "build-system",
+        "visual-studio"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http",
+      "type": "file",
+      "name": "ExcelManagement.Api.http",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http",
+      "summary": "Leftover default .http scratch file with a single sample GET request to a nonexistent /weatherforecast endpoint from the project template; not aligned with the actual routes defined in Program.cs.",
+      "tags": [
+        "api-testing",
+        "rest-client",
+        "http",
+        "scratch-file"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "summary": "ASP.NET Core minimal-API entry point that wires up DI, CORS, cookie-based JWT authentication/authorization, and maps every HTTP endpoint for auth, employees, departments, and audit logs.",
+      "tags": [
+        "entry-point",
+        "api-handler",
+        "middleware",
+        "minimal-api",
+        "dependency-injection"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+      "type": "config",
+      "name": "launchSettings.json",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+      "summary": "ASP.NET Core launch profile configuration defining local HTTP/HTTPS development server URLs and the Development environment variable.",
+      "tags": [
+        "configuration",
+        "aspnet-core",
+        "launch-profile",
+        "development"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "type": "file",
+      "name": "AuditLogDto.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "summary": "Defines the response DTO shape for a single audit log entry returned by the audit log listing endpoint.",
+      "tags": [
+        "data-model",
+        "dto",
+        "audit-logging"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "type": "file",
+      "name": "AuditLogQuery.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "summary": "Defines the filter/paging parameters accepted by the audit log listing endpoint.",
+      "tags": [
+        "data-model",
+        "query-object",
+        "audit-logging"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "type": "file",
+      "name": "IAuditLogRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "summary": "Repository abstraction for retrieving audit log entries, implemented by the infrastructure/persistence layer.",
+      "tags": [
+        "repository",
+        "interface",
+        "audit-logging",
+        "data-access"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "type": "file",
+      "name": "AuthenticatedUserDto.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "summary": "DTO representing the authenticated user's public identity returned to the client after login or token refresh.",
+      "tags": [
+        "data-model",
+        "dto",
+        "authentication"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "type": "file",
+      "name": "IRefreshTokenRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "summary": "Repository abstraction for persisting and revoking refresh tokens used in the JWT refresh-token rotation flow.",
+      "tags": [
+        "repository",
+        "interface",
+        "authentication",
+        "token-management"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "type": "file",
+      "name": "IUserRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "summary": "Repository abstraction for looking up application users by username, used during login.",
+      "tags": [
+        "repository",
+        "interface",
+        "authentication",
+        "data-access"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "type": "file",
+      "name": "LoginRequest.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "summary": "DTO carrying the username/password submitted to the login endpoint.",
+      "tags": [
+        "data-model",
+        "dto",
+        "authentication"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "type": "file",
+      "name": "PasswordHasher.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "summary": "Implements PBKDF2-based password hashing and constant-time verification for user credentials.",
+      "tags": [
+        "security",
+        "password-hashing",
+        "cryptography",
+        "utility"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs",
+      "type": "file",
+      "name": "CreateDepartmentRequest.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs",
+      "summary": "DTO for the request body when creating a new department.",
+      "tags": [
+        "data-model",
+        "dto",
+        "departments"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs",
+      "type": "file",
+      "name": "DepartmentDto.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs",
+      "summary": "Response DTO representing a department as returned by the department endpoints.",
+      "tags": [
+        "data-model",
+        "dto",
+        "departments"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs",
+      "type": "file",
+      "name": "DepartmentValidator.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs",
+      "summary": "Validates department name input (required, uniqueness conflict) and produces field-level validation errors used by the create/update department endpoints.",
+      "tags": [
+        "validation",
+        "departments",
+        "business-rules"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs",
+      "type": "file",
+      "name": "IDepartmentRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs",
+      "summary": "Repository abstraction for department CRUD operations and name-existence checks used by validation and the department endpoints.",
+      "tags": [
+        "repository",
+        "interface",
+        "departments",
+        "data-access"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs",
+      "type": "file",
+      "name": "UpdateDepartmentRequest.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs",
+      "summary": "DTO for the request body when updating an existing department's name and active state.",
+      "tags": [
+        "data-model",
+        "dto",
+        "departments"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs",
+      "type": "file",
+      "name": "EmployeeCsvWriter.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs",
+      "summary": "Serializes a list of employee records into CSV text (header row plus quoted rows) for the CSV employee-export option.",
+      "tags": [
+        "serialization",
+        "csv",
+        "export",
+        "utility"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs",
+      "type": "file",
+      "name": "EmployeeDetailDto.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs",
+      "summary": "Detailed response DTO for a single employee, returned by the get-by-id and create/update employee endpoints.",
+      "tags": [
+        "data-model",
+        "dto",
+        "employees"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs",
+      "type": "file",
+      "name": "EmployeeImport.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs",
+      "summary": "Defines the row, error, and result types used by the employee bulk-import pipeline (parsed row, per-row validation error, and import outcome summary).",
+      "tags": [
+        "data-model",
+        "import",
+        "employees"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs",
+      "type": "file",
+      "name": "EmployeeImportRowValidator.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs",
+      "summary": "Validates a single parsed employee import row (department lookup, salary/date parsing, status, and delegated field validation) and converts failures into structured row errors.",
+      "tags": [
+        "validation",
+        "import",
+        "employees",
+        "business-rules"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs",
+      "type": "file",
+      "name": "EmployeeListItemDto.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs",
+      "summary": "Lightweight DTO representing one employee row in the paginated employee list endpoint.",
+      "tags": [
+        "data-model",
+        "dto",
+        "employees"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs",
+      "type": "file",
+      "name": "EmployeeListQuery.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs",
+      "summary": "Defines the filter/paging/sorting parameters accepted by the employee list and export endpoints.",
+      "tags": [
+        "data-model",
+        "query-object",
+        "employees"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs",
+      "type": "file",
+      "name": "EmployeeValidator.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs",
+      "summary": "Validates an employee create/update request (required fields, department existence, join-date format) and produces field-level validation errors.",
+      "tags": [
+        "validation",
+        "employees",
+        "business-rules"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "type": "file",
+      "name": "IEmployeeExcelFile.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "summary": "Application-layer abstraction for reading and writing Employee Excel workbooks, decoupling repositories from a concrete Excel library.",
+      "tags": [
+        "interface",
+        "type-definition",
+        "excel-import-export",
+        "application-layer"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "type": "file",
+      "name": "IEmployeeRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "summary": "Application-layer repository contract defining CRUD, paging, and bulk-import operations for Employee data.",
+      "tags": [
+        "interface",
+        "type-definition",
+        "data-model",
+        "application-layer"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "type": "file",
+      "name": "PagedResult.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "summary": "Generic paginated-result wrapper carrying items, total count, and paging metadata for list endpoints.",
+      "tags": [
+        "data-model",
+        "pagination",
+        "application-layer"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "type": "file",
+      "name": "UpsertEmployeeRequest.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "summary": "Application-layer request DTO carrying employee field values used for create and update operations.",
+      "tags": [
+        "data-model",
+        "dto",
+        "application-layer"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Application.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "summary": "Project file for the Application layer, declaring its target framework and compilation scope for use-case contracts and DTOs.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "dotnet"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "type": "file",
+      "name": "AuditAction.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "summary": "Enum defining the possible audit actions (e.g. create, update, delete) recorded against entities.",
+      "tags": [
+        "enum",
+        "data-model",
+        "audit-logging"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "file",
+      "name": "AuditLog.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "summary": "Domain entity representing a single audit trail record, capturing which entity changed, the action taken, who made the change, and a JSON diff.",
+      "tags": [
+        "data-model",
+        "audit-logging",
+        "domain-entity"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "file",
+      "name": "Department.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "summary": "Domain entity representing an organizational department with a name and active status.",
+      "tags": [
+        "data-model",
+        "domain-entity"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "file",
+      "name": "Employee.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "summary": "Core domain entity representing an employee record, including department assignment, salary, join date, and active/update tracking.",
+      "tags": [
+        "data-model",
+        "domain-entity",
+        "employee-management"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Domain.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "summary": "Project file for the Domain layer, declaring the target framework used to compile the entity and enum types with no external dependencies.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "dotnet"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "type": "file",
+      "name": "RefreshToken.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "summary": "Domain entity storing a hashed refresh token for a user session, with issued/expired/revoked timestamps for JWT auth rotation.",
+      "tags": [
+        "data-model",
+        "domain-entity",
+        "authentication"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "type": "file",
+      "name": "User.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "summary": "Domain entity representing an application user account with a hashed password and assigned role.",
+      "tags": [
+        "data-model",
+        "domain-entity",
+        "authentication"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "type": "file",
+      "name": "UserRole.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "summary": "Enum defining the set of roles (e.g. Admin, User) a User account can hold for authorization checks.",
+      "tags": [
+        "enum",
+        "data-model",
+        "authentication"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "type": "file",
+      "name": "DependencyInjection.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "summary": "Composition-root extension method wiring the EF Core DbContext (Postgres/SQLite) and all repository/Excel-file implementations into the DI container.",
+      "tags": [
+        "entry-point",
+        "dependency-injection",
+        "infrastructure-layer",
+        "service"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Infrastructure.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "summary": "Project file for the Infrastructure layer, referencing EF Core, Npgsql, Sqlite, and ClosedXML packages used by persistence and Excel I/O code.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "dotnet"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "type": "file",
+      "name": "AppDbContext.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "summary": "EF Core DbContext exposing Employees, Departments, Users, AuditLogs, and RefreshTokens sets, with entity configuration and automatic audit-log capture on every SaveChanges call.",
+      "tags": [
+        "database",
+        "orm",
+        "audit-logging",
+        "infrastructure-layer"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "type": "file",
+      "name": "AuditLogRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "summary": "EF Core-backed repository that queries and filters audit log entries for the audit log listing feature.",
+      "tags": [
+        "repository",
+        "database",
+        "audit-logging"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "type": "file",
+      "name": "DepartmentRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "summary": "EF Core-backed repository providing listing, existence checks, name-uniqueness checks, creation, and update operations for departments.",
+      "tags": [
+        "repository",
+        "database",
+        "data-model"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "type": "file",
+      "name": "EmployeeExcelFile.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "summary": "ClosedXML-based implementation of IEmployeeExcelFile that writes employee lists to a workbook and parses uploaded workbooks back into import rows.",
+      "tags": [
+        "excel-import-export",
+        "infrastructure-layer"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "type": "file",
+      "name": "EmployeeRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "summary": "EF Core-backed repository implementing paged/filtered listing, CRUD, and bulk import for employees, including query filter construction and date parsing.",
+      "tags": [
+        "repository",
+        "database",
+        "employee-management"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "type": "file",
+      "name": "20260913164758_InitialCreate.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "summary": "EF Core migration designer snapshot describing the target model (Departments and Employees tables) for the InitialCreate migration.",
+      "tags": [
+        "database",
+        "migration",
+        "generated"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "type": "file",
+      "name": "20260913164758_InitialCreate.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "summary": "EF Core migration creating the initial Departments and Employees tables with their columns, keys, and foreign key.",
+      "tags": [
+        "database",
+        "migration"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "type": "file",
+      "name": "20260913183412_AddUsers.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "summary": "EF Core migration designer snapshot capturing the model shape (including the new Users table) at the AddUsers migration point.",
+      "tags": [
+        "database",
+        "migration",
+        "generated"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "type": "file",
+      "name": "20260913183412_AddUsers.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "summary": "EF Core migration adding the Users table with a unique index on username, supporting the new authentication feature.",
+      "tags": [
+        "database",
+        "migration",
+        "authentication"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "type": "file",
+      "name": "20260913191337_PostgresInitialCreate.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "summary": "EF Core migration designer snapshot for the Postgres-targeted initial schema, describing the full model as of this migration.",
+      "tags": [
+        "database",
+        "migration",
+        "generated"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs",
+      "type": "file",
+      "name": "20260913191337_PostgresInitialCreate.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs",
+      "summary": "EF Core migration that converts primary/foreign key ID columns and related types from SQLite (INTEGER) to PostgreSQL-native types (integer identity) across the Users, Employees, and Departments tables, as part of migrating the database engine to PostgreSQL.",
+      "tags": [
+        "migration",
+        "database",
+        "ef-core",
+        "postgresql"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs",
+      "type": "file",
+      "name": "20260914031918_AddAuditLogs.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs",
+      "summary": "EF Core migration designer snapshot capturing the database model shape (Department, Employee, User entities) at the point the AddAuditLogs migration was authored, used by EF tooling for diffing.",
+      "tags": [
+        "migration",
+        "ef-core",
+        "designer",
+        "snapshot"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs",
+      "type": "file",
+      "name": "20260914031918_AddAuditLogs.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs",
+      "summary": "EF Core migration that creates the AuditLogs table (entity name/id, action, changes diff, changed-by, timestamp) with supporting indexes.",
+      "tags": [
+        "migration",
+        "database",
+        "audit-log"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs",
+      "type": "file",
+      "name": "20260914041347_AddRefreshTokens.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs",
+      "summary": "EF Core migration designer snapshot capturing the model shape (adds the RefreshTokens entity) at the point the AddRefreshTokens migration was authored.",
+      "tags": [
+        "migration",
+        "ef-core",
+        "designer",
+        "snapshot"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs",
+      "type": "file",
+      "name": "20260914041347_AddRefreshTokens.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs",
+      "summary": "EF Core migration that creates the RefreshTokens table with a foreign key to Users and a unique index on the token hash, supporting refresh-token based authentication.",
+      "tags": [
+        "migration",
+        "database",
+        "auth"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "type": "file",
+      "name": "AppDbContextModelSnapshot.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "summary": "Current EF Core model snapshot for AppDbContext, used by EF tooling to compute the next migration's diff against the AuditLog, Department, Employee, RefreshToken, and User entities.",
+      "tags": [
+        "ef-core",
+        "snapshot",
+        "database"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs",
+      "type": "file",
+      "name": "RefreshTokenRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs",
+      "summary": "EF Core-backed repository that creates and revokes refresh tokens used for rotating JWT sessions.",
+      "tags": [
+        "repository",
+        "auth",
+        "refresh-tokens",
+        "ef-core"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs",
+      "type": "file",
+      "name": "SeedData.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs",
+      "summary": "Seeds the database with default admin/viewer users, sample departments, and sample employees on application startup when the database is empty.",
+      "tags": [
+        "seed-data",
+        "database",
+        "bootstrap"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs",
+      "type": "file",
+      "name": "UserRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs",
+      "summary": "EF Core-backed repository providing username lookup for authentication.",
+      "tags": [
+        "repository",
+        "auth",
+        "ef-core"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs",
+      "type": "file",
+      "name": "DepartmentTools.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs",
+      "summary": "MCP server tool exposing department listing to MCP clients (e.g. AI assistants) via the shared department repository.",
+      "tags": [
+        "mcp-server",
+        "api-handler",
+        "department"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs",
+      "type": "file",
+      "name": "EmployeeTools.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs",
+      "summary": "MCP server tools exposing employee CRUD and export operations (list, get, create, update, delete, export) to MCP clients, reusing the same validation as the REST API.",
+      "tags": [
+        "mcp-server",
+        "api-handler",
+        "employee"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj",
+      "type": "config",
+      "name": "ExcelManagement.McpServer.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj",
+      "summary": ".NET project file for the MCP server host, declaring its target framework, package references (MCP SDK, EF Core/Npgsql), and project references to the Infrastructure/Domain/Application layers.",
+      "tags": [
+        "configuration",
+        "dotnet",
+        "build-system",
+        "mcp-server"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+      "summary": "Entry point for the standalone MCP server host: wires up infrastructure services, registers MCP tools over stdio transport, applies pending migrations and seeds the database, then runs the host.",
+      "tags": [
+        "entry-point",
+        "mcp-server",
+        "bootstrap"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.McpServer/appsettings.json",
+      "type": "config",
+      "name": "appsettings.json",
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/appsettings.json",
+      "summary": "Runtime configuration for the MCP server host, specifying logging levels and the PostgreSQL connection string used by the MCP server's EF Core DbContext.",
+      "tags": [
+        "configuration",
+        "mcp-server",
+        "database"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "file",
+      "name": "ApiWebApplicationFactory.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "summary": "xUnit WebApplicationFactory that opens a fresh in-memory SQLite database per test class and swaps it into the API's DI container, providing the shared test host used by all integration tests.",
+      "tags": [
+        "test",
+        "test-infrastructure",
+        "sqlite"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "type": "file",
+      "name": "AuditLogTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "summary": "Integration tests verifying that create/update/delete operations on employees and departments produce correct audit log entries, and that the audit log query endpoint enforces date-range filtering and admin-only authorization.",
+      "tags": [
+        "test",
+        "integration-test",
+        "audit-log"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "file",
+      "name": "AuthTestHelper.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "summary": "Shared test helper that logs a test HttpClient in as the seeded admin or viewer account, used across most integration test classes.",
+      "tags": [
+        "test",
+        "test-infrastructure",
+        "auth"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "type": "file",
+      "name": "AuthTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "summary": "Integration tests covering login, refresh-token rotation and reuse detection, logout, and role-based authorization (admin vs viewer) across the employee and department endpoints.",
+      "tags": [
+        "test",
+        "integration-test",
+        "auth",
+        "authorization"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "type": "file",
+      "name": "DepartmentCrudTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "summary": "Integration tests covering department creation, duplicate-name and unique-constraint validation, updates including active-toggle, and default filtering of disabled departments.",
+      "tags": [
+        "test",
+        "integration-test",
+        "department"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "type": "file",
+      "name": "EmployeeCrudTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "summary": "Integration tests covering employee creation, field validation (name, department, salary, join date), updates, and deletion.",
+      "tags": [
+        "test",
+        "integration-test",
+        "employee"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "type": "file",
+      "name": "EmployeeImportExportTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "summary": "Integration tests covering Excel-based employee import (valid rows, native Excel date cells, mixed valid/invalid rows) and Excel/CSV export, including a round-trip export-then-reimport check and viewer-role authorization.",
+      "tags": [
+        "test",
+        "integration-test",
+        "excel-import",
+        "excel-export"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "type": "file",
+      "name": "EmployeeSearchTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "summary": "Integration tests covering employee search/filtering by name, department and status combined, salary range, and join-date range.",
+      "tags": [
+        "test",
+        "integration-test",
+        "search",
+        "employee"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "type": "file",
+      "name": "EmployeesEndpointTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "summary": "Integration tests covering the employee list endpoint's default paging, custom page size, and clamping of out-of-range paging parameters.",
+      "tags": [
+        "test",
+        "integration-test",
+        "employee",
+        "pagination"
+      ]
+    },
+    {
+      "id": "config:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Api.IntegrationTests.csproj",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj",
+      "summary": ".NET test project file for the API integration test suite, declaring the xUnit/test-SDK package references and a project reference to the API host being tested.",
+      "tags": [
+        "configuration",
+        "dotnet",
+        "build-system",
+        "test"
+      ]
+    },
+    {
+      "id": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "type": "file",
+      "name": "McpToolsTests.cs",
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "summary": "Integration tests exercising the MCP server tools (department listing, employee list/get/create/update/delete/export) directly against repositories backed by the test host's database scope.",
+      "tags": [
+        "test",
+        "integration-test",
+        "mcp-server"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/.npmrc",
+      "type": "file",
+      "name": ".npmrc",
+      "filePath": "excel-management-web/.npmrc",
+      "summary": "npm configuration enabling legacy-peer-deps resolution so the frontend's dependency tree installs without peer-dependency conflicts.",
+      "tags": [
+        "configuration",
+        "npm",
+        "dependency-management"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/nginx.conf",
+      "type": "file",
+      "name": "nginx.conf",
+      "filePath": "excel-management-web/nginx.conf",
+      "summary": "Nginx server config for the production frontend image: serves the built static SPA on port 80 and falls back to index.html for client-side routing.",
+      "tags": [
+        "configuration",
+        "nginx",
+        "web-server",
+        "spa-routing"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "excel-management-web/src/index.css",
+      "summary": "Global stylesheet defining the Tailwind/shadcn design tokens (light and dark color variables, radius, chart and sidebar colors) applied across the whole frontend.",
+      "tags": [
+        "styling",
+        "css",
+        "design-tokens",
+        "theming"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/lib/api/schema.d.ts",
+      "type": "file",
+      "name": "schema.d.ts",
+      "filePath": "excel-management-web/src/lib/api/schema.d.ts",
+      "summary": "Auto-generated TypeScript type definitions (via openapi-typescript) mirroring the backend's OpenAPI spec, covering paths and operations such as auth login/refresh/logout.",
+      "tags": [
+        "type-definition",
+        "api-schema",
+        "generated",
+        "typescript"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/lib/utils.ts",
+      "type": "file",
+      "name": "utils.ts",
+      "filePath": "excel-management-web/src/lib/utils.ts",
+      "summary": "One-line barrel re-exporting the shared `cn` class-name utility for use throughout the frontend's UI components.",
+      "tags": [
+        "utility",
+        "barrel",
+        "re-export"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/src/main.tsx",
+      "type": "file",
+      "name": "main.tsx",
+      "filePath": "excel-management-web/src/main.tsx",
+      "summary": "Frontend entry point that mounts the React app, wiring up TanStack Query and the generated TanStack Router route tree.",
+      "tags": [
+        "entry-point",
+        "bootstrap",
+        "react",
+        "routing"
+      ]
+    },
+    {
+      "id": "file:excel-management-web/vite.config.ts",
+      "type": "file",
+      "name": "vite.config.ts",
+      "filePath": "excel-management-web/vite.config.ts",
+      "summary": "Vite build configuration wiring the TanStack Router plugin, React plugin, and Tailwind CSS plugin, plus a `@` src path alias and Vitest jsdom test setup.",
+      "tags": [
+        "configuration",
+        "build-system",
+        "vite",
+        "testing"
+      ]
+    },
+    {
+      "id": "document:infra/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "infra/README.md",
+      "summary": "Explains how to bring up the full stack (frontend, backend, PostgreSQL) via docker-compose using prebuilt GHCR images, including ports, seeded accounts, and teardown commands.",
+      "tags": [
+        "documentation",
+        "infrastructure",
+        "docker-compose",
+        "deployment"
+      ]
+    },
+    {
+      "id": "service:infra/docker-compose.yml",
+      "type": "service",
+      "name": "docker-compose.yml",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "Docker Compose stack that orchestrates prebuilt postgres, api, and web images (published to GHCR by CI) with health-checked startup ordering and a durable Postgres volume.",
+      "tags": [
+        "orchestration",
+        "infrastructure",
+        "docker-compose",
+        "deployment"
+      ]
+    },
+    {
+      "id": "service:infra/docker-compose.yml:postgres",
+      "type": "service",
+      "name": "postgres",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "PostgreSQL 17 database service with a named volume for durable storage and a healthcheck used to gate startup of dependent services.",
+      "tags": [
+        "database",
+        "postgresql",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "service:infra/docker-compose.yml:api",
+      "type": "service",
+      "name": "api",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "Backend API service running the ghcr.io excel-management-api image, configured to connect to the postgres service and waiting for it to report healthy before starting.",
+      "tags": [
+        "backend",
+        "api",
+        "infrastructure",
+        "deployment"
+      ]
+    },
+    {
+      "id": "service:infra/docker-compose.yml:web",
+      "type": "service",
+      "name": "web",
+      "filePath": "infra/docker-compose.yml",
+      "summary": "Frontend service running the nginx-served static build image, published on port 5173 and depending on the api service.",
+      "tags": [
+        "frontend",
+        "nginx",
+        "infrastructure",
+        "deployment"
+      ]
+    },
+    {
+      "id": "file:requirements/Exam Data.xlsx",
+      "type": "file",
+      "name": "Exam Data.xlsx",
+      "filePath": "requirements/Exam Data.xlsx",
+      "summary": "Sample Excel workbook provided as project requirements input, likely used as sample/reference data for the employee Excel import/export feature.",
+      "tags": [
+        "requirements",
+        "sample-data",
+        "excel"
+      ]
+    },
+    {
+      "id": "file:requirements/Exercise Before Interview.docx",
+      "type": "file",
+      "name": "Exercise Before Interview.docx",
+      "filePath": "requirements/Exercise Before Interview.docx",
+      "summary": "Word document containing the original pre-interview coding exercise instructions that this excel-management project was built to satisfy.",
+      "tags": [
+        "requirements",
+        "specification",
+        "documentation"
+      ]
+    }
+  ],
+  "importEdges": [
+    {
+      "source": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "target": "file:excel-management-web/src/components/ui/calendar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "target": "file:excel-management-web/src/components/ui/popover.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/card.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/table.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/features/auditLogs/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/badge.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/card.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/checkbox.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/table.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/features/departments/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/checkbox.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/features/departments/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/__root.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/__root.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/test/renderApp.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/test/setup.ts",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/ui/alert-dialog.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/api.ts",
+      "target": "file:excel-management-web/src/lib/api/mutationError.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "target": "file:excel-management-web/src/components/ui/alert-dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/badge.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/card.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/table.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/departments/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/api.ts",
+      "target": "file:excel-management-web/src/lib/api/mutationError.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/guards.ts",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/main.tsx",
+      "target": "file:excel-management-web/src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ],
+  "allEdges": [
+    {
+      "source": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "target": "file:excel-management-web/src/components/ui/calendar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "target": "file:excel-management-web/src/components/ui/popover.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/card.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/table.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "target": "file:excel-management-web/src/features/auditLogs/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/badge.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/card.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/checkbox.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/table.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/features/departments/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/checkbox.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/components/ui/select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/features/departments/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/login.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/__root.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/__root.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/test/renderApp.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/test/setup.ts",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/store.ts",
+      "target": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/components/ui/alert-dialog.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auditLogs/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/api.ts",
+      "target": "file:excel-management-web/src/lib/api/mutationError.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "target": "file:excel-management-web/src/components/ui/alert-dialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/badge.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/card.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/date-picker.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/input.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/label.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/select.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/components/ui/table.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/departments/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/api.ts",
+      "target": "file:excel-management-web/src/lib/api/mutationError.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/guards.ts",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-api/Dockerfile",
+      "target": "service:excel-management-api/Dockerfile:build",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-api/Dockerfile",
+      "target": "service:excel-management-api/Dockerfile:runtime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-api/Dockerfile:runtime",
+      "target": "service:excel-management-api/Dockerfile:build",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-api/Dockerfile",
+      "target": "service:excel-management-api/.dockerignore",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-web/Dockerfile",
+      "target": "service:excel-management-web/Dockerfile:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:excel-management-web/Dockerfile",
+      "target": "service:excel-management-web/Dockerfile:runtime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:excel-management-web/.dockerignore",
+      "target": "service:excel-management-web/Dockerfile",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.beads/README.md",
+      "target": "config:.beads/config.yaml",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:.beads/config.yaml",
+      "target": "config:.beads/metadata.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:docs/excel-management-api-architecture.visual-check.html",
+      "target": "document:docs/excel-management-api-architecture.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/excel-management-api-architecture.visual-check.json",
+      "target": "document:docs/excel-management-api-architecture.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:docs/excel-management-api-architecture.visual-check.json",
+      "target": "document:docs/excel-management-api-architecture.visual-check.html",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "target": "config:excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:excel-management-web/tsconfig.json",
+      "target": "config:excel-management-web/tsconfig.app.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/tsconfig.json",
+      "target": "config:excel-management-web/tsconfig.node.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/tsconfig.app.json",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/tsconfig.node.json",
+      "target": "file:excel-management-web/vite.config.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/package.json",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/package.json",
+      "target": "config:excel-management-web/.oxlintrc.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-web/index.html",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:excel-management-web/README.md",
+      "target": "config:excel-management-web/.oxlintrc.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:excel-management-web/README.md",
+      "target": "file:excel-management-web/index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:AGENTS.md",
+      "target": "document:CLAUDE.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/beads/SKILL.md",
+      "target": "document:AGENTS.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/beads/SKILL.md",
+      "target": "document:CLAUDE.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+      "target": "file:excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj",
+      "target": "file:excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-web/src/main.tsx",
+      "target": "file:excel-management-web/src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/vite.config.ts",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:infra/docker-compose.yml",
+      "target": "service:infra/docker-compose.yml:postgres",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:infra/docker-compose.yml",
+      "target": "service:infra/docker-compose.yml:api",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:infra/docker-compose.yml",
+      "target": "service:infra/docker-compose.yml:web",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "service:infra/docker-compose.yml:api",
+      "target": "service:infra/docker-compose.yml:postgres",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:infra/docker-compose.yml:web",
+      "target": "service:infra/docker-compose.yml:api",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:infra/README.md",
+      "target": "service:infra/docker-compose.yml",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

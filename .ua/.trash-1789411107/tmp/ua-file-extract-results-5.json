@@ -1,0 +1,93 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "excel-management-api/.dockerignore"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-api/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra",
+      "totalLines": 9,
+      "nonEmptyLines": 8,
+      "services": [
+        {
+          "name": "build",
+          "image": "mcr.microsoft.com/dotnet/sdk:9.0",
+          "ports": [],
+          "startLine": 1,
+          "endLine": 5
+        },
+        {
+          "name": "runtime",
+          "image": "mcr.microsoft.com/dotnet/aspnet:9.0",
+          "ports": [],
+          "startLine": 6,
+          "endLine": 10
+        }
+      ],
+      "steps": [
+        {
+          "name": "FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "name": "WORKDIR /src",
+          "startLine": 2,
+          "endLine": 2
+        },
+        {
+          "name": "COPY . .",
+          "startLine": 3,
+          "endLine": 3
+        },
+        {
+          "name": "RUN dotnet publish src/ExcelManagement.Api/ExcelManagement.Api.c",
+          "startLine": 4,
+          "endLine": 4
+        },
+        {
+          "name": "FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime",
+          "startLine": 6,
+          "endLine": 6
+        },
+        {
+          "name": "WORKDIR /app",
+          "startLine": 7,
+          "endLine": 7
+        },
+        {
+          "name": "COPY --from=build /app .",
+          "startLine": 8,
+          "endLine": 8
+        },
+        {
+          "name": "ENTRYPOINT [\"dotnet\", \"ExcelManagement.Api.dll\"]",
+          "startLine": 9,
+          "endLine": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "serviceCount": 2,
+        "stepCount": 8
+      }
+    }
+  ]
+}

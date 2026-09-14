@@ -1,0 +1,73 @@
+{
+  "nodes": [
+    {
+      "id": "service:excel-management-api/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "excel-management-api/Dockerfile",
+      "summary": "Multi-stage Docker build for the .NET 9 ASP.NET Core API: compiles and publishes the ExcelManagement.Api project in an SDK image, then copies the published output into a slim ASP.NET runtime image and runs it via dotnet ExcelManagement.Api.dll.",
+      "tags": ["containerization", "infrastructure", "deployment", "dotnet", "multi-stage-build"],
+      "complexity": "simple",
+      "languageNotes": "Two-stage build (sdk build stage, aspnet runtime stage) keeps the final image free of SDK/build tooling."
+    },
+    {
+      "id": "service:excel-management-api/Dockerfile:build",
+      "type": "service",
+      "name": "build",
+      "filePath": "excel-management-api/Dockerfile",
+      "lineRange": [1, 5],
+      "summary": "Build stage based on the .NET 9 SDK image that restores and publishes the ExcelManagement.Api project from source.",
+      "tags": ["containerization", "build-stage", "dotnet"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:excel-management-api/Dockerfile:runtime",
+      "type": "service",
+      "name": "runtime",
+      "filePath": "excel-management-api/Dockerfile",
+      "lineRange": [6, 10],
+      "summary": "Runtime stage based on the .NET 9 ASP.NET image that copies the published build output and sets the container entrypoint to run the API.",
+      "tags": ["containerization", "runtime-stage", "dotnet"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:excel-management-api/.dockerignore",
+      "type": "service",
+      "name": ".dockerignore",
+      "filePath": "excel-management-api/.dockerignore",
+      "summary": "Excludes build output directories (bin/, obj/) from the Docker build context for the API, keeping the image build fast and avoiding stale binaries from the host.",
+      "tags": ["containerization", "infrastructure", "build-system", "docker"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:excel-management-api/Dockerfile",
+      "target": "service:excel-management-api/Dockerfile:build",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-api/Dockerfile",
+      "target": "service:excel-management-api/Dockerfile:runtime",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-api/Dockerfile:runtime",
+      "target": "service:excel-management-api/Dockerfile:build",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "service:excel-management-api/Dockerfile",
+      "target": "service:excel-management-api/.dockerignore",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

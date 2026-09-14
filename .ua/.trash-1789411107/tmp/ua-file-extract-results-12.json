@@ -1,0 +1,424 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [
+    ".beads/hooks/post-checkout",
+    ".beads/hooks/post-merge",
+    ".beads/hooks/pre-commit",
+    ".beads/hooks/pre-push",
+    ".beads/hooks/prepare-commit-msg",
+    ".beads/interactions.jsonl",
+    ".beads/issues.jsonl",
+    ".ua/.understandignore",
+    "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+    "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+    "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+    "excel-management-api/.vs/ExcelManagement/v17/.suo",
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+    "excel-management-api/ExcelManagement.sln"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 9
+    }
+  },
+  "results": [
+    {
+      "path": ".agents/skills/beads/SKILL.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 80,
+      "nonEmptyLines": 54,
+      "sections": [
+        {
+          "heading": "Beads",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "First Step",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "Preferred Route",
+          "level": 2,
+          "line": 24
+        },
+        {
+          "heading": "Core CLI Workflow",
+          "level": 2,
+          "line": 28
+        },
+        {
+          "heading": "What Belongs In Beads",
+          "level": 2,
+          "line": 62
+        },
+        {
+          "heading": "Rules",
+          "level": 2,
+          "line": 74
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": ".agents/skills/beads/agents/openai.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 4,
+      "nonEmptyLines": 4,
+      "sections": [
+        {
+          "heading": "interface",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": ".claude/settings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 15,
+      "nonEmptyLines": 15,
+      "sections": [
+        {
+          "heading": "hooks",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": ".codex/config.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 2,
+      "nonEmptyLines": 2,
+      "sections": [
+        {
+          "heading": "features",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": ".codex/hooks.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 51,
+      "nonEmptyLines": 51,
+      "sections": [
+        {
+          "heading": "hooks",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 244,
+      "nonEmptyLines": 180,
+      "sections": [
+        {
+          "heading": "Agent Instructions",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Quick Reference",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "Non-Interactive Shell Commands",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Beads Issue Tracker",
+          "level": 2,
+          "line": 51
+        },
+        {
+          "heading": "Quick Reference",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "Rules",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Agent Context Profiles",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "Session Completion",
+          "level": 2,
+          "line": 80
+        },
+        {
+          "heading": "Beads Issue Tracker",
+          "level": 2,
+          "line": 107
+        },
+        {
+          "heading": "Quick Reference",
+          "level": 3,
+          "line": 111
+        },
+        {
+          "heading": "Rules",
+          "level": 3,
+          "line": 121
+        },
+        {
+          "heading": "Beads Workflow Integration",
+          "level": 2,
+          "line": 134
+        },
+        {
+          "heading": "Using bv as an AI sidecar",
+          "level": 3,
+          "line": 140
+        },
+        {
+          "heading": "The Workflow: Start With Triage",
+          "level": 4,
+          "line": 148
+        },
+        {
+          "heading": "Other bv Commands",
+          "level": 4,
+          "line": 172
+        },
+        {
+          "heading": "Scoping & Filtering",
+          "level": 4,
+          "line": 186
+        },
+        {
+          "heading": "Tracker Commands for Issue Management",
+          "level": 3,
+          "line": 195
+        },
+        {
+          "heading": "Rust beads_rust (`br`)",
+          "level": 4,
+          "line": 199
+        },
+        {
+          "heading": "Go Beads (`bd`)",
+          "level": 4,
+          "line": 212
+        },
+        {
+          "heading": "Workflow Pattern",
+          "level": 3,
+          "line": 224
+        },
+        {
+          "heading": "Key Concepts",
+          "level": 3,
+          "line": 233
+        },
+        {
+          "heading": "Git Policy",
+          "level": 3,
+          "line": 240
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 22
+      }
+    },
+    {
+      "path": "CLAUDE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 77,
+      "nonEmptyLines": 53,
+      "sections": [
+        {
+          "heading": "Project Instructions for AI Agents",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Beads Issue Tracker",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Quick Reference",
+          "level": 3,
+          "line": 10
+        },
+        {
+          "heading": "Rules",
+          "level": 3,
+          "line": 19
+        },
+        {
+          "heading": "Agent Context Profiles",
+          "level": 2,
+          "line": 27
+        },
+        {
+          "heading": "Session Completion",
+          "level": 2,
+          "line": 35
+        },
+        {
+          "heading": "Build & Test",
+          "level": 2,
+          "line": 61
+        },
+        {
+          "heading": "Architecture Overview",
+          "level": 2,
+          "line": 71
+        },
+        {
+          "heading": "Conventions & Patterns",
+          "level": 2,
+          "line": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 96,
+      "nonEmptyLines": 96,
+      "sections": [
+        {
+          "heading": "Version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "WorkspaceRootPath",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "Documents",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "DocumentGroupContainers",
+          "level": 1,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 93,
+      "nonEmptyLines": 93,
+      "sections": [
+        {
+          "heading": "Version",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "WorkspaceRootPath",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "Documents",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "DocumentGroupContainers",
+          "level": 1,
+          "line": 22
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    }
+  ]
+}

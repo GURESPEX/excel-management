@@ -1,0 +1,138 @@
+[
+  {
+    "order": 1,
+    "title": "How to Run This Project",
+    "description": "This is a monorepo with no root README, so the fastest orientation is infra/README.md — it explains how to bring up the whole stack (React frontend, .NET API, PostgreSQL) with docker-compose using prebuilt GHCR images, including ports and seeded accounts. Keep this mental map handy: a web SPA talks to a REST API backed by Postgres, with a third standalone process (an MCP server, covered later) sharing the same database.",
+    "nodeIds": ["document:infra/README.md"]
+  },
+  {
+    "order": 2,
+    "title": "Backend Entry Point",
+    "description": "Program.cs is the ASP.NET Core minimal-API host and the single highest-fan-out file in the codebase (28 outgoing references) — it wires dependency injection, CORS, cookie-based JWT authentication/authorization, and maps every HTTP endpoint for auth, employees, departments, and audit logs. Reading this file top to bottom gives you the full inventory of backend features before diving into any one of them.",
+    "nodeIds": ["file:excel-management-api/src/ExcelManagement.Api/Program.cs"],
+    "languageLesson": "ASP.NET Core minimal APIs skip MVC controllers in favor of directly mapped endpoint delegates (app.MapGet/MapPost), with the DI container configured inline in Program.cs rather than a separate Startup.cs."
+  },
+  {
+    "order": 3,
+    "title": "Domain Model",
+    "description": "Below the API sits the Domain layer — plain entity classes with zero external dependencies, deliberately isolated from persistence or transport concerns. Employee and Department model the core business objects, User and AuditLog back authentication and change tracking, and every other layer (Application, Infrastructure, Api) ultimately depends on these types rather than the other way around, per Clean Architecture's dependency rule.",
+    "nodeIds": [
+      "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs"
+    ]
+  },
+  {
+    "order": 4,
+    "title": "Application Layer Contracts",
+    "description": "The Application layer defines use cases without implementing them: IEmployeeRepository is an interface the Infrastructure layer must satisfy, while EmployeeValidator and DepartmentValidator enforce business rules (required fields, department existence, name uniqueness) before anything reaches the database. This interface-first design is what lets Program.cs from Step 2 depend on abstractions instead of concrete database code.",
+    "nodeIds": [
+      "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs",
+      "file:excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs"
+    ],
+    "languageLesson": "FluentValidation lets you declare validation rules as a fluent chain (RuleFor(x => x.Name).NotEmpty()) separate from the model itself, keeping DTOs as plain data and validation logic independently testable."
+  },
+  {
+    "order": 5,
+    "title": "Persistence Layer",
+    "description": "Infrastructure is where the Application layer's interfaces get real implementations. AppDbContext is the EF Core gateway to the database (exposing Employees, Departments, Users, AuditLogs, RefreshTokens as queryable sets, and auto-capturing an audit log on every SaveChanges call), EmployeeRepository implements the paged/filtered CRUD contract from Step 4, and DependencyInjection.cs is the composition root that registers all of this — plus the Postgres/SQLite provider choice — into the container that Program.cs configures.",
+    "nodeIds": [
+      "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs"
+    ],
+    "languageLesson": "The repository pattern hides EF Core's DbContext behind interfaces (IEmployeeRepository), so the Application layer never references Entity Framework directly — swap Postgres for SQLite by changing only DependencyInjection.cs."
+  },
+  {
+    "order": 6,
+    "title": "Database Schema Evolution",
+    "description": "These EF Core migrations are the database's version history and map directly onto the entities from Step 3: InitialCreate lays down Departments and Employees, AddUsers introduces the login table (with a unique username index) for the auth feature in Step 7, and AddAuditLogs creates the table backing the AuditLog entity's change-tracking. Reading them in order shows the schema growing feature-by-feature alongside the code.",
+    "nodeIds": [
+      "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs"
+    ],
+    "languageLesson": "EF Core migrations are ordered, timestamped, and meant to be applied sequentially and idempotently — each file's Up/Down methods describe a forward and reverse schema change, and the accompanying .Designer.cs snapshot lets EF diff against the current model to generate the next migration."
+  },
+  {
+    "order": 7,
+    "title": "Authentication & Security",
+    "description": "JwtTokenService issues and validates the JWT access/refresh tokens that Program.cs's cookie-based auth middleware relies on, and also hashes refresh tokens before they touch the RefreshToken table from the migrations you just saw. PasswordHasher handles the other half of the credential story — PBKDF2-based password hashing with constant-time verification — so plaintext passwords never reach the Users table.",
+    "nodeIds": [
+      "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs"
+    ],
+    "languageLesson": "Constant-time comparison (rather than a plain == on hash bytes) prevents timing attacks where an attacker infers password correctness from how long verification takes."
+  },
+  {
+    "order": 8,
+    "title": "Excel Import/Export",
+    "description": "This is the project's signature feature: IEmployeeExcelFile is an Application-layer abstraction that decouples the rest of the code from any specific Excel library, while EmployeeExcelFile is the Infrastructure-layer implementation using ClosedXML to read uploaded workbooks and write export files. EmployeeImport.cs defines the row/error/result types that flow through this pipeline, mirroring the interface-then-implementation pattern already seen in Steps 4 and 5.",
+    "nodeIds": [
+      "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "file:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs"
+    ]
+  },
+  {
+    "order": 9,
+    "title": "MCP Server for AI Agents",
+    "description": "Alongside the REST API, ExcelManagement.McpServer is a standalone process that exposes the same Employee and Department operations as Model Context Protocol tools, letting AI agents call this system directly instead of through HTTP. Its Program.cs wires the same Infrastructure services and runs pending migrations over stdio transport, while EmployeeTools.cs and DepartmentTools.cs reuse the exact validators and repositories from Steps 4-5 — proving the Clean Architecture split pays off by letting a second entry point reuse the entire business layer with no duplication.",
+    "nodeIds": [
+      "file:excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+      "file:excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs",
+      "file:excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs"
+    ],
+    "languageLesson": "MCP (Model Context Protocol) tools are functions an AI agent can discover and call at runtime; running the server over stdio (rather than HTTP) is the standard transport for a locally-spawned MCP process."
+  },
+  {
+    "order": 10,
+    "title": "Frontend Entry Point",
+    "description": "Switching to the React side: main.tsx mounts the SPA and wires up TanStack Query (server-state caching) and the generated TanStack Router route tree, while vite.config.ts configures the build — the Router and Tailwind plugins, the `@` path alias, and Vitest's jsdom test environment. This is the frontend's equivalent of the backend's Program.cs from Step 2: the one file that assembles everything else.",
+    "nodeIds": [
+      "file:excel-management-web/src/main.tsx",
+      "file:excel-management-web/vite.config.ts"
+    ],
+    "languageLesson": "TanStack Router generates a type-safe route tree from file-based routes at build time, so navigating to an undefined route or passing the wrong search-param shape is a compile error, not a runtime one."
+  },
+  {
+    "order": 11,
+    "title": "Frontend Auth & Routing",
+    "description": "routes/index.tsx is the root (/) route — it requires authentication and validates its filter search params with a zod schema before rendering the employee list. guards.ts's requireAuth function is the route-guard reused across every protected route, store.ts is the Zustand store holding the current user (with a useIsAdmin selector gating admin-only UI), and AppShell.tsx is the layout shell every authenticated page renders inside. Together these mirror the backend's JWT auth from Step 7, just enforced client-side.",
+    "nodeIds": [
+      "file:excel-management-web/src/routes/index.tsx",
+      "file:excel-management-web/src/features/auth/guards.ts",
+      "file:excel-management-web/src/features/auth/store.ts",
+      "file:excel-management-web/src/components/layout/AppShell.tsx"
+    ],
+    "languageLesson": "Zustand stores are plain functions returning state + setters, with no providers or context wiring — a lighter alternative to Redux/Context for small, global client state like 'who is logged in'."
+  },
+  {
+    "order": 12,
+    "title": "Employee Feature Module",
+    "description": "EmployeeListPage.tsx is the primary feature screen, and features/employees/api.ts supplies the React Query hooks it calls for CRUD plus Excel/CSV import and export — talking to the backend through the shared, typed instance in lib/api/client.ts. button.tsx and table.tsx are the two most reused UI primitives in the whole frontend (8 and part of the shared design system respectively), showing how every feature page is built from the same small set of styled components.",
+    "nodeIds": [
+      "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "file:excel-management-web/src/features/employees/api.ts",
+      "file:excel-management-web/src/lib/api/client.ts",
+      "file:excel-management-web/src/components/ui/button.tsx",
+      "file:excel-management-web/src/components/ui/table.tsx"
+    ],
+    "languageLesson": "React Query hooks (useQuery/useMutation) handle server-state caching, loading/error states, and cache invalidation on mutation, replacing the manual useEffect+useState data-fetching boilerplate."
+  },
+  {
+    "order": 13,
+    "title": "Containerization & CI/CD",
+    "description": "Both Dockerfiles use multi-stage builds — the API compiles with the .NET 9 SDK then runs on a slim ASP.NET runtime image, the web app builds with Node then serves static assets via Nginx — keeping final images small. docker-compose.yml orchestrates both alongside Postgres with health-checked startup ordering, and the two GitHub Actions pipelines build/test each side on every push and publish these same images to GHCR on merge, closing the loop back to the docker-compose setup you started the tour with in Step 1.",
+    "nodeIds": [
+      "service:excel-management-api/Dockerfile",
+      "service:excel-management-web/Dockerfile",
+      "service:infra/docker-compose.yml",
+      "pipeline:.github/workflows/backend-ci.yml",
+      "pipeline:.github/workflows/frontend-ci.yml"
+    ],
+    "languageLesson": "Multi-stage Docker builds use multiple FROM statements — a builder stage with the full SDK/toolchain, and a runtime stage that copies only compiled output — so the shipped image never contains source code or build tools, only what's needed to run."
+  }
+]

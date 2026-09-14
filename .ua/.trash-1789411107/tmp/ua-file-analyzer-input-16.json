@@ -1,0 +1,29 @@
+{
+  "projectRoot": "C:/Personal Drive/My Files/Programming/Assignments/chememan/excel-management",
+  "batchFiles": [
+    {"path": "excel-management-web/.npmrc", "language": "unknown", "sizeLines": 1, "fileCategory": "code"},
+    {"path": "excel-management-web/nginx.conf", "language": "conf", "sizeLines": 10, "fileCategory": "code"},
+    {"path": "excel-management-web/src/index.css", "language": "css", "sizeLines": 134, "fileCategory": "markup"},
+    {"path": "excel-management-web/src/lib/api/schema.d.ts", "language": "typescript", "sizeLines": 712, "fileCategory": "code"},
+    {"path": "excel-management-web/src/lib/utils.ts", "language": "typescript", "sizeLines": 1, "fileCategory": "code"},
+    {"path": "excel-management-web/src/main.tsx", "language": "typescript", "sizeLines": 23, "fileCategory": "code"},
+    {"path": "excel-management-web/vite.config.ts", "language": "typescript", "sizeLines": 20, "fileCategory": "code"},
+    {"path": "infra/README.md", "language": "markdown", "sizeLines": 31, "fileCategory": "docs"},
+    {"path": "infra/docker-compose.yml", "language": "yaml", "sizeLines": 37, "fileCategory": "infra"},
+    {"path": "requirements/Exam Data.xlsx", "language": "xlsx", "sizeLines": 27, "fileCategory": "code"},
+    {"path": "requirements/Exercise Before Interview.docx", "language": "docx", "sizeLines": 60, "fileCategory": "code"}
+  ],
+  "batchImportData": {
+    "excel-management-web/.npmrc": [],
+    "excel-management-web/nginx.conf": [],
+    "excel-management-web/src/index.css": [],
+    "excel-management-web/src/lib/api/schema.d.ts": [],
+    "excel-management-web/src/lib/utils.ts": [],
+    "excel-management-web/src/main.tsx": ["excel-management-web/src/index.css"],
+    "excel-management-web/vite.config.ts": [],
+    "infra/README.md": [],
+    "infra/docker-compose.yml": [],
+    "requirements/Exam Data.xlsx": [],
+    "requirements/Exercise Before Interview.docx": []
+  }
+}

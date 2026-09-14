@@ -1,0 +1,421 @@
+{
+  "nodes": [
+    {
+      "id": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "file",
+      "name": "AppShell.tsx",
+      "filePath": "excel-management-web/src/components/layout/AppShell.tsx",
+      "summary": "Application shell component rendering the top navigation bar, admin-only links, current user avatar, and logout control, wrapping page content passed as children.",
+      "tags": ["component", "layout", "navigation", "auth"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-web/src/components/layout/AppShell.tsx:AppShell",
+      "type": "function",
+      "name": "AppShell",
+      "filePath": "excel-management-web/src/components/layout/AppShell.tsx",
+      "lineRange": [13, 73],
+      "summary": "Renders the shared page chrome (nav links, admin-gated links, user badge, logout button) and displays its children below the header.",
+      "tags": ["component", "layout", "auth-gated"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "file",
+      "name": "guards.ts",
+      "filePath": "excel-management-web/src/features/auth/guards.ts",
+      "summary": "Route guard functions used in TanStack Router's beforeLoad to redirect unauthenticated users to login and non-admin users away from admin-only routes.",
+      "tags": ["auth", "route-guard", "middleware", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/features/auth/guards.ts:requireAuth",
+      "type": "function",
+      "name": "requireAuth",
+      "filePath": "excel-management-web/src/features/auth/guards.ts",
+      "lineRange": [4, 8],
+      "summary": "Redirects to /login when the auth store's status is not 'authenticated'; used as a route's beforeLoad guard.",
+      "tags": ["auth", "route-guard"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/features/auth/guards.ts:requireAdmin",
+      "type": "function",
+      "name": "requireAdmin",
+      "filePath": "excel-management-web/src/features/auth/guards.ts",
+      "lineRange": [10, 15],
+      "summary": "Calls requireAuth then redirects to / if the current user's role is not 'Admin'; used to gate admin-only routes.",
+      "tags": ["auth", "route-guard", "authorization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/routes/audit-log.tsx",
+      "type": "file",
+      "name": "audit-log.tsx",
+      "filePath": "excel-management-web/src/routes/audit-log.tsx",
+      "summary": "TanStack Router file-route for /audit-log that gates access with requireAdmin and renders AuditLogPage inside AppShell.",
+      "tags": ["route", "admin", "auth-gated", "page"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/routes/departments.tsx",
+      "type": "file",
+      "name": "departments.tsx",
+      "filePath": "excel-management-web/src/routes/departments.tsx",
+      "summary": "TanStack Router file-route for /departments that requires authentication and renders DepartmentAdminPage inside AppShell.",
+      "tags": ["route", "page", "auth-gated"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "type": "file",
+      "name": "$employeeId.tsx",
+      "filePath": "excel-management-web/src/routes/employees/$employeeId.tsx",
+      "summary": "Dynamic route for editing a single employee by numeric id: loads the employee via useEmployee, renders EmployeeForm, and submits updates through useUpdateEmployee before navigating back to the list.",
+      "tags": ["route", "page", "form", "employees"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-web/src/routes/employees/$employeeId.tsx:EditEmployeePage",
+      "type": "function",
+      "name": "EditEmployeePage",
+      "filePath": "excel-management-web/src/routes/employees/$employeeId.tsx",
+      "lineRange": [12, 59],
+      "summary": "Page component that reads the employeeId route param, fetches the employee, and renders EmployeeForm with an update handler that navigates back to the employee list on success.",
+      "tags": ["component", "form", "employees"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-web/src/routes/employees/new.tsx",
+      "type": "file",
+      "name": "new.tsx",
+      "filePath": "excel-management-web/src/routes/employees/new.tsx",
+      "summary": "Route for creating a new employee: renders EmployeeForm in create mode and submits via useCreateEmployee, navigating to the employee list on success.",
+      "tags": ["route", "page", "form", "employees"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/routes/employees/new.tsx:NewEmployeePage",
+      "type": "function",
+      "name": "NewEmployeePage",
+      "filePath": "excel-management-web/src/routes/employees/new.tsx",
+      "lineRange": [12, 34],
+      "summary": "Page component rendering EmployeeForm for creating a new employee and navigating to the employee list after a successful create.",
+      "tags": ["component", "form", "employees"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/routes/index.tsx",
+      "type": "file",
+      "name": "index.tsx",
+      "filePath": "excel-management-web/src/routes/index.tsx",
+      "summary": "Root route (/) rendering the employee list page inside AppShell, requiring authentication and validating list filter search params (name, department, active status, salary range, join date range) with a zod schema.",
+      "tags": ["route", "entry-point", "page", "validation", "employees"],
+      "complexity": "moderate",
+      "languageNotes": "Uses zod z.preprocess to normalize a URL search param that can arrive as either a real boolean or a stringified 'true'/'false' before validating it as boolean."
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/components/ui/button.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "function:excel-management-web/src/components/layout/AppShell.tsx:AppShell",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "target": "function:excel-management-web/src/components/layout/AppShell.tsx:AppShell",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:excel-management-web/src/components/layout/AppShell.tsx:AppShell",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:excel-management-web/src/components/layout/AppShell.tsx:AppShell",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/guards.ts",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/guards.ts",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/guards.ts",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAdmin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/guards.ts",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAuth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/guards.ts",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAdmin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:excel-management-web/src/features/auth/guards.ts:requireAdmin",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:excel-management-web/src/features/auth/guards.ts:requireAuth",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:excel-management-web/src/features/auth/guards.ts:requireAdmin",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAdmin",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/routes/audit-log.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/departments.tsx",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/$employeeId.tsx",
+      "target": "function:excel-management-web/src/routes/employees/$employeeId.tsx:EditEmployeePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:excel-management-web/src/routes/employees/$employeeId.tsx:EditEmployeePage",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:excel-management-web/src/routes/employees/$employeeId.tsx:EditEmployeePage",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/employees/new.tsx",
+      "target": "function:excel-management-web/src/routes/employees/new.tsx:NewEmployeePage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "function:excel-management-web/src/routes/employees/new.tsx:NewEmployeePage",
+      "target": "file:excel-management-web/src/features/employees/api.ts",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:excel-management-web/src/routes/employees/new.tsx:NewEmployeePage",
+      "target": "file:excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/components/layout/AppShell.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/auth/guards.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "function:excel-management-web/src/features/auth/guards.ts:requireAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/routes/index.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

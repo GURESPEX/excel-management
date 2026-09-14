@@ -1,0 +1,6915 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "a2efdef1a62660ce34b3137ef86ec1ac34bb7d93",
+  "generatedAt": "2026-09-14T18:38:12.782Z",
+  "files": {
+    ".beads/hooks/post-checkout": {
+      "filePath": ".beads/hooks/post-checkout",
+      "contentHash": "0d678b90e2dd6b0bf135fc382ca36d7d92379b49e3c3e74cda1d5f9480ace358",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    ".beads/hooks/post-merge": {
+      "filePath": ".beads/hooks/post-merge",
+      "contentHash": "73a9e995de1e7d6aae7f86899092263de6203050b80b04113754d71f0f06cf6a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    ".beads/hooks/pre-commit": {
+      "filePath": ".beads/hooks/pre-commit",
+      "contentHash": "c04936fec107a6741472538337dcb7de3a17a8a3e63567df78420dd43b7bfe2a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    ".beads/hooks/pre-push": {
+      "filePath": ".beads/hooks/pre-push",
+      "contentHash": "4980bced957b1ce8d81984ab41e95c4b12f5c9d8227052cb2a1eda6b4aaff048",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    ".beads/hooks/prepare-commit-msg": {
+      "filePath": ".beads/hooks/prepare-commit-msg",
+      "contentHash": "4b46eab485d23a1fc8c8329ff7d40af0d3f8dd1468949c25a5dc430c3ed9c523",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 34,
+      "hasStructuralAnalysis": false
+    },
+    ".beads/interactions.jsonl": {
+      "filePath": ".beads/interactions.jsonl",
+      "contentHash": "fba5e2c81fd897395f467ee3664187521666cec0f774edfda865f77412a29afa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": false
+    },
+    ".beads/issues.jsonl": {
+      "filePath": ".beads/issues.jsonl",
+      "contentHash": "43fcb84069704d33b37a3747b1a55333373c6d88a55c6aa90050356b7a216a59",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/.understandignore": {
+      "filePath": ".ua/.understandignore",
+      "contentHash": "c11b0c857b9f61519e2b221af2b78f780d23acf0c5e448e914b9bd2f02d37282",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 85,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2": {
+      "filePath": "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+      "contentHash": "b6ca20f5b29f57e1b84c6d1b4ddc2fd9b5fff7196e1f246ce3d227fcaa7c2219",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2062,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx": {
+      "filePath": "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "contentHash": "3079c85df5643ac8bce619b630722eae494cdabb9100cc2e2c7679e65c3f053c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 467,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2": {
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+      "contentHash": "166b275e23f98a507473e1776a48ecd4cf2749a2856d2d36e63ab21d493b5224",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/.vs/ExcelManagement/v17/.suo": {
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/.suo",
+      "contentHash": "96bd4a4ac84970c557b7dfecccaa58fabf78e917431c1f17fd3c0bb9022e4bfb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin": {
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+      "contentHash": "0dccef7f78b48ffaf531e657884fe96e10d2ee67d3da926c9d98cee3e9abcad6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin": {
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+      "contentHash": "c209c89e28d9f39eb31f46c17ac422e4eb1afc06d5227ae1ef92ca55dcf98fc3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3471,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin": {
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+      "contentHash": "5c85c184d596cef835cf5955fd1dbb20f49fa77f1f5532f007dbb6426939881c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1017,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "contentHash": "610a1e744f221b4a5360a4df59662bfd00ea1cc0a0f0c7ffd621edae7565f89d",
+      "functions": [
+        {
+          "name": "CreateAccessToken",
+          "params": [
+            "principal"
+          ],
+          "returnType": "(string Token, DateTime ExpiresAt)",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "CreateRefreshToken",
+          "params": [
+            "principal"
+          ],
+          "returnType": "(string Token, DateTime ExpiresAt)",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "HashToken",
+          "params": [
+            "token"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "CreateToken",
+          "params": [
+            "principal",
+            "lifetime",
+            "tokenType"
+          ],
+          "returnType": "(string, DateTime)",
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "ValidateRefreshToken",
+          "params": [
+            "token"
+          ],
+          "returnType": "AuthPrincipal?",
+          "exported": true,
+          "lineCount": 29
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthPrincipal",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "JwtTokenService",
+          "methods": [
+            "CreateAccessToken",
+            "CreateRefreshToken",
+            "HashToken",
+            "CreateToken",
+            "ValidateRefreshToken"
+          ],
+          "properties": [
+            "_key",
+            "_accessMinutes",
+            "_refreshDays"
+          ],
+          "exported": true,
+          "lineCount": 66
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.IdentityModel.Tokens.Jwt",
+          "specifiers": [
+            "Jwt"
+          ]
+        },
+        {
+          "source": "System.Security.Claims",
+          "specifiers": [
+            "Claims"
+          ]
+        },
+        {
+          "source": "System.Security.Cryptography",
+          "specifiers": [
+            "Cryptography"
+          ]
+        },
+        {
+          "source": "System.Text",
+          "specifiers": [
+            "Text"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "Microsoft.IdentityModel.Tokens",
+          "specifiers": [
+            "Tokens"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthPrincipal",
+        "CreateAccessToken",
+        "CreateRefreshToken",
+        "HashToken",
+        "ValidateRefreshToken",
+        "JwtTokenService"
+      ],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user": {
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+      "contentHash": "a7aa504322d6c8938a15e2552de43f74af29633849b03c50a3135caccdf935d9",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http": {
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http",
+      "contentHash": "c699fa4e58b38062cff75f77a366351d674f7b718327d9b738044db0a8721c09",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-api/src/ExcelManagement.Api/Program.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "contentHash": "f1b91123353261bbfa14434c6b0fa78ed4ae671b9c598a36618a3d5efe127ae0",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Program",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Text",
+          "specifiers": [
+            "Text"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Api.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.AuditLogs",
+          "specifiers": [
+            "AuditLogs"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.AspNetCore.Authentication.JwtBearer",
+          "specifiers": [
+            "JwtBearer"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.IdentityModel.Tokens",
+          "specifiers": [
+            "Tokens"
+          ]
+        }
+      ],
+      "exports": [
+        "Program"
+      ],
+      "totalLines": 367,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "contentHash": "f4a3c4985ecbaa37e51fb991462afb71669624d1bb38494220fe81ba8e718142",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuditLogDto",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "AuditLogDto"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "contentHash": "c6b4b8f50700b5d6330e5f14d6e30c5739e286e5ff855b2620c1391fcf9e64b8",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuditLogQuery",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "AuditLogQuery"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "contentHash": "ab9817f968aeef67f3ca1b728926a7548130443150a9ba9d264d43854197c7e9",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IAuditLogRepository",
+          "methods": [
+            "GetAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "IAuditLogRepository"
+      ],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "contentHash": "6d07f77894df3da18233c8d9ae0ab8047ca13ebec6d86b6506e7cb4a1a8f680e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuthenticatedUserDto",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "AuthenticatedUserDto"
+      ],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "contentHash": "ae568a507af7dc503ac5b69e905b837eeea3c1f2f6c02c2335a8fbbd9aab9844",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IRefreshTokenRepository",
+          "methods": [
+            "CreateAsync",
+            "RevokeIfActiveAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "IRefreshTokenRepository"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "contentHash": "0f81bd05e4ca1bf4c1796fa37c52ce4e813fbde85213005e01d1837a1bde9973",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IUserRepository",
+          "methods": [
+            "GetByUsernameAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        }
+      ],
+      "exports": [
+        "IUserRepository"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "contentHash": "579594c6bc4911732de66912d46ba4a0d30b94a30cfce01b488dccec5a905535",
+      "functions": [],
+      "classes": [
+        {
+          "name": "LoginRequest",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "LoginRequest"
+      ],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "contentHash": "c6cb47e00e03d0ace159d94cd7aa196446da93adcceb9c7310c1df507913ead3",
+      "functions": [
+        {
+          "name": "Hash",
+          "params": [
+            "password"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "Verify",
+          "params": [
+            "password",
+            "hashed"
+          ],
+          "returnType": "bool",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "PasswordHasher",
+          "methods": [
+            "Hash",
+            "Verify"
+          ],
+          "properties": [
+            "SaltSize",
+            "HashSize",
+            "Iterations"
+          ],
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Security.Cryptography",
+          "specifiers": [
+            "Cryptography"
+          ]
+        }
+      ],
+      "exports": [
+        "Hash",
+        "Verify",
+        "PasswordHasher"
+      ],
+      "totalLines": 32,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs",
+      "contentHash": "939c4d06072a4cc5fe7aa8ca1f9d065830c6834cdf375d9d1c53f919efedbd2b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CreateDepartmentRequest",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "CreateDepartmentRequest"
+      ],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs",
+      "contentHash": "9c2aa429618bd181c50e7b4d82480bcb3d18960fd2dc6f4596a42a361f16f98c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "DepartmentDto",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "DepartmentDto"
+      ],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs",
+      "contentHash": "a6543f952101d1a8c415da9723b43f484617469025d00461b5cdd996412775b3",
+      "functions": [
+        {
+          "name": "Validate",
+          "params": [
+            "name",
+            "nameConflict"
+          ],
+          "returnType": "Dictionary<string, string[]>",
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "classes": [
+        {
+          "name": "DepartmentValidator",
+          "methods": [
+            "Validate"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "Validate",
+        "DepartmentValidator"
+      ],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs",
+      "contentHash": "f5859c3d21ff3a26c568b22c1815471fe915b538a65185298417bfbdc84c8d8d",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IDepartmentRepository",
+          "methods": [
+            "GetAllAsync",
+            "ExistsAsync",
+            "NameExistsAsync",
+            "CreateAsync",
+            "UpdateAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "IDepartmentRepository"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs",
+      "contentHash": "66738b18ec6f3dafe8e524d39c925c0e30e5ae9632c48fbfe01c327eec3de609",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UpdateDepartmentRequest",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "UpdateDepartmentRequest"
+      ],
+      "totalLines": 4,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs",
+      "contentHash": "b74599f15403b46a45b56ae47b6899927bc5101cf649bd6afff548f214518637",
+      "functions": [
+        {
+          "name": "Write",
+          "params": [
+            "employees"
+          ],
+          "returnType": "string",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "Quote",
+          "params": [
+            "value"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeCsvWriter",
+          "methods": [
+            "Write",
+            "Quote"
+          ],
+          "properties": [
+            "Headers"
+          ],
+          "exported": true,
+          "lineCount": 35
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        },
+        {
+          "source": "System.Text",
+          "specifiers": [
+            "Text"
+          ]
+        }
+      ],
+      "exports": [
+        "Write",
+        "EmployeeCsvWriter"
+      ],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs",
+      "contentHash": "5c9c3387c68f815015888097d71394fca34297d498b6095b80624bce188df94e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "EmployeeDetailDto",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "EmployeeDetailDto"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs",
+      "contentHash": "29fa93c0844287cf6addce34c333614b86e50e1f59ef9b1c13a240e0dfcfbf9b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "EmployeeImportRow",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "ImportRowError",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "EmployeeImportResult",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "EmployeeImportRow",
+        "ImportRowError",
+        "EmployeeImportResult"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs",
+      "contentHash": "d5a622d6d92f0d175b3494d79dfddfa8c65e5da8e858623e2989c72251e3c7cf",
+      "functions": [
+        {
+          "name": "Validate",
+          "params": [
+            "row",
+            "activeDepartmentIdsByName"
+          ],
+          "returnType": "(IReadOnlyList<ImportRowError> Errors, UpsertEmployeeRequest? Request)",
+          "exported": true,
+          "lineCount": 35
+        },
+        {
+          "name": "ParseStatus",
+          "params": [
+            "status"
+          ],
+          "returnType": "bool?",
+          "exported": false,
+          "lineCount": 16
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeImportRowValidator",
+          "methods": [
+            "Validate",
+            "ParseStatus"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 60
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        }
+      ],
+      "exports": [
+        "Validate",
+        "EmployeeImportRowValidator"
+      ],
+      "totalLines": 65,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs",
+      "contentHash": "ba568ec72201cd1ce7f671d7fba921761b604bc17bbf886334034e4bf4363eec",
+      "functions": [],
+      "classes": [
+        {
+          "name": "EmployeeListItemDto",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "EmployeeListItemDto"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs",
+      "contentHash": "4f0d72ea82c6b4c91241200ddb344a684c37bd021a9557e06311b98f593a9739",
+      "functions": [],
+      "classes": [
+        {
+          "name": "EmployeeListQuery",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "EmployeeListQuery"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs",
+      "contentHash": "63c0de31a712099207ef1750d7a809f8b8a1261721e59c9e8ed6dfe880366b71",
+      "functions": [
+        {
+          "name": "Validate",
+          "params": [
+            "request",
+            "departmentExists"
+          ],
+          "returnType": "Dictionary<string, string[]>",
+          "exported": true,
+          "lineCount": 26
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeValidator",
+          "methods": [
+            "Validate"
+          ],
+          "properties": [
+            "JoinDateFormat"
+          ],
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        }
+      ],
+      "exports": [
+        "JoinDateFormat",
+        "Validate",
+        "EmployeeValidator"
+      ],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "contentHash": "decded9789414f212f99b402313a38a9e9618f14e2334ab6cd309e94d7cef53a",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IEmployeeExcelFile",
+          "methods": [
+            "WriteWorkbook",
+            "ReadRows"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "IEmployeeExcelFile"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "contentHash": "d827e6b67bb10c5a7d924bea9b9a829e05b290de0edf13687c7f5b9395769288",
+      "functions": [],
+      "classes": [
+        {
+          "name": "IEmployeeRepository",
+          "methods": [
+            "GetPagedAsync",
+            "GetAllAsync",
+            "GetByIdAsync",
+            "CreateAsync",
+            "UpdateAsync",
+            "DeleteAsync",
+            "ImportAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "IEmployeeRepository"
+      ],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "contentHash": "9eb465578f96fdd1f18b286a773001a63bfd421b627aa63b45ee661e3ede5f92",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PagedResult",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "PagedResult"
+      ],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "contentHash": "ee9bee5c8fccecef2c881b421d9f017b232e35e938b111967ffbaf9d80aaf1ea",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UpsertEmployeeRequest",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "UpsertEmployeeRequest"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "contentHash": "d33298b01f5c2d9cb160a5385a1fdd61606c6e1de9dbcc3bb87bbee190450121",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "contentHash": "29a0e91abbf6047fe7d9d6a4ed97e2f0c60e46b539866cc86d27aa4aeea8fde4",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuditLog",
+          "methods": [],
+          "properties": [
+            "Id",
+            "EntityName",
+            "EntityId",
+            "Action",
+            "ChangedBy",
+            "Timestamp",
+            "Changes"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "Id",
+        "EntityName",
+        "EntityId",
+        "Action",
+        "ChangedBy",
+        "Timestamp",
+        "Changes",
+        "AuditLog"
+      ],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Domain/Department.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "contentHash": "9c4c4ccf3156ac53c1e71d15437dfff52298710e4eebbacfd527d9f7fde2eb5e",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Department",
+          "methods": [],
+          "properties": [
+            "Id",
+            "Name",
+            "IsActive"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "Id",
+        "Name",
+        "IsActive",
+        "Department"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Domain/Employee.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "contentHash": "cf3649a6f6215f879f99664502f3ce6fbe11c4b8dea3623c237334ceb45aafd3",
+      "functions": [],
+      "classes": [
+        {
+          "name": "Employee",
+          "methods": [],
+          "properties": [
+            "Id",
+            "Name",
+            "DepartmentId",
+            "Department",
+            "Salary",
+            "JoinDate",
+            "IsActive",
+            "UpdatedAt"
+          ],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "Id",
+        "Name",
+        "DepartmentId",
+        "Department",
+        "Salary",
+        "JoinDate",
+        "IsActive",
+        "UpdatedAt",
+        "Employee"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "contentHash": "ff2abe4c73f89775741810cab3767fc3f834472d63dc78def144276b36564c6b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "RefreshToken",
+          "methods": [],
+          "properties": [
+            "Id",
+            "TokenHash",
+            "UserId",
+            "IssuedAt",
+            "ExpiresAt",
+            "RevokedAt"
+          ],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "Id",
+        "TokenHash",
+        "UserId",
+        "IssuedAt",
+        "ExpiresAt",
+        "RevokedAt",
+        "RefreshToken"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Domain/User.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "contentHash": "3160a252e384c437109893d14b6d83d632358b69d0f5fb9b83493408c085ade6",
+      "functions": [],
+      "classes": [
+        {
+          "name": "User",
+          "methods": [],
+          "properties": [
+            "Id",
+            "Username",
+            "PasswordHash",
+            "Role"
+          ],
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "Id",
+        "Username",
+        "PasswordHash",
+        "Role",
+        "User"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Domain/UserRole.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "contentHash": "cd11b50bcd4ed043b649c8264df81defadea190ac563d536a02fc3084ef50692",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "contentHash": "f3a5e03bd89d76fcdd1a08d8fdca157d7f2695b0027e42b53fb220413713f717",
+      "functions": [
+        {
+          "name": "AddInfrastructure",
+          "params": [
+            "services",
+            "configuration"
+          ],
+          "returnType": "IServiceCollection",
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "classes": [
+        {
+          "name": "DependencyInjection",
+          "methods": [
+            "AddInfrastructure"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Application.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.AuditLogs",
+          "specifiers": [
+            "AuditLogs"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.Configuration",
+          "specifiers": [
+            "Configuration"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.DependencyInjection",
+          "specifiers": [
+            "DependencyInjection"
+          ]
+        }
+      ],
+      "exports": [
+        "AddInfrastructure",
+        "DependencyInjection"
+      ],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "contentHash": "6042bc9458c213311317ae032aad4d3b133f704c0e4c503a6674d9d5b77d4f4c",
+      "functions": [
+        {
+          "name": "OnConfiguring",
+          "params": [
+            "optionsBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "OnModelCreating",
+          "params": [
+            "modelBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 41
+        },
+        {
+          "name": "SaveChangesAsync",
+          "params": [
+            "cancellationToken"
+          ],
+          "returnType": "Task<int>",
+          "exported": true,
+          "lineCount": 38
+        },
+        {
+          "name": "SaveChanges",
+          "params": [],
+          "returnType": "int",
+          "exported": true,
+          "lineCount": 30
+        },
+        {
+          "name": "GetChangedBy",
+          "params": [],
+          "returnType": "string?",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "CaptureAuditEntries",
+          "params": [],
+          "returnType": "List<PendingAuditEntry>",
+          "exported": false,
+          "lineCount": 51
+        },
+        {
+          "name": "BuildChangesJson",
+          "params": [
+            "entry",
+            "action"
+          ],
+          "returnType": "string?",
+          "exported": false,
+          "lineCount": 32
+        }
+      ],
+      "classes": [
+        {
+          "name": "AppDbContext",
+          "methods": [
+            "OnConfiguring",
+            "OnModelCreating",
+            "SaveChangesAsync",
+            "SaveChanges",
+            "GetChangedBy",
+            "CaptureAuditEntries",
+            "BuildChangesJson"
+          ],
+          "properties": [
+            "Employees",
+            "Departments",
+            "Users",
+            "AuditLogs",
+            "RefreshTokens"
+          ],
+          "exported": true,
+          "lineCount": 250
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Security.Claims",
+          "specifiers": [
+            "Claims"
+          ]
+        },
+        {
+          "source": "System.Text.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "Microsoft.AspNetCore.Http",
+          "specifiers": [
+            "Http"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.ChangeTracking",
+          "specifiers": [
+            "ChangeTracking"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Diagnostics",
+          "specifiers": [
+            "Diagnostics"
+          ]
+        }
+      ],
+      "exports": [
+        "Employees",
+        "Departments",
+        "Users",
+        "AuditLogs",
+        "RefreshTokens",
+        "SaveChangesAsync",
+        "SaveChanges",
+        "AppDbContext"
+      ],
+      "totalLines": 261,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "contentHash": "6be0cef9ffb0bd8b5b905ae0d9d24f6bd2bbb29395d1c45ee06c923c720b08eb",
+      "functions": [
+        {
+          "name": "GetAsync",
+          "params": [
+            "filter",
+            "ct"
+          ],
+          "returnType": "Task<IReadOnlyList<AuditLogDto>>",
+          "exported": true,
+          "lineCount": 24
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuditLogRepository",
+          "methods": [
+            "GetAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Application.AuditLogs",
+          "specifiers": [
+            "AuditLogs"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        }
+      ],
+      "exports": [
+        "GetAsync",
+        "AuditLogRepository"
+      ],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "contentHash": "95c5a43f0181981f724e9025f713fc2d29ce92cc2a97d0c039efe13cd4294ccf",
+      "functions": [
+        {
+          "name": "GetAllAsync",
+          "params": [
+            "includeInactive",
+            "ct"
+          ],
+          "returnType": "Task<IReadOnlyList<DepartmentDto>>",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "ExistsAsync",
+          "params": [
+            "id",
+            "ct"
+          ],
+          "returnType": "Task<bool>",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "NameExistsAsync",
+          "params": [
+            "name",
+            "excludeId",
+            "ct"
+          ],
+          "returnType": "Task<bool>",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "CreateAsync",
+          "params": [
+            "name",
+            "ct"
+          ],
+          "returnType": "Task<DepartmentDto>",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "UpdateAsync",
+          "params": [
+            "id",
+            "name",
+            "isActive",
+            "ct"
+          ],
+          "returnType": "Task<DepartmentDto?>",
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [
+        {
+          "name": "DepartmentRepository",
+          "methods": [
+            "GetAllAsync",
+            "ExistsAsync",
+            "NameExistsAsync",
+            "CreateAsync",
+            "UpdateAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 50
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        }
+      ],
+      "exports": [
+        "GetAllAsync",
+        "ExistsAsync",
+        "NameExistsAsync",
+        "CreateAsync",
+        "UpdateAsync",
+        "DepartmentRepository"
+      ],
+      "totalLines": 57,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "contentHash": "fa5c36ee6b1257b7ce79113b6199f3e93cccc23ab9848f34be4215be8e0e9ec3",
+      "functions": [
+        {
+          "name": "WriteWorkbook",
+          "params": [
+            "employees"
+          ],
+          "returnType": "byte[]",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "ReadRows",
+          "params": [
+            "excelStream"
+          ],
+          "returnType": "IReadOnlyList<EmployeeImportRow>",
+          "exported": true,
+          "lineCount": 60
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeExcelFile",
+          "methods": [
+            "WriteWorkbook",
+            "ReadRows"
+          ],
+          "properties": [
+            "Headers"
+          ],
+          "exported": true,
+          "lineCount": 92
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        },
+        {
+          "source": "ClosedXML.Excel",
+          "specifiers": [
+            "Excel"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        }
+      ],
+      "exports": [
+        "WriteWorkbook",
+        "ReadRows",
+        "EmployeeExcelFile"
+      ],
+      "totalLines": 99,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "contentHash": "c50e046ece2293fe4088eaf42212cfa0cf00a733843d952f002b5f0ff56481da",
+      "functions": [
+        {
+          "name": "GetPagedAsync",
+          "params": [
+            "filter",
+            "ct"
+          ],
+          "returnType": "Task<PagedResult<EmployeeListItemDto>>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "GetAllAsync",
+          "params": [
+            "filter",
+            "ct"
+          ],
+          "returnType": "Task<IReadOnlyList<EmployeeListItemDto>>",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "ProjectListItems",
+          "params": [
+            "filter"
+          ],
+          "returnType": "IQueryable<EmployeeListItemDto>",
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "BuildFilteredQuery",
+          "params": [
+            "filter"
+          ],
+          "returnType": "IQueryable<Employee>",
+          "exported": false,
+          "lineCount": 45
+        },
+        {
+          "name": "TryParseJoinDate",
+          "params": [
+            "value",
+            "date"
+          ],
+          "returnType": "bool",
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "GetByIdAsync",
+          "params": [
+            "id",
+            "ct"
+          ],
+          "returnType": "Task<EmployeeDetailDto?>",
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "CreateAsync",
+          "params": [
+            "request",
+            "ct"
+          ],
+          "returnType": "Task<EmployeeDetailDto>",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "UpdateAsync",
+          "params": [
+            "id",
+            "request",
+            "ct"
+          ],
+          "returnType": "Task<bool>",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "DeleteAsync",
+          "params": [
+            "id",
+            "ct"
+          ],
+          "returnType": "Task<bool>",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "ImportAsync",
+          "params": [
+            "requests",
+            "ct"
+          ],
+          "returnType": "Task<int>",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "ToDetailDto",
+          "params": [
+            "e"
+          ],
+          "returnType": "EmployeeDetailDto",
+          "exported": false,
+          "lineCount": 2
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeRepository",
+          "methods": [
+            "GetPagedAsync",
+            "GetAllAsync",
+            "ProjectListItems",
+            "BuildFilteredQuery",
+            "TryParseJoinDate",
+            "GetByIdAsync",
+            "CreateAsync",
+            "UpdateAsync",
+            "DeleteAsync",
+            "ImportAsync",
+            "ToDetailDto"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 172
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Globalization",
+          "specifiers": [
+            "Globalization"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        }
+      ],
+      "exports": [
+        "GetPagedAsync",
+        "GetAllAsync",
+        "GetByIdAsync",
+        "CreateAsync",
+        "UpdateAsync",
+        "DeleteAsync",
+        "ImportAsync",
+        "EmployeeRepository"
+      ],
+      "totalLines": 180,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "contentHash": "1443bcfae21aa9fd68b976ed9427a3315c9099608d3071d913ff9da6e8c8b922",
+      "functions": [
+        {
+          "name": "BuildTargetModel",
+          "params": [
+            "modelBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 72
+        }
+      ],
+      "classes": [
+        {
+          "name": "InitialCreate",
+          "methods": [
+            "BuildTargetModel"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 78
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Storage.ValueConversion",
+          "specifiers": [
+            "ValueConversion"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 92,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "contentHash": "bc486baea4fa344c2f0e744164a126ad8f1385bf9e1c7aa69038d933f2a014a9",
+      "functions": [
+        {
+          "name": "Up",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 51
+        },
+        {
+          "name": "Down",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 8
+        }
+      ],
+      "classes": [
+        {
+          "name": "InitialCreate",
+          "methods": [
+            "Up",
+            "Down"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 65
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        }
+      ],
+      "exports": [
+        "InitialCreate"
+      ],
+      "totalLines": 75,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "contentHash": "f7f24671794d69da14019731917ed78caa5bba7e6f899f5328b7b742f982e181",
+      "functions": [
+        {
+          "name": "BuildTargetModel",
+          "params": [
+            "modelBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 98
+        }
+      ],
+      "classes": [
+        {
+          "name": "AddUsers",
+          "methods": [
+            "BuildTargetModel"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 104
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Storage.ValueConversion",
+          "specifiers": [
+            "ValueConversion"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 118,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "contentHash": "e0fc24a707e3c0a13c44ed54b6e45151f4697dc27b2ea0a7f5ab668702ee0015",
+      "functions": [
+        {
+          "name": "Up",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 23
+        },
+        {
+          "name": "Down",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "AddUsers",
+          "methods": [
+            "Up",
+            "Down"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "imports": [
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        }
+      ],
+      "exports": [
+        "AddUsers"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "contentHash": "cbc42522aa1b46c4bda08237931b8f81ff4de285ef686a5d16accede5d562f83",
+      "functions": [
+        {
+          "name": "BuildTargetModel",
+          "params": [
+            "modelBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 108
+        }
+      ],
+      "classes": [
+        {
+          "name": "PostgresInitialCreate",
+          "methods": [
+            "BuildTargetModel"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 114
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Storage.ValueConversion",
+          "specifiers": [
+            "ValueConversion"
+          ]
+        },
+        {
+          "source": "Npgsql.EntityFrameworkCore.PostgreSQL.Metadata",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 129,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs",
+      "contentHash": "dc0a4c346c645ee4baf1998ca27934febf0d8544552edebbf5c0249a2c6bb75d",
+      "functions": [
+        {
+          "name": "Up",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 111
+        },
+        {
+          "name": "Down",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 100
+        }
+      ],
+      "classes": [
+        {
+          "name": "PostgresInitialCreate",
+          "methods": [
+            "Up",
+            "Down"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 217
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Npgsql.EntityFrameworkCore.PostgreSQL.Metadata",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "PostgresInitialCreate"
+      ],
+      "totalLines": 228,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs",
+      "contentHash": "64c2ae137520640aeb8c82fad3afe850ddf4c04bc98cf8811fd4311a80a2e3e1",
+      "functions": [
+        {
+          "name": "BuildTargetModel",
+          "params": [
+            "modelBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 147
+        }
+      ],
+      "classes": [
+        {
+          "name": "AddAuditLogs",
+          "methods": [
+            "BuildTargetModel"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 153
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Storage.ValueConversion",
+          "specifiers": [
+            "ValueConversion"
+          ]
+        },
+        {
+          "source": "Npgsql.EntityFrameworkCore.PostgreSQL.Metadata",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 168,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs",
+      "contentHash": "6c7b192aa0bd0409113938ed125726fc1646ac366ce670af8195ebcdddc64a3c",
+      "functions": [
+        {
+          "name": "Up",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 30
+        },
+        {
+          "name": "Down",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "AddAuditLogs",
+          "methods": [
+            "Up",
+            "Down"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 41
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Npgsql.EntityFrameworkCore.PostgreSQL.Metadata",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "AddAuditLogs"
+      ],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs",
+      "contentHash": "e81719efb701cd33a088d054ae372aaf1815e79bbe0a90cf1562e882a7bd9d61",
+      "functions": [
+        {
+          "name": "BuildTargetModel",
+          "params": [
+            "modelBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 191
+        }
+      ],
+      "classes": [
+        {
+          "name": "AddRefreshTokens",
+          "methods": [
+            "BuildTargetModel"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 197
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Storage.ValueConversion",
+          "specifiers": [
+            "ValueConversion"
+          ]
+        },
+        {
+          "source": "Npgsql.EntityFrameworkCore.PostgreSQL.Metadata",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 212,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs",
+      "contentHash": "a40417f6c74ede6b1931d07e6481cd2041518fc429e74e719adc9d6c3af98216",
+      "functions": [
+        {
+          "name": "Up",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 36
+        },
+        {
+          "name": "Down",
+          "params": [
+            "migrationBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "AddRefreshTokens",
+          "methods": [
+            "Up",
+            "Down"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 47
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Migrations",
+          "specifiers": [
+            "Migrations"
+          ]
+        },
+        {
+          "source": "Npgsql.EntityFrameworkCore.PostgreSQL.Metadata",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [
+        "AddRefreshTokens"
+      ],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "contentHash": "72ebb8642f7e6001609c70a98a97478742c84e660942025caf04383e4e6f92c4",
+      "functions": [
+        {
+          "name": "BuildModel",
+          "params": [
+            "modelBuilder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 191
+        }
+      ],
+      "classes": [
+        {
+          "name": "AppDbContextModelSnapshot",
+          "methods": [
+            "BuildModel"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 195
+        }
+      ],
+      "imports": [
+        {
+          "source": "System",
+          "specifiers": [
+            "System"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore.Storage.ValueConversion",
+          "specifiers": [
+            "ValueConversion"
+          ]
+        },
+        {
+          "source": "Npgsql.EntityFrameworkCore.PostgreSQL.Metadata",
+          "specifiers": [
+            "Metadata"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 209,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs",
+      "contentHash": "0f5c5f30810735cc846ab7f6d653f11e9cccbc310409597dbc1cde05b0613850",
+      "functions": [
+        {
+          "name": "CreateAsync",
+          "params": [
+            "userId",
+            "tokenHash",
+            "expiresAt",
+            "ct"
+          ],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "RevokeIfActiveAsync",
+          "params": [
+            "tokenHash",
+            "ct"
+          ],
+          "returnType": "Task<bool>",
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "RefreshTokenRepository",
+          "methods": [
+            "CreateAsync",
+            "RevokeIfActiveAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 28
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Application.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        }
+      ],
+      "exports": [
+        "CreateAsync",
+        "RevokeIfActiveAsync",
+        "RefreshTokenRepository"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs",
+      "contentHash": "ff9555aea0ef42b704272c63c60d1aa1be6fd33b603b106ce10ddc31c58c83f5",
+      "functions": [
+        {
+          "name": "SeedAsync",
+          "params": [
+            "db"
+          ],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "classes": [
+        {
+          "name": "SeedData",
+          "methods": [
+            "SeedAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Application.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        }
+      ],
+      "exports": [
+        "SeedAsync",
+        "SeedData"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs",
+      "contentHash": "f5043725462594ad06f3892896c32bb491b406c9e6097a8bfda9bfe07d4a2853",
+      "functions": [
+        {
+          "name": "GetByUsernameAsync",
+          "params": [
+            "username",
+            "ct"
+          ],
+          "returnType": "Task<User?>",
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "UserRepository",
+          "methods": [
+            "GetByUsernameAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Application.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Domain",
+          "specifiers": [
+            "Domain"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        }
+      ],
+      "exports": [
+        "GetByUsernameAsync",
+        "UserRepository"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs",
+      "contentHash": "faee3f26a87c66d8653b214103f1c988534b76d5588eca8586470df47ccbcff0",
+      "functions": [
+        {
+          "name": "ListDepartments",
+          "params": [
+            "departments",
+            "includeInactive",
+            "ct"
+          ],
+          "returnType": "Task<IReadOnlyList<DepartmentDto>>",
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "DepartmentTools",
+          "methods": [
+            "ListDepartments"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.ComponentModel",
+          "specifiers": [
+            "ComponentModel"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ModelContextProtocol.Server",
+          "specifiers": [
+            "Server"
+          ]
+        }
+      ],
+      "exports": [
+        "ListDepartments",
+        "DepartmentTools"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs",
+      "contentHash": "7a2360ba1c904add51482b175732d0f5fce5ebf9d31341433b1edbaecdef9dd5",
+      "functions": [
+        {
+          "name": "ListEmployees",
+          "params": [
+            "employees",
+            "page",
+            "pageSize",
+            "ct"
+          ],
+          "returnType": "Task<PagedResult<EmployeeListItemDto>>",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "GetEmployee",
+          "params": [
+            "employees",
+            "id",
+            "ct"
+          ],
+          "returnType": "Task<EmployeeDetailDto?>",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "CreateEmployee",
+          "params": [
+            "employees",
+            "departments",
+            "name",
+            "departmentId",
+            "salary",
+            "joinDate",
+            "isActive",
+            "ct"
+          ],
+          "returnType": "Task<CreateEmployeeResult>",
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "UpdateEmployee",
+          "params": [
+            "employees",
+            "departments",
+            "id",
+            "name",
+            "departmentId",
+            "salary",
+            "joinDate",
+            "isActive",
+            "ct"
+          ],
+          "returnType": "Task<UpdateEmployeeResult>",
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "DeleteEmployee",
+          "params": [
+            "employees",
+            "id",
+            "ct"
+          ],
+          "returnType": "Task<bool>",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "ExportEmployees",
+          "params": [
+            "employees",
+            "ct"
+          ],
+          "returnType": "Task<IReadOnlyList<EmployeeListItemDto>>",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "ValidateAsync",
+          "params": [
+            "request",
+            "departments",
+            "ct"
+          ],
+          "returnType": "Task<Dictionary<string, string[]>>",
+          "exported": false,
+          "lineCount": 6
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeTools",
+          "methods": [
+            "ListEmployees",
+            "GetEmployee",
+            "CreateEmployee",
+            "UpdateEmployee",
+            "DeleteEmployee",
+            "ExportEmployees",
+            "ValidateAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 133
+        },
+        {
+          "name": "CreateEmployeeResult",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "UpdateEmployeeResult",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.ComponentModel",
+          "specifiers": [
+            "ComponentModel"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "ModelContextProtocol.Server",
+          "specifiers": [
+            "Server"
+          ]
+        }
+      ],
+      "exports": [
+        "ListEmployees",
+        "GetEmployee",
+        "CreateEmployee",
+        "UpdateEmployee",
+        "DeleteEmployee",
+        "ExportEmployees",
+        "EmployeeTools",
+        "CreateEmployeeResult",
+        "UpdateEmployeeResult"
+      ],
+      "totalLines": 145,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/src/ExcelManagement.McpServer/Program.cs": {
+      "filePath": "excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+      "contentHash": "2dda6e2964b45b8e44d95fc32bb776a1ba1f8ed617c74e7e5f3b89dd5f9f33f6",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "ExcelManagement.Infrastructure",
+          "specifiers": [
+            "Infrastructure"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.DependencyInjection",
+          "specifiers": [
+            "DependencyInjection"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.Hosting",
+          "specifiers": [
+            "Hosting"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.Logging",
+          "specifiers": [
+            "Logging"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "contentHash": "826ccb2a922ce1e7c806feed44ae62d8dee3c71b770c1224b774ea312e95fe2c",
+      "functions": [
+        {
+          "name": "InitializeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 4
+        },
+        {
+          "name": "DisposeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": false,
+          "lineCount": 4
+        },
+        {
+          "name": "ConfigureWebHost",
+          "params": [
+            "builder"
+          ],
+          "returnType": "void",
+          "exported": false,
+          "lineCount": 8
+        }
+      ],
+      "classes": [
+        {
+          "name": "ApiWebApplicationFactory",
+          "methods": [
+            "InitializeAsync",
+            "DisposeAsync",
+            "ConfigureWebHost"
+          ],
+          "properties": [
+            "_connection"
+          ],
+          "exported": true,
+          "lineCount": 23
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Infrastructure.Persistence",
+          "specifiers": [
+            "Persistence"
+          ]
+        },
+        {
+          "source": "Microsoft.AspNetCore.Hosting",
+          "specifiers": [
+            "Hosting"
+          ]
+        },
+        {
+          "source": "Microsoft.AspNetCore.Mvc.Testing",
+          "specifiers": [
+            "Testing"
+          ]
+        },
+        {
+          "source": "Microsoft.Data.Sqlite",
+          "specifiers": [
+            "Sqlite"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.DependencyInjection",
+          "specifiers": [
+            "DependencyInjection"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.DependencyInjection.Extensions",
+          "specifiers": [
+            "Extensions"
+          ]
+        }
+      ],
+      "exports": [
+        "InitializeAsync",
+        "ApiWebApplicationFactory"
+      ],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "contentHash": "e443a3bc6ec7e852395b37c2357fef59d375547f0c8ed0548c5208c2e931a932",
+      "functions": [
+        {
+          "name": "InitializeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "DisposeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "GetAnyDepartmentIdAsync",
+          "params": [],
+          "returnType": "Task<int>",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "GetLogsForAsync",
+          "params": [
+            "entityName",
+            "entityId"
+          ],
+          "returnType": "Task<List<AuditLogDto>>",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "CreateEmployee_WritesOneCreatedAuditEntry",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "UpdateEmployee_WritesOneUpdatedAuditEntryWithDiff",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "DeleteEmployee_WritesOneDeletedAuditEntry",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "CreateAndUpdateDepartment_WritesAuditEntries",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "GetAuditLogs_FiltersByEntityNameAndDateRange",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "GetAuditLogs_AsViewer_ReturnsForbidden",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "GetAuditLogs_WithoutToken_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuditLogTests",
+          "methods": [
+            "InitializeAsync",
+            "DisposeAsync",
+            "GetAnyDepartmentIdAsync",
+            "GetLogsForAsync",
+            "CreateEmployee_WritesOneCreatedAuditEntry",
+            "UpdateEmployee_WritesOneUpdatedAuditEntryWithDiff",
+            "DeleteEmployee_WritesOneDeletedAuditEntry",
+            "CreateAndUpdateDepartment_WritesAuditEntries",
+            "GetAuditLogs_FiltersByEntityNameAndDateRange",
+            "GetAuditLogs_AsViewer_ReturnsForbidden",
+            "GetAuditLogs_WithoutToken_ReturnsUnauthorized"
+          ],
+          "properties": [
+            "_client"
+          ],
+          "exported": true,
+          "lineCount": 129
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net",
+          "specifiers": [
+            "Net"
+          ]
+        },
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.AuditLogs",
+          "specifiers": [
+            "AuditLogs"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "InitializeAsync",
+        "DisposeAsync",
+        "CreateEmployee_WritesOneCreatedAuditEntry",
+        "UpdateEmployee_WritesOneUpdatedAuditEntryWithDiff",
+        "DeleteEmployee_WritesOneDeletedAuditEntry",
+        "CreateAndUpdateDepartment_WritesAuditEntries",
+        "GetAuditLogs_FiltersByEntityNameAndDateRange",
+        "GetAuditLogs_AsViewer_ReturnsForbidden",
+        "GetAuditLogs_WithoutToken_ReturnsUnauthorized",
+        "AuditLogTests"
+      ],
+      "totalLines": 139,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "contentHash": "419a6888586a264c15f90bac531f3961af81aeb9d324dc551d7d753a42e0623e",
+      "functions": [
+        {
+          "name": "LoginAsAdminAsync",
+          "params": [
+            "client"
+          ],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "LoginAsViewerAsync",
+          "params": [
+            "client"
+          ],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthTestHelper",
+          "methods": [
+            "LoginAsAdminAsync",
+            "LoginAsViewerAsync"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        }
+      ],
+      "exports": [
+        "LoginAsAdminAsync",
+        "LoginAsViewerAsync",
+        "AuthTestHelper"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "contentHash": "71ef8c1497f31f3fe46f7013d66b44802fac3c4e2a4ae833891890bf5226aedc",
+      "functions": [
+        {
+          "name": "Login_ValidAdminCredentials_ReturnsOkWithUserInfo",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "Login_InvalidPassword_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "Login_UnknownUsername_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "Refresh_WithValidRefreshCookie_RotatesAccessToken",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "Refresh_WithoutRefreshCookie_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "Logout_ThenReusingRefreshToken_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "ExtractCookie",
+          "params": [
+            "response",
+            "name"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "SendWithCookieAsync",
+          "params": [
+            "client",
+            "method",
+            "path",
+            "cookie"
+          ],
+          "returnType": "Task<HttpResponseMessage>",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "GetEmployees_WithoutToken_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "GetEmployees_AsViewer_Succeeds",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "CreateEmployee_AsViewer_ReturnsForbidden",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "CreateDepartment_AsViewer_ReturnsForbidden",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "CreateEmployee_AsAdmin_Succeeds",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "UpdateEmployee_AsViewer_ReturnsForbidden",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "DeleteEmployee_AsViewer_ReturnsForbidden",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "UpdateDepartment_AsViewer_ReturnsForbidden",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "GetEmployees_WithMalformedToken_ReturnsUnauthorized",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthTests",
+          "methods": [
+            "Login_ValidAdminCredentials_ReturnsOkWithUserInfo",
+            "Login_InvalidPassword_ReturnsUnauthorized",
+            "Login_UnknownUsername_ReturnsUnauthorized",
+            "Refresh_WithValidRefreshCookie_RotatesAccessToken",
+            "Refresh_WithoutRefreshCookie_ReturnsUnauthorized",
+            "Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized",
+            "Logout_ThenReusingRefreshToken_ReturnsUnauthorized",
+            "ExtractCookie",
+            "SendWithCookieAsync",
+            "GetEmployees_WithoutToken_ReturnsUnauthorized",
+            "GetEmployees_AsViewer_Succeeds",
+            "CreateEmployee_AsViewer_ReturnsForbidden",
+            "CreateDepartment_AsViewer_ReturnsForbidden",
+            "CreateEmployee_AsAdmin_Succeeds",
+            "UpdateEmployee_AsViewer_ReturnsForbidden",
+            "DeleteEmployee_AsViewer_ReturnsForbidden",
+            "UpdateDepartment_AsViewer_ReturnsForbidden",
+            "GetEmployees_WithMalformedToken_ReturnsUnauthorized"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 241
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net",
+          "specifiers": [
+            "Net"
+          ]
+        },
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Auth",
+          "specifiers": [
+            "Auth"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "Microsoft.AspNetCore.Mvc.Testing",
+          "specifiers": [
+            "Testing"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "Login_ValidAdminCredentials_ReturnsOkWithUserInfo",
+        "Login_InvalidPassword_ReturnsUnauthorized",
+        "Login_UnknownUsername_ReturnsUnauthorized",
+        "Refresh_WithValidRefreshCookie_RotatesAccessToken",
+        "Refresh_WithoutRefreshCookie_ReturnsUnauthorized",
+        "Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized",
+        "Logout_ThenReusingRefreshToken_ReturnsUnauthorized",
+        "GetEmployees_WithoutToken_ReturnsUnauthorized",
+        "GetEmployees_AsViewer_Succeeds",
+        "CreateEmployee_AsViewer_ReturnsForbidden",
+        "CreateDepartment_AsViewer_ReturnsForbidden",
+        "CreateEmployee_AsAdmin_Succeeds",
+        "UpdateEmployee_AsViewer_ReturnsForbidden",
+        "DeleteEmployee_AsViewer_ReturnsForbidden",
+        "UpdateDepartment_AsViewer_ReturnsForbidden",
+        "GetEmployees_WithMalformedToken_ReturnsUnauthorized",
+        "AuthTests"
+      ],
+      "totalLines": 252,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "contentHash": "2ea8917c91579904a378c8a60b9e8e47805fba622403d17146e816bbeaa0b77c",
+      "functions": [
+        {
+          "name": "InitializeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "DisposeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "CreateDepartment_PersistsAsActiveByDefault",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "CreateDepartment_DuplicateName_ReturnsValidationProblem",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 26
+        },
+        {
+          "name": "UpdateDepartment_RenamesAndTogglesActive",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "UpdateDepartment_NotFound_Returns404",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 7
+        },
+        {
+          "name": "GetDepartments_ExcludesDisabledByDefault_ButIncludesWhenRequested",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "ExistingEmployee_ReferencingDisabledDepartment_StillRendersAndSaves",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 23
+        }
+      ],
+      "classes": [
+        {
+          "name": "DepartmentCrudTests",
+          "methods": [
+            "InitializeAsync",
+            "DisposeAsync",
+            "CreateDepartment_PersistsAsActiveByDefault",
+            "CreateDepartment_DuplicateName_ReturnsValidationProblem",
+            "CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500",
+            "UpdateDepartment_RenamesAndTogglesActive",
+            "UpdateDepartment_NotFound_Returns404",
+            "GetDepartments_ExcludesDisabledByDefault_ButIncludesWhenRequested",
+            "ExistingEmployee_ReferencingDisabledDepartment_StillRendersAndSaves"
+          ],
+          "properties": [
+            "_client"
+          ],
+          "exported": true,
+          "lineCount": 137
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net",
+          "specifiers": [
+            "Net"
+          ]
+        },
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "Microsoft.AspNetCore.Http",
+          "specifiers": [
+            "Http"
+          ]
+        },
+        {
+          "source": "Microsoft.EntityFrameworkCore",
+          "specifiers": [
+            "EntityFrameworkCore"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.DependencyInjection",
+          "specifiers": [
+            "DependencyInjection"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.DependencyInjection.Extensions",
+          "specifiers": [
+            "Extensions"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "InitializeAsync",
+        "DisposeAsync",
+        "CreateDepartment_PersistsAsActiveByDefault",
+        "CreateDepartment_DuplicateName_ReturnsValidationProblem",
+        "CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500",
+        "UpdateDepartment_RenamesAndTogglesActive",
+        "UpdateDepartment_NotFound_Returns404",
+        "GetDepartments_ExcludesDisabledByDefault_ButIncludesWhenRequested",
+        "ExistingEmployee_ReferencingDisabledDepartment_StillRendersAndSaves",
+        "DepartmentCrudTests"
+      ],
+      "totalLines": 150,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "contentHash": "05027a0eb3320598e2a57862ca58e5a859427946fcb565d023982824f11b010b",
+      "functions": [
+        {
+          "name": "InitializeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "DisposeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "GetAnyDepartmentIdAsync",
+          "params": [],
+          "returnType": "Task<int>",
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "CreateEmployee_PersistsAndReturnsCreated",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "CreateEmployee_MissingName_ReturnsValidationProblem",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "CreateEmployee_UnknownDepartment_ReturnsValidationProblem",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "CreateEmployee_NegativeSalary_ReturnsValidationProblem",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "CreateEmployee_InvalidJoinDate_ReturnsValidationProblem",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "UpdateEmployee_ChangesFieldsAndPersists",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "UpdateEmployee_NotFound_Returns404",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "DeleteEmployee_RemovesRecord",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "DeleteEmployee_NotFound_Returns404",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeCrudTests",
+          "methods": [
+            "InitializeAsync",
+            "DisposeAsync",
+            "GetAnyDepartmentIdAsync",
+            "CreateEmployee_PersistsAndReturnsCreated",
+            "CreateEmployee_MissingName_ReturnsValidationProblem",
+            "CreateEmployee_UnknownDepartment_ReturnsValidationProblem",
+            "CreateEmployee_NegativeSalary_ReturnsValidationProblem",
+            "CreateEmployee_InvalidJoinDate_ReturnsValidationProblem",
+            "UpdateEmployee_ChangesFieldsAndPersists",
+            "UpdateEmployee_NotFound_Returns404",
+            "DeleteEmployee_RemovesRecord",
+            "DeleteEmployee_NotFound_Returns404"
+          ],
+          "properties": [
+            "_client"
+          ],
+          "exported": true,
+          "lineCount": 141
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net",
+          "specifiers": [
+            "Net"
+          ]
+        },
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "Microsoft.AspNetCore.Http",
+          "specifiers": [
+            "Http"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "InitializeAsync",
+        "DisposeAsync",
+        "CreateEmployee_PersistsAndReturnsCreated",
+        "CreateEmployee_MissingName_ReturnsValidationProblem",
+        "CreateEmployee_UnknownDepartment_ReturnsValidationProblem",
+        "CreateEmployee_NegativeSalary_ReturnsValidationProblem",
+        "CreateEmployee_InvalidJoinDate_ReturnsValidationProblem",
+        "UpdateEmployee_ChangesFieldsAndPersists",
+        "UpdateEmployee_NotFound_Returns404",
+        "DeleteEmployee_RemovesRecord",
+        "DeleteEmployee_NotFound_Returns404",
+        "EmployeeCrudTests"
+      ],
+      "totalLines": 151,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "contentHash": "5a2e95577caa781079a08c540c7ec91aa9005acc08e1610a462ccbff2c3236cf",
+      "functions": [
+        {
+          "name": "InitializeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "DisposeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "BuildWorkbook",
+          "params": [
+            "rows"
+          ],
+          "returnType": "byte[]",
+          "exported": false,
+          "lineCount": 25
+        },
+        {
+          "name": "ToFileContent",
+          "params": [
+            "bytes"
+          ],
+          "returnType": "HttpContent",
+          "exported": false,
+          "lineCount": 8
+        },
+        {
+          "name": "Import_AllRowsValid_CommitsAllRows",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 21
+        },
+        {
+          "name": "Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 35
+        },
+        {
+          "name": "Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "Export_Excel_ReturnsFilteredEmployeesWithStatusAsText",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "Export_Csv_ReturnsFilteredEmployeesWithStatusAsText",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "Export_RoundTrip_ExportedFileReimportsCleanly",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "Viewer_Gets403_OnImportAndExport",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "GetEngineeringId",
+          "params": [],
+          "returnType": "Task<int>",
+          "exported": false,
+          "lineCount": 5
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeImportExportTests",
+          "methods": [
+            "InitializeAsync",
+            "DisposeAsync",
+            "BuildWorkbook",
+            "ToFileContent",
+            "Import_AllRowsValid_CommitsAllRows",
+            "Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly",
+            "Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow",
+            "Export_Excel_ReturnsFilteredEmployeesWithStatusAsText",
+            "Export_Csv_ReturnsFilteredEmployeesWithStatusAsText",
+            "Export_RoundTrip_ExportedFileReimportsCleanly",
+            "Viewer_Gets403_OnImportAndExport",
+            "GetEngineeringId"
+          ],
+          "properties": [
+            "_client"
+          ],
+          "exported": true,
+          "lineCount": 202
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net",
+          "specifiers": [
+            "Net"
+          ]
+        },
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ClosedXML.Excel",
+          "specifiers": [
+            "Excel"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "InitializeAsync",
+        "DisposeAsync",
+        "Import_AllRowsValid_CommitsAllRows",
+        "Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly",
+        "Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow",
+        "Export_Excel_ReturnsFilteredEmployeesWithStatusAsText",
+        "Export_Csv_ReturnsFilteredEmployeesWithStatusAsText",
+        "Export_RoundTrip_ExportedFileReimportsCleanly",
+        "Viewer_Gets403_OnImportAndExport",
+        "EmployeeImportExportTests"
+      ],
+      "totalLines": 212,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "contentHash": "4cbb7a77bac0b7e811ae24a2c5c406d196da744a774cf01163805b9547c97537",
+      "functions": [
+        {
+          "name": "InitializeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "DisposeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "Name_PartialMatch_ReturnsOnlyMatchingEmployees",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "Department_AndStatus_Combine_ReturnsOnlyMatchingEmployees",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 17
+        },
+        {
+          "name": "SalaryRange_ReturnsOnlyEmployeesWithinRange",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "JoinDateRange_ReturnsOnlyEmployeesWithinRange",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeSearchTests",
+          "methods": [
+            "InitializeAsync",
+            "DisposeAsync",
+            "Name_PartialMatch_ReturnsOnlyMatchingEmployees",
+            "Department_AndStatus_Combine_ReturnsOnlyMatchingEmployees",
+            "SalaryRange_ReturnsOnlyEmployeesWithinRange",
+            "JoinDateRange_ReturnsOnlyEmployeesWithinRange"
+          ],
+          "properties": [
+            "_client"
+          ],
+          "exported": true,
+          "lineCount": 60
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "InitializeAsync",
+        "DisposeAsync",
+        "Name_PartialMatch_ReturnsOnlyMatchingEmployees",
+        "Department_AndStatus_Combine_ReturnsOnlyMatchingEmployees",
+        "SalaryRange_ReturnsOnlyEmployeesWithinRange",
+        "JoinDateRange_ReturnsOnlyEmployeesWithinRange",
+        "EmployeeSearchTests"
+      ],
+      "totalLines": 68,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "contentHash": "fbe1f7e66d4672cf9b02e1f8adb3108d682da41b3104aec9e72e2915b83b81fe",
+      "functions": [
+        {
+          "name": "InitializeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "DisposeAsync",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "GetEmployees_ReturnsSeededPagedResult",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "GetEmployees_RespectsPageSize",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "GetEmployees_ClampsOutOfRangePaging",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeesEndpointTests",
+          "methods": [
+            "InitializeAsync",
+            "DisposeAsync",
+            "GetEmployees_ReturnsSeededPagedResult",
+            "GetEmployees_RespectsPageSize",
+            "GetEmployees_ClampsOutOfRangePaging"
+          ],
+          "properties": [
+            "_client"
+          ],
+          "exported": true,
+          "lineCount": 48
+        }
+      ],
+      "imports": [
+        {
+          "source": "System.Net.Http.Json",
+          "specifiers": [
+            "Json"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "InitializeAsync",
+        "DisposeAsync",
+        "GetEmployees_ReturnsSeededPagedResult",
+        "GetEmployees_RespectsPageSize",
+        "GetEmployees_ClampsOutOfRangePaging",
+        "EmployeesEndpointTests"
+      ],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs": {
+      "filePath": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "contentHash": "079e2605d57f18188c963ba68cd1b508aeb09f434ae211b9ec062aca752f62fc",
+      "functions": [
+        {
+          "name": "CreateRepositories",
+          "params": [],
+          "returnType": "(IEmployeeRepository Employees, IDepartmentRepository Departments)",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "ListDepartments_DispatchesToRepository_ReturnsSeededActiveDepartments",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "ListEmployees_DispatchesToRepository_ReturnsPagedShape",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "GetEmployee_DispatchesToRepository_ReturnsDetailForSeededRow",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "GetEmployee_UnknownId_ReturnsNull",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "CreateEmployee_ValidRequest_PersistsThroughRepository",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 19
+        },
+        {
+          "name": "CreateEmployee_UnknownDepartment_ReturnsValidationErrorsAndDoesNotCreate",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "UpdateEmployee_ValidRequest_ChangesPersistedRow",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "UpdateEmployee_UnknownId_ReturnsUpdatedFalse",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "DeleteEmployee_ExistingRow_RemovesItAndReportsTrue",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "DeleteEmployee_UnknownId_ReturnsFalse",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "ExportEmployees_ReturnsEveryRowAcrossPages",
+          "params": [],
+          "returnType": "Task",
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [
+        {
+          "name": "McpToolsTests",
+          "methods": [
+            "CreateRepositories",
+            "ListDepartments_DispatchesToRepository_ReturnsSeededActiveDepartments",
+            "ListEmployees_DispatchesToRepository_ReturnsPagedShape",
+            "GetEmployee_DispatchesToRepository_ReturnsDetailForSeededRow",
+            "GetEmployee_UnknownId_ReturnsNull",
+            "CreateEmployee_ValidRequest_PersistsThroughRepository",
+            "CreateEmployee_UnknownDepartment_ReturnsValidationErrorsAndDoesNotCreate",
+            "UpdateEmployee_ValidRequest_ChangesPersistedRow",
+            "UpdateEmployee_UnknownId_ReturnsUpdatedFalse",
+            "DeleteEmployee_ExistingRow_RemovesItAndReportsTrue",
+            "DeleteEmployee_UnknownId_ReturnsFalse",
+            "ExportEmployees_ReturnsEveryRowAcrossPages"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 160
+        }
+      ],
+      "imports": [
+        {
+          "source": "ExcelManagement.Application.Departments",
+          "specifiers": [
+            "Departments"
+          ]
+        },
+        {
+          "source": "ExcelManagement.Application.Employees",
+          "specifiers": [
+            "Employees"
+          ]
+        },
+        {
+          "source": "ExcelManagement.McpServer",
+          "specifiers": [
+            "McpServer"
+          ]
+        },
+        {
+          "source": "Microsoft.Extensions.DependencyInjection",
+          "specifiers": [
+            "DependencyInjection"
+          ]
+        },
+        {
+          "source": "Xunit",
+          "specifiers": [
+            "Xunit"
+          ]
+        }
+      ],
+      "exports": [
+        "ListDepartments_DispatchesToRepository_ReturnsSeededActiveDepartments",
+        "ListEmployees_DispatchesToRepository_ReturnsPagedShape",
+        "GetEmployee_DispatchesToRepository_ReturnsDetailForSeededRow",
+        "GetEmployee_UnknownId_ReturnsNull",
+        "CreateEmployee_ValidRequest_PersistsThroughRepository",
+        "CreateEmployee_UnknownDepartment_ReturnsValidationErrorsAndDoesNotCreate",
+        "UpdateEmployee_ValidRequest_ChangesPersistedRow",
+        "UpdateEmployee_UnknownId_ReturnsUpdatedFalse",
+        "DeleteEmployee_ExistingRow_RemovesItAndReportsTrue",
+        "DeleteEmployee_UnknownId_ReturnsFalse",
+        "ExportEmployees_ReturnsEveryRowAcrossPages",
+        "McpToolsTests"
+      ],
+      "totalLines": 174,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/.npmrc": {
+      "filePath": "excel-management-web/.npmrc",
+      "contentHash": "a093bb2fed59d699b7f9a62a5203cc196054c624e9c39c6d908c9e7db5dd2464",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-web/nginx.conf": {
+      "filePath": "excel-management-web/nginx.conf",
+      "contentHash": "010ad313adaf8541f8df440baefa07c763fd2fa0320e54dbe85373b8a48449d4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": false
+    },
+    "excel-management-web/src/components/layout/AppShell.tsx": {
+      "filePath": "excel-management-web/src/components/layout/AppShell.tsx",
+      "contentHash": "a4ee7794f961f4caf3042f7a93d313d4994fbc599122ebd973a1ad01f633ae7a",
+      "functions": [
+        {
+          "name": "AppShell",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 61
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ClipboardList",
+            "LogOut",
+            "Table2",
+            "Users"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        },
+        {
+          "source": "@/assets/chememan-logo.svg",
+          "specifiers": [
+            "chememanLogo"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "Button"
+          ]
+        },
+        {
+          "source": "@/features/auth/api",
+          "specifiers": [
+            "useLogout"
+          ]
+        },
+        {
+          "source": "@/features/auth/store",
+          "specifiers": [
+            "useAuthStore",
+            "useIsAdmin"
+          ]
+        }
+      ],
+      "exports": [
+        "AppShell"
+      ],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/alert-dialog.tsx": {
+      "filePath": "excel-management-web/src/components/ui/alert-dialog.tsx",
+      "contentHash": "d39348ea094dea9b83ecf1baac1cd0ef98b73944bcca1e592da04fd30f452787",
+      "functions": [
+        {
+          "name": "AlertDialog",
+          "params": [
+            "{ ...props }"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "AlertDialogTrigger",
+          "params": [
+            "{ ...props }"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "AlertDialogPortal",
+          "params": [
+            "{ ...props }"
+          ],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "AlertDialogOverlay",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "AlertDialogContent",
+          "params": [
+            "{\n  className,\n  size = \"default\",\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "AlertDialogHeader",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "AlertDialogFooter",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "AlertDialogMedia",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "AlertDialogTitle",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "AlertDialogDescription",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "AlertDialogAction",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "AlertDialogCancel",
+          "params": [
+            "{\n  className,\n  variant = \"outline\",\n  size = \"default\",\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 16
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "@base-ui/react/alert-dialog",
+          "specifiers": [
+            "AlertDialogPrimitive"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "Button"
+          ]
+        }
+      ],
+      "exports": [
+        "AlertDialog",
+        "AlertDialogAction",
+        "AlertDialogCancel",
+        "AlertDialogContent",
+        "AlertDialogDescription",
+        "AlertDialogFooter",
+        "AlertDialogHeader",
+        "AlertDialogMedia",
+        "AlertDialogOverlay",
+        "AlertDialogPortal",
+        "AlertDialogTitle",
+        "AlertDialogTrigger"
+      ],
+      "totalLines": 188,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/badge.tsx": {
+      "filePath": "excel-management-web/src/components/ui/badge.tsx",
+      "contentHash": "d9fb280e266119c4b62a4c518e63152de27b094c68d3e5f8929d05bfb0c1bc6c",
+      "functions": [
+        {
+          "name": "Badge",
+          "params": [
+            "{\n  className,\n  variant = \"default\",\n  render,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 21
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@base-ui/react/merge-props",
+          "specifiers": [
+            "mergeProps"
+          ]
+        },
+        {
+          "source": "@base-ui/react/use-render",
+          "specifiers": [
+            "useRender"
+          ]
+        },
+        {
+          "source": "class-variance-authority",
+          "specifiers": [
+            "cva",
+            "VariantProps"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Badge",
+        "badgeVariants"
+      ],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/button.tsx": {
+      "filePath": "excel-management-web/src/components/ui/button.tsx",
+      "contentHash": "313353436d0fcc8e44ab470adb614b9fd013d28626f624328ea0d66d41a6c81b",
+      "functions": [
+        {
+          "name": "Button",
+          "params": [
+            "{\n  className,\n  variant = \"default\",\n  size = \"default\",\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@base-ui/react/button",
+          "specifiers": [
+            "ButtonPrimitive"
+          ]
+        },
+        {
+          "source": "class-variance-authority",
+          "specifiers": [
+            "cva",
+            "VariantProps"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Button",
+        "buttonVariants"
+      ],
+      "totalLines": 58,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/calendar.tsx": {
+      "filePath": "excel-management-web/src/components/ui/calendar.tsx",
+      "contentHash": "d1e4f3bd2a4d145f73f14b6b1c23f2bddc0d446cb4a696c4455f22a030d1b06a",
+      "functions": [
+        {
+          "name": "startOfMonth",
+          "params": [
+            "date"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "isSameDay",
+          "params": [
+            "a",
+            "b"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "Calendar",
+          "params": [
+            "{ selected, onSelect, className }"
+          ],
+          "exported": true,
+          "lineCount": 90
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ChevronLeft",
+            "ChevronRight"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Calendar"
+      ],
+      "totalLines": 113,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/card.tsx": {
+      "filePath": "excel-management-web/src/components/ui/card.tsx",
+      "contentHash": "6d2818b371f97467617c9d6b94ad9058176ab31cd0ad54f48c29c843c81ee9a2",
+      "functions": [
+        {
+          "name": "Card",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Card"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/checkbox.tsx": {
+      "filePath": "excel-management-web/src/components/ui/checkbox.tsx",
+      "contentHash": "51b82e5ca459ea7792d8f24ac924f13aeaa2b2cd338560d2b4291e38b648c12e",
+      "functions": [
+        {
+          "name": "Checkbox",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@base-ui/react/checkbox",
+          "specifiers": [
+            "CheckboxPrimitive"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "CheckIcon"
+          ]
+        }
+      ],
+      "exports": [
+        "Checkbox"
+      ],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/date-picker.tsx": {
+      "filePath": "excel-management-web/src/components/ui/date-picker.tsx",
+      "contentHash": "32ba795490284e66b93130383d190543bcd442ffb3d81734f9826f53215acf9c",
+      "functions": [
+        {
+          "name": "parseDateValue",
+          "params": [
+            "value"
+          ],
+          "returnType": "Date | undefined",
+          "exported": false,
+          "lineCount": 7
+        },
+        {
+          "name": "formatDateValue",
+          "params": [
+            "date"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "DatePicker",
+          "params": [
+            "{ id, value, onChange, placeholder = \"YYYY-MM-DD\", className }"
+          ],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "CalendarIcon"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        },
+        {
+          "source": "./calendar",
+          "specifiers": [
+            "Calendar"
+          ]
+        },
+        {
+          "source": "./input",
+          "specifiers": [
+            "Input"
+          ]
+        },
+        {
+          "source": "./popover",
+          "specifiers": [
+            "Popover",
+            "PopoverContent",
+            "PopoverTrigger"
+          ]
+        }
+      ],
+      "exports": [
+        "DatePicker"
+      ],
+      "totalLines": 67,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/input.tsx": {
+      "filePath": "excel-management-web/src/components/ui/input.tsx",
+      "contentHash": "dab990dfefa0ba78854ab6602ad074270dba9d7d1262184d9bfbb62bd990903b",
+      "functions": [
+        {
+          "name": "Input",
+          "params": [
+            "{ className, type, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "@base-ui/react/input",
+          "specifiers": [
+            "InputPrimitive"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Input"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/label.tsx": {
+      "filePath": "excel-management-web/src/components/ui/label.tsx",
+      "contentHash": "86232709f634da7f357a8aaec0e815f3f562604bb67202c88997fae97659b450",
+      "functions": [
+        {
+          "name": "Label",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Label"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/popover.tsx": {
+      "filePath": "excel-management-web/src/components/ui/popover.tsx",
+      "contentHash": "54d98e55bd2145c29aefc5418b4708a8d226ac8fec629a1988b992085a76df18",
+      "functions": [
+        {
+          "name": "PopoverContent",
+          "params": [
+            "{\n  className,\n  side = \"bottom\",\n  sideOffset = 4,\n  align = \"start\",\n  alignOffset = 0,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@base-ui/react/popover",
+          "specifiers": [
+            "PopoverPrimitive"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Popover",
+        "PopoverTrigger",
+        "PopoverContent"
+      ],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/select.tsx": {
+      "filePath": "excel-management-web/src/components/ui/select.tsx",
+      "contentHash": "4ba225fb838887a2493a8908774f1294ffbc2030af1e372425c6de76f598f0eb",
+      "functions": [
+        {
+          "name": "SelectGroup",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "SelectValue",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "SelectTrigger",
+          "params": [
+            "{\n  className,\n  size = \"default\",\n  children,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "SelectContent",
+          "params": [
+            "{\n  className,\n  children,\n  side = \"bottom\",\n  sideOffset = 4,\n  align = \"center\",\n  alignOffset = 0,\n  alignItemWithTrigger = true,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 38
+        },
+        {
+          "name": "SelectLabel",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "SelectItem",
+          "params": [
+            "{\n  className,\n  children,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "SelectSeparator",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "SelectScrollUpButton",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 18
+        },
+        {
+          "name": "SelectScrollDownButton",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "@base-ui/react/select",
+          "specifiers": [
+            "SelectPrimitive"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ChevronDownIcon",
+            "CheckIcon",
+            "ChevronUpIcon"
+          ]
+        }
+      ],
+      "exports": [
+        "Select",
+        "SelectContent",
+        "SelectGroup",
+        "SelectItem",
+        "SelectLabel",
+        "SelectScrollDownButton",
+        "SelectScrollUpButton",
+        "SelectSeparator",
+        "SelectTrigger",
+        "SelectValue"
+      ],
+      "totalLines": 201,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/components/ui/table.tsx": {
+      "filePath": "excel-management-web/src/components/ui/table.tsx",
+      "contentHash": "300dc171ff0e09543dce0787f43a3ceb0d168fa800eaecb98b6c5630f3c6d7e9",
+      "functions": [
+        {
+          "name": "Table",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "TableHeader",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "TableBody",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "TableFooter",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "TableRow",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "TableHead",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "TableCell",
+          "params": [
+            "{ className, ...props }"
+          ],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "TableCaption",
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "* as React"
+          ]
+        },
+        {
+          "source": "cn",
+          "specifiers": [
+            "cn"
+          ]
+        }
+      ],
+      "exports": [
+        "Table",
+        "TableHeader",
+        "TableBody",
+        "TableFooter",
+        "TableHead",
+        "TableRow",
+        "TableCell",
+        "TableCaption"
+      ],
+      "totalLines": 114,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": {
+      "filePath": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "contentHash": "38039760d0c850f34f3aa0a8d7c228d191ee79d676d46ed84443f2e4a0c9282b",
+      "functions": [
+        {
+          "name": "AuditLogPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 95
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useState"
+          ]
+        },
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Filter"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "buttonVariants"
+          ]
+        },
+        {
+          "source": "@/components/ui/card",
+          "specifiers": [
+            "Card"
+          ]
+        },
+        {
+          "source": "@/components/ui/date-picker",
+          "specifiers": [
+            "DatePicker"
+          ]
+        },
+        {
+          "source": "@/components/ui/input",
+          "specifiers": [
+            "Input"
+          ]
+        },
+        {
+          "source": "@/components/ui/label",
+          "specifiers": [
+            "Label"
+          ]
+        },
+        {
+          "source": "@/components/ui/select",
+          "specifiers": [
+            "Select",
+            "SelectContent",
+            "SelectItem",
+            "SelectTrigger",
+            "SelectValue"
+          ]
+        },
+        {
+          "source": "@/components/ui/table",
+          "specifiers": [
+            "Table",
+            "TableBody",
+            "TableCell",
+            "TableHead",
+            "TableHeader",
+            "TableRow"
+          ]
+        },
+        {
+          "source": "./api",
+          "specifiers": [
+            "useAuditLogs"
+          ]
+        }
+      ],
+      "exports": [
+        "AuditLogPage"
+      ],
+      "totalLines": 117,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/auditLogs/api.ts": {
+      "filePath": "excel-management-web/src/features/auditLogs/api.ts",
+      "contentHash": "1c9d1328509f2a7fffed4a72ce52b1452ca0ae83495441a3a25e3ee32d306e6c",
+      "functions": [
+        {
+          "name": "useAuditLogs",
+          "params": [
+            "filters"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "useQuery"
+          ]
+        },
+        {
+          "source": "@/lib/api/client",
+          "specifiers": [
+            "apiClient"
+          ]
+        }
+      ],
+      "exports": [
+        "useAuditLogs"
+      ],
+      "totalLines": 30,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/auth/AuthFlows.test.tsx": {
+      "filePath": "excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "contentHash": "836c0c7db5588f10fe8f528bedb9f1e91551279b4ce3f5a34087fe0b9f692b6a",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@testing-library/react",
+          "specifiers": [
+            "screen"
+          ]
+        },
+        {
+          "source": "msw",
+          "specifiers": [
+            "http",
+            "HttpResponse"
+          ]
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@/test/renderApp",
+          "specifiers": [
+            "renderApp"
+          ]
+        },
+        {
+          "source": "@/test/server",
+          "specifiers": [
+            "server"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/auth/api.ts": {
+      "filePath": "excel-management-web/src/features/auth/api.ts",
+      "contentHash": "955583a2a146546059745fdd361c4fffcc7237640dc94770b410534c2f2d7642",
+      "functions": [
+        {
+          "name": "toAuthUser",
+          "params": [
+            "dto"
+          ],
+          "returnType": "AuthUser",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "useLogin",
+          "params": [],
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "useLogout",
+          "params": [],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "bootstrapAuth",
+          "params": [],
+          "returnType": "Promise<void>",
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "useMutation"
+          ]
+        },
+        {
+          "source": "@/lib/api/client",
+          "specifiers": [
+            "apiClient"
+          ]
+        },
+        {
+          "source": "./store",
+          "specifiers": [
+            "AuthUser",
+            "Role",
+            "useAuthStore"
+          ]
+        }
+      ],
+      "exports": [
+        "useLogin",
+        "useLogout",
+        "bootstrapAuth"
+      ],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/auth/guards.ts": {
+      "filePath": "excel-management-web/src/features/auth/guards.ts",
+      "contentHash": "c7c7566cb0ad824de4dcc668b9212d0d250501bab45c01b43cd4ae76d25de9ad",
+      "functions": [
+        {
+          "name": "requireAuth",
+          "params": [],
+          "exported": true,
+          "lineCount": 5
+        },
+        {
+          "name": "requireAdmin",
+          "params": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "redirect"
+          ]
+        },
+        {
+          "source": "./store",
+          "specifiers": [
+            "useAuthStore"
+          ]
+        }
+      ],
+      "exports": [
+        "requireAuth",
+        "requireAdmin"
+      ],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/auth/store.ts": {
+      "filePath": "excel-management-web/src/features/auth/store.ts",
+      "contentHash": "231194650139139066ed6aa659a78f18d4abdeb138b375d404771693bdb90ff8",
+      "functions": [
+        {
+          "name": "useIsAdmin",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "zustand",
+          "specifiers": [
+            "create"
+          ]
+        }
+      ],
+      "exports": [
+        "useAuthStore",
+        "useIsAdmin"
+      ],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx": {
+      "filePath": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "contentHash": "1dd01687de1d87cc217c311a4870508061d9d2e228f3f9334c9d930a1aeccbf6",
+      "functions": [
+        {
+          "name": "renderPage",
+          "params": [],
+          "exported": false,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "QueryClient",
+            "QueryClientProvider"
+          ]
+        },
+        {
+          "source": "@testing-library/react",
+          "specifiers": [
+            "render",
+            "screen",
+            "waitFor"
+          ]
+        },
+        {
+          "source": "@testing-library/user-event",
+          "specifiers": [
+            "userEvent"
+          ]
+        },
+        {
+          "source": "msw",
+          "specifiers": [
+            "http",
+            "HttpResponse"
+          ]
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@/features/auth/store",
+          "specifiers": [
+            "useAuthStore"
+          ]
+        },
+        {
+          "source": "@/test/server",
+          "specifiers": [
+            "server"
+          ]
+        },
+        {
+          "source": "./DepartmentAdminPage",
+          "specifiers": [
+            "DepartmentAdminPage"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": {
+      "filePath": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "contentHash": "c25f11b06759295bdd7118a8f7b4f92f966b5f56dd874294909a0fd9ee5cde68",
+      "functions": [
+        {
+          "name": "DepartmentTableRow",
+          "params": [
+            "{ department }"
+          ],
+          "exported": false,
+          "lineCount": 58
+        },
+        {
+          "name": "DepartmentAdminPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 67
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Plus"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "@/components/ui/badge",
+          "specifiers": [
+            "Badge"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "Button"
+          ]
+        },
+        {
+          "source": "@/components/ui/card",
+          "specifiers": [
+            "Card"
+          ]
+        },
+        {
+          "source": "@/components/ui/checkbox",
+          "specifiers": [
+            "Checkbox"
+          ]
+        },
+        {
+          "source": "@/components/ui/input",
+          "specifiers": [
+            "Input"
+          ]
+        },
+        {
+          "source": "@/components/ui/label",
+          "specifiers": [
+            "Label"
+          ]
+        },
+        {
+          "source": "@/components/ui/table",
+          "specifiers": [
+            "Table",
+            "TableBody",
+            "TableCell",
+            "TableHead",
+            "TableHeader",
+            "TableRow"
+          ]
+        },
+        {
+          "source": "@/features/auth/store",
+          "specifiers": [
+            "useIsAdmin"
+          ]
+        },
+        {
+          "source": "./api",
+          "specifiers": [
+            "useCreateDepartment",
+            "useDepartments",
+            "useUpdateDepartment"
+          ]
+        }
+      ],
+      "exports": [
+        "DepartmentAdminPage"
+      ],
+      "totalLines": 152,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/departments/api.ts": {
+      "filePath": "excel-management-web/src/features/departments/api.ts",
+      "contentHash": "71286ef6ee7e543e5b93849d846c928f1bc618a853d4c688678a1bedac9287c2",
+      "functions": [
+        {
+          "name": "useDepartments",
+          "params": [
+            "includeInactive"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "useCreateDepartment",
+          "params": [],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "useUpdateDepartment",
+          "params": [],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "useMutation",
+            "useQuery",
+            "useQueryClient"
+          ]
+        },
+        {
+          "source": "@/lib/api/client",
+          "specifiers": [
+            "apiClient"
+          ]
+        },
+        {
+          "source": "@/lib/api/mutationError",
+          "specifiers": [
+            "throwOnMutationError"
+          ]
+        }
+      ],
+      "exports": [
+        "useDepartments",
+        "useCreateDepartment",
+        "useUpdateDepartment"
+      ],
+      "totalLines": 46,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx": {
+      "filePath": "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "contentHash": "ea471d8201e5561874ea36f223d1511728b1da5b6bdbeda2aaf410928b7ae38d",
+      "functions": [
+        {
+          "name": "DeleteEmployeeDialog",
+          "params": [
+            "{ employeeId, employeeName }"
+          ],
+          "exported": true,
+          "lineCount": 27
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Trash2"
+          ]
+        },
+        {
+          "source": "@/components/ui/alert-dialog",
+          "specifiers": [
+            "AlertDialog",
+            "AlertDialogAction",
+            "AlertDialogCancel",
+            "AlertDialogContent",
+            "AlertDialogDescription",
+            "AlertDialogFooter",
+            "AlertDialogHeader",
+            "AlertDialogTitle",
+            "AlertDialogTrigger"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "Button"
+          ]
+        },
+        {
+          "source": "./api",
+          "specifiers": [
+            "useDeleteEmployee"
+          ]
+        }
+      ],
+      "exports": [
+        "DeleteEmployeeDialog"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx": {
+      "filePath": "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "contentHash": "e8a81203a5ae5b711bb420e9cfdd93e674975f86f742f321a60c995c45635a05",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@testing-library/react",
+          "specifiers": [
+            "screen",
+            "waitFor"
+          ]
+        },
+        {
+          "source": "@testing-library/user-event",
+          "specifiers": [
+            "userEvent"
+          ]
+        },
+        {
+          "source": "msw",
+          "specifiers": [
+            "http",
+            "HttpResponse"
+          ]
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@/test/renderApp",
+          "specifiers": [
+            "renderApp"
+          ]
+        },
+        {
+          "source": "@/test/server",
+          "specifiers": [
+            "server"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 133,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/employees/EmployeeForm.tsx": {
+      "filePath": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "contentHash": "88a33af67477a7f4815c38b5947019d5f772bc46936b24624a83a22162118af8",
+      "functions": [
+        {
+          "name": "toFieldName",
+          "params": [
+            "apiFieldName"
+          ],
+          "returnType": "keyof EmployeeFormValues",
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "EmployeeForm",
+          "params": [
+            "{\n  defaultValues,\n  onSubmit,\n  submitLabel,\n}"
+          ],
+          "exported": true,
+          "lineCount": 112
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@hookform/resolvers/zod",
+          "specifiers": [
+            "zodResolver"
+          ]
+        },
+        {
+          "source": "react-hook-form",
+          "specifiers": [
+            "useForm"
+          ]
+        },
+        {
+          "source": "zod",
+          "specifiers": [
+            "z"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "Button"
+          ]
+        },
+        {
+          "source": "@/components/ui/checkbox",
+          "specifiers": [
+            "Checkbox"
+          ]
+        },
+        {
+          "source": "@/components/ui/date-picker",
+          "specifiers": [
+            "DatePicker"
+          ]
+        },
+        {
+          "source": "@/components/ui/input",
+          "specifiers": [
+            "Input"
+          ]
+        },
+        {
+          "source": "@/components/ui/label",
+          "specifiers": [
+            "Label"
+          ]
+        },
+        {
+          "source": "@/components/ui/select",
+          "specifiers": [
+            "Select",
+            "SelectContent",
+            "SelectItem",
+            "SelectTrigger",
+            "SelectValue"
+          ]
+        },
+        {
+          "source": "@/features/departments/api",
+          "specifiers": [
+            "useDepartments"
+          ]
+        },
+        {
+          "source": "./api",
+          "specifiers": [
+            "EmployeeFormValues",
+            "ValidationError"
+          ]
+        }
+      ],
+      "exports": [
+        "EmployeeForm"
+      ],
+      "totalLines": 146,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/employees/EmployeeListPage.test.tsx": {
+      "filePath": "excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "contentHash": "a87ebe1f50df0b8d95e2e285a8ac863d78276470d83ee7145fd42f08db4b3b69",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@testing-library/react",
+          "specifiers": [
+            "screen",
+            "waitFor"
+          ]
+        },
+        {
+          "source": "@testing-library/user-event",
+          "specifiers": [
+            "userEvent"
+          ]
+        },
+        {
+          "source": "msw",
+          "specifiers": [
+            "http",
+            "HttpResponse"
+          ]
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "describe",
+            "expect",
+            "it"
+          ]
+        },
+        {
+          "source": "@/test/renderApp",
+          "specifiers": [
+            "renderApp"
+          ]
+        },
+        {
+          "source": "@/test/server",
+          "specifiers": [
+            "server"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 100,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/employees/EmployeeListPage.tsx": {
+      "filePath": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "contentHash": "2b5c56a36eb304825363a8a831e26ca080c6518bdbe529cdb35d3adf83c09c61",
+      "functions": [
+        {
+          "name": "EmployeeFilterPanel",
+          "params": [],
+          "exported": false,
+          "lineCount": 115
+        },
+        {
+          "name": "EmployeeImportExportControls",
+          "params": [],
+          "exported": false,
+          "lineCount": 83
+        },
+        {
+          "name": "EmployeeListPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 123
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "Link",
+            "useNavigate",
+            "useSearch"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Download",
+            "Filter",
+            "Pencil",
+            "Plus",
+            "Upload",
+            "UserCheck",
+            "Users",
+            "UserX"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useRef",
+            "useState"
+          ]
+        },
+        {
+          "source": "@/components/ui/badge",
+          "specifiers": [
+            "Badge"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "Button",
+            "buttonVariants"
+          ]
+        },
+        {
+          "source": "@/components/ui/card",
+          "specifiers": [
+            "Card"
+          ]
+        },
+        {
+          "source": "@/components/ui/date-picker",
+          "specifiers": [
+            "DatePicker"
+          ]
+        },
+        {
+          "source": "@/components/ui/input",
+          "specifiers": [
+            "Input"
+          ]
+        },
+        {
+          "source": "@/components/ui/label",
+          "specifiers": [
+            "Label"
+          ]
+        },
+        {
+          "source": "@/components/ui/select",
+          "specifiers": [
+            "Select",
+            "SelectContent",
+            "SelectItem",
+            "SelectTrigger",
+            "SelectValue"
+          ]
+        },
+        {
+          "source": "@/components/ui/table",
+          "specifiers": [
+            "Table",
+            "TableBody",
+            "TableCell",
+            "TableHead",
+            "TableHeader",
+            "TableRow"
+          ]
+        },
+        {
+          "source": "@/features/auth/store",
+          "specifiers": [
+            "useIsAdmin"
+          ]
+        },
+        {
+          "source": "@/features/departments/api",
+          "specifiers": [
+            "useDepartments"
+          ]
+        },
+        {
+          "source": "./DeleteEmployeeDialog",
+          "specifiers": [
+            "DeleteEmployeeDialog"
+          ]
+        },
+        {
+          "source": "./api",
+          "specifiers": [
+            "exportEmployees",
+            "useEmployees",
+            "useImportEmployees"
+          ]
+        }
+      ],
+      "exports": [
+        "EmployeeListPage"
+      ],
+      "totalLines": 347,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/features/employees/api.ts": {
+      "filePath": "excel-management-web/src/features/employees/api.ts",
+      "contentHash": "a9b9d5c4b3deabe04725c41d98fd3db33d77042b8db31a741d5f975900753a77",
+      "functions": [
+        {
+          "name": "useEmployees",
+          "params": [
+            "filters"
+          ],
+          "exported": true,
+          "lineCount": 31
+        },
+        {
+          "name": "useEmployee",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 15
+        },
+        {
+          "name": "useCreateEmployee",
+          "params": [],
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "useUpdateEmployee",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "exportQuery",
+          "params": [
+            "filters"
+          ],
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "exportEmployees",
+          "params": [
+            "format",
+            "filters"
+          ],
+          "exported": true,
+          "lineCount": 16
+        },
+        {
+          "name": "useImportEmployees",
+          "params": [],
+          "exported": true,
+          "lineCount": 31
+        },
+        {
+          "name": "useDeleteEmployee",
+          "params": [],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "keepPreviousData",
+            "useMutation",
+            "useQuery",
+            "useQueryClient"
+          ]
+        },
+        {
+          "source": "@/lib/api/client",
+          "specifiers": [
+            "apiClient"
+          ]
+        },
+        {
+          "source": "@/lib/api/mutationError",
+          "specifiers": [
+            "throwOnMutationError"
+          ]
+        },
+        {
+          "source": "@/lib/api/schema",
+          "specifiers": [
+            "components"
+          ]
+        }
+      ],
+      "exports": [
+        "ValidationError",
+        "useEmployees",
+        "useEmployee",
+        "useCreateEmployee",
+        "useUpdateEmployee",
+        "exportEmployees",
+        "useImportEmployees",
+        "useDeleteEmployee"
+      ],
+      "totalLines": 181,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/lib/api/client.ts": {
+      "filePath": "excel-management-web/src/lib/api/client.ts",
+      "contentHash": "fa74be2ceaed35218ccf94137b25a609f715c170e6f53d088cd088d2244a21f6",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "openapi-fetch",
+          "specifiers": [
+            "createClient"
+          ]
+        },
+        {
+          "source": "./schema",
+          "specifiers": [
+            "paths"
+          ]
+        }
+      ],
+      "exports": [
+        "apiClient"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/lib/api/mutationError.ts": {
+      "filePath": "excel-management-web/src/lib/api/mutationError.ts",
+      "contentHash": "18ca930e6614630362e49294eca343c8c18fd7ad4f1c99b027952264d779121f",
+      "functions": [
+        {
+          "name": "throwOnMutationError",
+          "params": [
+            "error",
+            "status",
+            "fallbackMessage"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "classes": [
+        {
+          "name": "ValidationError",
+          "methods": [
+            "constructor"
+          ],
+          "properties": [
+            "fieldErrors"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "ValidationError",
+        "throwOnMutationError"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/lib/api/schema.d.ts": {
+      "filePath": "excel-management-web/src/lib/api/schema.d.ts",
+      "contentHash": "04134f634c5930d06a4677caa5bbedea2eb20f1d327379e8edee54a6e95dadf5",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 713,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/lib/utils.ts": {
+      "filePath": "excel-management-web/src/lib/utils.ts",
+      "contentHash": "14300d758170c270c75b057f38fedb3793a5920ea872f0477e29fb131185e8a7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "cn"
+      ],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/main.tsx": {
+      "filePath": "excel-management-web/src/main.tsx",
+      "contentHash": "ca1f2694cf305fcc4df437e227e08cb6f16340d22487f2302052a20b0a9b8f41",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "QueryClient",
+            "QueryClientProvider"
+          ]
+        },
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createRouter",
+            "RouterProvider"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "StrictMode"
+          ]
+        },
+        {
+          "source": "react-dom/client",
+          "specifiers": [
+            "createRoot"
+          ]
+        },
+        {
+          "source": "./index.css",
+          "specifiers": []
+        },
+        {
+          "source": "./routeTree.gen",
+          "specifiers": [
+            "routeTree"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/routes/__root.tsx": {
+      "filePath": "excel-management-web/src/routes/__root.tsx",
+      "contentHash": "b91b7899d4c7b53b348bd54d4e65d2f26cd78d90fba1800c884cb52cccbf523d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createRootRoute",
+            "Outlet"
+          ]
+        },
+        {
+          "source": "@/features/auth/api",
+          "specifiers": [
+            "bootstrapAuth"
+          ]
+        },
+        {
+          "source": "@/features/auth/store",
+          "specifiers": [
+            "useAuthStore"
+          ]
+        }
+      ],
+      "exports": [
+        "Route"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/routes/audit-log.tsx": {
+      "filePath": "excel-management-web/src/routes/audit-log.tsx",
+      "contentHash": "698e2619180455591d2a7cabcbc30e7877a1600f1edbe890b6b953a300ba975f",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createFileRoute"
+          ]
+        },
+        {
+          "source": "@/components/layout/AppShell",
+          "specifiers": [
+            "AppShell"
+          ]
+        },
+        {
+          "source": "@/features/auth/guards",
+          "specifiers": [
+            "requireAdmin"
+          ]
+        },
+        {
+          "source": "@/features/auditLogs/AuditLogPage",
+          "specifiers": [
+            "AuditLogPage"
+          ]
+        }
+      ],
+      "exports": [
+        "Route"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/routes/departments.tsx": {
+      "filePath": "excel-management-web/src/routes/departments.tsx",
+      "contentHash": "5d3af102d56a6afb4463edcf06e689d9290c3de0fb718f2d7e8942b5e6e2093e",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createFileRoute"
+          ]
+        },
+        {
+          "source": "@/components/layout/AppShell",
+          "specifiers": [
+            "AppShell"
+          ]
+        },
+        {
+          "source": "@/features/auth/guards",
+          "specifiers": [
+            "requireAuth"
+          ]
+        },
+        {
+          "source": "@/features/departments/DepartmentAdminPage",
+          "specifiers": [
+            "DepartmentAdminPage"
+          ]
+        }
+      ],
+      "exports": [
+        "Route"
+      ],
+      "totalLines": 14,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/routes/employees/$employeeId.tsx": {
+      "filePath": "excel-management-web/src/routes/employees/$employeeId.tsx",
+      "contentHash": "02b90b243cd313686f19bd4c705233e6d8f038d5de57da46884c3384faa2fb14",
+      "functions": [
+        {
+          "name": "EditEmployeePage",
+          "params": [],
+          "exported": false,
+          "lineCount": 48
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createFileRoute",
+            "useNavigate"
+          ]
+        },
+        {
+          "source": "@/components/layout/AppShell",
+          "specifiers": [
+            "AppShell"
+          ]
+        },
+        {
+          "source": "@/features/auth/guards",
+          "specifiers": [
+            "requireAdmin"
+          ]
+        },
+        {
+          "source": "@/features/employees/EmployeeForm",
+          "specifiers": [
+            "EmployeeForm"
+          ]
+        },
+        {
+          "source": "@/features/employees/api",
+          "specifiers": [
+            "useEmployee",
+            "useUpdateEmployee"
+          ]
+        }
+      ],
+      "exports": [
+        "Route"
+      ],
+      "totalLines": 60,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/routes/employees/new.tsx": {
+      "filePath": "excel-management-web/src/routes/employees/new.tsx",
+      "contentHash": "1d0add5b44164e4ba2d223ab10926630b436759cd570102b30eb749c105ffb8b",
+      "functions": [
+        {
+          "name": "NewEmployeePage",
+          "params": [],
+          "exported": false,
+          "lineCount": 23
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createFileRoute",
+            "useNavigate"
+          ]
+        },
+        {
+          "source": "@/components/layout/AppShell",
+          "specifiers": [
+            "AppShell"
+          ]
+        },
+        {
+          "source": "@/features/auth/guards",
+          "specifiers": [
+            "requireAdmin"
+          ]
+        },
+        {
+          "source": "@/features/employees/EmployeeForm",
+          "specifiers": [
+            "EmployeeForm"
+          ]
+        },
+        {
+          "source": "@/features/employees/api",
+          "specifiers": [
+            "useCreateEmployee"
+          ]
+        }
+      ],
+      "exports": [
+        "Route"
+      ],
+      "totalLines": 35,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/routes/index.tsx": {
+      "filePath": "excel-management-web/src/routes/index.tsx",
+      "contentHash": "1e24e4ba3fc9394cb7a5e6c31cc5e51f5fe42cc0f7e9843e87b3e971a3d90d39",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createFileRoute"
+          ]
+        },
+        {
+          "source": "zod",
+          "specifiers": [
+            "z"
+          ]
+        },
+        {
+          "source": "@/components/layout/AppShell",
+          "specifiers": [
+            "AppShell"
+          ]
+        },
+        {
+          "source": "@/features/auth/guards",
+          "specifiers": [
+            "requireAuth"
+          ]
+        },
+        {
+          "source": "@/features/employees/EmployeeListPage",
+          "specifiers": [
+            "EmployeeListPage"
+          ]
+        }
+      ],
+      "exports": [
+        "Route"
+      ],
+      "totalLines": 34,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/routes/login.tsx": {
+      "filePath": "excel-management-web/src/routes/login.tsx",
+      "contentHash": "6043c487e0ebcfdcaae705d95cd3d0bf33697a9586e66d57f522055268eda938",
+      "functions": [
+        {
+          "name": "LoginPage",
+          "params": [],
+          "exported": false,
+          "lineCount": 71
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createFileRoute",
+            "useNavigate"
+          ]
+        },
+        {
+          "source": "react",
+          "specifiers": [
+            "useState"
+          ]
+        },
+        {
+          "source": "@/assets/chememan-logo.svg",
+          "specifiers": [
+            "chememanLogo"
+          ]
+        },
+        {
+          "source": "@/components/ui/button",
+          "specifiers": [
+            "Button"
+          ]
+        },
+        {
+          "source": "@/components/ui/input",
+          "specifiers": [
+            "Input"
+          ]
+        },
+        {
+          "source": "@/components/ui/label",
+          "specifiers": [
+            "Label"
+          ]
+        },
+        {
+          "source": "@/features/auth/api",
+          "specifiers": [
+            "useLogin"
+          ]
+        }
+      ],
+      "exports": [
+        "Route"
+      ],
+      "totalLines": 84,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/test/renderApp.tsx": {
+      "filePath": "excel-management-web/src/test/renderApp.tsx",
+      "contentHash": "1a98de6d9d4ac2eee511416949be0937aadcd387d693fde65fb6c645d31cdaf9",
+      "functions": [
+        {
+          "name": "renderApp",
+          "params": [
+            "initialPath"
+          ],
+          "exported": true,
+          "lineCount": 20
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@tanstack/react-query",
+          "specifiers": [
+            "QueryClient",
+            "QueryClientProvider"
+          ]
+        },
+        {
+          "source": "@tanstack/react-router",
+          "specifiers": [
+            "createMemoryHistory",
+            "createRouter",
+            "RouterProvider"
+          ]
+        },
+        {
+          "source": "@testing-library/react",
+          "specifiers": [
+            "render"
+          ]
+        },
+        {
+          "source": "@/features/auth/store",
+          "specifiers": [
+            "useAuthStore"
+          ]
+        },
+        {
+          "source": "@/routeTree.gen",
+          "specifiers": [
+            "routeTree"
+          ]
+        }
+      ],
+      "exports": [
+        "renderApp"
+      ],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/test/server.ts": {
+      "filePath": "excel-management-web/src/test/server.ts",
+      "contentHash": "83edd629f6227d22c3b9122a6169c508ba674265e0be67db415d89231aa39899",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "msw",
+          "specifiers": [
+            "http",
+            "HttpResponse"
+          ]
+        },
+        {
+          "source": "msw/node",
+          "specifiers": [
+            "setupServer"
+          ]
+        }
+      ],
+      "exports": [
+        "server"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/src/test/setup.ts": {
+      "filePath": "excel-management-web/src/test/setup.ts",
+      "contentHash": "ce6b07616ae5a15314637bd63d5d356db0d6ed0ed2c8ca9f2935769bcb83e1c5",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@testing-library/jest-dom/vitest",
+          "specifiers": []
+        },
+        {
+          "source": "vitest",
+          "specifiers": [
+            "afterAll",
+            "afterEach",
+            "beforeAll"
+          ]
+        },
+        {
+          "source": "./server",
+          "specifiers": [
+            "server"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "excel-management-web/vite.config.ts": {
+      "filePath": "excel-management-web/vite.config.ts",
+      "contentHash": "2ad82638fc94e51790efedc7925774dd4d3ccbb21f5a0e3c23e61bcaa06bd718",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        },
+        {
+          "source": "@tailwindcss/vite",
+          "specifiers": [
+            "tailwindcss"
+          ]
+        },
+        {
+          "source": "@tanstack/router-plugin/vite",
+          "specifiers": [
+            "tanstackRouter"
+          ]
+        },
+        {
+          "source": "@vitejs/plugin-react",
+          "specifiers": [
+            "react"
+          ]
+        },
+        {
+          "source": "vitest/config",
+          "specifiers": [
+            "defineConfig"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "requirements/Exam Data.xlsx": {
+      "filePath": "requirements/Exam Data.xlsx",
+      "contentHash": "1e64e26780612f9430912bf4371b1d9eda6ea46f98ae370499c39c08d70acef4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    "requirements/Exercise Before Interview.docx": {
+      "filePath": "requirements/Exercise Before Interview.docx",
+      "contentHash": "465b9c1342ef80ed9edf2031a79ca588c11b5b269fc19876c3dbd1fa6fb00f73",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 61,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

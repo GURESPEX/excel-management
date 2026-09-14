@@ -1,0 +1,1377 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 23,
+  "filesSkipped": [
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 23,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 22,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 77,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "CreateAccessToken",
+          "startLine": 18,
+          "endLine": 19,
+          "params": [
+            "principal"
+          ]
+        },
+        {
+          "name": "CreateRefreshToken",
+          "startLine": 21,
+          "endLine": 22,
+          "params": [
+            "principal"
+          ]
+        },
+        {
+          "name": "HashToken",
+          "startLine": 25,
+          "endLine": 26,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "CreateToken",
+          "startLine": 28,
+          "endLine": 46,
+          "params": [
+            "principal",
+            "lifetime",
+            "tokenType"
+          ]
+        },
+        {
+          "name": "ValidateRefreshToken",
+          "startLine": 48,
+          "endLine": 76,
+          "params": [
+            "token"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "AuthPrincipal",
+          "startLine": 10,
+          "endLine": 10,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "JwtTokenService",
+          "startLine": 12,
+          "endLine": 77,
+          "methods": [
+            "CreateAccessToken",
+            "CreateRefreshToken",
+            "HashToken",
+            "CreateToken",
+            "ValidateRefreshToken"
+          ],
+          "properties": [
+            "_key",
+            "_accessMinutes",
+            "_refreshDays"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthPrincipal",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "CreateAccessToken",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "CreateRefreshToken",
+          "line": 21,
+          "isDefault": false
+        },
+        {
+          "name": "HashToken",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "ValidateRefreshToken",
+          "line": 48,
+          "isDefault": false
+        },
+        {
+          "name": "JwtTokenService",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CreateAccessToken",
+          "callee": "CreateToken",
+          "lineNumber": 19
+        },
+        {
+          "caller": "CreateAccessToken",
+          "callee": "TimeSpan.FromMinutes",
+          "lineNumber": 19
+        },
+        {
+          "caller": "CreateRefreshToken",
+          "callee": "CreateToken",
+          "lineNumber": 22
+        },
+        {
+          "caller": "CreateRefreshToken",
+          "callee": "TimeSpan.FromDays",
+          "lineNumber": 22
+        },
+        {
+          "caller": "HashToken",
+          "callee": "Convert.ToHexString",
+          "lineNumber": 26
+        },
+        {
+          "caller": "HashToken",
+          "callee": "SHA256.HashData",
+          "lineNumber": 26
+        },
+        {
+          "caller": "HashToken",
+          "callee": "Encoding.UTF8.GetBytes",
+          "lineNumber": 26
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "DateTime.UtcNow.Add",
+          "lineNumber": 30
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new Claim",
+          "lineNumber": 33
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "principal.Id.ToString",
+          "lineNumber": 33
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new Claim",
+          "lineNumber": 34
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new Claim",
+          "lineNumber": 35
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "principal.Role.ToString",
+          "lineNumber": 35
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new Claim",
+          "lineNumber": 36
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new Claim",
+          "lineNumber": 41
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "Guid.NewGuid().ToString",
+          "lineNumber": 41
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "Guid.NewGuid",
+          "lineNumber": 41
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new SigningCredentials",
+          "lineNumber": 43
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new JwtSecurityToken",
+          "lineNumber": 44
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new JwtSecurityTokenHandler().WriteToken",
+          "lineNumber": 45
+        },
+        {
+          "caller": "CreateToken",
+          "callee": "new JwtSecurityTokenHandler",
+          "lineNumber": 45
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "new JwtSecurityTokenHandler",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "handler.ValidateToken",
+          "lineNumber": 53
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "new TokenValidationParameters",
+          "lineNumber": 53
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "claimsPrincipal.FindFirstValue",
+          "lineNumber": 62
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "new AuthPrincipal",
+          "lineNumber": 67
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "int.Parse",
+          "lineNumber": 68
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "claimsPrincipal.FindFirstValue",
+          "lineNumber": 68
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "claimsPrincipal.FindFirstValue",
+          "lineNumber": 69
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "Enum.Parse<UserRole>",
+          "lineNumber": 70
+        },
+        {
+          "caller": "ValidateRefreshToken",
+          "callee": "claimsPrincipal.FindFirstValue",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 6,
+        "functionCount": 5,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 366,
+      "nonEmptyLines": 321,
+      "classes": [
+        {
+          "name": "Program",
+          "startLine": 366,
+          "endLine": 366,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Program",
+          "line": 366,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 23,
+      "nonEmptyLines": 23,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "AuditLogDto",
+          "startLine": 3,
+          "endLine": 10,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuditLogDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "classes": [
+        {
+          "name": "AuditLogQuery",
+          "startLine": 3,
+          "endLine": 6,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuditLogQuery",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 5,
+      "classes": [
+        {
+          "name": "IAuditLogRepository",
+          "startLine": 3,
+          "endLine": 6,
+          "methods": [
+            "GetAsync"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IAuditLogRepository",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "classes": [
+        {
+          "name": "AuthenticatedUserDto",
+          "startLine": 3,
+          "endLine": 3,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthenticatedUserDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 12,
+      "classes": [
+        {
+          "name": "IRefreshTokenRepository",
+          "startLine": 3,
+          "endLine": 14,
+          "methods": [
+            "CreateAsync",
+            "RevokeIfActiveAsync"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IRefreshTokenRepository",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 6,
+      "classes": [
+        {
+          "name": "IUserRepository",
+          "startLine": 5,
+          "endLine": 8,
+          "methods": [
+            "GetByUsernameAsync"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IUserRepository",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "classes": [
+        {
+          "name": "LoginRequest",
+          "startLine": 3,
+          "endLine": 3,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoginRequest",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 31,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "Hash",
+          "startLine": 11,
+          "endLine": 16,
+          "params": [
+            "password"
+          ]
+        },
+        {
+          "name": "Verify",
+          "startLine": 18,
+          "endLine": 30,
+          "params": [
+            "password",
+            "hashed"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "PasswordHasher",
+          "startLine": 5,
+          "endLine": 31,
+          "methods": [
+            "Hash",
+            "Verify"
+          ],
+          "properties": [
+            "SaltSize",
+            "HashSize",
+            "Iterations"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Hash",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "Verify",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "PasswordHasher",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Hash",
+          "callee": "RandomNumberGenerator.GetBytes",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Hash",
+          "callee": "Rfc2898DeriveBytes.Pbkdf2",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Hash",
+          "callee": "Convert.ToBase64String",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Hash",
+          "callee": "Convert.ToBase64String",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Verify",
+          "callee": "hashed.Split",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Verify",
+          "callee": "Convert.FromBase64String",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Verify",
+          "callee": "Convert.FromBase64String",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Verify",
+          "callee": "Rfc2898DeriveBytes.Pbkdf2",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Verify",
+          "callee": "CryptographicOperations.FixedTimeEquals",
+          "lineNumber": 29
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "classes": [
+        {
+          "name": "CreateDepartmentRequest",
+          "startLine": 3,
+          "endLine": 3,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateDepartmentRequest",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "classes": [
+        {
+          "name": "DepartmentDto",
+          "startLine": 3,
+          "endLine": 3,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DepartmentDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "Validate",
+          "startLine": 5,
+          "endLine": 19,
+          "params": [
+            "name",
+            "nameConflict"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "DepartmentValidator",
+          "startLine": 3,
+          "endLine": 20,
+          "methods": [
+            "Validate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Validate",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "DepartmentValidator",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Validate",
+          "callee": "new Dictionary<string, string[]>",
+          "lineNumber": 7
+        },
+        {
+          "caller": "Validate",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "IDepartmentRepository",
+          "startLine": 3,
+          "endLine": 14,
+          "methods": [
+            "GetAllAsync",
+            "ExistsAsync",
+            "NameExistsAsync",
+            "CreateAsync",
+            "UpdateAsync"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "IDepartmentRepository",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 3,
+      "nonEmptyLines": 2,
+      "classes": [
+        {
+          "name": "UpdateDepartmentRequest",
+          "startLine": 3,
+          "endLine": 3,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateDepartmentRequest",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "Write",
+          "startLine": 11,
+          "endLine": 30,
+          "params": [
+            "employees"
+          ]
+        },
+        {
+          "name": "Quote",
+          "startLine": 32,
+          "endLine": 40,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeCsvWriter",
+          "startLine": 7,
+          "endLine": 41,
+          "methods": [
+            "Write",
+            "Quote"
+          ],
+          "properties": [
+            "Headers"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Write",
+          "line": 11,
+          "isDefault": false
+        },
+        {
+          "name": "EmployeeCsvWriter",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Write",
+          "callee": "new StringBuilder",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Write",
+          "callee": "sb.Append(string.Join(',', Headers)).Append",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Write",
+          "callee": "sb.Append",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Write",
+          "callee": "string.Join",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Write",
+          "callee": "sb.Append",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Write",
+          "callee": "string.Join",
+          "lineNumber": 18
+        },
+        {
+          "caller": "Write",
+          "callee": "Quote",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Write",
+          "callee": "e.Id.ToString",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Write",
+          "callee": "Quote",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Write",
+          "callee": "Quote",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Write",
+          "callee": "Quote",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Write",
+          "callee": "e.Salary.ToString",
+          "lineNumber": 23
+        },
+        {
+          "caller": "Write",
+          "callee": "Quote",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Write",
+          "callee": "e.JoinDate.ToString",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Write",
+          "callee": "Quote",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Write",
+          "callee": "sb.Append",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Write",
+          "callee": "sb.ToString",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Quote",
+          "callee": "value.IndexOfAny",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Quote",
+          "callee": "value.Replace",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "EmployeeDetailDto",
+          "startLine": 3,
+          "endLine": 10,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EmployeeDetailDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "EmployeeImportRow",
+          "startLine": 4,
+          "endLine": 10,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "ImportRowError",
+          "startLine": 12,
+          "endLine": 12,
+          "methods": [],
+          "properties": []
+        },
+        {
+          "name": "EmployeeImportResult",
+          "startLine": 14,
+          "endLine": 14,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EmployeeImportRow",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "ImportRowError",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "EmployeeImportResult",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 0,
+        "classCount": 3
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 64,
+      "nonEmptyLines": 53,
+      "functions": [
+        {
+          "name": "Validate",
+          "startLine": 12,
+          "endLine": 46,
+          "params": [
+            "row",
+            "activeDepartmentIdsByName"
+          ]
+        },
+        {
+          "name": "ParseStatus",
+          "startLine": 48,
+          "endLine": 63,
+          "params": [
+            "status"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeImportRowValidator",
+          "startLine": 5,
+          "endLine": 64,
+          "methods": [
+            "Validate",
+            "ParseStatus"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Validate",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "EmployeeImportRowValidator",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Validate",
+          "callee": "new List<ImportRowError>",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Validate",
+          "callee": "activeDepartmentIdsByName.TryGetValue",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Validate",
+          "callee": "row.DepartmentName.Trim",
+          "lineNumber": 17
+        },
+        {
+          "caller": "Validate",
+          "callee": "decimal.TryParse",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Validate",
+          "callee": "errors.Add",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Validate",
+          "callee": "new ImportRowError",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Validate",
+          "callee": "nameof",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Validate",
+          "callee": "ParseStatus",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Validate",
+          "callee": "errors.Add",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Validate",
+          "callee": "new ImportRowError",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Validate",
+          "callee": "new UpsertEmployeeRequest",
+          "lineNumber": 33
+        },
+        {
+          "caller": "Validate",
+          "callee": "EmployeeValidator.Validate",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Validate",
+          "callee": "errors.AddRange",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Validate",
+          "callee": "messages.Select",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Validate",
+          "callee": "new ImportRowError",
+          "lineNumber": 42
+        },
+        {
+          "caller": "ParseStatus",
+          "callee": "status.Trim",
+          "lineNumber": 50
+        },
+        {
+          "caller": "ParseStatus",
+          "callee": "string.Equals",
+          "lineNumber": 51
+        },
+        {
+          "caller": "ParseStatus",
+          "callee": "string.Equals",
+          "lineNumber": 56
+        },
+        {
+          "caller": "ParseStatus",
+          "callee": "string.Equals",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "EmployeeListItemDto",
+          "startLine": 3,
+          "endLine": 10,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EmployeeListItemDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "classes": [
+        {
+          "name": "EmployeeListQuery",
+          "startLine": 3,
+          "endLine": 12,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EmployeeListQuery",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs",
+      "language": "csharp",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "Validate",
+          "startLine": 9,
+          "endLine": 34,
+          "params": [
+            "request",
+            "departmentExists"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "EmployeeValidator",
+          "startLine": 5,
+          "endLine": 35,
+          "methods": [
+            "Validate"
+          ],
+          "properties": [
+            "JoinDateFormat"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "JoinDateFormat",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "Validate",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "EmployeeValidator",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Validate",
+          "callee": "new Dictionary<string, string[]>",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Validate",
+          "callee": "string.IsNullOrWhiteSpace",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Validate",
+          "callee": "nameof",
+          "lineNumber": 15
+        },
+        {
+          "caller": "Validate",
+          "callee": "nameof",
+          "lineNumber": 20
+        },
+        {
+          "caller": "Validate",
+          "callee": "nameof",
+          "lineNumber": 25
+        },
+        {
+          "caller": "Validate",
+          "callee": "DateOnly.TryParseExact",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Validate",
+          "callee": "nameof",
+          "lineNumber": 30
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

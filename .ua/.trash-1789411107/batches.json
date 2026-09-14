@@ -1,0 +1,2547 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 175,
+  "totalBatches": 16,
+  "exportsByPath": {
+    ".beads/hooks/post-checkout": [],
+    ".beads/hooks/post-merge": [],
+    ".beads/hooks/pre-commit": [],
+    ".beads/hooks/pre-push": [],
+    ".beads/hooks/prepare-commit-msg": [],
+    ".beads/interactions.jsonl": [],
+    ".beads/issues.jsonl": [],
+    ".ua/.understandignore": [],
+    "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2": [],
+    "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx": [],
+    "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2": [],
+    "excel-management-api/.vs/ExcelManagement/v17/.suo": [],
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin": [],
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin": [],
+    "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin": [],
+    "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs": [
+      "AuthPrincipal",
+      "CreateAccessToken",
+      "CreateRefreshToken",
+      "HashToken",
+      "ValidateRefreshToken",
+      "JwtTokenService"
+    ],
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user": [],
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http": [],
+    "excel-management-api/src/ExcelManagement.Api/Program.cs": [
+      "Program"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs": [
+      "AuditLogDto"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs": [
+      "AuditLogQuery"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs": [
+      "IAuditLogRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs": [
+      "AuthenticatedUserDto"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs": [
+      "IRefreshTokenRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs": [
+      "IUserRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs": [
+      "LoginRequest"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs": [
+      "Hash",
+      "Verify",
+      "PasswordHasher"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs": [
+      "CreateDepartmentRequest"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs": [
+      "DepartmentDto"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs": [
+      "Validate",
+      "DepartmentValidator"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs": [
+      "IDepartmentRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs": [
+      "UpdateDepartmentRequest"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs": [
+      "Write",
+      "EmployeeCsvWriter"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs": [
+      "EmployeeDetailDto"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs": [
+      "EmployeeImportRow",
+      "ImportRowError",
+      "EmployeeImportResult"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs": [
+      "Validate",
+      "EmployeeImportRowValidator"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs": [
+      "EmployeeListItemDto"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs": [
+      "EmployeeListQuery"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs": [
+      "JoinDateFormat",
+      "Validate",
+      "EmployeeValidator"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs": [
+      "IEmployeeExcelFile"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs": [
+      "IEmployeeRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs": [
+      "PagedResult"
+    ],
+    "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs": [
+      "UpsertEmployeeRequest"
+    ],
+    "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs": [],
+    "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs": [
+      "Id",
+      "EntityName",
+      "EntityId",
+      "Action",
+      "ChangedBy",
+      "Timestamp",
+      "Changes",
+      "AuditLog"
+    ],
+    "excel-management-api/src/ExcelManagement.Domain/Department.cs": [
+      "Id",
+      "Name",
+      "IsActive",
+      "Department"
+    ],
+    "excel-management-api/src/ExcelManagement.Domain/Employee.cs": [
+      "Id",
+      "Name",
+      "DepartmentId",
+      "Department",
+      "Salary",
+      "JoinDate",
+      "IsActive",
+      "UpdatedAt",
+      "Employee"
+    ],
+    "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs": [
+      "Id",
+      "TokenHash",
+      "UserId",
+      "IssuedAt",
+      "ExpiresAt",
+      "RevokedAt",
+      "RefreshToken"
+    ],
+    "excel-management-api/src/ExcelManagement.Domain/User.cs": [
+      "Id",
+      "Username",
+      "PasswordHash",
+      "Role",
+      "User"
+    ],
+    "excel-management-api/src/ExcelManagement.Domain/UserRole.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs": [
+      "AddInfrastructure",
+      "DependencyInjection"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs": [
+      "Employees",
+      "Departments",
+      "Users",
+      "AuditLogs",
+      "RefreshTokens",
+      "SaveChangesAsync",
+      "SaveChanges",
+      "AppDbContext"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs": [
+      "GetAsync",
+      "AuditLogRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs": [
+      "GetAllAsync",
+      "ExistsAsync",
+      "NameExistsAsync",
+      "CreateAsync",
+      "UpdateAsync",
+      "DepartmentRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs": [
+      "WriteWorkbook",
+      "ReadRows",
+      "EmployeeExcelFile"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs": [
+      "GetPagedAsync",
+      "GetAllAsync",
+      "GetByIdAsync",
+      "CreateAsync",
+      "UpdateAsync",
+      "DeleteAsync",
+      "ImportAsync",
+      "EmployeeRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs": [
+      "InitialCreate"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs": [
+      "AddUsers"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs": [
+      "PostgresInitialCreate"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs": [
+      "AddAuditLogs"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs": [
+      "AddRefreshTokens"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs": [
+      "CreateAsync",
+      "RevokeIfActiveAsync",
+      "RefreshTokenRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs": [
+      "SeedAsync",
+      "SeedData"
+    ],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs": [
+      "GetByUsernameAsync",
+      "UserRepository"
+    ],
+    "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs": [
+      "ListDepartments",
+      "DepartmentTools"
+    ],
+    "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs": [
+      "ListEmployees",
+      "GetEmployee",
+      "CreateEmployee",
+      "UpdateEmployee",
+      "DeleteEmployee",
+      "ExportEmployees",
+      "EmployeeTools",
+      "CreateEmployeeResult",
+      "UpdateEmployeeResult"
+    ],
+    "excel-management-api/src/ExcelManagement.McpServer/Program.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs": [
+      "InitializeAsync",
+      "ApiWebApplicationFactory"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs": [
+      "InitializeAsync",
+      "DisposeAsync",
+      "CreateEmployee_WritesOneCreatedAuditEntry",
+      "UpdateEmployee_WritesOneUpdatedAuditEntryWithDiff",
+      "DeleteEmployee_WritesOneDeletedAuditEntry",
+      "CreateAndUpdateDepartment_WritesAuditEntries",
+      "GetAuditLogs_FiltersByEntityNameAndDateRange",
+      "GetAuditLogs_AsViewer_ReturnsForbidden",
+      "GetAuditLogs_WithoutToken_ReturnsUnauthorized",
+      "AuditLogTests"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs": [
+      "LoginAsAdminAsync",
+      "LoginAsViewerAsync",
+      "AuthTestHelper"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs": [
+      "Login_ValidAdminCredentials_ReturnsOkWithUserInfo",
+      "Login_InvalidPassword_ReturnsUnauthorized",
+      "Login_UnknownUsername_ReturnsUnauthorized",
+      "Refresh_WithValidRefreshCookie_RotatesAccessToken",
+      "Refresh_WithoutRefreshCookie_ReturnsUnauthorized",
+      "Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized",
+      "Logout_ThenReusingRefreshToken_ReturnsUnauthorized",
+      "GetEmployees_WithoutToken_ReturnsUnauthorized",
+      "GetEmployees_AsViewer_Succeeds",
+      "CreateEmployee_AsViewer_ReturnsForbidden",
+      "CreateDepartment_AsViewer_ReturnsForbidden",
+      "CreateEmployee_AsAdmin_Succeeds",
+      "UpdateEmployee_AsViewer_ReturnsForbidden",
+      "DeleteEmployee_AsViewer_ReturnsForbidden",
+      "UpdateDepartment_AsViewer_ReturnsForbidden",
+      "GetEmployees_WithMalformedToken_ReturnsUnauthorized",
+      "AuthTests"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs": [
+      "InitializeAsync",
+      "DisposeAsync",
+      "CreateDepartment_PersistsAsActiveByDefault",
+      "CreateDepartment_DuplicateName_ReturnsValidationProblem",
+      "CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500",
+      "UpdateDepartment_RenamesAndTogglesActive",
+      "UpdateDepartment_NotFound_Returns404",
+      "GetDepartments_ExcludesDisabledByDefault_ButIncludesWhenRequested",
+      "ExistingEmployee_ReferencingDisabledDepartment_StillRendersAndSaves",
+      "DepartmentCrudTests"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs": [
+      "InitializeAsync",
+      "DisposeAsync",
+      "CreateEmployee_PersistsAndReturnsCreated",
+      "CreateEmployee_MissingName_ReturnsValidationProblem",
+      "CreateEmployee_UnknownDepartment_ReturnsValidationProblem",
+      "CreateEmployee_NegativeSalary_ReturnsValidationProblem",
+      "CreateEmployee_InvalidJoinDate_ReturnsValidationProblem",
+      "UpdateEmployee_ChangesFieldsAndPersists",
+      "UpdateEmployee_NotFound_Returns404",
+      "DeleteEmployee_RemovesRecord",
+      "DeleteEmployee_NotFound_Returns404",
+      "EmployeeCrudTests"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs": [
+      "InitializeAsync",
+      "DisposeAsync",
+      "Import_AllRowsValid_CommitsAllRows",
+      "Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly",
+      "Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow",
+      "Export_Excel_ReturnsFilteredEmployeesWithStatusAsText",
+      "Export_Csv_ReturnsFilteredEmployeesWithStatusAsText",
+      "Export_RoundTrip_ExportedFileReimportsCleanly",
+      "Viewer_Gets403_OnImportAndExport",
+      "EmployeeImportExportTests"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs": [
+      "InitializeAsync",
+      "DisposeAsync",
+      "Name_PartialMatch_ReturnsOnlyMatchingEmployees",
+      "Department_AndStatus_Combine_ReturnsOnlyMatchingEmployees",
+      "SalaryRange_ReturnsOnlyEmployeesWithinRange",
+      "JoinDateRange_ReturnsOnlyEmployeesWithinRange",
+      "EmployeeSearchTests"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs": [
+      "InitializeAsync",
+      "DisposeAsync",
+      "GetEmployees_ReturnsSeededPagedResult",
+      "GetEmployees_RespectsPageSize",
+      "GetEmployees_ClampsOutOfRangePaging",
+      "EmployeesEndpointTests"
+    ],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs": [
+      "ListDepartments_DispatchesToRepository_ReturnsSeededActiveDepartments",
+      "ListEmployees_DispatchesToRepository_ReturnsPagedShape",
+      "GetEmployee_DispatchesToRepository_ReturnsDetailForSeededRow",
+      "GetEmployee_UnknownId_ReturnsNull",
+      "CreateEmployee_ValidRequest_PersistsThroughRepository",
+      "CreateEmployee_UnknownDepartment_ReturnsValidationErrorsAndDoesNotCreate",
+      "UpdateEmployee_ValidRequest_ChangesPersistedRow",
+      "UpdateEmployee_UnknownId_ReturnsUpdatedFalse",
+      "DeleteEmployee_ExistingRow_RemovesItAndReportsTrue",
+      "DeleteEmployee_UnknownId_ReturnsFalse",
+      "ExportEmployees_ReturnsEveryRowAcrossPages",
+      "McpToolsTests"
+    ],
+    "excel-management-web/.npmrc": [],
+    "excel-management-web/nginx.conf": [],
+    "excel-management-web/src/components/layout/AppShell.tsx": [
+      "AppShell"
+    ],
+    "excel-management-web/src/components/ui/alert-dialog.tsx": [
+      "AlertDialog",
+      "AlertDialogAction",
+      "AlertDialogCancel",
+      "AlertDialogContent",
+      "AlertDialogDescription",
+      "AlertDialogFooter",
+      "AlertDialogHeader",
+      "AlertDialogMedia",
+      "AlertDialogOverlay",
+      "AlertDialogPortal",
+      "AlertDialogTitle",
+      "AlertDialogTrigger"
+    ],
+    "excel-management-web/src/components/ui/badge.tsx": [
+      "Badge",
+      "badgeVariants"
+    ],
+    "excel-management-web/src/components/ui/button.tsx": [
+      "Button",
+      "buttonVariants"
+    ],
+    "excel-management-web/src/components/ui/calendar.tsx": [
+      "Calendar"
+    ],
+    "excel-management-web/src/components/ui/card.tsx": [
+      "Card"
+    ],
+    "excel-management-web/src/components/ui/checkbox.tsx": [
+      "Checkbox"
+    ],
+    "excel-management-web/src/components/ui/date-picker.tsx": [
+      "DatePicker"
+    ],
+    "excel-management-web/src/components/ui/input.tsx": [
+      "Input"
+    ],
+    "excel-management-web/src/components/ui/label.tsx": [
+      "Label"
+    ],
+    "excel-management-web/src/components/ui/popover.tsx": [
+      "Popover",
+      "PopoverTrigger",
+      "PopoverContent"
+    ],
+    "excel-management-web/src/components/ui/select.tsx": [
+      "Select",
+      "SelectContent",
+      "SelectGroup",
+      "SelectItem",
+      "SelectLabel",
+      "SelectScrollDownButton",
+      "SelectScrollUpButton",
+      "SelectSeparator",
+      "SelectTrigger",
+      "SelectValue"
+    ],
+    "excel-management-web/src/components/ui/table.tsx": [
+      "Table",
+      "TableHeader",
+      "TableBody",
+      "TableFooter",
+      "TableHead",
+      "TableRow",
+      "TableCell",
+      "TableCaption"
+    ],
+    "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": [
+      "AuditLogPage"
+    ],
+    "excel-management-web/src/features/auditLogs/api.ts": [
+      "useAuditLogs"
+    ],
+    "excel-management-web/src/features/auth/AuthFlows.test.tsx": [],
+    "excel-management-web/src/features/auth/api.ts": [
+      "useLogin",
+      "useLogout",
+      "bootstrapAuth"
+    ],
+    "excel-management-web/src/features/auth/guards.ts": [
+      "requireAuth",
+      "requireAdmin"
+    ],
+    "excel-management-web/src/features/auth/store.ts": [
+      "useAuthStore",
+      "useIsAdmin"
+    ],
+    "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx": [],
+    "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": [
+      "DepartmentAdminPage"
+    ],
+    "excel-management-web/src/features/departments/api.ts": [
+      "useDepartments",
+      "useCreateDepartment",
+      "useUpdateDepartment"
+    ],
+    "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx": [
+      "DeleteEmployeeDialog"
+    ],
+    "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx": [],
+    "excel-management-web/src/features/employees/EmployeeForm.tsx": [
+      "EmployeeForm"
+    ],
+    "excel-management-web/src/features/employees/EmployeeListPage.test.tsx": [],
+    "excel-management-web/src/features/employees/EmployeeListPage.tsx": [
+      "EmployeeListPage"
+    ],
+    "excel-management-web/src/features/employees/api.ts": [
+      "ValidationError",
+      "useEmployees",
+      "useEmployee",
+      "useCreateEmployee",
+      "useUpdateEmployee",
+      "exportEmployees",
+      "useImportEmployees",
+      "useDeleteEmployee"
+    ],
+    "excel-management-web/src/lib/api/client.ts": [
+      "apiClient"
+    ],
+    "excel-management-web/src/lib/api/mutationError.ts": [
+      "ValidationError",
+      "throwOnMutationError"
+    ],
+    "excel-management-web/src/lib/api/schema.d.ts": [],
+    "excel-management-web/src/lib/utils.ts": [
+      "cn"
+    ],
+    "excel-management-web/src/main.tsx": [],
+    "excel-management-web/src/routes/__root.tsx": [
+      "Route"
+    ],
+    "excel-management-web/src/routes/audit-log.tsx": [
+      "Route"
+    ],
+    "excel-management-web/src/routes/departments.tsx": [
+      "Route"
+    ],
+    "excel-management-web/src/routes/employees/$employeeId.tsx": [
+      "Route"
+    ],
+    "excel-management-web/src/routes/employees/new.tsx": [
+      "Route"
+    ],
+    "excel-management-web/src/routes/index.tsx": [
+      "Route"
+    ],
+    "excel-management-web/src/routes/login.tsx": [
+      "Route"
+    ],
+    "excel-management-web/src/test/renderApp.tsx": [
+      "renderApp"
+    ],
+    "excel-management-web/src/test/server.ts": [
+      "server"
+    ],
+    "excel-management-web/src/test/setup.ts": [],
+    "excel-management-web/vite.config.ts": [],
+    "requirements/Exam Data.xlsx": [],
+    "requirements/Exercise Before Interview.docx": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "excel-management-web/src/components/ui/badge.tsx",
+          "language": "typescript",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/calendar.tsx",
+          "language": "typescript",
+          "sizeLines": 112,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/card.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/checkbox.tsx",
+          "language": "typescript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/date-picker.tsx",
+          "language": "typescript",
+          "sizeLines": 66,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/input.tsx",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/label.tsx",
+          "language": "typescript",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/popover.tsx",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/select.tsx",
+          "language": "typescript",
+          "sizeLines": 200,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/table.tsx",
+          "language": "typescript",
+          "sizeLines": 113,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+          "language": "typescript",
+          "sizeLines": 116,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+          "language": "typescript",
+          "sizeLines": 151,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+          "language": "typescript",
+          "sizeLines": 145,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/routes/login.tsx",
+          "language": "typescript",
+          "sizeLines": 83,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-web/src/components/ui/badge.tsx": [],
+        "excel-management-web/src/components/ui/calendar.tsx": [],
+        "excel-management-web/src/components/ui/card.tsx": [],
+        "excel-management-web/src/components/ui/checkbox.tsx": [],
+        "excel-management-web/src/components/ui/date-picker.tsx": [
+          "excel-management-web/src/components/ui/calendar.tsx",
+          "excel-management-web/src/components/ui/input.tsx",
+          "excel-management-web/src/components/ui/popover.tsx"
+        ],
+        "excel-management-web/src/components/ui/input.tsx": [],
+        "excel-management-web/src/components/ui/label.tsx": [],
+        "excel-management-web/src/components/ui/popover.tsx": [],
+        "excel-management-web/src/components/ui/select.tsx": [],
+        "excel-management-web/src/components/ui/table.tsx": [],
+        "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": [
+          "excel-management-web/src/components/ui/button.tsx",
+          "excel-management-web/src/components/ui/card.tsx",
+          "excel-management-web/src/components/ui/date-picker.tsx",
+          "excel-management-web/src/components/ui/input.tsx",
+          "excel-management-web/src/components/ui/label.tsx",
+          "excel-management-web/src/components/ui/select.tsx",
+          "excel-management-web/src/components/ui/table.tsx",
+          "excel-management-web/src/features/auditLogs/api.ts"
+        ],
+        "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": [
+          "excel-management-web/src/components/ui/badge.tsx",
+          "excel-management-web/src/components/ui/button.tsx",
+          "excel-management-web/src/components/ui/card.tsx",
+          "excel-management-web/src/components/ui/checkbox.tsx",
+          "excel-management-web/src/components/ui/input.tsx",
+          "excel-management-web/src/components/ui/label.tsx",
+          "excel-management-web/src/components/ui/table.tsx",
+          "excel-management-web/src/features/auth/store.ts",
+          "excel-management-web/src/features/departments/api.ts"
+        ],
+        "excel-management-web/src/features/employees/EmployeeForm.tsx": [
+          "excel-management-web/src/components/ui/button.tsx",
+          "excel-management-web/src/components/ui/checkbox.tsx",
+          "excel-management-web/src/components/ui/date-picker.tsx",
+          "excel-management-web/src/components/ui/input.tsx",
+          "excel-management-web/src/components/ui/label.tsx",
+          "excel-management-web/src/components/ui/select.tsx",
+          "excel-management-web/src/features/departments/api.ts",
+          "excel-management-web/src/features/employees/api.ts"
+        ],
+        "excel-management-web/src/routes/login.tsx": [
+          "excel-management-web/src/components/ui/button.tsx",
+          "excel-management-web/src/components/ui/input.tsx",
+          "excel-management-web/src/components/ui/label.tsx",
+          "excel-management-web/src/features/auth/api.ts"
+        ]
+      },
+      "neighborMap": {
+        "excel-management-web/src/components/ui/badge.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/components/ui/card.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/components/ui/date-picker.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/components/ui/input.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/components/ui/label.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/components/ui/select.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/components/ui/table.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": [
+          {
+            "path": "excel-management-web/src/components/ui/button.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "Button",
+              "buttonVariants"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auditLogs/api.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "useAuditLogs"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/audit-log.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Route"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": [
+          {
+            "path": "excel-management-web/src/components/ui/button.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "Button",
+              "buttonVariants"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auth/store.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useAuthStore",
+              "useIsAdmin"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/departments/api.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "useDepartments",
+              "useCreateDepartment",
+              "useUpdateDepartment"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+            "batchIndex": 2,
+            "symbols": []
+          },
+          {
+            "path": "excel-management-web/src/routes/departments.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Route"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/employees/EmployeeForm.tsx": [
+          {
+            "path": "excel-management-web/src/components/ui/button.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "Button",
+              "buttonVariants"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/departments/api.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "useDepartments",
+              "useCreateDepartment",
+              "useUpdateDepartment"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/employees/api.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "ValidationError",
+              "useEmployees",
+              "useEmployee",
+              "useCreateEmployee",
+              "useUpdateEmployee",
+              "exportEmployees",
+              "useImportEmployees",
+              "useDeleteEmployee"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/employees/$employeeId.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Route"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/employees/new.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Route"
+            ]
+          }
+        ],
+        "excel-management-web/src/routes/login.tsx": [
+          {
+            "path": "excel-management-web/src/components/ui/button.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "Button",
+              "buttonVariants"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auth/api.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useLogin",
+              "useLogout",
+              "bootstrapAuth"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "excel-management-web/src/features/auth/AuthFlows.test.tsx",
+          "language": "typescript",
+          "sizeLines": 38,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/auth/api.ts",
+          "language": "typescript",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/auth/store.ts",
+          "language": "typescript",
+          "sizeLines": 25,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+          "language": "typescript",
+          "sizeLines": 65,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+          "language": "typescript",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+          "language": "typescript",
+          "sizeLines": 99,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/routes/__root.tsx",
+          "language": "typescript",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/test/renderApp.tsx",
+          "language": "typescript",
+          "sizeLines": 26,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/test/server.ts",
+          "language": "typescript",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/test/setup.ts",
+          "language": "typescript",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-web/src/features/auth/AuthFlows.test.tsx": [
+          "excel-management-web/src/test/renderApp.tsx",
+          "excel-management-web/src/test/server.ts"
+        ],
+        "excel-management-web/src/features/auth/api.ts": [
+          "excel-management-web/src/features/auth/store.ts",
+          "excel-management-web/src/lib/api/client.ts"
+        ],
+        "excel-management-web/src/features/auth/store.ts": [],
+        "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx": [
+          "excel-management-web/src/features/auth/store.ts",
+          "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+          "excel-management-web/src/test/server.ts"
+        ],
+        "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx": [
+          "excel-management-web/src/test/renderApp.tsx",
+          "excel-management-web/src/test/server.ts"
+        ],
+        "excel-management-web/src/features/employees/EmployeeListPage.test.tsx": [
+          "excel-management-web/src/test/renderApp.tsx",
+          "excel-management-web/src/test/server.ts"
+        ],
+        "excel-management-web/src/routes/__root.tsx": [
+          "excel-management-web/src/features/auth/api.ts",
+          "excel-management-web/src/features/auth/store.ts"
+        ],
+        "excel-management-web/src/test/renderApp.tsx": [
+          "excel-management-web/src/features/auth/store.ts"
+        ],
+        "excel-management-web/src/test/server.ts": [],
+        "excel-management-web/src/test/setup.ts": [
+          "excel-management-web/src/test/server.ts"
+        ]
+      },
+      "neighborMap": {
+        "excel-management-web/src/features/auth/api.ts": [
+          {
+            "path": "excel-management-web/src/lib/api/client.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "apiClient"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/components/layout/AppShell.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AppShell"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/login.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Route"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/auth/store.ts": [
+          {
+            "path": "excel-management-web/src/components/layout/AppShell.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AppShell"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auth/guards.ts",
+            "batchIndex": 4,
+            "symbols": [
+              "requireAuth",
+              "requireAdmin"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "DepartmentAdminPage"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx": [
+          {
+            "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "DepartmentAdminPage"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "excel-management-web/src/components/ui/alert-dialog.tsx",
+          "language": "typescript",
+          "sizeLines": 187,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/components/ui/button.tsx",
+          "language": "typescript",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/auditLogs/api.ts",
+          "language": "typescript",
+          "sizeLines": 29,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/departments/api.ts",
+          "language": "typescript",
+          "sizeLines": 45,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+          "language": "typescript",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+          "language": "typescript",
+          "sizeLines": 346,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/employees/api.ts",
+          "language": "typescript",
+          "sizeLines": 180,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/lib/api/client.ts",
+          "language": "typescript",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/lib/api/mutationError.ts",
+          "language": "typescript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-web/src/components/ui/alert-dialog.tsx": [
+          "excel-management-web/src/components/ui/button.tsx"
+        ],
+        "excel-management-web/src/components/ui/button.tsx": [],
+        "excel-management-web/src/features/auditLogs/api.ts": [
+          "excel-management-web/src/lib/api/client.ts"
+        ],
+        "excel-management-web/src/features/departments/api.ts": [
+          "excel-management-web/src/lib/api/client.ts",
+          "excel-management-web/src/lib/api/mutationError.ts"
+        ],
+        "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx": [
+          "excel-management-web/src/components/ui/alert-dialog.tsx",
+          "excel-management-web/src/components/ui/button.tsx",
+          "excel-management-web/src/features/employees/api.ts"
+        ],
+        "excel-management-web/src/features/employees/EmployeeListPage.tsx": [
+          "excel-management-web/src/components/ui/badge.tsx",
+          "excel-management-web/src/components/ui/button.tsx",
+          "excel-management-web/src/components/ui/card.tsx",
+          "excel-management-web/src/components/ui/date-picker.tsx",
+          "excel-management-web/src/components/ui/input.tsx",
+          "excel-management-web/src/components/ui/label.tsx",
+          "excel-management-web/src/components/ui/select.tsx",
+          "excel-management-web/src/components/ui/table.tsx",
+          "excel-management-web/src/features/auth/store.ts",
+          "excel-management-web/src/features/departments/api.ts",
+          "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+          "excel-management-web/src/features/employees/api.ts"
+        ],
+        "excel-management-web/src/features/employees/api.ts": [
+          "excel-management-web/src/lib/api/client.ts",
+          "excel-management-web/src/lib/api/mutationError.ts"
+        ],
+        "excel-management-web/src/lib/api/client.ts": [],
+        "excel-management-web/src/lib/api/mutationError.ts": []
+      },
+      "neighborMap": {
+        "excel-management-web/src/components/ui/button.tsx": [
+          {
+            "path": "excel-management-web/src/components/layout/AppShell.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AppShell"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AuditLogPage"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "DepartmentAdminPage"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "EmployeeForm"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/login.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Route"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/auditLogs/api.ts": [
+          {
+            "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AuditLogPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/departments/api.ts": [
+          {
+            "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "DepartmentAdminPage"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "EmployeeForm"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/employees/EmployeeListPage.tsx": [
+          {
+            "path": "excel-management-web/src/components/ui/badge.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Badge",
+              "badgeVariants"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/components/ui/card.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Card"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/components/ui/date-picker.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "DatePicker"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/components/ui/input.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Input"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/components/ui/label.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Label"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/components/ui/select.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Select",
+              "SelectContent",
+              "SelectGroup",
+              "SelectItem",
+              "SelectLabel",
+              "SelectScrollDownButton",
+              "SelectScrollUpButton",
+              "SelectSeparator",
+              "SelectTrigger",
+              "SelectValue"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/components/ui/table.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "Table",
+              "TableHeader",
+              "TableBody",
+              "TableFooter",
+              "TableHead",
+              "TableRow",
+              "TableCell",
+              "TableCaption"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auth/store.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useAuthStore",
+              "useIsAdmin"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/index.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Route"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/employees/api.ts": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "EmployeeForm"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/employees/$employeeId.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Route"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/routes/employees/new.tsx",
+            "batchIndex": 4,
+            "symbols": [
+              "Route"
+            ]
+          }
+        ],
+        "excel-management-web/src/lib/api/client.ts": [
+          {
+            "path": "excel-management-web/src/features/auth/api.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useLogin",
+              "useLogout",
+              "bootstrapAuth"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "excel-management-web/src/components/layout/AppShell.tsx",
+          "language": "typescript",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/features/auth/guards.ts",
+          "language": "typescript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/routes/audit-log.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/routes/departments.tsx",
+          "language": "typescript",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/routes/employees/$employeeId.tsx",
+          "language": "typescript",
+          "sizeLines": 59,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/routes/employees/new.tsx",
+          "language": "typescript",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/routes/index.tsx",
+          "language": "typescript",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-web/src/components/layout/AppShell.tsx": [
+          "excel-management-web/src/components/ui/button.tsx",
+          "excel-management-web/src/features/auth/api.ts",
+          "excel-management-web/src/features/auth/store.ts"
+        ],
+        "excel-management-web/src/features/auth/guards.ts": [
+          "excel-management-web/src/features/auth/store.ts"
+        ],
+        "excel-management-web/src/routes/audit-log.tsx": [
+          "excel-management-web/src/components/layout/AppShell.tsx",
+          "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+          "excel-management-web/src/features/auth/guards.ts"
+        ],
+        "excel-management-web/src/routes/departments.tsx": [
+          "excel-management-web/src/components/layout/AppShell.tsx",
+          "excel-management-web/src/features/auth/guards.ts",
+          "excel-management-web/src/features/departments/DepartmentAdminPage.tsx"
+        ],
+        "excel-management-web/src/routes/employees/$employeeId.tsx": [
+          "excel-management-web/src/components/layout/AppShell.tsx",
+          "excel-management-web/src/features/auth/guards.ts",
+          "excel-management-web/src/features/employees/EmployeeForm.tsx",
+          "excel-management-web/src/features/employees/api.ts"
+        ],
+        "excel-management-web/src/routes/employees/new.tsx": [
+          "excel-management-web/src/components/layout/AppShell.tsx",
+          "excel-management-web/src/features/auth/guards.ts",
+          "excel-management-web/src/features/employees/EmployeeForm.tsx",
+          "excel-management-web/src/features/employees/api.ts"
+        ],
+        "excel-management-web/src/routes/index.tsx": [
+          "excel-management-web/src/components/layout/AppShell.tsx",
+          "excel-management-web/src/features/auth/guards.ts",
+          "excel-management-web/src/features/employees/EmployeeListPage.tsx"
+        ]
+      },
+      "neighborMap": {
+        "excel-management-web/src/components/layout/AppShell.tsx": [
+          {
+            "path": "excel-management-web/src/components/ui/button.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "Button",
+              "buttonVariants"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auth/api.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useLogin",
+              "useLogout",
+              "bootstrapAuth"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/auth/store.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useAuthStore",
+              "useIsAdmin"
+            ]
+          }
+        ],
+        "excel-management-web/src/features/auth/guards.ts": [
+          {
+            "path": "excel-management-web/src/features/auth/store.ts",
+            "batchIndex": 2,
+            "symbols": [
+              "useAuthStore",
+              "useIsAdmin"
+            ]
+          }
+        ],
+        "excel-management-web/src/routes/audit-log.tsx": [
+          {
+            "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "AuditLogPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/routes/departments.tsx": [
+          {
+            "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "DepartmentAdminPage"
+            ]
+          }
+        ],
+        "excel-management-web/src/routes/employees/$employeeId.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "EmployeeForm"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/employees/api.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "ValidationError",
+              "useEmployees",
+              "useEmployee",
+              "useCreateEmployee",
+              "useUpdateEmployee",
+              "exportEmployees",
+              "useImportEmployees",
+              "useDeleteEmployee"
+            ]
+          }
+        ],
+        "excel-management-web/src/routes/employees/new.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+            "batchIndex": 1,
+            "symbols": [
+              "EmployeeForm"
+            ]
+          },
+          {
+            "path": "excel-management-web/src/features/employees/api.ts",
+            "batchIndex": 3,
+            "symbols": [
+              "ValidationError",
+              "useEmployees",
+              "useEmployee",
+              "useCreateEmployee",
+              "useUpdateEmployee",
+              "exportEmployees",
+              "useImportEmployees",
+              "useDeleteEmployee"
+            ]
+          }
+        ],
+        "excel-management-web/src/routes/index.tsx": [
+          {
+            "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+            "batchIndex": 3,
+            "symbols": [
+              "EmployeeListPage"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "excel-management-api/.dockerignore",
+          "language": "unknown",
+          "sizeLines": 2,
+          "fileCategory": "infra"
+        },
+        {
+          "path": "excel-management-api/Dockerfile",
+          "language": "dockerfile",
+          "sizeLines": 9,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-api/.dockerignore": [],
+        "excel-management-api/Dockerfile": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": "excel-management-web/.dockerignore",
+          "language": "unknown",
+          "sizeLines": 2,
+          "fileCategory": "infra"
+        },
+        {
+          "path": "excel-management-web/Dockerfile",
+          "language": "dockerfile",
+          "sizeLines": 14,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-web/.dockerignore": [],
+        "excel-management-web/Dockerfile": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": ".github/workflows/backend-ci.yml",
+          "language": "yaml",
+          "sizeLines": 65,
+          "fileCategory": "infra"
+        },
+        {
+          "path": ".github/workflows/frontend-ci.yml",
+          "language": "yaml",
+          "sizeLines": 70,
+          "fileCategory": "infra"
+        }
+      ],
+      "batchImportData": {
+        ".github/workflows/backend-ci.yml": [],
+        ".github/workflows/frontend-ci.yml": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": ".beads/README.md",
+          "language": "markdown",
+          "sizeLines": 81,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".beads/config.yaml",
+          "language": "yaml",
+          "sizeLines": 70,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".beads/metadata.json",
+          "language": "json",
+          "sizeLines": 6,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".beads/README.md": [],
+        ".beads/config.yaml": [],
+        ".beads/metadata.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "docs/architecture.html",
+          "language": "html",
+          "sizeLines": 14955,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "docs/excel-management-api-architecture.html",
+          "language": "html",
+          "sizeLines": 15006,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "docs/excel-management-api-architecture.visual-check.html",
+          "language": "html",
+          "sizeLines": 32,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "docs/excel-management-api-architecture.visual-check.json",
+          "language": "json",
+          "sizeLines": 548,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "docs/architecture.html": [],
+        "docs/excel-management-api-architecture.html": [],
+        "docs/excel-management-api-architecture.visual-check.html": [],
+        "docs/excel-management-api-architecture.visual-check.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 10,
+      "files": [
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj",
+          "language": "csproj",
+          "sizeLines": 24,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+          "language": "json",
+          "sizeLines": 8,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/appsettings.json",
+          "language": "json",
+          "sizeLines": 20,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj": [],
+        "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json": [],
+        "excel-management-api/src/ExcelManagement.Api/appsettings.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 11,
+      "files": [
+        {
+          "path": "excel-management-web/.oxlintrc.json",
+          "language": "json",
+          "sizeLines": 8,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-web/README.md",
+          "language": "markdown",
+          "sizeLines": 32,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "excel-management-web/components.json",
+          "language": "json",
+          "sizeLines": 25,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-web/index.html",
+          "language": "html",
+          "sizeLines": 13,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "excel-management-web/package.json",
+          "language": "json",
+          "sizeLines": 51,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-web/tsconfig.app.json",
+          "language": "json",
+          "sizeLines": 30,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-web/tsconfig.json",
+          "language": "json",
+          "sizeLines": 12,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-web/tsconfig.node.json",
+          "language": "json",
+          "sizeLines": 23,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-web/.oxlintrc.json": [],
+        "excel-management-web/README.md": [],
+        "excel-management-web/components.json": [],
+        "excel-management-web/index.html": [],
+        "excel-management-web/package.json": [],
+        "excel-management-web/tsconfig.app.json": [],
+        "excel-management-web/tsconfig.json": [],
+        "excel-management-web/tsconfig.node.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 12,
+      "files": [
+        {
+          "path": ".agents/skills/beads/SKILL.md",
+          "language": "markdown",
+          "sizeLines": 80,
+          "fileCategory": "docs"
+        },
+        {
+          "path": ".agents/skills/beads/agents/openai.yaml",
+          "language": "yaml",
+          "sizeLines": 4,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".beads/hooks/post-checkout",
+          "language": "unknown",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".beads/hooks/post-merge",
+          "language": "unknown",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".beads/hooks/pre-commit",
+          "language": "unknown",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".beads/hooks/pre-push",
+          "language": "unknown",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".beads/hooks/prepare-commit-msg",
+          "language": "unknown",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".beads/interactions.jsonl",
+          "language": "jsonl",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".beads/issues.jsonl",
+          "language": "jsonl",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": ".claude/settings.json",
+          "language": "json",
+          "sizeLines": 14,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".codex/config.toml",
+          "language": "toml",
+          "sizeLines": 2,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".codex/hooks.json",
+          "language": "json",
+          "sizeLines": 51,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".ua/.understandignore",
+          "language": "unknown",
+          "sizeLines": 84,
+          "fileCategory": "code"
+        },
+        {
+          "path": "AGENTS.md",
+          "language": "markdown",
+          "sizeLines": 244,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "CLAUDE.md",
+          "language": "markdown",
+          "sizeLines": 77,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+          "language": "v2",
+          "sizeLines": 2061,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+          "language": "vsidx",
+          "sizeLines": 466,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+          "language": "v2",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/.vs/ExcelManagement/v17/.suo",
+          "language": "unknown",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json",
+          "language": "json",
+          "sizeLines": 95,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json",
+          "language": "json",
+          "sizeLines": 92,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+          "language": "bin",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+          "language": "bin",
+          "sizeLines": 3470,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+          "language": "bin",
+          "sizeLines": 1016,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/ExcelManagement.sln",
+          "language": "sln",
+          "sizeLines": 114,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".agents/skills/beads/SKILL.md": [],
+        ".agents/skills/beads/agents/openai.yaml": [],
+        ".beads/hooks/post-checkout": [],
+        ".beads/hooks/post-merge": [],
+        ".beads/hooks/pre-commit": [],
+        ".beads/hooks/pre-push": [],
+        ".beads/hooks/prepare-commit-msg": [],
+        ".beads/interactions.jsonl": [],
+        ".beads/issues.jsonl": [],
+        ".claude/settings.json": [],
+        ".codex/config.toml": [],
+        ".codex/hooks.json": [],
+        ".ua/.understandignore": [],
+        "AGENTS.md": [],
+        "CLAUDE.md": [],
+        "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2": [],
+        "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx": [],
+        "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2": [],
+        "excel-management-api/.vs/ExcelManagement/v17/.suo": [],
+        "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json": [],
+        "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json": [],
+        "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin": [],
+        "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin": [],
+        "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin": [],
+        "excel-management-api/ExcelManagement.sln": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 13,
+      "files": [
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+          "language": "csharp",
+          "sizeLines": 77,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+          "language": "user",
+          "sizeLines": 5,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http",
+          "language": "http",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/Program.cs",
+          "language": "csharp",
+          "sizeLines": 366,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+          "language": "json",
+          "sizeLines": 23,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+          "language": "csharp",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+          "language": "csharp",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+          "language": "csharp",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+          "language": "csharp",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+          "language": "csharp",
+          "sizeLines": 31,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs",
+          "language": "csharp",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs",
+          "language": "csharp",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs",
+          "language": "csharp",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs",
+          "language": "csharp",
+          "sizeLines": 3,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs",
+          "language": "csharp",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs",
+          "language": "csharp",
+          "sizeLines": 64,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs",
+          "language": "csharp",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs",
+          "language": "csharp",
+          "sizeLines": 35,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs": [],
+        "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user": [],
+        "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http": [],
+        "excel-management-api/src/ExcelManagement.Api/Program.cs": [],
+        "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json": [],
+        "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 14,
+      "files": [
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+          "language": "csharp",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+          "language": "csharp",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+          "language": "csharp",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+          "language": "csproj",
+          "sizeLines": 13,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+          "language": "csharp",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+          "language": "csharp",
+          "sizeLines": 14,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/Department.cs",
+          "language": "csharp",
+          "sizeLines": 8,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+          "language": "csproj",
+          "sizeLines": 9,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+          "language": "csharp",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/User.cs",
+          "language": "csharp",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+          "language": "csharp",
+          "sizeLines": 7,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+          "language": "csharp",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+          "language": "csproj",
+          "sizeLines": 29,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+          "language": "csharp",
+          "sizeLines": 260,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+          "language": "csharp",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+          "language": "csharp",
+          "sizeLines": 56,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+          "language": "csharp",
+          "sizeLines": 98,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+          "language": "csharp",
+          "sizeLines": 179,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 91,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+          "language": "csharp",
+          "sizeLines": 74,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 117,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+          "language": "csharp",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 128,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs": [],
+        "excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj": [],
+        "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs": [],
+        "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs": [],
+        "excel-management-api/src/ExcelManagement.Domain/Department.cs": [],
+        "excel-management-api/src/ExcelManagement.Domain/Employee.cs": [],
+        "excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj": [],
+        "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs": [],
+        "excel-management-api/src/ExcelManagement.Domain/User.cs": [],
+        "excel-management-api/src/ExcelManagement.Domain/UserRole.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 15,
+      "files": [
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs",
+          "language": "csharp",
+          "sizeLines": 227,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 167,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs",
+          "language": "csharp",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs",
+          "language": "csharp",
+          "sizeLines": 211,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs",
+          "language": "csharp",
+          "sizeLines": 57,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+          "language": "csharp",
+          "sizeLines": 208,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs",
+          "language": "csharp",
+          "sizeLines": 34,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs",
+          "language": "csharp",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs",
+          "language": "csharp",
+          "sizeLines": 13,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs",
+          "language": "csharp",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs",
+          "language": "csharp",
+          "sizeLines": 144,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj",
+          "language": "csproj",
+          "sizeLines": 26,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+          "language": "csharp",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/src/ExcelManagement.McpServer/appsettings.json",
+          "language": "json",
+          "sizeLines": 14,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+          "language": "csharp",
+          "sizeLines": 33,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+          "language": "csharp",
+          "sizeLines": 138,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+          "language": "csharp",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+          "language": "csharp",
+          "sizeLines": 251,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+          "language": "csharp",
+          "sizeLines": 149,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+          "language": "csharp",
+          "sizeLines": 150,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+          "language": "csharp",
+          "sizeLines": 211,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+          "language": "csharp",
+          "sizeLines": 67,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+          "language": "csharp",
+          "sizeLines": 54,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj",
+          "language": "csproj",
+          "sizeLines": 29,
+          "fileCategory": "config"
+        },
+        {
+          "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+          "language": "csharp",
+          "sizeLines": 173,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs": [],
+        "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs": [],
+        "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs": [],
+        "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs": [],
+        "excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj": [],
+        "excel-management-api/src/ExcelManagement.McpServer/Program.cs": [],
+        "excel-management-api/src/ExcelManagement.McpServer/appsettings.json": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj": [],
+        "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 16,
+      "files": [
+        {
+          "path": "excel-management-web/.npmrc",
+          "language": "unknown",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/nginx.conf",
+          "language": "conf",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/index.css",
+          "language": "css",
+          "sizeLines": 134,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "excel-management-web/src/lib/api/schema.d.ts",
+          "language": "typescript",
+          "sizeLines": 712,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/lib/utils.ts",
+          "language": "typescript",
+          "sizeLines": 1,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/src/main.tsx",
+          "language": "typescript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "excel-management-web/vite.config.ts",
+          "language": "typescript",
+          "sizeLines": 20,
+          "fileCategory": "code"
+        },
+        {
+          "path": "infra/README.md",
+          "language": "markdown",
+          "sizeLines": 31,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "infra/docker-compose.yml",
+          "language": "yaml",
+          "sizeLines": 37,
+          "fileCategory": "infra"
+        },
+        {
+          "path": "requirements/Exam Data.xlsx",
+          "language": "xlsx",
+          "sizeLines": 27,
+          "fileCategory": "code"
+        },
+        {
+          "path": "requirements/Exercise Before Interview.docx",
+          "language": "docx",
+          "sizeLines": 60,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "excel-management-web/.npmrc": [],
+        "excel-management-web/nginx.conf": [],
+        "excel-management-web/src/index.css": [],
+        "excel-management-web/src/lib/api/schema.d.ts": [],
+        "excel-management-web/src/lib/utils.ts": [],
+        "excel-management-web/src/main.tsx": [
+          "excel-management-web/src/index.css"
+        ],
+        "excel-management-web/vite.config.ts": [],
+        "infra/README.md": [],
+        "infra/docker-compose.yml": [],
+        "requirements/Exam Data.xlsx": [],
+        "requirements/Exercise Before Interview.docx": []
+      },
+      "neighborMap": {}
+    }
+  ]
+}

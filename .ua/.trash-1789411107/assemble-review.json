@@ -1,0 +1,16 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 2,
+  "edgesRestored": 4,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "No 'Fixed' pattern-count section was included in the dispatched report, so it could not be sanity-checked directly; input/output counts (423->423 nodes, 639->635 edges) are internally consistent with only the 4 reported dangling edges being dropped, and there were 0 nodes with missing ids, 0 unknown types, and 0 unknown complexity values in the merged output, so this is likely a non-issue.",
+    "Recovered function:excel-management-web/src/components/ui/button.tsx:buttonVariants and function:excel-management-web/src/features/auth/store.ts:useIsAdmin. Both are real named exports (buttonVariants = cva(...) at button.tsx:5-40; useIsAdmin = () => ... at store.ts:25) that the file-analyzer batches for those files (batch-3 and batch-2) simply never emitted as function nodes, unlike sibling exports (e.g. Button) in the same files -- likely because they are const/arrow-function exports rather than `function` declarations, which the extraction heuristic appears to under-detect. This is a systemic gap worth flagging upstream: any file that exports a function only as `const x = (...) => ...` or `const x = cva(...)` risks being invisible in the graph even though other code depends on it.",
+    "Added contains/exports edges for the two recovered nodes (matching the pattern already used for their sibling Button node) and restored the 4 originally-dropped `calls` edges now that their targets exist.",
+    "Cross-batch import edges: all 90 non-empty importMap entries (of 175 scanned) already had corresponding `imports` edges in the assembled graph before this review -- 0 gaps found, consistent with the merge script's own 'Recovered 0' result. No speculative edges were added.",
+    "General quality across the 16 batches (mixed .NET API + React/Vite frontend + infra): 0 dangling edges, 0 duplicate node ids, 0 self-loops in the final graph. Node type mix (file 133, function 176, class 65, service 12, pipeline 2, document 9, config 26) and complexity mix (simple 292, moderate 117, complex 14) look plausible for this monorepo shape. The 16 batch-input-*.json helper files were correctly excluded by the merge script per the task instructions and are not a real issue.",
+    "Tested-by linker produced 0 supplemental tested_by edges, but 5 tested_by edges and 4 'tested' tags already existed in the batch output directly (LLM-authored), so test linkage is present even though the path-convention supplement found nothing new -- not a concern."
+  ]
+}

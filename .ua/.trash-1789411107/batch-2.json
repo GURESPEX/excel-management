@@ -1,0 +1,349 @@
+{
+  "nodes": [
+    {
+      "id": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "type": "file",
+      "name": "AuthFlows.test.tsx",
+      "filePath": "excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "summary": "Integration test suite covering the login and logout user flows by rendering the full app via the test harness and asserting against the mocked API server.",
+      "tags": ["test", "auth", "integration-test"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "excel-management-web/src/features/auth/api.ts",
+      "summary": "Auth data-layer hooks (useLogin, useLogout, bootstrapAuth) that call the API client, normalize the returned user DTO, and sync results into the auth store.",
+      "tags": ["api-handler", "auth", "hook", "service"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "file",
+      "name": "store.ts",
+      "filePath": "excel-management-web/src/features/auth/store.ts",
+      "summary": "Zustand store holding the current authenticated user and exposing a useIsAdmin selector hook used to gate admin-only UI.",
+      "tags": ["data-model", "auth", "state-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "type": "file",
+      "name": "DepartmentAdminPage.test.tsx",
+      "filePath": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "summary": "Test suite for the department admin page that seeds an admin auth state and verifies rendering/behavior against the mocked API server.",
+      "tags": ["test", "departments", "integration-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "type": "file",
+      "name": "EmployeeCrudFlows.test.tsx",
+      "filePath": "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "summary": "Integration test suite exercising employee create/update/delete flows end-to-end against the mocked API server.",
+      "tags": ["test", "employees", "integration-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "type": "file",
+      "name": "EmployeeListPage.test.tsx",
+      "filePath": "excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "summary": "Test suite for the employee list page covering rendering, filtering, and pagination behavior against the mocked API server.",
+      "tags": ["test", "employees", "integration-test"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-web/src/routes/__root.tsx",
+      "type": "file",
+      "name": "__root.tsx",
+      "filePath": "excel-management-web/src/routes/__root.tsx",
+      "summary": "TanStack Router root route definition that anchors the route tree and wires in auth API/store dependencies for route-level context.",
+      "tags": ["routing", "entry-point", "layout"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "file",
+      "name": "renderApp.tsx",
+      "filePath": "excel-management-web/src/test/renderApp.tsx",
+      "summary": "Shared test utility that boots the full router-backed app in memory with a given path and pre-seeded auth state, used by integration tests.",
+      "tags": ["test", "utility", "test-harness"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/test/server.ts",
+      "type": "file",
+      "name": "server.ts",
+      "filePath": "excel-management-web/src/test/server.ts",
+      "summary": "Mock Service Worker (MSW) server instance used to intercept and stub API calls during tests.",
+      "tags": ["test", "utility", "mocking"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/src/test/setup.ts",
+      "type": "file",
+      "name": "setup.ts",
+      "filePath": "excel-management-web/src/test/setup.ts",
+      "summary": "Vitest global setup file that starts/resets/stops the mock API server around the test suite lifecycle.",
+      "tags": ["test", "configuration", "test-harness"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/features/auth/api.ts:useLogin",
+      "type": "function",
+      "name": "useLogin",
+      "filePath": "excel-management-web/src/features/auth/api.ts",
+      "lineRange": [12, 23],
+      "summary": "Mutation hook that posts login credentials to the API, converts the response DTO to an AuthUser, and stores it in the auth store.",
+      "tags": ["hook", "auth", "api-handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/features/auth/api.ts:useLogout",
+      "type": "function",
+      "name": "useLogout",
+      "filePath": "excel-management-web/src/features/auth/api.ts",
+      "lineRange": [25, 32],
+      "summary": "Mutation hook that posts a logout request to the API and clears the client-side auth store on success.",
+      "tags": ["hook", "auth", "api-handler"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/features/auth/api.ts:bootstrapAuth",
+      "type": "function",
+      "name": "bootstrapAuth",
+      "filePath": "excel-management-web/src/features/auth/api.ts",
+      "lineRange": [34, 41],
+      "summary": "Startup routine that checks the current session with the API and populates or clears the auth store accordingly, used to restore auth state on app load.",
+      "tags": ["auth", "utility", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx:renderPage",
+      "type": "function",
+      "name": "renderPage",
+      "filePath": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "lineRange": [10, 21],
+      "summary": "Test helper that seeds an authenticated admin user into the auth store and renders the DepartmentAdminPage for assertions.",
+      "tags": ["test", "utility", "test-harness"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-web/src/test/renderApp.tsx:renderApp",
+      "type": "function",
+      "name": "renderApp",
+      "filePath": "excel-management-web/src/test/renderApp.tsx",
+      "lineRange": [7, 26],
+      "summary": "Shared test utility that builds a memory-history router, seeds auth state, loads the initial route, and renders the app for integration tests.",
+      "tags": ["test", "utility", "test-harness"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/lib/api/client.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "target": "file:excel-management-web/src/test/renderApp.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/__root.tsx",
+      "target": "file:excel-management-web/src/features/auth/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/routes/__root.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/test/renderApp.tsx",
+      "target": "file:excel-management-web/src/features/auth/store.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/test/setup.ts",
+      "target": "file:excel-management-web/src/test/server.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "function:excel-management-web/src/features/auth/api.ts:useLogin",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "function:excel-management-web/src/features/auth/api.ts:useLogout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "function:excel-management-web/src/features/auth/api.ts:bootstrapAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "target": "function:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx:renderPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/test/renderApp.tsx",
+      "target": "function:excel-management-web/src/test/renderApp.tsx:renderApp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "function:excel-management-web/src/features/auth/api.ts:useLogin",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "function:excel-management-web/src/features/auth/api.ts:useLogout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "function:excel-management-web/src/features/auth/api.ts:bootstrapAuth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/test/renderApp.tsx",
+      "target": "function:excel-management-web/src/test/renderApp.tsx:renderApp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/api.ts",
+      "target": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/auth/store.ts",
+      "target": "file:excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "target": "file:excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "target": "file:excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

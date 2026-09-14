@@ -1,0 +1,141 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 3,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 3,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 3
+    }
+  },
+  "results": [
+    {
+      "path": ".beads/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 81,
+      "nonEmptyLines": 55,
+      "sections": [
+        {
+          "heading": "Beads - AI-Native Issue Tracking",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "What is Beads?",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Quick Start",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Essential Commands",
+          "level": 3,
+          "line": 13
+        },
+        {
+          "heading": "Working with Issues",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "Why Beads?",
+          "level": 2,
+          "line": 41
+        },
+        {
+          "heading": "Get Started with Beads",
+          "level": 2,
+          "line": 58
+        },
+        {
+          "heading": "Learn More",
+          "level": 2,
+          "line": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": ".beads/config.yaml",
+      "language": "yaml",
+      "fileCategory": "config",
+      "totalLines": 70,
+      "nonEmptyLines": 59,
+      "sections": [
+        {
+          "heading": "sync.remote",
+          "level": 1,
+          "line": 68
+        },
+        {
+          "heading": "export",
+          "level": 1,
+          "line": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": ".beads/metadata.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "database",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "backend",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "dolt_mode",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "dolt_database",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "project_id",
+          "level": 1,
+          "line": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

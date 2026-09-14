@@ -1,0 +1,336 @@
+{
+  "batchIndex": 1,
+  "files": [
+    {
+      "path": "excel-management-web/src/components/ui/badge.tsx",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/calendar.tsx",
+      "language": "typescript",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/card.tsx",
+      "language": "typescript",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/checkbox.tsx",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/date-picker.tsx",
+      "language": "typescript",
+      "sizeLines": 66,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/input.tsx",
+      "language": "typescript",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/label.tsx",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/popover.tsx",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/select.tsx",
+      "language": "typescript",
+      "sizeLines": 200,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/table.tsx",
+      "language": "typescript",
+      "sizeLines": 113,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "language": "typescript",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "language": "typescript",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "language": "typescript",
+      "sizeLines": 145,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/routes/login.tsx",
+      "language": "typescript",
+      "sizeLines": 83,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "excel-management-web/src/components/ui/badge.tsx": [],
+    "excel-management-web/src/components/ui/calendar.tsx": [],
+    "excel-management-web/src/components/ui/card.tsx": [],
+    "excel-management-web/src/components/ui/checkbox.tsx": [],
+    "excel-management-web/src/components/ui/date-picker.tsx": [
+      "excel-management-web/src/components/ui/calendar.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/popover.tsx"
+    ],
+    "excel-management-web/src/components/ui/input.tsx": [],
+    "excel-management-web/src/components/ui/label.tsx": [],
+    "excel-management-web/src/components/ui/popover.tsx": [],
+    "excel-management-web/src/components/ui/select.tsx": [],
+    "excel-management-web/src/components/ui/table.tsx": [],
+    "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": [
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/card.tsx",
+      "excel-management-web/src/components/ui/date-picker.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/components/ui/select.tsx",
+      "excel-management-web/src/components/ui/table.tsx",
+      "excel-management-web/src/features/auditLogs/api.ts"
+    ],
+    "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": [
+      "excel-management-web/src/components/ui/badge.tsx",
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/card.tsx",
+      "excel-management-web/src/components/ui/checkbox.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/components/ui/table.tsx",
+      "excel-management-web/src/features/auth/store.ts",
+      "excel-management-web/src/features/departments/api.ts"
+    ],
+    "excel-management-web/src/features/employees/EmployeeForm.tsx": [
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/checkbox.tsx",
+      "excel-management-web/src/components/ui/date-picker.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/components/ui/select.tsx",
+      "excel-management-web/src/features/departments/api.ts",
+      "excel-management-web/src/features/employees/api.ts"
+    ],
+    "excel-management-web/src/routes/login.tsx": [
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/features/auth/api.ts"
+    ]
+  },
+  "neighborMap": {
+    "excel-management-web/src/components/ui/badge.tsx": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "EmployeeListPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/components/ui/card.tsx": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "EmployeeListPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/components/ui/date-picker.tsx": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "EmployeeListPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/components/ui/input.tsx": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "EmployeeListPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/components/ui/label.tsx": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "EmployeeListPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/components/ui/select.tsx": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "EmployeeListPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/components/ui/table.tsx": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "EmployeeListPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": [
+      {
+        "path": "excel-management-web/src/components/ui/button.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "Button",
+          "buttonVariants"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/auditLogs/api.ts",
+        "batchIndex": 3,
+        "symbols": [
+          "useAuditLogs"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/routes/audit-log.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "Route"
+        ]
+      }
+    ],
+    "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": [
+      {
+        "path": "excel-management-web/src/components/ui/button.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "Button",
+          "buttonVariants"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/auth/store.ts",
+        "batchIndex": 2,
+        "symbols": [
+          "useAuthStore",
+          "useIsAdmin"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/departments/api.ts",
+        "batchIndex": 3,
+        "symbols": [
+          "useDepartments",
+          "useCreateDepartment",
+          "useUpdateDepartment"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+        "batchIndex": 2,
+        "symbols": []
+      },
+      {
+        "path": "excel-management-web/src/routes/departments.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "Route"
+        ]
+      }
+    ],
+    "excel-management-web/src/features/employees/EmployeeForm.tsx": [
+      {
+        "path": "excel-management-web/src/components/ui/button.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "Button",
+          "buttonVariants"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/departments/api.ts",
+        "batchIndex": 3,
+        "symbols": [
+          "useDepartments",
+          "useCreateDepartment",
+          "useUpdateDepartment"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/employees/api.ts",
+        "batchIndex": 3,
+        "symbols": [
+          "ValidationError",
+          "useEmployees",
+          "useEmployee",
+          "useCreateEmployee",
+          "useUpdateEmployee",
+          "exportEmployees",
+          "useImportEmployees",
+          "useDeleteEmployee"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/routes/employees/$employeeId.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "Route"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/routes/employees/new.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "Route"
+        ]
+      }
+    ],
+    "excel-management-web/src/routes/login.tsx": [
+      {
+        "path": "excel-management-web/src/components/ui/button.tsx",
+        "batchIndex": 3,
+        "symbols": [
+          "Button",
+          "buttonVariants"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/auth/api.ts",
+        "batchIndex": 2,
+        "symbols": [
+          "useLogin",
+          "useLogout",
+          "bootstrapAuth"
+        ]
+      }
+    ]
+  }
+}

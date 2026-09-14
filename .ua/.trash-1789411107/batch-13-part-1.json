@@ -1,0 +1,368 @@
+{
+  "nodes": [
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "type": "file",
+      "name": "JwtTokenService.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "summary": "Issues and validates JWT access and refresh tokens for authenticated users and computes a storable hash of refresh tokens for the persistence layer.",
+      "tags": ["authentication", "jwt", "security", "service", "token-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:AuthPrincipal",
+      "type": "class",
+      "name": "AuthPrincipal",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "lineRange": [10, 10],
+      "summary": "Record capturing an authenticated user's id, username, and role, used to build JWT claims and issue auth cookies.",
+      "tags": ["data-model", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:JwtTokenService",
+      "type": "class",
+      "name": "JwtTokenService",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "lineRange": [12, 77],
+      "summary": "Service configured with a signing key and token lifetimes that creates access/refresh JWTs, hashes tokens, and validates presented refresh tokens.",
+      "tags": ["service", "authentication", "jwt", "security"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateAccessToken",
+      "type": "function",
+      "name": "CreateAccessToken",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "lineRange": [18, 19],
+      "summary": "Creates a short-lived JWT access token for the given authenticated principal.",
+      "tags": ["authentication", "jwt"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateRefreshToken",
+      "type": "function",
+      "name": "CreateRefreshToken",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "lineRange": [21, 22],
+      "summary": "Creates a longer-lived JWT refresh token for the given authenticated principal.",
+      "tags": ["authentication", "jwt"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:HashToken",
+      "type": "function",
+      "name": "HashToken",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "lineRange": [25, 26],
+      "summary": "Computes a SHA-256 hex digest of a token so only the hash, never the raw token, is persisted.",
+      "tags": ["security", "hashing", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateToken",
+      "type": "function",
+      "name": "CreateToken",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "lineRange": [28, 46],
+      "summary": "Builds a signed JWT with subject, username, role, and jti claims for the requested lifetime; shared implementation behind both access and refresh token creation.",
+      "tags": ["jwt", "authentication", "internal"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:ValidateRefreshToken",
+      "type": "function",
+      "name": "ValidateRefreshToken",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "lineRange": [48, 76],
+      "summary": "Validates a presented refresh token's signature and claims and reconstructs the AuthPrincipal, returning null when the token is invalid or expired.",
+      "tags": ["authentication", "jwt", "validation"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+      "type": "file",
+      "name": "ExcelManagement.Api.csproj.user",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+      "summary": "Visual Studio per-developer project settings file that records the active debug profile (https) for local runs; machine-specific and not meant to be shared.",
+      "tags": ["ide-settings", "user-specific", "build-system", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http",
+      "type": "file",
+      "name": "ExcelManagement.Api.http",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http",
+      "summary": "Leftover default .http scratch file with a single sample GET request to a nonexistent /weatherforecast endpoint from the project template; not aligned with the actual routes defined in Program.cs.",
+      "tags": ["api-testing", "rest-client", "http", "scratch-file"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "type": "file",
+      "name": "Program.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "summary": "ASP.NET Core minimal-API entry point that wires up DI, CORS, cookie-based JWT authentication/authorization, and maps every HTTP endpoint for auth, employees, departments, and audit logs.",
+      "tags": ["entry-point", "api-handler", "middleware", "minimal-api", "dependency-injection"],
+      "complexity": "complex",
+      "languageNotes": "Uses ASP.NET Core minimal APIs (top-level app.MapGet/MapPost/MapPut/MapDelete route handlers) instead of MVC controllers; local static functions at the bottom of the file (not extracted as separate structural nodes) factor out shared employee-request validation and auth-cookie issuing."
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+      "type": "config",
+      "name": "launchSettings.json",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+      "summary": "ASP.NET Core launch profile configuration defining local HTTP/HTTPS development server URLs and the Development environment variable.",
+      "tags": ["configuration", "aspnet-core", "launch-profile", "development"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "type": "file",
+      "name": "AuditLogDto.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "summary": "Defines the response DTO shape for a single audit log entry returned by the audit log listing endpoint.",
+      "tags": ["data-model", "dto", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs:AuditLogDto",
+      "type": "class",
+      "name": "AuditLogDto",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "lineRange": [3, 10],
+      "summary": "Record representing one audit log entry (actor, action, timestamp, and related details) returned to API clients.",
+      "tags": ["data-model", "dto", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "type": "file",
+      "name": "AuditLogQuery.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "summary": "Defines the filter/paging parameters accepted by the audit log listing endpoint.",
+      "tags": ["data-model", "query-object", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs:AuditLogQuery",
+      "type": "class",
+      "name": "AuditLogQuery",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "lineRange": [3, 6],
+      "summary": "Record carrying the query/paging parameters bound from the /audit-logs endpoint's request.",
+      "tags": ["data-model", "query-object", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "type": "file",
+      "name": "IAuditLogRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "summary": "Repository abstraction for retrieving audit log entries, implemented by the infrastructure/persistence layer.",
+      "tags": ["repository", "interface", "audit-logging", "data-access"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs:IAuditLogRepository",
+      "type": "class",
+      "name": "IAuditLogRepository",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "lineRange": [3, 6],
+      "summary": "Interface exposing GetAsync to fetch audit log entries matching a query, injected into the /audit-logs endpoint.",
+      "tags": ["repository", "interface", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "type": "file",
+      "name": "AuthenticatedUserDto.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "summary": "DTO representing the authenticated user's public identity returned to the client after login or token refresh.",
+      "tags": ["data-model", "dto", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs:AuthenticatedUserDto",
+      "type": "class",
+      "name": "AuthenticatedUserDto",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "lineRange": [3, 3],
+      "summary": "Record with the authenticated user's id, username, and role string returned from /auth/login and /auth/refresh.",
+      "tags": ["data-model", "dto", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "type": "file",
+      "name": "IRefreshTokenRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "summary": "Repository abstraction for persisting and revoking refresh tokens used in the JWT refresh-token rotation flow.",
+      "tags": ["repository", "interface", "authentication", "token-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs:IRefreshTokenRepository",
+      "type": "class",
+      "name": "IRefreshTokenRepository",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "lineRange": [3, 14],
+      "summary": "Interface exposing CreateAsync (store a new refresh token hash) and RevokeIfActiveAsync (atomically revoke on use, guarding against replay) to the login/refresh/logout endpoints.",
+      "tags": ["repository", "interface", "authentication", "token-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "type": "file",
+      "name": "IUserRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "summary": "Repository abstraction for looking up application users by username, used during login.",
+      "tags": ["repository", "interface", "authentication", "data-access"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs:IUserRepository",
+      "type": "class",
+      "name": "IUserRepository",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "lineRange": [5, 8],
+      "summary": "Interface exposing GetByUsernameAsync, injected into the /auth/login endpoint to find the user record to authenticate.",
+      "tags": ["repository", "interface", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "type": "file",
+      "name": "LoginRequest.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "summary": "DTO carrying the username/password submitted to the login endpoint.",
+      "tags": ["data-model", "dto", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs:LoginRequest",
+      "type": "class",
+      "name": "LoginRequest",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "lineRange": [3, 3],
+      "summary": "Record with the username and password fields bound from the /auth/login request body.",
+      "tags": ["data-model", "dto", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "type": "file",
+      "name": "PasswordHasher.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "summary": "Implements PBKDF2-based password hashing and constant-time verification for user credentials.",
+      "tags": ["security", "password-hashing", "cryptography", "utility"],
+      "complexity": "simple",
+      "languageNotes": "Uses Rfc2898DeriveBytes.Pbkdf2 with a random salt and CryptographicOperations.FixedTimeEquals to avoid timing side-channels during verification."
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:PasswordHasher",
+      "type": "class",
+      "name": "PasswordHasher",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "lineRange": [5, 31],
+      "summary": "Static helper providing PBKDF2 password hashing and verification with configurable salt size, hash size, and iteration count.",
+      "tags": ["security", "cryptography", "utility"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:Hash",
+      "type": "function",
+      "name": "Hash",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "lineRange": [11, 16],
+      "summary": "Hashes a plaintext password with a fresh random salt via PBKDF2 and encodes salt and hash together into a storable string.",
+      "tags": ["security", "cryptography"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:Verify",
+      "type": "function",
+      "name": "Verify",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "lineRange": [18, 30],
+      "summary": "Re-derives a PBKDF2 hash from a candidate password using the stored salt and compares it to the stored hash in constant time.",
+      "tags": ["security", "cryptography"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:AuthPrincipal", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:JwtTokenService", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateAccessToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateRefreshToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:HashToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:ValidateRefreshToken", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:AuthPrincipal", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:JwtTokenService", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateAccessToken", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateRefreshToken", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:HashToken", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:ValidateRefreshToken", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs:AuditLogDto", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs:AuditLogDto", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs:AuditLogQuery", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs:AuditLogQuery", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs:IAuditLogRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs:IAuditLogRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs:AuthenticatedUserDto", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs:AuthenticatedUserDto", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs:IRefreshTokenRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs:IRefreshTokenRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs:IUserRepository", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs:IUserRepository", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs:LoginRequest", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs:LoginRequest", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:PasswordHasher", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:Hash", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:Verify", "type": "contains", "direction": "forward", "weight": 1.0 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:PasswordHasher", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:Hash", "type": "exports", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:Verify", "type": "exports", "direction": "forward", "weight": 0.8 },
+
+    { "source": "config:excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json", "target": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "type": "configures", "direction": "forward", "weight": 0.6 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs:Verify", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:HashToken", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateAccessToken", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:CreateRefreshToken", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:ValidateRefreshToken", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs:Validate", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs:Validate", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs:Validate", "type": "calls", "direction": "forward", "weight": 0.8 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "function:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs:Write", "type": "calls", "direction": "forward", "weight": 0.8 },
+
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs:IUserRepository", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs:IRefreshTokenRepository", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs:IDepartmentRepository", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs:IAuditLogRepository", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:JwtTokenService", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs:AuthPrincipal", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs:AuthenticatedUserDto", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs:LoginRequest", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs:EmployeeListQuery", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs:EmployeeDetailDto", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs:EmployeeListItemDto", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs:EmployeeImportRow", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs:ImportRowError", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs:EmployeeImportResult", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs:DepartmentDto", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs:CreateDepartmentRequest", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs:UpdateDepartmentRequest", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs:AuditLogQuery", "type": "depends_on", "direction": "forward", "weight": 0.6 },
+    { "source": "file:excel-management-api/src/ExcelManagement.Api/Program.cs", "target": "class:excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs:AuditLogDto", "type": "depends_on", "direction": "forward", "weight": 0.6 }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 1,
+  "filesSkipped": [
+    "excel-management-web/.dockerignore"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 1,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 1
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-web/Dockerfile",
+      "language": "dockerfile",
+      "fileCategory": "infra",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "services": [
+        {
+          "name": "build",
+          "image": "node:24-alpine",
+          "ports": [],
+          "startLine": 1,
+          "endLine": 11
+        },
+        {
+          "name": "runtime",
+          "image": "nginx:alpine",
+          "ports": [],
+          "startLine": 12,
+          "endLine": 15
+        }
+      ],
+      "steps": [
+        {
+          "name": "FROM node:24-alpine AS build",
+          "startLine": 1,
+          "endLine": 1
+        },
+        {
+          "name": "WORKDIR /app",
+          "startLine": 2,
+          "endLine": 2
+        },
+        {
+          "name": "COPY package.json package-lock.json ./",
+          "startLine": 3,
+          "endLine": 3
+        },
+        {
+          "name": "RUN npm ci --legacy-peer-deps",
+          "startLine": 8,
+          "endLine": 8
+        },
+        {
+          "name": "COPY . .",
+          "startLine": 9,
+          "endLine": 9
+        },
+        {
+          "name": "RUN npm run build",
+          "startLine": 10,
+          "endLine": 10
+        },
+        {
+          "name": "FROM nginx:alpine AS runtime",
+          "startLine": 12,
+          "endLine": 12
+        },
+        {
+          "name": "COPY --from=build /app/dist /usr/share/nginx/html",
+          "startLine": 13,
+          "endLine": 13
+        },
+        {
+          "name": "COPY nginx.conf /etc/nginx/conf.d/default.conf",
+          "startLine": 14,
+          "endLine": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "serviceCount": 2,
+        "stepCount": 9
+      }
+    }
+  ]
+}

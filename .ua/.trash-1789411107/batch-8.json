@@ -1,0 +1,47 @@
+{
+  "nodes": [
+    {
+      "id": "document:.beads/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": ".beads/README.md",
+      "summary": "Introductory guide to the Beads (bd) AI-native issue tracker used by this project, covering what Beads is, quick-start commands, everyday issue workflow, and where to learn more.",
+      "tags": ["documentation", "issue-tracking", "onboarding", "entry-point"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.beads/config.yaml",
+      "type": "config",
+      "name": "config.yaml",
+      "filePath": ".beads/config.yaml",
+      "summary": "Configures default behavior for the bd (Beads) CLI in this repository, including the Dolt git sync remote and automatic JSONL export; most options are documented but left commented out/disabled.",
+      "tags": ["configuration", "issue-tracking", "sync", "yaml"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.beads/metadata.json",
+      "type": "config",
+      "name": "metadata.json",
+      "filePath": ".beads/metadata.json",
+      "summary": "Small metadata file identifying the Beads embedded Dolt database backend, database name, and project id for this repository's issue tracker.",
+      "tags": ["configuration", "issue-tracking", "database", "metadata"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:.beads/README.md",
+      "target": "config:.beads/config.yaml",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:.beads/config.yaml",
+      "target": "config:.beads/metadata.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

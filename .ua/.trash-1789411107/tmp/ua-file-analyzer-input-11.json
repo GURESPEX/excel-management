@@ -1,0 +1,23 @@
+{
+  "projectRoot": "C:/Personal Drive/My Files/Programming/Assignments/chememan/excel-management",
+  "batchFiles": [
+    {"path": "excel-management-web/.oxlintrc.json", "language": "json", "sizeLines": 8, "fileCategory": "config"},
+    {"path": "excel-management-web/README.md", "language": "markdown", "sizeLines": 32, "fileCategory": "docs"},
+    {"path": "excel-management-web/components.json", "language": "json", "sizeLines": 25, "fileCategory": "config"},
+    {"path": "excel-management-web/index.html", "language": "html", "sizeLines": 13, "fileCategory": "markup"},
+    {"path": "excel-management-web/package.json", "language": "json", "sizeLines": 51, "fileCategory": "config"},
+    {"path": "excel-management-web/tsconfig.app.json", "language": "json", "sizeLines": 30, "fileCategory": "config"},
+    {"path": "excel-management-web/tsconfig.json", "language": "json", "sizeLines": 12, "fileCategory": "config"},
+    {"path": "excel-management-web/tsconfig.node.json", "language": "json", "sizeLines": 23, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    "excel-management-web/.oxlintrc.json": [],
+    "excel-management-web/README.md": [],
+    "excel-management-web/components.json": [],
+    "excel-management-web/index.html": [],
+    "excel-management-web/package.json": [],
+    "excel-management-web/tsconfig.app.json": [],
+    "excel-management-web/tsconfig.json": [],
+    "excel-management-web/tsconfig.node.json": []
+  }
+}

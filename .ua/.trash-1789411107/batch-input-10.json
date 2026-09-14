@@ -1,0 +1,29 @@
+{
+  "batchIndex": 10,
+  "files": [
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj",
+      "language": "csproj",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "language": "json",
+      "sizeLines": 20,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj": [],
+    "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json": [],
+    "excel-management-api/src/ExcelManagement.Api/appsettings.json": []
+  },
+  "neighborMap": {}
+}

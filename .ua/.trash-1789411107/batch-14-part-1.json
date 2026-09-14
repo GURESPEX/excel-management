@@ -1,0 +1,437 @@
+{
+  "nodes": [
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "type": "file",
+      "name": "IEmployeeExcelFile.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "summary": "Application-layer abstraction for reading and writing Employee Excel workbooks, decoupling repositories from a concrete Excel library.",
+      "tags": ["interface", "type-definition", "excel-import-export", "application-layer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs:IEmployeeExcelFile",
+      "type": "class",
+      "name": "IEmployeeExcelFile",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "lineRange": [8, 13],
+      "summary": "Interface exposing WriteWorkbook and ReadRows methods for serializing employees to and parsing employees from Excel files.",
+      "tags": ["interface", "excel-import-export", "contract"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "type": "file",
+      "name": "IEmployeeRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "summary": "Application-layer repository contract defining CRUD, paging, and bulk-import operations for Employee data.",
+      "tags": ["interface", "type-definition", "data-model", "application-layer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs:IEmployeeRepository",
+      "type": "class",
+      "name": "IEmployeeRepository",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "lineRange": [3, 20],
+      "summary": "Repository interface declaring paged/list retrieval, single lookup, create, update, delete, and bulk import operations for employees.",
+      "tags": ["interface", "repository", "contract"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "type": "file",
+      "name": "PagedResult.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "summary": "Generic paginated-result wrapper carrying items, total count, and paging metadata for list endpoints.",
+      "tags": ["data-model", "pagination", "application-layer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs:PagedResult",
+      "type": "class",
+      "name": "PagedResult",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "lineRange": [3, 7],
+      "summary": "Generic record type used to return a page of items alongside total count and page metadata from repository queries.",
+      "tags": ["data-model", "pagination"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "type": "file",
+      "name": "UpsertEmployeeRequest.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "summary": "Application-layer request DTO carrying employee field values used for create and update operations.",
+      "tags": ["data-model", "dto", "application-layer"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs:UpsertEmployeeRequest",
+      "type": "class",
+      "name": "UpsertEmployeeRequest",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "lineRange": [3, 8],
+      "summary": "Record DTO holding the editable fields (name, department, salary, join date, active flag) submitted when creating or updating an employee.",
+      "tags": ["dto", "validation", "data-model"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Application.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "summary": "Project file for the Application layer, declaring its target framework and compilation scope for use-case contracts and DTOs.",
+      "tags": ["configuration", "build-system", "dotnet"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "type": "file",
+      "name": "AuditAction.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "summary": "Enum defining the possible audit actions (e.g. create, update, delete) recorded against entities.",
+      "tags": ["enum", "data-model", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "file",
+      "name": "AuditLog.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "summary": "Domain entity representing a single audit trail record, capturing which entity changed, the action taken, who made the change, and a JSON diff.",
+      "tags": ["data-model", "audit-logging", "domain-entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs:AuditLog",
+      "type": "class",
+      "name": "AuditLog",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "lineRange": [3, 14],
+      "summary": "Entity with Id, EntityName, EntityId, Action, ChangedBy, Timestamp, and Changes properties persisted as the audit log table row.",
+      "tags": ["domain-entity", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "file",
+      "name": "Department.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "summary": "Domain entity representing an organizational department with a name and active status.",
+      "tags": ["data-model", "domain-entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Domain/Department.cs:Department",
+      "type": "class",
+      "name": "Department",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "lineRange": [3, 8],
+      "summary": "Entity with Id, Name, and IsActive properties used to group employees and enforce unique department names.",
+      "tags": ["domain-entity"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "file",
+      "name": "Employee.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "summary": "Core domain entity representing an employee record, including department assignment, salary, join date, and active/update tracking.",
+      "tags": ["data-model", "domain-entity", "employee-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Domain/Employee.cs:Employee",
+      "type": "class",
+      "name": "Employee",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "lineRange": [3, 13],
+      "summary": "Entity with Id, Name, DepartmentId/Department, Salary, JoinDate, IsActive, and UpdatedAt properties that is the central persisted record for the employee management feature.",
+      "tags": ["domain-entity", "employee-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Domain.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "summary": "Project file for the Domain layer, declaring the target framework used to compile the entity and enum types with no external dependencies.",
+      "tags": ["configuration", "build-system", "dotnet"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "type": "file",
+      "name": "RefreshToken.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "summary": "Domain entity storing a hashed refresh token for a user session, with issued/expired/revoked timestamps for JWT auth rotation.",
+      "tags": ["data-model", "domain-entity", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs:RefreshToken",
+      "type": "class",
+      "name": "RefreshToken",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "lineRange": [3, 17],
+      "summary": "Entity with Id, TokenHash, UserId, IssuedAt, ExpiresAt, and RevokedAt properties used to track and invalidate refresh tokens.",
+      "tags": ["domain-entity", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "type": "file",
+      "name": "User.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "summary": "Domain entity representing an application user account with a hashed password and assigned role.",
+      "tags": ["data-model", "domain-entity", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Domain/User.cs:User",
+      "type": "class",
+      "name": "User",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "lineRange": [3, 12],
+      "summary": "Entity with Id, Username, PasswordHash, and Role properties used for authentication and authorization.",
+      "tags": ["domain-entity", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "type": "file",
+      "name": "UserRole.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "summary": "Enum defining the set of roles (e.g. Admin, User) a User account can hold for authorization checks.",
+      "tags": ["enum", "data-model", "authentication"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs:IEmployeeExcelFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs:IEmployeeExcelFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs:IEmployeeRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs:IEmployeeRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs:PagedResult",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs:PagedResult",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs:UpsertEmployeeRequest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs:UpsertEmployeeRequest",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs:AuditLog",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs:AuditLog",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/Department.cs:Department",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/Department.cs:Department",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/Employee.cs:Employee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/Employee.cs:Employee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs:RefreshToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs:RefreshToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/User.cs:User",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Domain/User.cs:User",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

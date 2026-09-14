@@ -1,0 +1,183 @@
+{
+  "batchIndex": 13,
+  "files": [
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs",
+      "language": "csharp",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user",
+      "language": "user",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http",
+      "language": "http",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/Program.cs",
+      "language": "csharp",
+      "sizeLines": 366,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json",
+      "language": "json",
+      "sizeLines": 23,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs",
+      "language": "csharp",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs",
+      "language": "csharp",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs",
+      "language": "csharp",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs",
+      "language": "csharp",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs",
+      "language": "csharp",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs",
+      "language": "csharp",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs",
+      "language": "csharp",
+      "sizeLines": 3,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs",
+      "language": "csharp",
+      "sizeLines": 64,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs",
+      "language": "csharp",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs",
+      "language": "csharp",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs": [],
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj.user": [],
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.http": [],
+    "excel-management-api/src/ExcelManagement.Api/Program.cs": [],
+    "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json": [],
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs": []
+  },
+  "neighborMap": {}
+}

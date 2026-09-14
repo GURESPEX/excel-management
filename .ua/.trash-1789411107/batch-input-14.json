@@ -1,0 +1,183 @@
+{
+  "batchIndex": 14,
+  "files": [
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs",
+      "language": "csharp",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "language": "csharp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj",
+      "language": "csproj",
+      "sizeLines": 13,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "language": "csharp",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "language": "csharp",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj",
+      "language": "csproj",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "language": "csharp",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "language": "csharp",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Domain/UserRole.cs",
+      "language": "csharp",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "language": "csharp",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "language": "csproj",
+      "sizeLines": 29,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "language": "csharp",
+      "sizeLines": 260,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "language": "csharp",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "language": "csharp",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "language": "csharp",
+      "sizeLines": 98,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "language": "csharp",
+      "sizeLines": 179,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 91,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "language": "csharp",
+      "sizeLines": 74,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 117,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "language": "csharp",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 128,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs": [],
+    "excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj": [],
+    "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs": [],
+    "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs": [],
+    "excel-management-api/src/ExcelManagement.Domain/Department.cs": [],
+    "excel-management-api/src/ExcelManagement.Domain/Employee.cs": [],
+    "excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj": [],
+    "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs": [],
+    "excel-management-api/src/ExcelManagement.Domain/User.cs": [],
+    "excel-management-api/src/ExcelManagement.Domain/UserRole.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs": []
+  },
+  "neighborMap": {}
+}

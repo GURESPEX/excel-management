@@ -1,0 +1,970 @@
+{
+  "nodes": [
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "type": "file",
+      "name": "DependencyInjection.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "summary": "Composition-root extension method wiring the EF Core DbContext (Postgres/SQLite) and all repository/Excel-file implementations into the DI container.",
+      "tags": ["entry-point", "dependency-injection", "infrastructure-layer", "service"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs:DependencyInjection",
+      "type": "class",
+      "name": "DependencyInjection",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "lineRange": [12, 41],
+      "summary": "Static class hosting the AddInfrastructure extension method used by the API startup to register infrastructure services.",
+      "tags": ["dependency-injection", "factory"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs:AddInfrastructure",
+      "type": "function",
+      "name": "AddInfrastructure",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "lineRange": [14, 40],
+      "summary": "Reads the configured connection string and provider name to configure EF Core with Npgsql or Sqlite, then registers repository and Excel-file services with the DI container.",
+      "tags": ["dependency-injection", "configuration", "entry-point"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Infrastructure.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "summary": "Project file for the Infrastructure layer, referencing EF Core, Npgsql, Sqlite, and ClosedXML packages used by persistence and Excel I/O code.",
+      "tags": ["configuration", "build-system", "dotnet"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "type": "file",
+      "name": "AppDbContext.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "summary": "EF Core DbContext exposing Employees, Departments, Users, AuditLogs, and RefreshTokens sets, with entity configuration and automatic audit-log capture on every SaveChanges call.",
+      "tags": ["database", "orm", "audit-logging", "infrastructure-layer"],
+      "complexity": "complex",
+      "languageNotes": "Overrides SaveChanges/SaveChangesAsync to wrap writes in a transaction and diff ChangeTracker entries into AuditLog rows via reflection-free JSON serialization of changed property values."
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "type": "class",
+      "name": "AppDbContext",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [11, 260],
+      "summary": "Central EF Core context configuring all entity mappings and intercepting save operations to persist an audit trail alongside normal writes.",
+      "tags": ["database", "orm", "audit-logging"],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:OnModelCreating",
+      "type": "function",
+      "name": "OnModelCreating",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [28, 68],
+      "summary": "Configures column constraints, unique indexes, and foreign-key relationships for Employee, Department, User, AuditLog, and RefreshToken entities.",
+      "tags": ["orm", "database", "configuration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:SaveChangesAsync",
+      "type": "function",
+      "name": "SaveChangesAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [83, 120],
+      "summary": "Captures pending audit entries, wraps the save in a transaction, persists the primary changes, writes the resulting audit logs, then commits.",
+      "tags": ["database", "audit-logging", "transaction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:SaveChanges",
+      "type": "function",
+      "name": "SaveChanges",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [122, 151],
+      "summary": "Synchronous counterpart to SaveChangesAsync that captures audit entries, persists changes inside a transaction, and writes the audit log rows.",
+      "tags": ["database", "audit-logging", "transaction"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:CaptureAuditEntries",
+      "type": "function",
+      "name": "CaptureAuditEntries",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [161, 211],
+      "summary": "Walks the ChangeTracker's added/modified/deleted entries and builds pending audit records with the entity name, id, action, and changed-property JSON.",
+      "tags": ["audit-logging", "orm"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:BuildChangesJson",
+      "type": "function",
+      "name": "BuildChangesJson",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "lineRange": [213, 244],
+      "summary": "Serializes the set of changed property values for a tracked entity entry into a JSON string stored on the audit log row.",
+      "tags": ["audit-logging", "serialization"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "type": "file",
+      "name": "AuditLogRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "summary": "EF Core-backed repository that queries and filters audit log entries for the audit log listing feature.",
+      "tags": ["repository", "database", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs:AuditLogRepository",
+      "type": "class",
+      "name": "AuditLogRepository",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "lineRange": [6, 32],
+      "summary": "Repository implementation exposing a single filtered, paged-free query method over the AuditLogs table.",
+      "tags": ["repository", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs:GetAsync",
+      "type": "function",
+      "name": "GetAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "lineRange": [8, 31],
+      "summary": "Builds a filtered, ordered query over AuditLogs by entity name, action, and date range, then projects results into AuditLogDto records.",
+      "tags": ["database", "filtering", "audit-logging"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "type": "file",
+      "name": "DepartmentRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "summary": "EF Core-backed repository providing listing, existence checks, name-uniqueness checks, creation, and update operations for departments.",
+      "tags": ["repository", "database", "data-model"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:DepartmentRepository",
+      "type": "class",
+      "name": "DepartmentRepository",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "lineRange": [7, 56],
+      "summary": "Repository implementing department listing, validation, and mutation operations against AppDbContext.",
+      "tags": ["repository", "database"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:GetAllAsync",
+      "type": "function",
+      "name": "GetAllAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "lineRange": [9, 21],
+      "summary": "Returns departments ordered by name, optionally excluding inactive ones, projected to DepartmentDto.",
+      "tags": ["database", "filtering"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:UpdateAsync",
+      "type": "function",
+      "name": "UpdateAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "lineRange": [42, 55],
+      "summary": "Looks up a department by id and updates its name and active flag, persisting the change and returning the updated DTO.",
+      "tags": ["database", "mutation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "type": "file",
+      "name": "EmployeeExcelFile.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "summary": "ClosedXML-based implementation of IEmployeeExcelFile that writes employee lists to a workbook and parses uploaded workbooks back into import rows.",
+      "tags": ["excel-import-export", "infrastructure-layer"],
+      "complexity": "moderate",
+      "languageNotes": "Uses header-name-to-column-index mapping so the importer tolerates reordered columns in uploaded spreadsheets."
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:EmployeeExcelFile",
+      "type": "class",
+      "name": "EmployeeExcelFile",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "lineRange": [7, 98],
+      "summary": "Concrete Excel reader/writer for employee data built on the ClosedXML (XLWorkbook) library.",
+      "tags": ["excel-import-export"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:WriteWorkbook",
+      "type": "function",
+      "name": "WriteWorkbook",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "lineRange": [11, 36],
+      "summary": "Builds an XLWorkbook with a header row and one row per employee, returning the serialized bytes for download.",
+      "tags": ["excel-import-export", "serialization"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:ReadRows",
+      "type": "function",
+      "name": "ReadRows",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "lineRange": [38, 97],
+      "summary": "Parses an uploaded Excel stream by matching header names to columns, then reads each non-empty row into an EmployeeImportRow.",
+      "tags": ["excel-import-export", "parsing"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "type": "file",
+      "name": "EmployeeRepository.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "summary": "EF Core-backed repository implementing paged/filtered listing, CRUD, and bulk import for employees, including query filter construction and date parsing.",
+      "tags": ["repository", "database", "employee-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "type": "class",
+      "name": "EmployeeRepository",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [8, 179],
+      "summary": "Primary employee data-access implementation, combining dynamic filtering, paging, and Excel-import persistence against AppDbContext.",
+      "tags": ["repository", "database", "employee-management"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:GetPagedAsync",
+      "type": "function",
+      "name": "GetPagedAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [10, 21],
+      "summary": "Clamps page/pageSize, runs a count and a skip/take query against the filtered projection, and returns a PagedResult of employee list items.",
+      "tags": ["pagination", "database"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:ProjectListItems",
+      "type": "function",
+      "name": "ProjectListItems",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [28, 40],
+      "summary": "Applies the filtered query and orders/projects rows into EmployeeListItemDto shapes for listing.",
+      "tags": ["database", "filtering"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:BuildFilteredQuery",
+      "type": "function",
+      "name": "BuildFilteredQuery",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [42, 86],
+      "summary": "Composes a queryable over Employees by conditionally applying name, department, active-state, and join-date-range filters from the request.",
+      "tags": ["filtering", "database", "query-builder"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:TryParseJoinDate",
+      "type": "function",
+      "name": "TryParseJoinDate",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [88, 97],
+      "summary": "Attempts to parse a join-date filter string using the employee validator's expected date format.",
+      "tags": ["validation", "parsing"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:CreateAsync",
+      "type": "function",
+      "name": "CreateAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [108, 124],
+      "summary": "Constructs a new Employee entity from the upsert request, saves it, and returns the resulting detail DTO.",
+      "tags": ["database", "mutation", "employee-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:UpdateAsync",
+      "type": "function",
+      "name": "UpdateAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [126, 143],
+      "summary": "Loads an existing employee by id, applies the upsert request's field values, and persists the update.",
+      "tags": ["database", "mutation", "employee-management"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:DeleteAsync",
+      "type": "function",
+      "name": "DeleteAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [145, 156],
+      "summary": "Finds an employee by id and removes it from the database, returning whether the deletion occurred.",
+      "tags": ["database", "mutation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:ImportAsync",
+      "type": "function",
+      "name": "ImportAsync",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "lineRange": [158, 175],
+      "summary": "Maps a batch of upsert requests from an Excel import into Employee entities with a shared timestamp and bulk-saves them.",
+      "tags": ["excel-import-export", "database", "bulk-operation"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "type": "file",
+      "name": "20260913164758_InitialCreate.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "summary": "EF Core migration designer snapshot describing the target model (Departments and Employees tables) for the InitialCreate migration.",
+      "tags": ["database", "migration", "generated"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs:InitialCreate",
+      "type": "class",
+      "name": "InitialCreate",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "lineRange": [13, 90],
+      "summary": "Migration metadata class holding the BuildTargetModel snapshot consumed by EF Core tooling for the initial schema.",
+      "tags": ["migration", "generated"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "lineRange": [18, 89],
+      "summary": "Auto-generated method describing column types, keys, and indexes for the Department and Employee entities as of this migration.",
+      "tags": ["migration", "generated", "orm"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "type": "file",
+      "name": "20260913164758_InitialCreate.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "summary": "EF Core migration creating the initial Departments and Employees tables with their columns, keys, and foreign key.",
+      "tags": ["database", "migration"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs:InitialCreate",
+      "type": "class",
+      "name": "InitialCreate",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "lineRange": [9, 73],
+      "summary": "Migration class with Up/Down methods that create and drop the Departments and Employees tables.",
+      "tags": ["migration", "database"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "lineRange": [12, 62],
+      "summary": "Creates the Departments and Employees tables including columns, primary keys, unique index, and the Employee-to-Department foreign key.",
+      "tags": ["migration", "database", "schema-definition"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "type": "file",
+      "name": "20260913183412_AddUsers.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "summary": "EF Core migration designer snapshot capturing the model shape (including the new Users table) at the AddUsers migration point.",
+      "tags": ["database", "migration", "generated"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs:AddUsers",
+      "type": "class",
+      "name": "AddUsers",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "lineRange": [13, 116],
+      "summary": "Migration metadata class holding the BuildTargetModel snapshot for the schema after Users were added.",
+      "tags": ["migration", "generated"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "lineRange": [18, 115],
+      "summary": "Auto-generated method describing the full entity model, including the new Users table, as of this migration.",
+      "tags": ["migration", "generated", "orm"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "type": "file",
+      "name": "20260913183412_AddUsers.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "summary": "EF Core migration adding the Users table with a unique index on username, supporting the new authentication feature.",
+      "tags": ["database", "migration", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs:AddUsers",
+      "type": "class",
+      "name": "AddUsers",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "lineRange": [8, 41],
+      "summary": "Migration class with Up/Down methods that create and drop the Users table.",
+      "tags": ["migration", "database", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs:Up",
+      "type": "function",
+      "name": "Up",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "lineRange": [11, 33],
+      "summary": "Creates the Users table with Id, Username, PasswordHash, and Role columns plus a unique index on Username.",
+      "tags": ["migration", "database", "schema-definition"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "type": "file",
+      "name": "20260913191337_PostgresInitialCreate.Designer.cs",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "summary": "EF Core migration designer snapshot for the Postgres-targeted initial schema, describing the full model as of this migration.",
+      "tags": ["database", "migration", "generated"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs:PostgresInitialCreate",
+      "type": "class",
+      "name": "PostgresInitialCreate",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "lineRange": [14, 127],
+      "summary": "Migration metadata class holding the BuildTargetModel snapshot used when targeting PostgreSQL instead of SQLite.",
+      "tags": ["migration", "generated", "database"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs:BuildTargetModel",
+      "type": "function",
+      "name": "BuildTargetModel",
+      "filePath": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "lineRange": [19, 126],
+      "summary": "Auto-generated method describing column types, keys, and indexes for the full entity model under the Postgres provider.",
+      "tags": ["migration", "generated", "orm", "database"],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs:DependencyInjection",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs:DependencyInjection",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs:DependencyInjection",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs:AddInfrastructure",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj",
+      "target": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:OnModelCreating",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:SaveChangesAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:SaveChanges",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:CaptureAuditEntries",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:AppDbContext",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs:BuildChangesJson",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/User.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs:AuditLogRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs:AuditLogRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs:AuditLogRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs:GetAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/AuditLog.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:DepartmentRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:DepartmentRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:DepartmentRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:GetAllAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:DepartmentRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs:UpdateAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Department.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:EmployeeExcelFile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:EmployeeExcelFile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:EmployeeExcelFile",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:WriteWorkbook",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:EmployeeExcelFile",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:ReadRows",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs:EmployeeExcelFile",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs:IEmployeeExcelFile",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:GetPagedAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:ProjectListItems",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:BuildFilteredQuery",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:TryParseJoinDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:CreateAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:UpdateAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:DeleteAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:ImportAsync",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs:EmployeeRepository",
+      "target": "class:excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs:IEmployeeRepository",
+      "type": "implements",
+      "direction": "forward",
+      "weight": 0.9
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Domain/Employee.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs",
+      "target": "file:excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs:InitialCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs:InitialCreate",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs:InitialCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs:InitialCreate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs:InitialCreate",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs:AddUsers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs:AddUsers",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs:AddUsers",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs:AddUsers",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs:AddUsers",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs:Up",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs",
+      "target": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs:PostgresInitialCreate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "class:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs:PostgresInitialCreate",
+      "target": "function:excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs:BuildTargetModel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ]
+}

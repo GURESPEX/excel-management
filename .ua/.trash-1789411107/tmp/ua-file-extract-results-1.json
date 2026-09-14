@@ -1,0 +1,1554 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 14,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 14,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 14,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-web/src/components/ui/badge.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "Badge",
+          "startLine": 29,
+          "endLine": 49,
+          "params": [
+            "{\n  className,\n  variant = \"default\",\n  render,\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Badge",
+          "line": 51,
+          "isDefault": false
+        },
+        {
+          "name": "badgeVariants",
+          "line": 51,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Badge",
+          "callee": "useRender",
+          "lineNumber": 35
+        },
+        {
+          "caller": "Badge",
+          "callee": "mergeProps",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Badge",
+          "callee": "cn",
+          "lineNumber": 39
+        },
+        {
+          "caller": "Badge",
+          "callee": "badgeVariants",
+          "lineNumber": 39
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/calendar.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 112,
+      "nonEmptyLines": 100,
+      "functions": [
+        {
+          "name": "startOfMonth",
+          "startLine": 7,
+          "endLine": 9,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "isSameDay",
+          "startLine": 11,
+          "endLine": 13,
+          "params": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "name": "Calendar",
+          "startLine": 21,
+          "endLine": 110,
+          "params": [
+            "{ selected, onSelect, className }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Calendar",
+          "line": 112,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "startOfMonth",
+          "callee": "date.getFullYear",
+          "lineNumber": 8
+        },
+        {
+          "caller": "startOfMonth",
+          "callee": "date.getMonth",
+          "lineNumber": 8
+        },
+        {
+          "caller": "isSameDay",
+          "callee": "a.getFullYear",
+          "lineNumber": 12
+        },
+        {
+          "caller": "isSameDay",
+          "callee": "b.getFullYear",
+          "lineNumber": 12
+        },
+        {
+          "caller": "isSameDay",
+          "callee": "a.getMonth",
+          "lineNumber": 12
+        },
+        {
+          "caller": "isSameDay",
+          "callee": "b.getMonth",
+          "lineNumber": 12
+        },
+        {
+          "caller": "isSameDay",
+          "callee": "a.getDate",
+          "lineNumber": 12
+        },
+        {
+          "caller": "isSameDay",
+          "callee": "b.getDate",
+          "lineNumber": 12
+        },
+        {
+          "caller": "Calendar",
+          "callee": "React.useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Calendar",
+          "callee": "startOfMonth",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Calendar",
+          "callee": "selected?.getTime",
+          "lineNumber": 28
+        },
+        {
+          "caller": "Calendar",
+          "callee": "React.useEffect",
+          "lineNumber": 29
+        },
+        {
+          "caller": "Calendar",
+          "callee": "setMonth",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Calendar",
+          "callee": "startOfMonth",
+          "lineNumber": 31
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getDay",
+          "lineNumber": 36
+        },
+        {
+          "caller": "Calendar",
+          "callee": "new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getFullYear",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getMonth",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Calendar",
+          "callee": "new Date(month.getFullYear(), month.getMonth(), 0).getDate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getFullYear",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getMonth",
+          "lineNumber": 38
+        },
+        {
+          "caller": "Calendar",
+          "callee": "cells.push",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getFullYear",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getMonth",
+          "lineNumber": 42
+        },
+        {
+          "caller": "Calendar",
+          "callee": "cells.push",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getFullYear",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getMonth",
+          "lineNumber": 45
+        },
+        {
+          "caller": "Calendar",
+          "callee": "cells.push",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getFullYear",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getMonth",
+          "lineNumber": 49
+        },
+        {
+          "caller": "Calendar",
+          "callee": "cn",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Calendar",
+          "callee": "setMonth",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getFullYear",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getMonth",
+          "lineNumber": 59
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.toLocaleDateString",
+          "lineNumber": 65
+        },
+        {
+          "caller": "Calendar",
+          "callee": "setMonth",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getFullYear",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Calendar",
+          "callee": "month.getMonth",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Calendar",
+          "callee": "WEEKDAYS.map",
+          "lineNumber": 78
+        },
+        {
+          "caller": "Calendar",
+          "callee": "cells.map",
+          "lineNumber": 86
+        },
+        {
+          "caller": "Calendar",
+          "callee": "isSameDay",
+          "lineNumber": 87
+        },
+        {
+          "caller": "Calendar",
+          "callee": "isSameDay",
+          "lineNumber": 88
+        },
+        {
+          "caller": "Calendar",
+          "callee": "date.toISOString",
+          "lineNumber": 91
+        },
+        {
+          "caller": "Calendar",
+          "callee": "onSelect",
+          "lineNumber": 94
+        },
+        {
+          "caller": "Calendar",
+          "callee": "cn",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Calendar",
+          "callee": "date.getDate",
+          "lineNumber": 103
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/card.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 11,
+      "functions": [
+        {
+          "name": "Card",
+          "startLine": 3,
+          "endLine": 11,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Card",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Card",
+          "callee": "cn",
+          "lineNumber": 7
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/checkbox.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 24,
+      "functions": [
+        {
+          "name": "Checkbox",
+          "startLine": 5,
+          "endLine": 24,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Checkbox",
+          "line": 26,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Checkbox",
+          "callee": "cn",
+          "lineNumber": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/date-picker.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 66,
+      "nonEmptyLines": 60,
+      "functions": [
+        {
+          "name": "parseDateValue",
+          "startLine": 8,
+          "endLine": 14,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "formatDateValue",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "DatePicker",
+          "startLine": 31,
+          "endLine": 64,
+          "params": [
+            "{ id, value, onChange, placeholder = \"YYYY-MM-DD\", className }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DatePicker",
+          "line": 66,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parseDateValue",
+          "callee": "/^(\\d{4})-(\\d{2})-(\\d{2})$/.exec",
+          "lineNumber": 9
+        },
+        {
+          "caller": "parseDateValue",
+          "callee": "Number",
+          "lineNumber": 12
+        },
+        {
+          "caller": "parseDateValue",
+          "callee": "Number",
+          "lineNumber": 12
+        },
+        {
+          "caller": "parseDateValue",
+          "callee": "Number",
+          "lineNumber": 12
+        },
+        {
+          "caller": "parseDateValue",
+          "callee": "Number.isNaN",
+          "lineNumber": 13
+        },
+        {
+          "caller": "parseDateValue",
+          "callee": "date.getTime",
+          "lineNumber": 13
+        },
+        {
+          "caller": "formatDateValue",
+          "callee": "date.getFullYear",
+          "lineNumber": 17
+        },
+        {
+          "caller": "formatDateValue",
+          "callee": "String(date.getMonth() + 1).padStart",
+          "lineNumber": 18
+        },
+        {
+          "caller": "formatDateValue",
+          "callee": "String",
+          "lineNumber": 18
+        },
+        {
+          "caller": "formatDateValue",
+          "callee": "date.getMonth",
+          "lineNumber": 18
+        },
+        {
+          "caller": "formatDateValue",
+          "callee": "String(date.getDate()).padStart",
+          "lineNumber": 19
+        },
+        {
+          "caller": "formatDateValue",
+          "callee": "String",
+          "lineNumber": 19
+        },
+        {
+          "caller": "formatDateValue",
+          "callee": "date.getDate",
+          "lineNumber": 19
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "React.useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "cn",
+          "lineNumber": 35
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "onChange",
+          "lineNumber": 42
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "parseDateValue",
+          "lineNumber": 54
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "onChange",
+          "lineNumber": 56
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "formatDateValue",
+          "lineNumber": 56
+        },
+        {
+          "caller": "DatePicker",
+          "callee": "setOpen",
+          "lineNumber": 57
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/input.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 17,
+      "functions": [
+        {
+          "name": "Input",
+          "startLine": 5,
+          "endLine": 17,
+          "params": [
+            "{ className, type, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Input",
+          "line": 19,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Input",
+          "callee": "cn",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/label.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 15,
+      "functions": [
+        {
+          "name": "Label",
+          "startLine": 4,
+          "endLine": 15,
+          "params": [
+            "{ className, ...props }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Label",
+          "line": 17,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Label",
+          "callee": "cn",
+          "lineNumber": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/popover.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "PopoverContent",
+          "startLine": 7,
+          "endLine": 36,
+          "params": [
+            "{\n  className,\n  side = \"bottom\",\n  sideOffset = 4,\n  align = \"start\",\n  alignOffset = 0,\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Popover",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "PopoverTrigger",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "PopoverContent",
+          "line": 38,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "PopoverContent",
+          "callee": "cn",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/select.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 200,
+      "nonEmptyLines": 188,
+      "functions": [
+        {
+          "name": "SelectGroup",
+          "startLine": 10,
+          "endLine": 18,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "SelectValue",
+          "startLine": 20,
+          "endLine": 28,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "SelectTrigger",
+          "startLine": 30,
+          "endLine": 56,
+          "params": [
+            "{\n  className,\n  size = \"default\",\n  children,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "SelectContent",
+          "startLine": 58,
+          "endLine": 95,
+          "params": [
+            "{\n  className,\n  children,\n  side = \"bottom\",\n  sideOffset = 4,\n  align = \"center\",\n  alignOffset = 0,\n  alignItemWithTrigger = true,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "SelectLabel",
+          "startLine": 97,
+          "endLine": 108,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "SelectItem",
+          "startLine": 110,
+          "endLine": 136,
+          "params": [
+            "{\n  className,\n  children,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "SelectSeparator",
+          "startLine": 138,
+          "endLine": 149,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "SelectScrollUpButton",
+          "startLine": 151,
+          "endLine": 168,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "SelectScrollDownButton",
+          "startLine": 170,
+          "endLine": 187,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Select",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectContent",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectGroup",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectItem",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectLabel",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectScrollDownButton",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectScrollUpButton",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectSeparator",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectTrigger",
+          "line": 189,
+          "isDefault": false
+        },
+        {
+          "name": "SelectValue",
+          "line": 189,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "SelectGroup",
+          "callee": "cn",
+          "lineNumber": 14
+        },
+        {
+          "caller": "SelectValue",
+          "callee": "cn",
+          "lineNumber": 24
+        },
+        {
+          "caller": "SelectTrigger",
+          "callee": "cn",
+          "lineNumber": 42
+        },
+        {
+          "caller": "SelectContent",
+          "callee": "cn",
+          "lineNumber": 85
+        },
+        {
+          "caller": "SelectLabel",
+          "callee": "cn",
+          "lineNumber": 104
+        },
+        {
+          "caller": "SelectItem",
+          "callee": "cn",
+          "lineNumber": 118
+        },
+        {
+          "caller": "SelectSeparator",
+          "callee": "cn",
+          "lineNumber": 145
+        },
+        {
+          "caller": "SelectScrollUpButton",
+          "callee": "cn",
+          "lineNumber": 158
+        },
+        {
+          "caller": "SelectScrollDownButton",
+          "callee": "cn",
+          "lineNumber": 177
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 10,
+        "functionCount": 9,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/table.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 113,
+      "nonEmptyLines": 104,
+      "functions": [
+        {
+          "name": "Table",
+          "startLine": 4,
+          "endLine": 17,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "TableHeader",
+          "startLine": 19,
+          "endLine": 27,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "TableBody",
+          "startLine": 29,
+          "endLine": 37,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "TableFooter",
+          "startLine": 39,
+          "endLine": 50,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "TableRow",
+          "startLine": 52,
+          "endLine": 63,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "TableHead",
+          "startLine": 65,
+          "endLine": 76,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "TableCell",
+          "startLine": 78,
+          "endLine": 89,
+          "params": [
+            "{ className, ...props }"
+          ]
+        },
+        {
+          "name": "TableCaption",
+          "startLine": 91,
+          "endLine": 102,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Table",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "TableHeader",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "TableBody",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "TableFooter",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "TableHead",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "TableRow",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "TableCell",
+          "line": 104,
+          "isDefault": false
+        },
+        {
+          "name": "TableCaption",
+          "line": 104,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Table",
+          "callee": "cn",
+          "lineNumber": 12
+        },
+        {
+          "caller": "TableHeader",
+          "callee": "cn",
+          "lineNumber": 23
+        },
+        {
+          "caller": "TableBody",
+          "callee": "cn",
+          "lineNumber": 33
+        },
+        {
+          "caller": "TableFooter",
+          "callee": "cn",
+          "lineNumber": 43
+        },
+        {
+          "caller": "TableRow",
+          "callee": "cn",
+          "lineNumber": 56
+        },
+        {
+          "caller": "TableHead",
+          "callee": "cn",
+          "lineNumber": 69
+        },
+        {
+          "caller": "TableCell",
+          "callee": "cn",
+          "lineNumber": 82
+        },
+        {
+          "caller": "TableCaption",
+          "callee": "cn",
+          "lineNumber": 98
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 107,
+      "functions": [
+        {
+          "name": "AuditLogPage",
+          "startLine": 22,
+          "endLine": 116,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuditLogPage",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AuditLogPage",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "useAuditLogs",
+          "lineNumber": 27
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "new Date(from).toISOString",
+          "lineNumber": 31
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "new Date(`${to}T23:59:59.999Z`).toISOString",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "buttonVariants",
+          "lineNumber": 44
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "setEntityName",
+          "lineNumber": 57
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "data.map",
+          "lineNumber": 98
+        },
+        {
+          "caller": "AuditLogPage",
+          "callee": "new Date(entry.timestamp!).toLocaleString",
+          "lineNumber": 100
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 151,
+      "nonEmptyLines": 140,
+      "functions": [
+        {
+          "name": "DepartmentTableRow",
+          "startLine": 26,
+          "endLine": 83,
+          "params": [
+            "{ department }"
+          ]
+        },
+        {
+          "name": "DepartmentAdminPage",
+          "startLine": 85,
+          "endLine": 151,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DepartmentAdminPage",
+          "line": 85,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "useUpdateDepartment",
+          "lineNumber": 29
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "useIsAdmin",
+          "lineNumber": 30
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "useEffect",
+          "lineNumber": 35
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "setName",
+          "lineNumber": 36
+        },
+        {
+          "caller": "save",
+          "callee": "setError",
+          "lineNumber": 40
+        },
+        {
+          "caller": "save",
+          "callee": "updateDepartment.mutateAsync",
+          "lineNumber": 42
+        },
+        {
+          "caller": "save",
+          "callee": "setError",
+          "lineNumber": 44
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "setName",
+          "lineNumber": 55
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "save",
+          "lineNumber": 67
+        },
+        {
+          "caller": "DepartmentTableRow",
+          "callee": "save",
+          "lineNumber": 74
+        },
+        {
+          "caller": "DepartmentAdminPage",
+          "callee": "useDepartments",
+          "lineNumber": 86
+        },
+        {
+          "caller": "DepartmentAdminPage",
+          "callee": "useCreateDepartment",
+          "lineNumber": 87
+        },
+        {
+          "caller": "DepartmentAdminPage",
+          "callee": "useState",
+          "lineNumber": 88
+        },
+        {
+          "caller": "DepartmentAdminPage",
+          "callee": "useState",
+          "lineNumber": 89
+        },
+        {
+          "caller": "DepartmentAdminPage",
+          "callee": "useIsAdmin",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleCreate",
+          "callee": "setCreateError",
+          "lineNumber": 93
+        },
+        {
+          "caller": "handleCreate",
+          "callee": "createDepartment.mutateAsync",
+          "lineNumber": 95
+        },
+        {
+          "caller": "handleCreate",
+          "callee": "setNewName",
+          "lineNumber": 96
+        },
+        {
+          "caller": "handleCreate",
+          "callee": "setCreateError",
+          "lineNumber": 98
+        },
+        {
+          "caller": "DepartmentAdminPage",
+          "callee": "setNewName",
+          "lineNumber": 122
+        },
+        {
+          "caller": "DepartmentAdminPage",
+          "callee": "departments?.map",
+          "lineNumber": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 9,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 145,
+      "nonEmptyLines": 133,
+      "functions": [
+        {
+          "name": "toFieldName",
+          "startLine": 30,
+          "endLine": 32,
+          "params": [
+            "apiFieldName"
+          ]
+        },
+        {
+          "name": "EmployeeForm",
+          "startLine": 34,
+          "endLine": 145,
+          "params": [
+            "{\n  defaultValues,\n  onSubmit,\n  submitLabel,\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "EmployeeForm",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toFieldName",
+          "callee": "apiFieldName.charAt(0).toLowerCase",
+          "lineNumber": 31
+        },
+        {
+          "caller": "toFieldName",
+          "callee": "apiFieldName.charAt",
+          "lineNumber": 31
+        },
+        {
+          "caller": "toFieldName",
+          "callee": "apiFieldName.slice",
+          "lineNumber": 31
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "useDepartments",
+          "lineNumber": 46
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "departments?.filter",
+          "lineNumber": 47
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "useForm",
+          "lineNumber": 48
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "zodResolver",
+          "lineNumber": 49
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.handleSubmit",
+          "lineNumber": 60
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "onSubmit",
+          "lineNumber": 62
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "Object.entries",
+          "lineNumber": 65
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.setError",
+          "lineNumber": 66
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "toFieldName",
+          "lineNumber": 66
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.setError",
+          "lineNumber": 70
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.register",
+          "lineNumber": 78
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "Object.fromEntries",
+          "lineNumber": 87
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "(departments ?? []).map",
+          "lineNumber": 87
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "String",
+          "lineNumber": 87
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.watch",
+          "lineNumber": 88
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "String",
+          "lineNumber": 88
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.watch",
+          "lineNumber": 88
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.setValue",
+          "lineNumber": 89
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "Number",
+          "lineNumber": 89
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "selectableDepartments?.map",
+          "lineNumber": 95
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "String",
+          "lineNumber": 96
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.register",
+          "lineNumber": 109
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.watch",
+          "lineNumber": 119
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.setValue",
+          "lineNumber": 120
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.watch",
+          "lineNumber": 130
+        },
+        {
+          "caller": "EmployeeForm",
+          "callee": "form.setValue",
+          "lineNumber": 131
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 1,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/routes/login.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 83,
+      "nonEmptyLines": 74,
+      "functions": [
+        {
+          "name": "LoginPage",
+          "startLine": 13,
+          "endLine": 83,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Route",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LoginPage",
+          "callee": "useLogin",
+          "lineNumber": 14
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useNavigate",
+          "lineNumber": 15
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "event.preventDefault",
+          "lineNumber": 21
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 22
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "login.mutateAsync",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "navigate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 27
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "setUsername",
+          "lineNumber": 61
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "setPassword",
+          "lineNumber": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

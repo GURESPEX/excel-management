@@ -1,0 +1,41 @@
+{
+  "nodes": [
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj",
+      "type": "config",
+      "name": "ExcelManagement.Api.csproj",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj",
+      "summary": "MSBuild project file for the ASP.NET Core Web API host, targeting .NET 9 with nullable/implicit usings enabled, referencing JWT bearer auth, EF Core Design, and Swashbuckle, and project-referencing the Application, Domain, and Infrastructure layers.",
+      "tags": ["configuration", "build-system", "dotnet", "dependency-management", "api"],
+      "complexity": "simple",
+      "languageNotes": "Uses the Microsoft.NET.Sdk.Web SDK-style project format with ProjectReference entries wiring this Api project to the Application, Domain, and Infrastructure layers of a Clean Architecture-style solution."
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "type": "config",
+      "name": "appsettings.json",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "summary": "Base ASP.NET Core configuration for the API: logging levels, allowed hosts, a Sqlite database provider with connection string, and JWT signing/token-lifetime settings.",
+      "tags": ["configuration", "database", "security", "logging", "authentication"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "type": "config",
+      "name": "appsettings.Development.json",
+      "filePath": "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "summary": "Development-environment override for the API's logging configuration, layered on top of the base appsettings.json when running locally.",
+      "tags": ["configuration", "development", "logging"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "target": "config:excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

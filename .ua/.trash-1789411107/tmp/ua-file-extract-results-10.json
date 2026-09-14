@@ -1,0 +1,82 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 2,
+  "filesSkipped": [
+    "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj"
+  ],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 2,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 2
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 8,
+      "nonEmptyLines": 8,
+      "sections": [
+        {
+          "heading": "Logging",
+          "level": 1,
+          "line": 2
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 1
+      }
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Api/appsettings.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 20,
+      "nonEmptyLines": 20,
+      "sections": [
+        {
+          "heading": "Logging",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "AllowedHosts",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "Database",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "ConnectionStrings",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "Jwt",
+          "level": 1,
+          "line": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    }
+  ]
+}

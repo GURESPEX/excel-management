@@ -1,0 +1,13 @@
+{
+  "projectRoot": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management",
+  "batchFiles": [
+    {"path": ".beads/README.md", "language": "markdown", "sizeLines": 81, "fileCategory": "docs"},
+    {"path": ".beads/config.yaml", "language": "yaml", "sizeLines": 70, "fileCategory": "config"},
+    {"path": ".beads/metadata.json", "language": "json", "sizeLines": 6, "fileCategory": "config"}
+  ],
+  "batchImportData": {
+    ".beads/README.md": [],
+    ".beads/config.yaml": [],
+    ".beads/metadata.json": []
+  }
+}

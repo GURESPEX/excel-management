@@ -1,0 +1,255 @@
+{
+  "nodes": [
+    {
+      "id": "document:.agents/skills/beads/SKILL.md",
+      "type": "document",
+      "name": "SKILL.md",
+      "filePath": ".agents/skills/beads/SKILL.md",
+      "summary": "Skill guide instructing AI agents on the Beads issue-tracking workflow: how to take the first step, the preferred route, core CLI commands, what belongs in Beads, and the rules for using it.",
+      "tags": ["documentation", "beads", "workflow", "task-tracking"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.agents/skills/beads/agents/openai.yaml",
+      "type": "config",
+      "name": "openai.yaml",
+      "filePath": ".agents/skills/beads/agents/openai.yaml",
+      "summary": "Agent-interface declaration for the Beads skill under an OpenAI-compatible agent runtime, defining its display name, short description, and default prompt text.",
+      "tags": ["configuration", "beads", "agent-interface"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.beads/hooks/post-checkout",
+      "type": "file",
+      "name": "post-checkout",
+      "filePath": ".beads/hooks/post-checkout",
+      "summary": "Git post-checkout hook shim that delegates to `bd hooks run post-checkout`, wrapped with a cross-platform timeout guard (timeout/gtimeout/perl fallback) and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": ["git-hook", "automation", "beads", "shell-script"],
+      "complexity": "simple",
+      "languageNotes": "POSIX sh with a portable timeout fallback chain (timeout -> gtimeout -> perl alarm) since not all platforms ship GNU coreutils' timeout."
+    },
+    {
+      "id": "file:.beads/hooks/post-merge",
+      "type": "file",
+      "name": "post-merge",
+      "filePath": ".beads/hooks/post-merge",
+      "summary": "Git post-merge hook shim that delegates to `bd hooks run post-merge`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": ["git-hook", "automation", "beads", "shell-script"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.beads/hooks/pre-commit",
+      "type": "file",
+      "name": "pre-commit",
+      "filePath": ".beads/hooks/pre-commit",
+      "summary": "Git pre-commit hook shim that delegates to `bd hooks run pre-commit`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": ["git-hook", "automation", "beads", "shell-script"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.beads/hooks/pre-push",
+      "type": "file",
+      "name": "pre-push",
+      "filePath": ".beads/hooks/pre-push",
+      "summary": "Git pre-push hook shim that delegates to `bd hooks run pre-push`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": ["git-hook", "automation", "beads", "shell-script"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.beads/hooks/prepare-commit-msg",
+      "type": "file",
+      "name": "prepare-commit-msg",
+      "filePath": ".beads/hooks/prepare-commit-msg",
+      "summary": "Git prepare-commit-msg hook shim that delegates to `bd hooks run prepare-commit-msg`, wrapped with a cross-platform timeout guard and graceful no-op when the bd CLI or Beads database isn't available.",
+      "tags": ["git-hook", "automation", "beads", "shell-script"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.beads/interactions.jsonl",
+      "type": "file",
+      "name": "interactions.jsonl",
+      "filePath": ".beads/interactions.jsonl",
+      "summary": "JSONL audit log recorded by the Beads issue tracker, capturing field-change events (status transitions with narrative close reasons) for the project's tickets.",
+      "tags": ["data-log", "beads", "issue-tracking", "audit"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.beads/issues.jsonl",
+      "type": "file",
+      "name": "issues.jsonl",
+      "filePath": ".beads/issues.jsonl",
+      "summary": "JSONL export of the Beads issue database for this project: the parent epic plus its 15 child tickets (Walking Skeleton, Employee CRUD, Department Master Data, Auth/RBAC, Search & Filter, Audit Log, Import/Export, MCP Server, Multi-DB Verification, CI Pipelines, Infra Compose, and follow-up fixes) with full descriptions, acceptance criteria, and close reasons.",
+      "tags": ["data-log", "beads", "issue-tracking", "project-management"],
+      "complexity": "simple",
+      "languageNotes": "Very few lines but each line is a dense JSON record carrying the full project history/spec — line-count metrics understate its informational weight."
+    },
+    {
+      "id": "config:.claude/settings.json",
+      "type": "config",
+      "name": "settings.json",
+      "filePath": ".claude/settings.json",
+      "summary": "Claude Code settings configuring a SessionStart hook that runs `bd prime --hook-json` to load Beads task-tracking context at the start of each session.",
+      "tags": ["configuration", "claude-code", "beads", "hooks"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.codex/config.toml",
+      "type": "config",
+      "name": "config.toml",
+      "filePath": ".codex/config.toml",
+      "summary": "Codex CLI feature-flag configuration enabling the hooks feature so Codex sessions can run the project's Beads hook commands.",
+      "tags": ["configuration", "codex", "feature-flag"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.codex/hooks.json",
+      "type": "config",
+      "name": "hooks.json",
+      "filePath": ".codex/hooks.json",
+      "summary": "Codex CLI hook configuration wiring SessionStart, PreCompact, PostCompact, and UserPromptSubmit events to `bd codex-hook` commands that load and refresh Beads task context during a Codex session.",
+      "tags": ["configuration", "codex", "beads", "hooks"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:.ua/.understandignore",
+      "type": "file",
+      "name": ".understandignore",
+      "filePath": ".ua/.understandignore",
+      "summary": "Understand-Anything ignore-pattern file (gitignore-style syntax) listing directories/files to exclude from codebase analysis; most entries are commented-out opt-in suggestions covering Dolt DB files, SQLite artifacts, a generated route-tree file, and common test-file conventions across languages.",
+      "tags": ["configuration", "ignore-file", "tooling", "understand-anything"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Root-level instructions for AI coding agents covering non-interactive shell command conventions, the Beads issue-tracker workflow (bd/bv CLI usage, triage, scoping and filtering), agent context profiles, and the session-completion/git-policy protocol for this repo.",
+      "tags": ["documentation", "agent-instructions", "beads", "workflow"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:CLAUDE.md",
+      "type": "document",
+      "name": "CLAUDE.md",
+      "filePath": "CLAUDE.md",
+      "summary": "Project-level instructions for AI coding agents mirroring the Beads issue-tracking workflow, agent context profiles, and session-completion/git protocol, plus placeholder sections for build/test commands and architecture notes.",
+      "tags": ["documentation", "agent-instructions", "beads", "workflow"],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+      "type": "file",
+      "name": ".dtbcache.v2",
+      "filePath": "excel-management-api/.vs/ExcelManagement/DesignTimeBuild/.dtbcache.v2",
+      "summary": "Auto-generated Visual Studio design-time build cache for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": ["generated", "ide-cache", "binary", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "type": "file",
+      "name": "64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "filePath": "excel-management-api/.vs/ExcelManagement/FileContentIndex/64a9f664-b0d4-42ec-80ed-991812e6319e.vsidx",
+      "summary": "Auto-generated Visual Studio file-content search index for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": ["generated", "ide-cache", "binary", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+      "type": "file",
+      "name": ".futdcache.v2",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/.futdcache.v2",
+      "summary": "Auto-generated Visual Studio 'find up-to-date' cache for the ExcelManagement solution; empty/binary IDE state with no authored content.",
+      "tags": ["generated", "ide-cache", "binary", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/.vs/ExcelManagement/v17/.suo",
+      "type": "file",
+      "name": ".suo",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/.suo",
+      "summary": "Auto-generated Visual Studio solution user-options file storing per-developer IDE state (window layout, breakpoints, open files) for the ExcelManagement solution; binary, not meant to be shared.",
+      "tags": ["generated", "ide-cache", "binary", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json",
+      "type": "config",
+      "name": "DocumentLayout.backup.json",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.backup.json",
+      "summary": "Backup copy of Visual Studio's persisted editor document-layout state (open documents, document groups, workspace root path) for the ExcelManagement solution; auto-generated by the IDE.",
+      "tags": ["ide-config", "generated", "visual-studio", "editor-state"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json",
+      "type": "config",
+      "name": "DocumentLayout.json",
+      "filePath": "excel-management-api/.vs/ExcelManagement/v17/DocumentLayout.json",
+      "summary": "Visual Studio's persisted editor document-layout state (open documents, document groups, workspace root path) for the ExcelManagement solution; auto-generated by the IDE.",
+      "tags": ["ide-config", "generated", "visual-studio", "editor-state"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+      "type": "file",
+      "name": "excelmanagement.metadata.v9.bin",
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.metadata.v9.bin",
+      "summary": "Auto-generated Visual Studio project-evaluation metadata cache for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": ["generated", "ide-cache", "binary", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+      "type": "file",
+      "name": "excelmanagement.projects.v9.bin",
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.projects.v9.bin",
+      "summary": "Auto-generated Visual Studio project-evaluation cache holding evaluated MSBuild project data for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": ["generated", "ide-cache", "binary", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+      "type": "file",
+      "name": "excelmanagement.strings.v9.bin",
+      "filePath": "excel-management-api/.vs/ProjectEvaluation/excelmanagement.strings.v9.bin",
+      "summary": "Auto-generated Visual Studio project-evaluation string-interning cache for the ExcelManagement solution; binary IDE state with no authored content.",
+      "tags": ["generated", "ide-cache", "binary", "visual-studio"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-api/ExcelManagement.sln",
+      "type": "config",
+      "name": "ExcelManagement.sln",
+      "filePath": "excel-management-api/ExcelManagement.sln",
+      "summary": "Visual Studio solution file wiring together the six ExcelManagement projects (Domain, Application, Infrastructure, Api, McpServer, and the Api integration test project) under a Clean Architecture layering, with Debug/Release build configurations across platforms.",
+      "tags": ["configuration", "build-system", "solution-file", "dotnet"],
+      "complexity": "moderate",
+      "languageNotes": "Standard MSBuild .sln format: a project list plus per-project per-configuration platform mappings and solution nesting under a virtual 'src' folder."
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:AGENTS.md",
+      "target": "document:CLAUDE.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/beads/SKILL.md",
+      "target": "document:AGENTS.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:.agents/skills/beads/SKILL.md",
+      "target": "document:CLAUDE.md",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

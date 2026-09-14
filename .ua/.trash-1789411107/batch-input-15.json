@@ -1,0 +1,183 @@
+{
+  "batchIndex": 15,
+  "files": [
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs",
+      "language": "csharp",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs",
+      "language": "csharp",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs",
+      "language": "csharp",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs",
+      "language": "csharp",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs",
+      "language": "csharp",
+      "sizeLines": 208,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs",
+      "language": "csharp",
+      "sizeLines": 34,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs",
+      "language": "csharp",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs",
+      "language": "csharp",
+      "sizeLines": 13,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs",
+      "language": "csharp",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs",
+      "language": "csharp",
+      "sizeLines": 144,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj",
+      "language": "csproj",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.McpServer/Program.cs",
+      "language": "csharp",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/src/ExcelManagement.McpServer/appsettings.json",
+      "language": "json",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs",
+      "language": "csharp",
+      "sizeLines": 33,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs",
+      "language": "csharp",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs",
+      "language": "csharp",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs",
+      "language": "csharp",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs",
+      "language": "csharp",
+      "sizeLines": 149,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs",
+      "language": "csharp",
+      "sizeLines": 150,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs",
+      "language": "csharp",
+      "sizeLines": 211,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs",
+      "language": "csharp",
+      "sizeLines": 67,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs",
+      "language": "csharp",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj",
+      "language": "csproj",
+      "sizeLines": 29,
+      "fileCategory": "config"
+    },
+    {
+      "path": "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs",
+      "language": "csharp",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs": [],
+    "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs": [],
+    "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs": [],
+    "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs": [],
+    "excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj": [],
+    "excel-management-api/src/ExcelManagement.McpServer/Program.cs": [],
+    "excel-management-api/src/ExcelManagement.McpServer/appsettings.json": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj": [],
+    "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs": []
+  },
+  "neighborMap": {}
+}

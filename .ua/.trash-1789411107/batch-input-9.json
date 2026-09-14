@@ -1,0 +1,36 @@
+{
+  "batchIndex": 9,
+  "files": [
+    {
+      "path": "docs/architecture.html",
+      "language": "html",
+      "sizeLines": 14955,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "docs/excel-management-api-architecture.html",
+      "language": "html",
+      "sizeLines": 15006,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "docs/excel-management-api-architecture.visual-check.html",
+      "language": "html",
+      "sizeLines": 32,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "docs/excel-management-api-architecture.visual-check.json",
+      "language": "json",
+      "sizeLines": 548,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    "docs/architecture.html": [],
+    "docs/excel-management-api-architecture.html": [],
+    "docs/excel-management-api-architecture.visual-check.html": [],
+    "docs/excel-management-api-architecture.visual-check.json": []
+  },
+  "neighborMap": {}
+}

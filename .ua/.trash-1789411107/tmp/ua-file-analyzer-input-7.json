@@ -1,0 +1,11 @@
+{
+  "projectRoot": "C:/Personal Drive/My Files/Programming/Assignments/chememan/excel-management",
+  "batchFiles": [
+    {"path": ".github/workflows/backend-ci.yml", "language": "yaml", "sizeLines": 65, "fileCategory": "infra"},
+    {"path": ".github/workflows/frontend-ci.yml", "language": "yaml", "sizeLines": 70, "fileCategory": "infra"}
+  ],
+  "batchImportData": {
+    ".github/workflows/backend-ci.yml": [],
+    ".github/workflows/frontend-ci.yml": []
+  }
+}

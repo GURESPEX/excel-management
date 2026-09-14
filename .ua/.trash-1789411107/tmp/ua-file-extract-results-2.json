@@ -1,0 +1,375 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 10,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 10,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 10,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-web/src/features/auth/AuthFlows.test.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 32,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/auth/api.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "toAuthUser",
+          "startLine": 8,
+          "endLine": 10,
+          "params": [
+            "dto"
+          ]
+        },
+        {
+          "name": "useLogin",
+          "startLine": 12,
+          "endLine": 23,
+          "params": []
+        },
+        {
+          "name": "useLogout",
+          "startLine": 25,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "bootstrapAuth",
+          "startLine": 34,
+          "endLine": 41,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useLogin",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "useLogout",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "bootstrapAuth",
+          "line": 34,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useLogin",
+          "callee": "useMutation",
+          "lineNumber": 13
+        },
+        {
+          "caller": "useLogin",
+          "callee": "apiClient.POST",
+          "lineNumber": 15
+        },
+        {
+          "caller": "useLogin",
+          "callee": "toAuthUser",
+          "lineNumber": 19
+        },
+        {
+          "caller": "useLogin",
+          "callee": "useAuthStore.getState().setUser",
+          "lineNumber": 21
+        },
+        {
+          "caller": "useLogin",
+          "callee": "useAuthStore.getState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "useLogout",
+          "callee": "useMutation",
+          "lineNumber": 26
+        },
+        {
+          "caller": "useLogout",
+          "callee": "apiClient.POST",
+          "lineNumber": 28
+        },
+        {
+          "caller": "useLogout",
+          "callee": "useAuthStore.getState().clear",
+          "lineNumber": 30
+        },
+        {
+          "caller": "useLogout",
+          "callee": "useAuthStore.getState",
+          "lineNumber": 30
+        },
+        {
+          "caller": "bootstrapAuth",
+          "callee": "apiClient.POST",
+          "lineNumber": 35
+        },
+        {
+          "caller": "bootstrapAuth",
+          "callee": "useAuthStore.getState().clear",
+          "lineNumber": 37
+        },
+        {
+          "caller": "bootstrapAuth",
+          "callee": "useAuthStore.getState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "bootstrapAuth",
+          "callee": "useAuthStore.getState().setUser",
+          "lineNumber": 40
+        },
+        {
+          "caller": "bootstrapAuth",
+          "callee": "useAuthStore.getState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "bootstrapAuth",
+          "callee": "toAuthUser",
+          "lineNumber": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 4,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/auth/store.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "useIsAdmin",
+          "startLine": 25,
+          "endLine": 25,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useAuthStore",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "useIsAdmin",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useIsAdmin",
+          "callee": "useAuthStore",
+          "lineNumber": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 55,
+      "functions": [
+        {
+          "name": "renderPage",
+          "startLine": 10,
+          "endLine": 21,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "renderPage",
+          "callee": "useAuthStore.setState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "renderPage",
+          "callee": "render",
+          "lineNumber": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 132,
+      "nonEmptyLines": 115,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/employees/EmployeeListPage.test.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 99,
+      "nonEmptyLines": 87,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/routes/__root.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 11,
+      "exports": [
+        {
+          "name": "Route",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/test/renderApp.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 23,
+      "functions": [
+        {
+          "name": "renderApp",
+          "startLine": 7,
+          "endLine": 26,
+          "params": [
+            "initialPath"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "renderApp",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "renderApp",
+          "callee": "useAuthStore.setState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "renderApp",
+          "callee": "createRouter",
+          "lineNumber": 15
+        },
+        {
+          "caller": "renderApp",
+          "callee": "createMemoryHistory",
+          "lineNumber": 17
+        },
+        {
+          "caller": "renderApp",
+          "callee": "router.load",
+          "lineNumber": 19
+        },
+        {
+          "caller": "renderApp",
+          "callee": "render",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/test/server.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 18,
+      "exports": [
+        {
+          "name": "server",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/test/setup.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "batchIndex": 3,
+  "files": [
+    {
+      "path": "excel-management-web/src/components/ui/alert-dialog.tsx",
+      "language": "typescript",
+      "sizeLines": 187,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/components/ui/button.tsx",
+      "language": "typescript",
+      "sizeLines": 57,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/auditLogs/api.ts",
+      "language": "typescript",
+      "sizeLines": 29,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/departments/api.ts",
+      "language": "typescript",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "language": "typescript",
+      "sizeLines": 346,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/features/employees/api.ts",
+      "language": "typescript",
+      "sizeLines": 180,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/lib/api/client.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "excel-management-web/src/lib/api/mutationError.ts",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "excel-management-web/src/components/ui/alert-dialog.tsx": [
+      "excel-management-web/src/components/ui/button.tsx"
+    ],
+    "excel-management-web/src/components/ui/button.tsx": [],
+    "excel-management-web/src/features/auditLogs/api.ts": [
+      "excel-management-web/src/lib/api/client.ts"
+    ],
+    "excel-management-web/src/features/departments/api.ts": [
+      "excel-management-web/src/lib/api/client.ts",
+      "excel-management-web/src/lib/api/mutationError.ts"
+    ],
+    "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx": [
+      "excel-management-web/src/components/ui/alert-dialog.tsx",
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/features/employees/api.ts"
+    ],
+    "excel-management-web/src/features/employees/EmployeeListPage.tsx": [
+      "excel-management-web/src/components/ui/badge.tsx",
+      "excel-management-web/src/components/ui/button.tsx",
+      "excel-management-web/src/components/ui/card.tsx",
+      "excel-management-web/src/components/ui/date-picker.tsx",
+      "excel-management-web/src/components/ui/input.tsx",
+      "excel-management-web/src/components/ui/label.tsx",
+      "excel-management-web/src/components/ui/select.tsx",
+      "excel-management-web/src/components/ui/table.tsx",
+      "excel-management-web/src/features/auth/store.ts",
+      "excel-management-web/src/features/departments/api.ts",
+      "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "excel-management-web/src/features/employees/api.ts"
+    ],
+    "excel-management-web/src/features/employees/api.ts": [
+      "excel-management-web/src/lib/api/client.ts",
+      "excel-management-web/src/lib/api/mutationError.ts"
+    ],
+    "excel-management-web/src/lib/api/client.ts": [],
+    "excel-management-web/src/lib/api/mutationError.ts": []
+  },
+  "neighborMap": {
+    "excel-management-web/src/components/ui/button.tsx": [
+      {
+        "path": "excel-management-web/src/components/layout/AppShell.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "AppShell"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "AuditLogPage"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "DepartmentAdminPage"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "EmployeeForm"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/routes/login.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "Route"
+        ]
+      }
+    ],
+    "excel-management-web/src/features/auditLogs/api.ts": [
+      {
+        "path": "excel-management-web/src/features/auditLogs/AuditLogPage.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "AuditLogPage"
+        ]
+      }
+    ],
+    "excel-management-web/src/features/departments/api.ts": [
+      {
+        "path": "excel-management-web/src/features/departments/DepartmentAdminPage.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "DepartmentAdminPage"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "EmployeeForm"
+        ]
+      }
+    ],
+    "excel-management-web/src/features/employees/EmployeeListPage.tsx": [
+      {
+        "path": "excel-management-web/src/components/ui/badge.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "Badge",
+          "badgeVariants"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/components/ui/card.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "Card"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/components/ui/date-picker.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "DatePicker"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/components/ui/input.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "Input"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/components/ui/label.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "Label"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/components/ui/select.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "Select",
+          "SelectContent",
+          "SelectGroup",
+          "SelectItem",
+          "SelectLabel",
+          "SelectScrollDownButton",
+          "SelectScrollUpButton",
+          "SelectSeparator",
+          "SelectTrigger",
+          "SelectValue"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/components/ui/table.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "Table",
+          "TableHeader",
+          "TableBody",
+          "TableFooter",
+          "TableHead",
+          "TableRow",
+          "TableCell",
+          "TableCaption"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/features/auth/store.ts",
+        "batchIndex": 2,
+        "symbols": [
+          "useAuthStore",
+          "useIsAdmin"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/routes/index.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "Route"
+        ]
+      }
+    ],
+    "excel-management-web/src/features/employees/api.ts": [
+      {
+        "path": "excel-management-web/src/features/employees/EmployeeForm.tsx",
+        "batchIndex": 1,
+        "symbols": [
+          "EmployeeForm"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/routes/employees/$employeeId.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "Route"
+        ]
+      },
+      {
+        "path": "excel-management-web/src/routes/employees/new.tsx",
+        "batchIndex": 4,
+        "symbols": [
+          "Route"
+        ]
+      }
+    ],
+    "excel-management-web/src/lib/api/client.ts": [
+      {
+        "path": "excel-management-web/src/features/auth/api.ts",
+        "batchIndex": 2,
+        "symbols": [
+          "useLogin",
+          "useLogout",
+          "bootstrapAuth"
+        ]
+      }
+    ]
+  }
+}

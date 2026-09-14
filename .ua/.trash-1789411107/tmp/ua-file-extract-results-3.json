@@ -1,0 +1,1080 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-web/src/components/ui/alert-dialog.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 187,
+      "nonEmptyLines": 172,
+      "functions": [
+        {
+          "name": "AlertDialog",
+          "startLine": 9,
+          "endLine": 11,
+          "params": [
+            "{ ...props }"
+          ]
+        },
+        {
+          "name": "AlertDialogTrigger",
+          "startLine": 13,
+          "endLine": 17,
+          "params": [
+            "{ ...props }"
+          ]
+        },
+        {
+          "name": "AlertDialogPortal",
+          "startLine": 19,
+          "endLine": 23,
+          "params": [
+            "{ ...props }"
+          ]
+        },
+        {
+          "name": "AlertDialogOverlay",
+          "startLine": 25,
+          "endLine": 39,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogContent",
+          "startLine": 41,
+          "endLine": 62,
+          "params": [
+            "{\n  className,\n  size = \"default\",\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogHeader",
+          "startLine": 64,
+          "endLine": 78,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogFooter",
+          "startLine": 80,
+          "endLine": 94,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogMedia",
+          "startLine": 96,
+          "endLine": 110,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogTitle",
+          "startLine": 112,
+          "endLine": 126,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogDescription",
+          "startLine": 128,
+          "endLine": 142,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogAction",
+          "startLine": 144,
+          "endLine": 155,
+          "params": [
+            "{\n  className,\n  ...props\n}"
+          ]
+        },
+        {
+          "name": "AlertDialogCancel",
+          "startLine": 157,
+          "endLine": 172,
+          "params": [
+            "{\n  className,\n  variant = \"outline\",\n  size = \"default\",\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AlertDialog",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogAction",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogCancel",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogContent",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogDescription",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogFooter",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogHeader",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogMedia",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogOverlay",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogPortal",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogTitle",
+          "line": 174,
+          "isDefault": false
+        },
+        {
+          "name": "AlertDialogTrigger",
+          "line": 174,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AlertDialogOverlay",
+          "callee": "cn",
+          "lineNumber": 32
+        },
+        {
+          "caller": "AlertDialogContent",
+          "callee": "cn",
+          "lineNumber": 54
+        },
+        {
+          "caller": "AlertDialogHeader",
+          "callee": "cn",
+          "lineNumber": 71
+        },
+        {
+          "caller": "AlertDialogFooter",
+          "callee": "cn",
+          "lineNumber": 87
+        },
+        {
+          "caller": "AlertDialogMedia",
+          "callee": "cn",
+          "lineNumber": 103
+        },
+        {
+          "caller": "AlertDialogTitle",
+          "callee": "cn",
+          "lineNumber": 119
+        },
+        {
+          "caller": "AlertDialogDescription",
+          "callee": "cn",
+          "lineNumber": 135
+        },
+        {
+          "caller": "AlertDialogAction",
+          "callee": "cn",
+          "lineNumber": 151
+        },
+        {
+          "caller": "AlertDialogCancel",
+          "callee": "cn",
+          "lineNumber": 167
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 12,
+        "functionCount": 12,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/components/ui/button.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 57,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "Button",
+          "startLine": 42,
+          "endLine": 55,
+          "params": [
+            "{\n  className,\n  variant = \"default\",\n  size = \"default\",\n  ...props\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Button",
+          "line": 57,
+          "isDefault": false
+        },
+        {
+          "name": "buttonVariants",
+          "line": 57,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Button",
+          "callee": "cn",
+          "lineNumber": 51
+        },
+        {
+          "caller": "Button",
+          "callee": "buttonVariants",
+          "lineNumber": 51
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/auditLogs/api.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 29,
+      "nonEmptyLines": 27,
+      "functions": [
+        {
+          "name": "useAuditLogs",
+          "startLine": 10,
+          "endLine": 29,
+          "params": [
+            "filters"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "useAuditLogs",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useAuditLogs",
+          "callee": "useQuery",
+          "lineNumber": 11
+        },
+        {
+          "caller": "useAuditLogs",
+          "callee": "apiClient.GET",
+          "lineNumber": 14
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/departments/api.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 45,
+      "nonEmptyLines": 42,
+      "functions": [
+        {
+          "name": "useDepartments",
+          "startLine": 5,
+          "endLine": 18,
+          "params": [
+            "includeInactive"
+          ]
+        },
+        {
+          "name": "useCreateDepartment",
+          "startLine": 20,
+          "endLine": 30,
+          "params": []
+        },
+        {
+          "name": "useUpdateDepartment",
+          "startLine": 32,
+          "endLine": 45,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "useDepartments",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "useCreateDepartment",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "useUpdateDepartment",
+          "line": 32,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useDepartments",
+          "callee": "useQuery",
+          "lineNumber": 6
+        },
+        {
+          "caller": "useDepartments",
+          "callee": "apiClient.GET",
+          "lineNumber": 9
+        },
+        {
+          "caller": "useCreateDepartment",
+          "callee": "useQueryClient",
+          "lineNumber": 21
+        },
+        {
+          "caller": "useCreateDepartment",
+          "callee": "useMutation",
+          "lineNumber": 22
+        },
+        {
+          "caller": "useCreateDepartment",
+          "callee": "apiClient.POST",
+          "lineNumber": 24
+        },
+        {
+          "caller": "useCreateDepartment",
+          "callee": "throwOnMutationError",
+          "lineNumber": 25
+        },
+        {
+          "caller": "useCreateDepartment",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 28
+        },
+        {
+          "caller": "useUpdateDepartment",
+          "callee": "useQueryClient",
+          "lineNumber": 33
+        },
+        {
+          "caller": "useUpdateDepartment",
+          "callee": "useMutation",
+          "lineNumber": 34
+        },
+        {
+          "caller": "useUpdateDepartment",
+          "callee": "apiClient.PUT",
+          "lineNumber": 36
+        },
+        {
+          "caller": "useUpdateDepartment",
+          "callee": "throwOnMutationError",
+          "lineNumber": 40
+        },
+        {
+          "caller": "useUpdateDepartment",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "DeleteEmployeeDialog",
+          "startLine": 16,
+          "endLine": 42,
+          "params": [
+            "{ employeeId, employeeName }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "DeleteEmployeeDialog",
+          "line": 16,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DeleteEmployeeDialog",
+          "callee": "useDeleteEmployee",
+          "lineNumber": 17
+        },
+        {
+          "caller": "DeleteEmployeeDialog",
+          "callee": "deleteEmployee.mutate",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/employees/EmployeeListPage.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 346,
+      "nonEmptyLines": 317,
+      "functions": [
+        {
+          "name": "EmployeeFilterPanel",
+          "startLine": 24,
+          "endLine": 138,
+          "params": []
+        },
+        {
+          "name": "EmployeeImportExportControls",
+          "startLine": 140,
+          "endLine": 222,
+          "params": []
+        },
+        {
+          "name": "EmployeeListPage",
+          "startLine": 224,
+          "endLine": 346,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "EmployeeListPage",
+          "line": 224,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "useSearch",
+          "lineNumber": 25
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "useNavigate",
+          "lineNumber": 26
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "useDepartments",
+          "lineNumber": 29
+        },
+        {
+          "caller": "setFilter",
+          "callee": "navigate",
+          "lineNumber": 34
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "Object.fromEntries",
+          "lineNumber": 43
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "(departments ?? []).map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "String",
+          "lineNumber": 43
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "setFilter",
+          "lineNumber": 52
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "String",
+          "lineNumber": 60
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "setFilter",
+          "lineNumber": 61
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "Number",
+          "lineNumber": 61
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "departments?.map",
+          "lineNumber": 68
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "String",
+          "lineNumber": 69
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "String",
+          "lineNumber": 81
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "setFilter",
+          "lineNumber": 82
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "setFilter",
+          "lineNumber": 101
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "Number",
+          "lineNumber": 101
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "setFilter",
+          "lineNumber": 111
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "Number",
+          "lineNumber": 111
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "setFilter",
+          "lineNumber": 120
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "setFilter",
+          "lineNumber": 129
+        },
+        {
+          "caller": "EmployeeFilterPanel",
+          "callee": "navigate",
+          "lineNumber": 133
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "useSearch",
+          "lineNumber": 141
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "useRef",
+          "lineNumber": 142
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "useImportEmployees",
+          "lineNumber": 143
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "useState",
+          "lineNumber": 144
+        },
+        {
+          "caller": "handleExport",
+          "callee": "setExportError",
+          "lineNumber": 147
+        },
+        {
+          "caller": "handleExport",
+          "callee": "exportEmployees",
+          "lineNumber": 149
+        },
+        {
+          "caller": "handleExport",
+          "callee": "setExportError",
+          "lineNumber": 151
+        },
+        {
+          "caller": "handleFileChosen",
+          "callee": "importMutation.mutate",
+          "lineNumber": 159
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "handleExport",
+          "lineNumber": 169
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "handleExport",
+          "lineNumber": 172
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "fileInputRef.current?.click",
+          "lineNumber": 175
+        },
+        {
+          "caller": "EmployeeImportExportControls",
+          "callee": "result.errors!.map",
+          "lineNumber": 209
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "useSearch",
+          "lineNumber": 225
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "useEmployees",
+          "lineNumber": 226
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "useIsAdmin",
+          "lineNumber": 227
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "employees.filter",
+          "lineNumber": 238
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "buttonVariants",
+          "lineNumber": 248
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "data.items?.map",
+          "lineNumber": 308
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "employee.salary?.toLocaleString",
+          "lineNumber": 314
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "String",
+          "lineNumber": 330
+        },
+        {
+          "caller": "EmployeeListPage",
+          "callee": "buttonVariants",
+          "lineNumber": 331
+        }
+      ],
+      "metrics": {
+        "importCount": 12,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/employees/api.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 180,
+      "nonEmptyLines": 166,
+      "functions": [
+        {
+          "name": "useEmployees",
+          "startLine": 28,
+          "endLine": 58,
+          "params": [
+            "filters"
+          ]
+        },
+        {
+          "name": "useEmployee",
+          "startLine": 60,
+          "endLine": 74,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "useCreateEmployee",
+          "startLine": 76,
+          "endLine": 86,
+          "params": []
+        },
+        {
+          "name": "useUpdateEmployee",
+          "startLine": 88,
+          "endLine": 100,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "exportQuery",
+          "startLine": 104,
+          "endLine": 116,
+          "params": [
+            "filters"
+          ]
+        },
+        {
+          "name": "exportEmployees",
+          "startLine": 118,
+          "endLine": 133,
+          "params": [
+            "format",
+            "filters"
+          ]
+        },
+        {
+          "name": "useImportEmployees",
+          "startLine": 135,
+          "endLine": 165,
+          "params": []
+        },
+        {
+          "name": "useDeleteEmployee",
+          "startLine": 167,
+          "endLine": 180,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ValidationError",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "useEmployees",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "useEmployee",
+          "line": 60,
+          "isDefault": false
+        },
+        {
+          "name": "useCreateEmployee",
+          "line": 76,
+          "isDefault": false
+        },
+        {
+          "name": "useUpdateEmployee",
+          "line": 88,
+          "isDefault": false
+        },
+        {
+          "name": "exportEmployees",
+          "line": 118,
+          "isDefault": false
+        },
+        {
+          "name": "useImportEmployees",
+          "line": 135,
+          "isDefault": false
+        },
+        {
+          "name": "useDeleteEmployee",
+          "line": 167,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "useEmployees",
+          "callee": "useQuery",
+          "lineNumber": 29
+        },
+        {
+          "caller": "useEmployees",
+          "callee": "apiClient.GET",
+          "lineNumber": 32
+        },
+        {
+          "caller": "useEmployee",
+          "callee": "useQuery",
+          "lineNumber": 61
+        },
+        {
+          "caller": "useEmployee",
+          "callee": "apiClient.GET",
+          "lineNumber": 65
+        },
+        {
+          "caller": "useCreateEmployee",
+          "callee": "useQueryClient",
+          "lineNumber": 77
+        },
+        {
+          "caller": "useCreateEmployee",
+          "callee": "useMutation",
+          "lineNumber": 78
+        },
+        {
+          "caller": "useCreateEmployee",
+          "callee": "apiClient.POST",
+          "lineNumber": 80
+        },
+        {
+          "caller": "useCreateEmployee",
+          "callee": "throwOnMutationError",
+          "lineNumber": 81
+        },
+        {
+          "caller": "useCreateEmployee",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 84
+        },
+        {
+          "caller": "useUpdateEmployee",
+          "callee": "useQueryClient",
+          "lineNumber": 89
+        },
+        {
+          "caller": "useUpdateEmployee",
+          "callee": "useMutation",
+          "lineNumber": 90
+        },
+        {
+          "caller": "useUpdateEmployee",
+          "callee": "apiClient.PUT",
+          "lineNumber": 92
+        },
+        {
+          "caller": "useUpdateEmployee",
+          "callee": "throwOnMutationError",
+          "lineNumber": 96
+        },
+        {
+          "caller": "useUpdateEmployee",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 98
+        },
+        {
+          "caller": "exportEmployees",
+          "callee": "apiClient.GET",
+          "lineNumber": 119
+        },
+        {
+          "caller": "exportEmployees",
+          "callee": "exportQuery",
+          "lineNumber": 120
+        },
+        {
+          "caller": "exportEmployees",
+          "callee": "URL.createObjectURL",
+          "lineNumber": 127
+        },
+        {
+          "caller": "exportEmployees",
+          "callee": "document.createElement",
+          "lineNumber": 128
+        },
+        {
+          "caller": "exportEmployees",
+          "callee": "link.click",
+          "lineNumber": 131
+        },
+        {
+          "caller": "exportEmployees",
+          "callee": "URL.revokeObjectURL",
+          "lineNumber": 132
+        },
+        {
+          "caller": "useImportEmployees",
+          "callee": "useQueryClient",
+          "lineNumber": 136
+        },
+        {
+          "caller": "useImportEmployees",
+          "callee": "useMutation",
+          "lineNumber": 137
+        },
+        {
+          "caller": "useImportEmployees",
+          "callee": "formData.append",
+          "lineNumber": 144
+        },
+        {
+          "caller": "useImportEmployees",
+          "callee": "apiClient.POST",
+          "lineNumber": 145
+        },
+        {
+          "caller": "useImportEmployees",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 161
+        },
+        {
+          "caller": "useDeleteEmployee",
+          "callee": "useQueryClient",
+          "lineNumber": 168
+        },
+        {
+          "caller": "useDeleteEmployee",
+          "callee": "useMutation",
+          "lineNumber": 169
+        },
+        {
+          "caller": "useDeleteEmployee",
+          "callee": "apiClient.DELETE",
+          "lineNumber": 171
+        },
+        {
+          "caller": "useDeleteEmployee",
+          "callee": "queryClient.invalidateQueries",
+          "lineNumber": 178
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 8,
+        "functionCount": 8,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/lib/api/client.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 7,
+      "exports": [
+        {
+          "name": "apiClient",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/lib/api/mutationError.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 20,
+      "functions": [
+        {
+          "name": "throwOnMutationError",
+          "startLine": 10,
+          "endLine": 22,
+          "params": [
+            "error",
+            "status",
+            "fallbackMessage"
+          ]
+        }
+      ],
+      "classes": [
+        {
+          "name": "ValidationError",
+          "startLine": 1,
+          "endLine": 8,
+          "methods": [
+            "constructor"
+          ],
+          "properties": [
+            "fieldErrors"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ValidationError",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "throwOnMutationError",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "constructor",
+          "callee": "super",
+          "lineNumber": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 1
+      }
+    }
+  ]
+}

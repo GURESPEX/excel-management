@@ -1,0 +1,141 @@
+{
+  "nodes": [
+    {
+      "id": "config:excel-management-web/.oxlintrc.json",
+      "type": "config",
+      "name": ".oxlintrc.json",
+      "filePath": "excel-management-web/.oxlintrc.json",
+      "summary": "Oxlint configuration for the frontend enabling the react, typescript, and oxc plugins with rules-of-hooks enforced as an error.",
+      "tags": ["configuration", "linting", "oxlint", "javascript"],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:excel-management-web/README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "excel-management-web/README.md",
+      "summary": "Default Vite React+TypeScript template README covering HMR plugins, the React Compiler opt-in, and how to expand the Oxlint configuration.",
+      "tags": ["documentation", "entry-point", "vite", "react"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-web/components.json",
+      "type": "config",
+      "name": "components.json",
+      "filePath": "excel-management-web/components.json",
+      "summary": "shadcn/ui configuration defining the base-nova style, Tailwind CSS entry point, lucide icon library, and @/ path aliases for components, lib, hooks, and ui directories.",
+      "tags": ["configuration", "ui-components", "shadcn", "design-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:excel-management-web/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "excel-management-web/index.html",
+      "summary": "Vite application HTML shell that mounts the React app into #root and loads the src/main.tsx entry module.",
+      "tags": ["entry-point", "html", "vite", "bootstrap"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-web/package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "excel-management-web/package.json",
+      "summary": "npm manifest for the excel-management-web frontend, defining dev/build/test/lint scripts and dependencies including React 19, TanStack Query/Router, react-hook-form, zod, zustand, and Tailwind/shadcn UI tooling.",
+      "tags": ["configuration", "build-system", "dependencies", "npm"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-web/tsconfig.app.json",
+      "type": "config",
+      "name": "tsconfig.app.json",
+      "filePath": "excel-management-web/tsconfig.app.json",
+      "summary": "TypeScript project config for the application source under src/, using bundler module resolution, react-jsx, and the @/* path alias.",
+      "tags": ["configuration", "typescript", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-web/tsconfig.json",
+      "type": "config",
+      "name": "tsconfig.json",
+      "filePath": "excel-management-web/tsconfig.json",
+      "summary": "Root TypeScript solution file that references tsconfig.app.json and tsconfig.node.json and declares the shared @/* path alias.",
+      "tags": ["configuration", "typescript", "project-references"],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:excel-management-web/tsconfig.node.json",
+      "type": "config",
+      "name": "tsconfig.node.json",
+      "filePath": "excel-management-web/tsconfig.node.json",
+      "summary": "TypeScript project config for Node-side tooling, scoped to vite.config.ts with nodenext module resolution.",
+      "tags": ["configuration", "typescript", "build-system", "tooling"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "config:excel-management-web/tsconfig.json",
+      "target": "config:excel-management-web/tsconfig.app.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/tsconfig.json",
+      "target": "config:excel-management-web/tsconfig.node.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/tsconfig.app.json",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/tsconfig.node.json",
+      "target": "file:excel-management-web/vite.config.ts",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/package.json",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:excel-management-web/package.json",
+      "target": "config:excel-management-web/.oxlintrc.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:excel-management-web/index.html",
+      "target": "file:excel-management-web/src/main.tsx",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "document:excel-management-web/README.md",
+      "target": "config:excel-management-web/.oxlintrc.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:excel-management-web/README.md",
+      "target": "file:excel-management-web/index.html",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

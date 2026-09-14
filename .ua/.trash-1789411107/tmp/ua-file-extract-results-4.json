@@ -1,0 +1,336 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 7,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "excel-management-web/src/components/layout/AppShell.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 67,
+      "functions": [
+        {
+          "name": "AppShell",
+          "startLine": 13,
+          "endLine": 73,
+          "params": [
+            "{ children }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AppShell",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AppShell",
+          "callee": "useIsAdmin",
+          "lineNumber": 14
+        },
+        {
+          "caller": "AppShell",
+          "callee": "useAuthStore",
+          "lineNumber": 15
+        },
+        {
+          "caller": "AppShell",
+          "callee": "useLogout",
+          "lineNumber": 16
+        },
+        {
+          "caller": "AppShell",
+          "callee": "cn",
+          "lineNumber": 27
+        },
+        {
+          "caller": "AppShell",
+          "callee": "cn",
+          "lineNumber": 31
+        },
+        {
+          "caller": "AppShell",
+          "callee": "cn",
+          "lineNumber": 36
+        },
+        {
+          "caller": "AppShell",
+          "callee": "user.username.slice(0, 2).toUpperCase",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AppShell",
+          "callee": "user.username.slice",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AppShell",
+          "callee": "logout.mutate",
+          "lineNumber": 62
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/features/auth/guards.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "functions": [
+        {
+          "name": "requireAuth",
+          "startLine": 4,
+          "endLine": 8,
+          "params": []
+        },
+        {
+          "name": "requireAdmin",
+          "startLine": 10,
+          "endLine": 15,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "requireAuth",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "requireAdmin",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "requireAuth",
+          "callee": "useAuthStore.getState",
+          "lineNumber": 5
+        },
+        {
+          "caller": "requireAuth",
+          "callee": "redirect",
+          "lineNumber": 6
+        },
+        {
+          "caller": "requireAdmin",
+          "callee": "requireAuth",
+          "lineNumber": 11
+        },
+        {
+          "caller": "requireAdmin",
+          "callee": "useAuthStore.getState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "requireAdmin",
+          "callee": "redirect",
+          "lineNumber": 13
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/routes/audit-log.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 12,
+      "exports": [
+        {
+          "name": "Route",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/routes/departments.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 13,
+      "nonEmptyLines": 12,
+      "exports": [
+        {
+          "name": "Route",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/routes/employees/$employeeId.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 59,
+      "nonEmptyLines": 54,
+      "functions": [
+        {
+          "name": "EditEmployeePage",
+          "startLine": 12,
+          "endLine": 59,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Route",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "EditEmployeePage",
+          "callee": "Route.useParams",
+          "lineNumber": 13
+        },
+        {
+          "caller": "EditEmployeePage",
+          "callee": "Number",
+          "lineNumber": 14
+        },
+        {
+          "caller": "EditEmployeePage",
+          "callee": "useNavigate",
+          "lineNumber": 15
+        },
+        {
+          "caller": "EditEmployeePage",
+          "callee": "useEmployee",
+          "lineNumber": 16
+        },
+        {
+          "caller": "EditEmployeePage",
+          "callee": "useUpdateEmployee",
+          "lineNumber": 17
+        },
+        {
+          "caller": "EditEmployeePage",
+          "callee": "updateEmployee.mutateAsync",
+          "lineNumber": 52
+        },
+        {
+          "caller": "EditEmployeePage",
+          "callee": "navigate",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/routes/employees/new.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 34,
+      "nonEmptyLines": 31,
+      "functions": [
+        {
+          "name": "NewEmployeePage",
+          "startLine": 12,
+          "endLine": 34,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Route",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "NewEmployeePage",
+          "callee": "useNavigate",
+          "lineNumber": 13
+        },
+        {
+          "caller": "NewEmployeePage",
+          "callee": "useCreateEmployee",
+          "lineNumber": 14
+        },
+        {
+          "caller": "NewEmployeePage",
+          "callee": "createEmployee.mutateAsync",
+          "lineNumber": 27
+        },
+        {
+          "caller": "NewEmployeePage",
+          "callee": "navigate",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "excel-management-web/src/routes/index.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 33,
+      "nonEmptyLines": 30,
+      "exports": [
+        {
+          "name": "Route",
+          "line": 25,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

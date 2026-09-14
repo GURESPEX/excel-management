@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "service:excel-management-web/Dockerfile",
+      "type": "service",
+      "name": "Dockerfile",
+      "filePath": "excel-management-web/Dockerfile",
+      "summary": "Multi-stage Docker build for the React/Vite frontend: builds the app with Node 24 and serves the compiled static assets via an Nginx runtime image.",
+      "tags": ["containerization", "infrastructure", "deployment", "build-system"],
+      "complexity": "simple",
+      "languageNotes": "Two-stage build separates the npm build toolchain (node:24-alpine) from the lean nginx:alpine runtime, minimizing final image size. A ponytail comment on the npm ci line documents a deliberate --legacy-peer-deps workaround for an openapi-typescript peer-dependency mismatch under the older npm bundled in node:24-alpine."
+    },
+    {
+      "id": "service:excel-management-web/Dockerfile:build",
+      "type": "service",
+      "name": "build",
+      "summary": "Build stage using node:24-alpine: installs dependencies with npm ci and runs the Vite production build.",
+      "tags": ["containerization", "build-system"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:excel-management-web/Dockerfile:runtime",
+      "type": "service",
+      "name": "runtime",
+      "summary": "Runtime stage using nginx:alpine: serves the built static assets and a custom nginx.conf.",
+      "tags": ["containerization", "deployment"],
+      "complexity": "simple"
+    },
+    {
+      "id": "service:excel-management-web/.dockerignore",
+      "type": "service",
+      "name": ".dockerignore",
+      "filePath": "excel-management-web/.dockerignore",
+      "summary": "Excludes node_modules and dist from the Docker build context to keep frontend image builds fast and clean.",
+      "tags": ["infrastructure", "containerization", "configuration"],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "service:excel-management-web/Dockerfile",
+      "target": "service:excel-management-web/Dockerfile:build",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:excel-management-web/Dockerfile",
+      "target": "service:excel-management-web/Dockerfile:runtime",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "service:excel-management-web/.dockerignore",
+      "target": "service:excel-management-web/Dockerfile",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}
