@@ -1,0 +1,70 @@
+name: Frontend CI
+
+on:
+  push:
+    paths:
+      - 'excel-management-web/**'
+      - '.github/workflows/frontend-ci.yml'
+  pull_request:
+    paths:
+      - 'excel-management-web/**'
+      - '.github/workflows/frontend-ci.yml'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: excel-management-web
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: excel-management-web/package-lock.json
+
+      # ponytail: --legacy-peer-deps works around openapi-typescript's peer
+      # typescript@^5.x vs. root devDependency typescript@~6.0.2. Revisit once
+      # openapi-typescript publishes a typescript 6.x-compatible peer range.
+      - name: Install dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm run test
+
+  push-image:
+    needs: build-and-test
+    # Explicit success() alongside the event check: an `if:` on a job replaces the
+    # implicit success() gate GitHub Actions would otherwise apply to `needs:`, so a
+    # failed build-and-test must still be ANDed in here to actually skip this job.
+    if: ${{ github.event_name == 'push' && success() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compute lowercase image owner
+        id: image
+        run: echo "owner=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: excel-management-web
+          push: true
+          tags: |
+            ghcr.io/${{ steps.image.outputs.owner }}/excel-management-web:latest
+            ghcr.io/${{ steps.image.outputs.owner }}/excel-management-web:${{ github.sha }}

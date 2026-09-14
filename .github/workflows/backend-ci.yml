@@ -1,0 +1,65 @@
+name: Backend CI
+
+on:
+  push:
+    paths:
+      - 'excel-management-api/**'
+      - '.github/workflows/backend-ci.yml'
+  pull_request:
+    paths:
+      - 'excel-management-api/**'
+      - '.github/workflows/backend-ci.yml'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: excel-management-api
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
+      - name: Restore
+        run: dotnet restore ExcelManagement.sln
+
+      - name: Build
+        run: dotnet build ExcelManagement.sln --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test ExcelManagement.sln --configuration Release --no-build
+
+  push-image:
+    needs: build-and-test
+    # Explicit success() alongside the event check: an `if:` on a job replaces the
+    # implicit success() gate GitHub Actions would otherwise apply to `needs:`, so a
+    # failed build-and-test must still be ANDed in here to actually skip this job.
+    if: ${{ github.event_name == 'push' && success() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compute lowercase image owner
+        id: image
+        run: echo "owner=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')" >> "$GITHUB_OUTPUT"
+
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: docker/build-push-action@v6
+        with:
+          context: excel-management-api
+          push: true
+          tags: |
+            ghcr.io/${{ steps.image.outputs.owner }}/excel-management-api:latest
+            ghcr.io/${{ steps.image.outputs.owner }}/excel-management-api:${{ github.sha }}
