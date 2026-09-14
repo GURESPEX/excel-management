@@ -68,4 +68,32 @@ describe('EmployeeListPage', () => {
     await waitFor(() => expect(screen.queryByText('Jane Smith')).not.toBeInTheDocument())
     expect(screen.getByText('John Doe')).toBeInTheDocument()
   })
+
+  it('uploads the chosen file as multipart/form-data, not a JSON body', async () => {
+    // Regression test: openapi-fetch only turns a body into multipart if it is
+    // already a FormData instance — passing a plain `{ file }` object silently
+    // JSON.stringify()s the File into `{}` and sends it as application/json,
+    // which the API rejects with 415.
+    server.use(
+      http.get('http://localhost:5289/employees', () =>
+        HttpResponse.json({ items: [], page: 1, pageSize: 20, totalCount: 0 }),
+      ),
+      http.post('http://localhost:5289/employees/import', ({ request }) => {
+        expect(request.headers.get('content-type')).toMatch(/^multipart\/form-data/)
+        return HttpResponse.json({ importedCount: 1, errors: [] })
+      }),
+    )
+
+    const user = userEvent.setup()
+    const { container } = await renderApp('/')
+    await screen.findByRole('button', { name: /import excel/i })
+
+    const fileInput = container.querySelector('input[type="file"]') as HTMLInputElement
+    const file = new File(['dummy'], 'employees.xlsx', {
+      type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+    })
+    await user.upload(fileInput, file)
+
+    expect(await screen.findByText(/imported 1 employee/i)).toBeInTheDocument()
+  })
 })

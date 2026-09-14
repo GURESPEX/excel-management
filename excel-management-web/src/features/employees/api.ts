@@ -136,11 +136,14 @@ export function useImportEmployees() {
   const queryClient = useQueryClient()
   return useMutation({
     mutationFn: async (file: File) => {
+      // openapi-fetch only auto-serializes a body that is already a FormData
+      // instance (see defaultBodySerializer) — a plain `{ file }` object falls
+      // through to JSON.stringify(), turning the File into `{}` and sending it
+      // with a `application/json` content-type the server rejects with 415.
+      const formData = new FormData()
+      formData.append('file', file)
       const { data, error, response } = await apiClient.POST('/employees/import', {
-        // The generated schema types this `multipart/form-data` field as `string`
-        // (openapi-typescript's rendering of `format: binary`), but openapi-fetch
-        // serializes a File value here into real multipart form data at runtime.
-        body: { file } as unknown as { file: string },
+        body: formData as unknown as { file: string },
       })
 
       // A 400 here is a row-by-row validation report, not an unexpected failure —

@@ -26,8 +26,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2090367263:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:323948898:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -51,16 +59,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\DependencyInjection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T07:56:42.16Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2090367263:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:323948898:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+              "WhenOpened": "2026-09-14T07:56:42.16Z"
             },
             {
               "$type": "Document",
@@ -72,8 +71,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Api\\Auth\\JwtTokenService.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwBgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T07:54:01.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T07:54:01.61Z"
             },
             {
               "$type": "Document",
@@ -85,8 +83,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Api\\Program.cs",
               "ViewState": "AgIAAEIBAAAAAAAAAAAhwFwBAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T07:43:28.294Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T07:43:28.294Z"
             }
           ]
         }
