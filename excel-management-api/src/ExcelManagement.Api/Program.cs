@@ -76,7 +76,7 @@ using (var scope = app.Services.CreateScope())
     await SeedData.SeedAsync(db);
 }
 
-app.MapPost("/auth/login", async (LoginRequest request, IUserRepository users, JwtTokenService tokens, HttpContext http, CancellationToken ct) =>
+app.MapPost("/auth/login", async (LoginRequest request, IUserRepository users, JwtTokenService tokens, IRefreshTokenRepository refreshTokens, HttpContext http, CancellationToken ct) =>
 {
     var user = await users.GetByUsernameAsync(request.Username, ct);
     if (user is null || !PasswordHasher.Verify(request.Password, user.PasswordHash))
@@ -85,7 +85,7 @@ app.MapPost("/auth/login", async (LoginRequest request, IUserRepository users, J
     }
 
     var principal = new AuthPrincipal(user.Id, user.Username, user.Role);
-    IssueAuthCookies(http, tokens, app.Environment, principal);
+    await IssueAuthCookiesAsync(http, tokens, refreshTokens, app.Environment, principal, ct);
     return Results.Ok(new AuthenticatedUserDto(principal.Id, principal.Username, principal.Role.ToString()));
 })
 .WithName("Login")
@@ -93,7 +93,7 @@ app.MapPost("/auth/login", async (LoginRequest request, IUserRepository users, J
 .Produces(StatusCodes.Status401Unauthorized)
 .AllowAnonymous();
 
-app.MapPost("/auth/refresh", (HttpContext http, JwtTokenService tokens) =>
+app.MapPost("/auth/refresh", async (HttpContext http, JwtTokenService tokens, IRefreshTokenRepository refreshTokens, CancellationToken ct) =>
 {
     if (!http.Request.Cookies.TryGetValue("refresh_token", out var refreshToken))
     {
@@ -106,7 +106,15 @@ app.MapPost("/auth/refresh", (HttpContext http, JwtTokenService tokens) =>
         return Results.Unauthorized();
     }
 
-    IssueAuthCookies(http, tokens, app.Environment, principal);
+    // Consume the presented refresh token: reject replay of an already-rotated-away
+    // (or unknown/expired) token even though its JWT signature/expiry still checks out.
+    var rotated = await refreshTokens.RevokeIfActiveAsync(JwtTokenService.HashToken(refreshToken), ct);
+    if (!rotated)
+    {
+        return Results.Unauthorized();
+    }
+
+    await IssueAuthCookiesAsync(http, tokens, refreshTokens, app.Environment, principal, ct);
     return Results.Ok(new AuthenticatedUserDto(principal.Id, principal.Username, principal.Role.ToString()));
 })
 .WithName("RefreshToken")
@@ -114,8 +122,13 @@ app.MapPost("/auth/refresh", (HttpContext http, JwtTokenService tokens) =>
 .Produces(StatusCodes.Status401Unauthorized)
 .AllowAnonymous();
 
-app.MapPost("/auth/logout", (HttpContext http) =>
+app.MapPost("/auth/logout", async (HttpContext http, IRefreshTokenRepository refreshTokens, CancellationToken ct) =>
 {
+    if (http.Request.Cookies.TryGetValue("refresh_token", out var refreshToken))
+    {
+        await refreshTokens.RevokeIfActiveAsync(JwtTokenService.HashToken(refreshToken), ct);
+    }
+
     http.Response.Cookies.Delete("access_token");
     http.Response.Cookies.Delete("refresh_token");
     return Results.NoContent();
@@ -328,10 +341,12 @@ static async Task<IResult?> ValidateEmployeeRequestAsync(UpsertEmployeeRequest r
     return errors.Count > 0 ? Results.ValidationProblem(errors) : null;
 }
 
-static void IssueAuthCookies(HttpContext http, JwtTokenService tokens, IWebHostEnvironment env, AuthPrincipal principal)
+static async Task IssueAuthCookiesAsync(HttpContext http, JwtTokenService tokens, IRefreshTokenRepository refreshTokens, IWebHostEnvironment env, AuthPrincipal principal, CancellationToken ct)
 {
     var (accessToken, accessExpires) = tokens.CreateAccessToken(principal);
     var (refreshToken, refreshExpires) = tokens.CreateRefreshToken(principal);
+
+    await refreshTokens.CreateAsync(principal.Id, JwtTokenService.HashToken(refreshToken), refreshExpires, ct);
 
     AppendAuthCookie(http, env, "access_token", accessToken, accessExpires);
     AppendAuthCookie(http, env, "refresh_token", refreshToken, refreshExpires);

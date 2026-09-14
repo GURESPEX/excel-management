@@ -14,6 +14,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, IHttpContextAc
     public DbSet<Department> Departments => Set<Department>();
     public DbSet<User> Users => Set<User>();
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
+    public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -56,6 +57,13 @@ public class AppDbContext(DbContextOptions<AppDbContext> options, IHttpContextAc
             a.Property(x => x.Changes).IsRequired();
             a.HasIndex(x => x.EntityName);
             a.HasIndex(x => x.Timestamp);
+        });
+
+        modelBuilder.Entity<RefreshToken>(rt =>
+        {
+            rt.Property(x => x.TokenHash).IsRequired().HasMaxLength(64);
+            rt.HasIndex(x => x.TokenHash).IsUnique();
+            rt.HasOne<User>().WithMany().HasForeignKey(x => x.UserId);
         });
     }
 

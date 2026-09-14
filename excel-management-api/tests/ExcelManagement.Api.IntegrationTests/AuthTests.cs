@@ -3,6 +3,7 @@ using System.Net.Http.Json;
 using ExcelManagement.Application.Auth;
 using ExcelManagement.Application.Departments;
 using ExcelManagement.Application.Employees;
+using Microsoft.AspNetCore.Mvc.Testing;
 using Xunit;
 
 namespace ExcelManagement.Api.IntegrationTests;
@@ -67,6 +68,57 @@ public class AuthTests(ApiWebApplicationFactory factory) : IClassFixture<ApiWebA
         var response = await client.PostAsync("/auth/refresh", content: null);
 
         Assert.Equal(HttpStatusCode.Unauthorized, response.StatusCode);
+    }
+
+    [Fact]
+    public async Task Refresh_ReusingRotatedAwayRefreshToken_ReturnsUnauthorized()
+    {
+        // HandleCookies:false so we can manually keep hold of the ORIGINAL refresh_token
+        // cookie value even after the automatic jar would have replaced it with the
+        // rotated one.
+        var client = factory.CreateClient(new WebApplicationFactoryClientOptions { HandleCookies = false });
+
+        var loginResponse = await client.PostAsJsonAsync("/auth/login", new LoginRequest("admin", "admin123"));
+        var originalRefreshCookie = ExtractCookie(loginResponse, "refresh_token");
+
+        // First use of the refresh token rotates it away — this must still succeed.
+        var firstRefresh = await SendWithCookieAsync(client, HttpMethod.Post, "/auth/refresh", originalRefreshCookie);
+        Assert.Equal(HttpStatusCode.OK, firstRefresh.StatusCode);
+
+        // Replaying the SAME (now-revoked) refresh token must be rejected even though
+        // its JWT signature/expiry are still perfectly valid.
+        var replayResponse = await SendWithCookieAsync(client, HttpMethod.Post, "/auth/refresh", originalRefreshCookie);
+
+        Assert.Equal(HttpStatusCode.Unauthorized, replayResponse.StatusCode);
+    }
+
+    [Fact]
+    public async Task Logout_ThenReusingRefreshToken_ReturnsUnauthorized()
+    {
+        var client = factory.CreateClient(new WebApplicationFactoryClientOptions { HandleCookies = false });
+
+        var loginResponse = await client.PostAsJsonAsync("/auth/login", new LoginRequest("admin", "admin123"));
+        var refreshCookie = ExtractCookie(loginResponse, "refresh_token");
+
+        var logoutResponse = await SendWithCookieAsync(client, HttpMethod.Post, "/auth/logout", refreshCookie);
+        Assert.Equal(HttpStatusCode.NoContent, logoutResponse.StatusCode);
+
+        var refreshResponse = await SendWithCookieAsync(client, HttpMethod.Post, "/auth/refresh", refreshCookie);
+
+        Assert.Equal(HttpStatusCode.Unauthorized, refreshResponse.StatusCode);
+    }
+
+    private static string ExtractCookie(HttpResponseMessage response, string name)
+    {
+        var setCookies = response.Headers.TryGetValues("Set-Cookie", out var values) ? values : [];
+        return setCookies.Single(v => v.StartsWith($"{name}=", StringComparison.Ordinal)).Split(';')[0];
+    }
+
+    private static async Task<HttpResponseMessage> SendWithCookieAsync(HttpClient client, HttpMethod method, string path, string cookie)
+    {
+        using var request = new HttpRequestMessage(method, path);
+        request.Headers.Add("Cookie", cookie);
+        return await client.SendAsync(request);
     }
 
     [Fact]
