@@ -1,3 +1,4 @@
+using System.Globalization;
 using ClosedXML.Excel;
 using ExcelManagement.Application.Employees;
 
@@ -48,6 +49,24 @@ public class EmployeeExcelFile : IEmployeeExcelFile
         int Col(string name) => columnIndex.GetValueOrDefault(name, -1);
         string Cell(IXLRow xlRow, int col) => col < 0 ? string.Empty : xlRow.Cell(col).GetString().Trim();
 
+        // Excel stores dates as a numeric serial value with a display format (e.g. "6-Feb-23"),
+        // not as the "yyyy-MM-dd" text EmployeeValidator expects — GetString() would return that
+        // display format verbatim and fail every row's date validation. Format explicitly instead
+        // whenever the source cell is a real date, and only fall back to the raw string for a
+        // sheet where Join Date was authored as plain text already in the expected format.
+        string JoinDateCell(IXLRow xlRow, int col)
+        {
+            if (col < 0)
+            {
+                return string.Empty;
+            }
+
+            var cell = xlRow.Cell(col);
+            return cell.DataType == XLDataType.DateTime
+                ? cell.GetDateTime().ToString(EmployeeValidator.JoinDateFormat, CultureInfo.InvariantCulture)
+                : cell.GetString().Trim();
+        }
+
         var nameCol = Col("Name");
         var deptCol = Col("Department");
         var salaryCol = Col("Salary");
@@ -70,7 +89,7 @@ public class EmployeeExcelFile : IEmployeeExcelFile
                 Cell(xlRow, nameCol),
                 Cell(xlRow, deptCol),
                 Cell(xlRow, salaryCol),
-                Cell(xlRow, joinDateCol),
+                JoinDateCell(xlRow, joinDateCol),
                 Cell(xlRow, statusCol)));
         }
 

@@ -73,6 +73,42 @@ public class EmployeeImportExportTests(ApiWebApplicationFactory factory) : IClas
     }
 
     [Fact]
+    public async Task Import_JoinDateAsNativeExcelDateCell_ParsesCorrectly()
+    {
+        // Mirrors requirements/Exam Data.xlsx: Join Date authored as a real Excel date
+        // (numeric serial + a "d-mmm-yy" display format), not as plain "yyyy-MM-dd" text.
+        using var workbook = new XLWorkbook();
+        var sheet = workbook.Worksheets.Add("Employees");
+        string[] headers = ["Name", "Department", "Salary", "Join Date", "Status"];
+        for (var c = 0; c < headers.Length; c++)
+        {
+            sheet.Cell(1, c + 1).Value = headers[c];
+        }
+
+        sheet.Cell(2, 1).Value = "Native Date Hire";
+        sheet.Cell(2, 2).Value = "Engineering";
+        sheet.Cell(2, 3).Value = 60000;
+        sheet.Cell(2, 4).Value = new DateTime(2023, 2, 6);
+        sheet.Cell(2, 4).Style.NumberFormat.Format = "d-mmm-yy";
+        sheet.Cell(2, 5).Value = "Active";
+
+        using var stream = new MemoryStream();
+        workbook.SaveAs(stream);
+
+        var response = await _client.PostAsync("/employees/import", ToFileContent(stream.ToArray()));
+
+        Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        var result = await response.Content.ReadFromJsonAsync<EmployeeImportResult>();
+        Assert.NotNull(result);
+        Assert.Empty(result!.Errors);
+        Assert.Equal(1, result.ImportedCount);
+
+        var list = await _client.GetFromJsonAsync<PagedResult<EmployeeListItemDto>>($"/employees?name={Uri.EscapeDataString("Native Date Hire")}");
+        Assert.NotNull(list);
+        Assert.Contains(list!.Items, e => e.Name == "Native Date Hire" && e.JoinDate == new DateOnly(2023, 2, 6));
+    }
+
+    [Fact]
     public async Task Import_MixedValidAndInvalidRows_CommitsNothingAndReportsEveryFailingRow()
     {
         var bytes = BuildWorkbook([
