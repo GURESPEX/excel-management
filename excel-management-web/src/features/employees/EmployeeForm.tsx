@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 import { z } from 'zod'
 import { Button } from '@/components/ui/button'
 import { Checkbox } from '@/components/ui/checkbox'
+import { DatePicker } from '@/components/ui/date-picker'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import {
@@ -113,7 +114,11 @@ export function EmployeeForm({
 
       <div className="flex flex-col gap-1">
         <Label htmlFor="joinDate">Join Date</Label>
-        <Input id="joinDate" type="date" {...form.register('joinDate')} />
+        <DatePicker
+          id="joinDate"
+          value={form.watch('joinDate')}
+          onChange={(value) => form.setValue('joinDate', value)}
+        />
         {form.formState.errors.joinDate && (
           <p className="text-sm text-destructive">{form.formState.errors.joinDate.message}</p>
         )}

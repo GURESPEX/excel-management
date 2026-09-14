@@ -3,6 +3,7 @@ import { Link } from '@tanstack/react-router'
 import { Filter } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { DatePicker } from '@/components/ui/date-picker'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
@@ -67,12 +68,12 @@ export function AuditLogPage() {
 
           <div className="flex flex-col gap-1">
             <Label htmlFor="filter-from">From</Label>
-            <Input id="filter-from" type="date" value={from} onChange={(event) => setFrom(event.target.value)} />
+            <DatePicker id="filter-from" value={from} onChange={setFrom} />
           </div>
 
           <div className="flex flex-col gap-1">
             <Label htmlFor="filter-to">To</Label>
-            <Input id="filter-to" type="date" value={to} onChange={(event) => setTo(event.target.value)} />
+            <DatePicker id="filter-to" value={to} onChange={setTo} />
           </div>
         </div>
       </Card>

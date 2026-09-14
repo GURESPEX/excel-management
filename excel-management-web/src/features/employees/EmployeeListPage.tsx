@@ -4,6 +4,7 @@ import { useRef, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button, buttonVariants } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { DatePicker } from '@/components/ui/date-picker'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
@@ -113,21 +114,19 @@ function EmployeeFilterPanel() {
 
       <div className="flex flex-col gap-1">
         <Label htmlFor="filter-join-from">Join Date From</Label>
-        <Input
+        <DatePicker
           id="filter-join-from"
-          type="date"
           value={search.joinDateFrom ?? ''}
-          onChange={(event) => setFilter({ joinDateFrom: event.target.value || undefined })}
+          onChange={(value) => setFilter({ joinDateFrom: value || undefined })}
         />
       </div>
 
       <div className="flex flex-col gap-1">
         <Label htmlFor="filter-join-to">Join Date To</Label>
-        <Input
+        <DatePicker
           id="filter-join-to"
-          type="date"
           value={search.joinDateTo ?? ''}
-          onChange={(event) => setFilter({ joinDateTo: event.target.value || undefined })}
+          onChange={(value) => setFilter({ joinDateTo: value || undefined })}
         />
       </div>
 
