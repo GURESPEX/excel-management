@@ -1,6 +1,7 @@
 import { keepPreviousData, useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { apiClient } from '@/lib/api/client'
 import { throwOnMutationError } from '@/lib/api/mutationError'
+import type { components } from '@/lib/api/schema'
 
 export interface EmployeeFormValues {
   name: string
@@ -95,6 +96,68 @@ export function useUpdateEmployee(id: number) {
       throwOnMutationError(error, response.status, 'Failed to update employee')
     },
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ['employees'] }),
+  })
+}
+
+export type EmployeeImportResult = components['schemas']['EmployeeImportResult']
+
+function exportQuery(filters: EmployeeFilters) {
+  return {
+    Page: filters.page ?? 1,
+    PageSize: filters.pageSize ?? 20,
+    Name: filters.name,
+    DepartmentId: filters.departmentId,
+    IsActive: filters.isActive,
+    MinSalary: filters.minSalary,
+    MaxSalary: filters.maxSalary,
+    JoinDateFrom: filters.joinDateFrom,
+    JoinDateTo: filters.joinDateTo,
+  }
+}
+
+export async function exportEmployees(format: 'excel' | 'csv', filters: EmployeeFilters = {}) {
+  const { data, response } = await apiClient.GET('/employees/export', {
+    params: { query: { ...exportQuery(filters), format } },
+    parseAs: 'blob',
+  })
+  if (!response.ok || !data) {
+    throw new Error('Failed to export employees')
+  }
+
+  const url = URL.createObjectURL(data as Blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = format === 'excel' ? 'employees.xlsx' : 'employees.csv'
+  link.click()
+  URL.revokeObjectURL(url)
+}
+
+export function useImportEmployees() {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn: async (file: File) => {
+      const { data, error, response } = await apiClient.POST('/employees/import', {
+        // The generated schema types this `multipart/form-data` field as `string`
+        // (openapi-typescript's rendering of `format: binary`), but openapi-fetch
+        // serializes a File value here into real multipart form data at runtime.
+        body: { file } as unknown as { file: string },
+      })
+
+      // A 400 here is a row-by-row validation report, not an unexpected failure —
+      // resolve with it so the UI can render every failing row instead of throwing.
+      if (response.status === 400 && error) {
+        return error as EmployeeImportResult
+      }
+      if (error || !data) {
+        throw new Error('Failed to import employees')
+      }
+      return data
+    },
+    onSuccess: (result) => {
+      if (!result.errors || result.errors.length === 0) {
+        queryClient.invalidateQueries({ queryKey: ['employees'] })
+      }
+    },
   })
 }
 

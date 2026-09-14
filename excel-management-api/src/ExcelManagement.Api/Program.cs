@@ -184,6 +184,69 @@ app.MapDelete("/employees/{id:int}", async (int id, IEmployeeRepository employee
 .Produces(StatusCodes.Status404NotFound)
 .RequireAuthorization("AdminOnly");
 
+app.MapGet("/employees/export", async ([AsParameters] EmployeeListQuery query, string format, IEmployeeRepository employees, IEmployeeExcelFile excelFile, CancellationToken ct) =>
+{
+    var items = await employees.GetAllAsync(query, ct);
+
+    return format.ToLowerInvariant() switch
+    {
+        "excel" => Results.File(
+            excelFile.WriteWorkbook(items),
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            "employees.xlsx"),
+        "csv" => Results.File(
+            Encoding.UTF8.GetBytes(EmployeeCsvWriter.Write(items)),
+            "text/csv",
+            "employees.csv"),
+        _ => Results.BadRequest("format must be 'excel' or 'csv'."),
+    };
+})
+.WithName("ExportEmployees")
+.Produces(StatusCodes.Status200OK)
+.Produces(StatusCodes.Status400BadRequest)
+.RequireAuthorization("AdminOnly");
+
+app.MapPost("/employees/import", async (IFormFile file, IEmployeeRepository employees, IDepartmentRepository departments, IEmployeeExcelFile excelFile, CancellationToken ct) =>
+{
+    IReadOnlyList<EmployeeImportRow> rows;
+    await using (var stream = file.OpenReadStream())
+    {
+        rows = excelFile.ReadRows(stream);
+    }
+
+    var activeDepartments = await departments.GetAllAsync(includeInactive: false, ct);
+    var activeDepartmentIdsByName = activeDepartments.ToDictionary(d => d.Name, d => d.Id, StringComparer.OrdinalIgnoreCase);
+
+    var errors = new List<ImportRowError>();
+    var requests = new List<UpsertEmployeeRequest>();
+
+    foreach (var row in rows)
+    {
+        var (rowErrors, request) = EmployeeImportRowValidator.Validate(row, activeDepartmentIdsByName);
+        if (rowErrors.Count > 0)
+        {
+            errors.AddRange(rowErrors);
+        }
+        else
+        {
+            requests.Add(request!);
+        }
+    }
+
+    if (errors.Count > 0)
+    {
+        return Results.BadRequest(new EmployeeImportResult(0, errors));
+    }
+
+    var imported = await employees.ImportAsync(requests, ct);
+    return Results.Ok(new EmployeeImportResult(imported, []));
+})
+.WithName("ImportEmployees")
+.Produces<EmployeeImportResult>(StatusCodes.Status200OK)
+.Produces<EmployeeImportResult>(StatusCodes.Status400BadRequest)
+.DisableAntiforgery()
+.RequireAuthorization("AdminOnly");
+
 app.MapGet("/departments", async (IDepartmentRepository repository, bool includeInactive = false, CancellationToken ct = default) =>
 {
     var departments = await repository.GetAllAsync(includeInactive, ct);
