@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_DB: excel_management
+      POSTGRES_USER: excel_management
+      POSTGRES_PASSWORD: excel_management
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U excel_management"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    image: ghcr.io/gurespex/excel-management-api:latest
+    environment:
+      Database__Provider: Postgres
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=excel_management;Username=excel_management;Password=excel_management
+    ports:
+      - "5289:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  web:
+    image: ghcr.io/gurespex/excel-management-web:latest
+    ports:
+      - "5173:80"
+    depends_on:
+      - api
+
+volumes:
+  postgres-data:
