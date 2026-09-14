@@ -1,6 +1,7 @@
 using System.Text;
 using ExcelManagement.Api.Auth;
 using ExcelManagement.Application.Auth;
+using ExcelManagement.Application.AuditLogs;
 using ExcelManagement.Application.Departments;
 using ExcelManagement.Application.Employees;
 using ExcelManagement.Domain;
@@ -12,6 +13,7 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddSingleton<JwtTokenService>();
 builder.Services.AddEndpointsApiExplorer();
@@ -226,6 +228,15 @@ app.MapPut("/departments/{id:int}", async (int id, UpdateDepartmentRequest reque
 .Produces<DepartmentDto>(StatusCodes.Status200OK)
 .Produces(StatusCodes.Status404NotFound)
 .ProducesValidationProblem()
+.RequireAuthorization("AdminOnly");
+
+app.MapGet("/audit-logs", async ([AsParameters] AuditLogQuery query, IAuditLogRepository repository, CancellationToken ct) =>
+{
+    var result = await repository.GetAsync(query, ct);
+    return Results.Ok(result);
+})
+.WithName("GetAuditLogs")
+.Produces<IReadOnlyList<AuditLogDto>>(StatusCodes.Status200OK)
 .RequireAuthorization("AdminOnly");
 
 app.Run();

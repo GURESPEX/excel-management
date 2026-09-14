@@ -1,4 +1,5 @@
 using ExcelManagement.Application.Auth;
+using ExcelManagement.Application.AuditLogs;
 using ExcelManagement.Application.Departments;
 using ExcelManagement.Application.Employees;
 using ExcelManagement.Infrastructure.Persistence;
@@ -31,6 +32,7 @@ public static class DependencyInjection
         services.AddScoped<IEmployeeRepository, EmployeeRepository>();
         services.AddScoped<IDepartmentRepository, DepartmentRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IAuditLogRepository, AuditLogRepository>();
 
         return services;
     }
