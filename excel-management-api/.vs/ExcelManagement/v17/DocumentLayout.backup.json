@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "DepartmentRepository.cs",
               "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\DepartmentRepository.cs",
               "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\DepartmentRepository.cs",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "EmployeeExcelFile.cs",
               "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeExcelFile.cs",
               "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeExcelFile.cs",
@@ -103,12 +103,11 @@
               "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeExcelFile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:33:17.66Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:33:17.66Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EmployeeRepository.cs",
               "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeRepository.cs",
@@ -116,12 +115,11 @@
               "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:33:17.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:33:17.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "RefreshTokenRepository.cs",
               "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\RefreshTokenRepository.cs",
               "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\RefreshTokenRepository.cs",
@@ -129,18 +127,17 @@
               "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\RefreshTokenRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:33:16.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:33:16.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "SeedData.cs",
               "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
               "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
               "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
               "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBoAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-14T04:33:13.342Z",
               "EditorCaption": ""
@@ -155,8 +152,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\UserRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:33:12.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:33:12.388Z"
             },
             {
               "$type": "Document",
@@ -168,8 +164,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Domain\\UserRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:32:08.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:32:08.524Z"
             },
             {
               "$type": "Document",
@@ -181,8 +176,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Domain\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:32:07.363Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:32:07.363Z"
             },
             {
               "$type": "Document",
@@ -194,8 +188,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Domain\\RefreshToken.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:32:06.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:32:06.09Z"
             },
             {
               "$type": "Document",
@@ -207,8 +200,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Domain\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:32:05.178Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:32:05.178Z"
             },
             {
               "$type": "Document",
@@ -220,8 +212,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Domain\\Department.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:32:04.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:32:04.374Z"
             },
             {
               "$type": "Document",
@@ -233,8 +224,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Domain\\AuditLog.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:31:57.86Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:31:57.86Z"
             },
             {
               "$type": "Document",
@@ -246,8 +236,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Domain\\AuditAction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:31:56.671Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:31:56.671Z"
             },
             {
               "$type": "Document",
@@ -259,8 +248,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Api\\Auth\\JwtTokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:27:32.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:27:32.113Z"
             },
             {
               "$type": "Document",
@@ -272,8 +260,7 @@
               "RelativeToolTip": "src\\ExcelManagement.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T04:27:23.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T04:27:23.658Z"
             }
           ]
         }
