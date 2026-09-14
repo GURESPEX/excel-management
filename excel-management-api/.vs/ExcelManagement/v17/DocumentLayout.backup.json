@@ -1,0 +1,283 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\employeeexcelfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\employeeexcelfile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\refreshtokenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{515B0369-B7AF-4C88-9107-6573A0E7EB63}|src\\ExcelManagement.Infrastructure\\ExcelManagement.Infrastructure.csproj|solutionrelative:src\\excelmanagement.infrastructure\\persistence\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E7A024-234D-45C8-9B0F-3D593F56A351}|src\\ExcelManagement.Api\\ExcelManagement.Api.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E7A024-234D-45C8-9B0F-3D593F56A351}|src\\ExcelManagement.Api\\ExcelManagement.Api.csproj|solutionrelative:src\\excelmanagement.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.domain\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|solutionrelative:src\\excelmanagement.domain\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.domain\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|solutionrelative:src\\excelmanagement.domain\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.domain\\auditaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|solutionrelative:src\\excelmanagement.domain\\auditaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.domain\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|solutionrelative:src\\excelmanagement.domain\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.domain\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|solutionrelative:src\\excelmanagement.domain\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|solutionrelative:src\\excelmanagement.domain\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.domain\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FF2BDF7-AAC5-4208-810E-73C215CD6BFA}|src\\ExcelManagement.Domain\\ExcelManagement.Domain.csproj|solutionrelative:src\\excelmanagement.domain\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21E7A024-234D-45C8-9B0F-3D593F56A351}|src\\ExcelManagement.Api\\ExcelManagement.Api.csproj|c:\\personal drive\\my files\\programming\\assignments\\chememan\\excel-management\\excel-management-api\\src\\excelmanagement.api\\auth\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21E7A024-234D-45C8-9B0F-3D593F56A351}|src\\ExcelManagement.Api\\ExcelManagement.Api.csproj|solutionrelative:src\\excelmanagement.api\\auth\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2090367263:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:323948898:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\DepartmentRepository.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\DepartmentRepository.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\DepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:33:18.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeExcelFile.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeExcelFile.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeExcelFile.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeExcelFile.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeExcelFile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:33:17.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeRepository.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:33:17.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RefreshTokenRepository.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\RefreshTokenRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\RefreshTokenRepository.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\RefreshTokenRepository.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\RefreshTokenRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:33:16.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\SeedData.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:33:13.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\UserRepository.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Infrastructure\\Persistence\\UserRepository.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Infrastructure\\Persistence\\UserRepository.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Infrastructure\\Persistence\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:33:12.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\UserRole.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Domain\\UserRole.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\UserRole.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Domain\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:32:08.524Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\User.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Domain\\User.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\User.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Domain\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:32:07.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RefreshToken.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\RefreshToken.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Domain\\RefreshToken.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\RefreshToken.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Domain\\RefreshToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:32:06.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\Employee.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Domain\\Employee.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\Employee.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Domain\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:32:05.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\Department.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Domain\\Department.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\Department.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Domain\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:32:04.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuditLog.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\AuditLog.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Domain\\AuditLog.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\AuditLog.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Domain\\AuditLog.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:31:57.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuditAction.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\AuditAction.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Domain\\AuditAction.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Domain\\AuditAction.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Domain\\AuditAction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:31:56.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Api\\Auth\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Api\\Auth\\JwtTokenService.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Api\\Auth\\JwtTokenService.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Api\\Auth\\JwtTokenService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:27:32.113Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\ExcelManagement.Api\\Program.cs",
+              "ToolTip": "C:\\Personal Drive\\My Files\\Programming\\Assignments\\chememan\\excel-management\\excel-management-api\\src\\ExcelManagement.Api\\Program.cs",
+              "RelativeToolTip": "src\\ExcelManagement.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-14T04:27:23.658Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
