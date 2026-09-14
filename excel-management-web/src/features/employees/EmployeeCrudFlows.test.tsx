@@ -95,7 +95,7 @@ describe('edit employee flow', () => {
     expect(await screen.findByRole('combobox', { name: /department/i })).toHaveTextContent('Legacy Dept')
 
     await user.click(screen.getByRole('combobox'))
-    expect(screen.getByRole('option', { name: 'Engineering' })).toBeInTheDocument()
+    expect(await screen.findByRole('option', { name: 'Engineering' })).toBeInTheDocument()
     expect(screen.queryByRole('option', { name: 'Legacy Dept' })).not.toBeInTheDocument()
   })
 
