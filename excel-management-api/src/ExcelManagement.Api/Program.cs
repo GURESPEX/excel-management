@@ -267,8 +267,18 @@ app.MapPost("/departments", async (CreateDepartmentRequest request, IDepartmentR
         return Results.ValidationProblem(errors);
     }
 
-    var created = await departments.CreateAsync(request.Name, ct);
-    return Results.Created($"/departments/{created.Id}", created);
+    try
+    {
+        var created = await departments.CreateAsync(request.Name, ct);
+        return Results.Created($"/departments/{created.Id}", created);
+    }
+    catch (DbUpdateException)
+    {
+        // Two concurrent requests can both pass the check-then-act NameExistsAsync
+        // check before either commits; the DB's unique index is the real guard, so
+        // translate its violation into the same validation error instead of a 500.
+        return Results.ValidationProblem(DepartmentValidator.Validate(request.Name, nameConflict: true));
+    }
 })
 .WithName("CreateDepartment")
 .Produces<DepartmentDto>(StatusCodes.Status201Created)
@@ -284,8 +294,15 @@ app.MapPut("/departments/{id:int}", async (int id, UpdateDepartmentRequest reque
         return Results.ValidationProblem(errors);
     }
 
-    var updated = await departments.UpdateAsync(id, request.Name, request.IsActive, ct);
-    return updated is not null ? Results.Ok(updated) : Results.NotFound();
+    try
+    {
+        var updated = await departments.UpdateAsync(id, request.Name, request.IsActive, ct);
+        return updated is not null ? Results.Ok(updated) : Results.NotFound();
+    }
+    catch (DbUpdateException)
+    {
+        return Results.ValidationProblem(DepartmentValidator.Validate(request.Name, nameConflict: true));
+    }
 })
 .WithName("UpdateDepartment")
 .Produces<DepartmentDto>(StatusCodes.Status200OK)

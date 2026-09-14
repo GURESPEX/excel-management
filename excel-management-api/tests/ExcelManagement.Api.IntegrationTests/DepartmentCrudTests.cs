@@ -3,6 +3,9 @@ using System.Net.Http.Json;
 using ExcelManagement.Application.Departments;
 using ExcelManagement.Application.Employees;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Xunit;
 
 namespace ExcelManagement.Api.IntegrationTests;
@@ -37,6 +40,49 @@ public class DepartmentCrudTests(ApiWebApplicationFactory factory) : IClassFixtu
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
         var problem = await response.Content.ReadFromJsonAsync<HttpValidationProblemDetails>();
         Assert.Contains("Name", problem!.Errors.Keys);
+    }
+
+    [Fact]
+    public async Task CreateDepartment_UniqueConstraintViolationAtSaveTime_ReturnsValidationProblemNot500()
+    {
+        // Simulates the real-world race: two concurrent requests can both pass the
+        // check-then-act NameExistsAsync check before either commits, so the DB's
+        // unique index is what actually rejects the second write, as a DbUpdateException
+        // from SaveChangesAsync. A fake repository forces that exact path deterministically
+        // (a genuine concurrent-HTTP-request test isn't reliable here: this factory's test
+        // AppDbContext shares one in-memory SqliteConnection across all requests, so real
+        // concurrent SaveChangesAsync calls hit "nested transactions" first — an artifact
+        // of the shared test connection, not of production, where each request gets its
+        // own pooled connection).
+        await using var scopedFactory = factory.WithWebHostBuilder(builder => builder.ConfigureServices(services =>
+        {
+            services.RemoveAll<IDepartmentRepository>();
+            services.AddScoped<IDepartmentRepository, ThrowsUniqueConstraintDepartmentRepository>();
+        }));
+        var client = scopedFactory.CreateClient();
+        await AuthTestHelper.LoginAsAdminAsync(client);
+
+        var response = await client.PostAsJsonAsync("/departments", new CreateDepartmentRequest("Anything"));
+
+        Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
+        var problem = await response.Content.ReadFromJsonAsync<HttpValidationProblemDetails>();
+        Assert.Contains("Name", problem!.Errors.Keys);
+    }
+
+    private class ThrowsUniqueConstraintDepartmentRepository : IDepartmentRepository
+    {
+        public Task<IReadOnlyList<DepartmentDto>> GetAllAsync(bool includeInactive, CancellationToken ct) =>
+            Task.FromResult<IReadOnlyList<DepartmentDto>>([]);
+
+        public Task<bool> ExistsAsync(int id, CancellationToken ct) => Task.FromResult(false);
+
+        public Task<bool> NameExistsAsync(string name, int? excludeId, CancellationToken ct) => Task.FromResult(false);
+
+        public Task<DepartmentDto> CreateAsync(string name, CancellationToken ct) =>
+            throw new DbUpdateException("Simulated unique constraint violation.");
+
+        public Task<DepartmentDto?> UpdateAsync(int id, string name, bool isActive, CancellationToken ct) =>
+            throw new DbUpdateException("Simulated unique constraint violation.");
     }
 
     [Fact]
