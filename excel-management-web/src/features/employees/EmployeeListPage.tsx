@@ -244,6 +244,11 @@ export function EmployeeListPage() {
             Departments
           </Link>
           {isAdmin && (
+            <Link to="/audit-log" className={buttonVariants({ variant: 'outline' })}>
+              Audit Log
+            </Link>
+          )}
+          {isAdmin && (
             <Link to="/employees/new" className={buttonVariants({})}>
               New Employee
             </Link>
