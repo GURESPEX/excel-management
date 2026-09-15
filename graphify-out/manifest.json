@@ -1,0 +1,812 @@
+{
+  ".beads/hooks/post-checkout": {
+    "mtime": 1789301851.244238,
+    "ast_hash": "1b338a19300815b26679237e4f14771d",
+    "semantic_hash": "1b338a19300815b26679237e4f14771d"
+  },
+  ".beads/hooks/post-merge": {
+    "mtime": 1789301851.2405274,
+    "ast_hash": "2f045fa2d1e0c59d389787a8ea2ed8e4",
+    "semantic_hash": "2f045fa2d1e0c59d389787a8ea2ed8e4"
+  },
+  ".beads/hooks/pre-commit": {
+    "mtime": 1789301851.2405274,
+    "ast_hash": "04b241daa7636cecaf9e2c216617ce15",
+    "semantic_hash": "04b241daa7636cecaf9e2c216617ce15"
+  },
+  ".beads/hooks/pre-push": {
+    "mtime": 1789301851.2410457,
+    "ast_hash": "ee33f47e1168f7b261bb71b74b484a5e",
+    "semantic_hash": "ee33f47e1168f7b261bb71b74b484a5e"
+  },
+  ".beads/hooks/prepare-commit-msg": {
+    "mtime": 1789301851.2447357,
+    "ast_hash": "64e754f486681f479810d20fd66c9e38",
+    "semantic_hash": "64e754f486681f479810d20fd66c9e38"
+  },
+  ".beads/metadata.json": {
+    "mtime": 1789301566.5213423,
+    "ast_hash": "2e57db3948214803a64c9f16ee6600a7",
+    "semantic_hash": "2e57db3948214803a64c9f16ee6600a7"
+  },
+  ".claude/settings.json": {
+    "mtime": 1789301851.3645992,
+    "ast_hash": "408623853c987db7ac558792eeaec276",
+    "semantic_hash": "408623853c987db7ac558792eeaec276"
+  },
+  ".codex/hooks.json": {
+    "mtime": 1789301851.3954144,
+    "ast_hash": "6ab111cb0ebd91918bed9fa0805d8a31",
+    "semantic_hash": "6ab111cb0ebd91918bed9fa0805d8a31"
+  },
+  ".ua/fingerprints.json": {
+    "mtime": 1789411092.7848744,
+    "ast_hash": "bc4cc9b7f22e2a6e22a50153a0d81743",
+    "semantic_hash": "bc4cc9b7f22e2a6e22a50153a0d81743"
+  },
+  ".ua/intermediate/scan-result.json": {
+    "mtime": 1789408323.6389384,
+    "ast_hash": "80b0372d56b85cc0978e71bbca59a9bb",
+    "semantic_hash": "80b0372d56b85cc0978e71bbca59a9bb"
+  },
+  ".ua/knowledge-graph.json": {
+    "mtime": 1789411069.783537,
+    "ast_hash": "869c1a91a33481726818a0066cb703ef",
+    "semantic_hash": "869c1a91a33481726818a0066cb703ef"
+  },
+  ".ua/meta.json": {
+    "mtime": 1789411097.8565598,
+    "ast_hash": "7fa5bc9e6f83c0091969630439d277a6",
+    "semantic_hash": "7fa5bc9e6f83c0091969630439d277a6"
+  },
+  "docs/excel-management-api-architecture.visual-check.json": {
+    "mtime": 1789380618.472091,
+    "ast_hash": "79cacda44c1c7b74b403f385ed7627fd",
+    "semantic_hash": "79cacda44c1c7b74b403f385ed7627fd"
+  },
+  "excel-management-api/ExcelManagement.sln": {
+    "mtime": 1789317741.2568877,
+    "ast_hash": "aec475a3b0f063680c0a7a59f669e192",
+    "semantic_hash": "aec475a3b0f063680c0a7a59f669e192"
+  },
+  "excel-management-api/src/ExcelManagement.Api/Auth/JwtTokenService.cs": {
+    "mtime": 1789359550.1881778,
+    "ast_hash": "3313fb772f5f69d1150ecfbf9a1646cc",
+    "semantic_hash": "3313fb772f5f69d1150ecfbf9a1646cc"
+  },
+  "excel-management-api/src/ExcelManagement.Api/ExcelManagement.Api.csproj": {
+    "mtime": 1789324306.3828027,
+    "ast_hash": "d266501e89fbf8126b64b3291dffaa6a",
+    "semantic_hash": "d266501e89fbf8126b64b3291dffaa6a"
+  },
+  "excel-management-api/src/ExcelManagement.Api/Program.cs": {
+    "mtime": 1789373579.520818,
+    "ast_hash": "b76b09b9c744fde8e7294a5b222b1af8",
+    "semantic_hash": "b76b09b9c744fde8e7294a5b222b1af8"
+  },
+  "excel-management-api/src/ExcelManagement.Api/Properties/launchSettings.json": {
+    "mtime": 1789317735.752544,
+    "ast_hash": "7ecd9c37d25580b7c06426a245639719",
+    "semantic_hash": "7ecd9c37d25580b7c06426a245639719"
+  },
+  "excel-management-api/src/ExcelManagement.Api/appsettings.Development.json": {
+    "mtime": 1789317735.6985652,
+    "ast_hash": "804b473502a4c415cf75db61c56c32aa",
+    "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
+  },
+  "excel-management-api/src/ExcelManagement.Api/appsettings.json": {
+    "mtime": 1789324331.8798153,
+    "ast_hash": "342af5130b7f1eb19b06c9adeaf9e385",
+    "semantic_hash": "342af5130b7f1eb19b06c9adeaf9e385"
+  },
+  "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogDto.cs": {
+    "mtime": 1789357130.0755424,
+    "ast_hash": "24e45fb37af3ca7fc9e79daec1218df5",
+    "semantic_hash": "24e45fb37af3ca7fc9e79daec1218df5"
+  },
+  "excel-management-api/src/ExcelManagement.Application/AuditLogs/AuditLogQuery.cs": {
+    "mtime": 1789357130.0765417,
+    "ast_hash": "0bb1e355f692cef6450abf676a488ebe",
+    "semantic_hash": "0bb1e355f692cef6450abf676a488ebe"
+  },
+  "excel-management-api/src/ExcelManagement.Application/AuditLogs/IAuditLogRepository.cs": {
+    "mtime": 1789357130.0802064,
+    "ast_hash": "5ee120a980df411e7fa5bead1da54581",
+    "semantic_hash": "5ee120a980df411e7fa5bead1da54581"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Auth/AuthenticatedUserDto.cs": {
+    "mtime": 1789324245.1101277,
+    "ast_hash": "839af86f0358352fb51f5f9ad51b2893",
+    "semantic_hash": "839af86f0358352fb51f5f9ad51b2893"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Auth/IRefreshTokenRepository.cs": {
+    "mtime": 1789359550.190172,
+    "ast_hash": "416488cb831d293f51d59c9e3aa9827a",
+    "semantic_hash": "416488cb831d293f51d59c9e3aa9827a"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Auth/IUserRepository.cs": {
+    "mtime": 1789324227.3855875,
+    "ast_hash": "e8557ab06ac2b92523de1482b45bea7a",
+    "semantic_hash": "e8557ab06ac2b92523de1482b45bea7a"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Auth/LoginRequest.cs": {
+    "mtime": 1789324236.153926,
+    "ast_hash": "dd437bd67fb153c17b317eb3a2f33007",
+    "semantic_hash": "dd437bd67fb153c17b317eb3a2f33007"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Auth/PasswordHasher.cs": {
+    "mtime": 1789324259.7266858,
+    "ast_hash": "6a5e5581db39c8734462d89d58a20ffa",
+    "semantic_hash": "6a5e5581db39c8734462d89d58a20ffa"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Departments/CreateDepartmentRequest.cs": {
+    "mtime": 1789322107.5358782,
+    "ast_hash": "6284f15c9e126880b31b9211905b961e",
+    "semantic_hash": "6284f15c9e126880b31b9211905b961e"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentDto.cs": {
+    "mtime": 1789322080.0250015,
+    "ast_hash": "9fa9301a2d4c8ec34f7a7ccbb35b05c9",
+    "semantic_hash": "9fa9301a2d4c8ec34f7a7ccbb35b05c9"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Departments/DepartmentValidator.cs": {
+    "mtime": 1789322100.2490654,
+    "ast_hash": "5cc71eddb74b78789a1741a43e0b327b",
+    "semantic_hash": "5cc71eddb74b78789a1741a43e0b327b"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Departments/IDepartmentRepository.cs": {
+    "mtime": 1789322090.4442096,
+    "ast_hash": "aa48031752ea8031f444d3b421c3c06b",
+    "semantic_hash": "aa48031752ea8031f444d3b421c3c06b"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Departments/UpdateDepartmentRequest.cs": {
+    "mtime": 1789322114.4796085,
+    "ast_hash": "c613a0b2437a1a9e1551091fb4a3bd3c",
+    "semantic_hash": "c613a0b2437a1a9e1551091fb4a3bd3c"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeCsvWriter.cs": {
+    "mtime": 1789357122.4521554,
+    "ast_hash": "d670e3d667bf57b851e853f3e5717be5",
+    "semantic_hash": "d670e3d667bf57b851e853f3e5717be5"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeDetailDto.cs": {
+    "mtime": 1789320061.2389257,
+    "ast_hash": "786b824ba90d2510aca32d41885d2afe",
+    "semantic_hash": "786b824ba90d2510aca32d41885d2afe"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImport.cs": {
+    "mtime": 1789357122.4531631,
+    "ast_hash": "62cee4bad6c1fb9ee9e904c91795a587",
+    "semantic_hash": "62cee4bad6c1fb9ee9e904c91795a587"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeImportRowValidator.cs": {
+    "mtime": 1789357122.4541636,
+    "ast_hash": "db2f85bfd9c10533ddb8267c78a0b583",
+    "semantic_hash": "db2f85bfd9c10533ddb8267c78a0b583"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListItemDto.cs": {
+    "mtime": 1789317913.20926,
+    "ast_hash": "3203846efab78374577915607a2fe0bd",
+    "semantic_hash": "3203846efab78374577915607a2fe0bd"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeListQuery.cs": {
+    "mtime": 1789325860.2850008,
+    "ast_hash": "e06a2e2667e5aa79334c9832d9a98016",
+    "semantic_hash": "e06a2e2667e5aa79334c9832d9a98016"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/EmployeeValidator.cs": {
+    "mtime": 1789321603.774705,
+    "ast_hash": "d786540be4b192c013d315b902ff2411",
+    "semantic_hash": "d786540be4b192c013d315b902ff2411"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeExcelFile.cs": {
+    "mtime": 1789357122.4551642,
+    "ast_hash": "83fd8956d3ce02c4a4fa4ab9194520bd",
+    "semantic_hash": "83fd8956d3ce02c4a4fa4ab9194520bd"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/IEmployeeRepository.cs": {
+    "mtime": 1789357122.4551642,
+    "ast_hash": "1489e20f2a7e37eea3e65bc916e9861d",
+    "semantic_hash": "1489e20f2a7e37eea3e65bc916e9861d"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/PagedResult.cs": {
+    "mtime": 1789317923.7931526,
+    "ast_hash": "b6aaaa1457e5fb90a8a4987babe4d6b7",
+    "semantic_hash": "b6aaaa1457e5fb90a8a4987babe4d6b7"
+  },
+  "excel-management-api/src/ExcelManagement.Application/Employees/UpsertEmployeeRequest.cs": {
+    "mtime": 1789321333.4040525,
+    "ast_hash": "193eb8cc6078912f9f4f0fff42d647ca",
+    "semantic_hash": "193eb8cc6078912f9f4f0fff42d647ca"
+  },
+  "excel-management-api/src/ExcelManagement.Application/ExcelManagement.Application.csproj": {
+    "mtime": 1789317751.321706,
+    "ast_hash": "1798abc8402ccdbb349968626736740c",
+    "semantic_hash": "1798abc8402ccdbb349968626736740c"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/AuditAction.cs": {
+    "mtime": 1789357130.0812168,
+    "ast_hash": "fe9af928183a8077d281e69a17247a66",
+    "semantic_hash": "fe9af928183a8077d281e69a17247a66"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/AuditLog.cs": {
+    "mtime": 1789357130.0836325,
+    "ast_hash": "860e7c28ebb4a1ffe6453f0e69db3989",
+    "semantic_hash": "860e7c28ebb4a1ffe6453f0e69db3989"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/Department.cs": {
+    "mtime": 1789317887.7290583,
+    "ast_hash": "9b33e27e8427ee78defb6b0465b29635",
+    "semantic_hash": "9b33e27e8427ee78defb6b0465b29635"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/Employee.cs": {
+    "mtime": 1789317855.3170204,
+    "ast_hash": "c421a58802e6c1876f1b2e174e82f26c",
+    "semantic_hash": "c421a58802e6c1876f1b2e174e82f26c"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/ExcelManagement.Domain.csproj": {
+    "mtime": 1789317732.311979,
+    "ast_hash": "a179c1fd32442fdc3ca095a8084e072a",
+    "semantic_hash": "a179c1fd32442fdc3ca095a8084e072a"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/RefreshToken.cs": {
+    "mtime": 1789359550.190172,
+    "ast_hash": "d5557290e76b06d74706095aca6f4931",
+    "semantic_hash": "d5557290e76b06d74706095aca6f4931"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/User.cs": {
+    "mtime": 1789324216.9995978,
+    "ast_hash": "0a7f05b37adad872d3a9c098f1c00bc9",
+    "semantic_hash": "0a7f05b37adad872d3a9c098f1c00bc9"
+  },
+  "excel-management-api/src/ExcelManagement.Domain/UserRole.cs": {
+    "mtime": 1789324207.673859,
+    "ast_hash": "1e663784107052063a0530faf830e172",
+    "semantic_hash": "1e663784107052063a0530faf830e172"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/DependencyInjection.cs": {
+    "mtime": 1789359550.191174,
+    "ast_hash": "148d910a88ceeb153018f58ebf0d07ba",
+    "semantic_hash": "148d910a88ceeb153018f58ebf0d07ba"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/ExcelManagement.Infrastructure.csproj": {
+    "mtime": 1789357130.0861704,
+    "ast_hash": "afa7d8bb920be9ce74961207fd163bc8",
+    "semantic_hash": "afa7d8bb920be9ce74961207fd163bc8"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AppDbContext.cs": {
+    "mtime": 1789359550.1921744,
+    "ast_hash": "50866eeca4bcbd55bd3804e8f649ec4e",
+    "semantic_hash": "50866eeca4bcbd55bd3804e8f649ec4e"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/AuditLogRepository.cs": {
+    "mtime": 1789357130.0891833,
+    "ast_hash": "d2d3e69193c59ae5e82ca099f1d1b395",
+    "semantic_hash": "d2d3e69193c59ae5e82ca099f1d1b395"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/DepartmentRepository.cs": {
+    "mtime": 1789322126.567135,
+    "ast_hash": "0d04499204135b0b9d8e1d84dbf3cdf5",
+    "semantic_hash": "0d04499204135b0b9d8e1d84dbf3cdf5"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeExcelFile.cs": {
+    "mtime": 1789357122.4585667,
+    "ast_hash": "3e977753942fafe1ed2ba68ec3d10782",
+    "semantic_hash": "3e977753942fafe1ed2ba68ec3d10782"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/EmployeeRepository.cs": {
+    "mtime": 1789357122.4595656,
+    "ast_hash": "0dc28f82acea4e93ee08e5491a14b189",
+    "semantic_hash": "0dc28f82acea4e93ee08e5491a14b189"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.Designer.cs": {
+    "mtime": 1789318078.293714,
+    "ast_hash": "77d9d6b720f9449829fe739ab194c29b",
+    "semantic_hash": "77d9d6b720f9449829fe739ab194c29b"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913164758_InitialCreate.cs": {
+    "mtime": 1789318078.293714,
+    "ast_hash": "d6151038034a3d3483b22f1d1067a583",
+    "semantic_hash": "d6151038034a3d3483b22f1d1067a583"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.Designer.cs": {
+    "mtime": 1789324452.8085227,
+    "ast_hash": "83c247f8aabc4b744005b2eeeb605905",
+    "semantic_hash": "83c247f8aabc4b744005b2eeeb605905"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913183412_AddUsers.cs": {
+    "mtime": 1789324452.806266,
+    "ast_hash": "9597542f0423b6dc1909811bba0bde50",
+    "semantic_hash": "9597542f0423b6dc1909811bba0bde50"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.Designer.cs": {
+    "mtime": 1789326817.3768198,
+    "ast_hash": "c5244c6802d616bcac6d00d8f1667df5",
+    "semantic_hash": "c5244c6802d616bcac6d00d8f1667df5"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260913191337_PostgresInitialCreate.cs": {
+    "mtime": 1789327230.4583373,
+    "ast_hash": "9fc5a00266454f1623a8d9dba32aaa22",
+    "semantic_hash": "9fc5a00266454f1623a8d9dba32aaa22"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.Designer.cs": {
+    "mtime": 1789357130.0917497,
+    "ast_hash": "ee9f2ada15bc7fe711867c7854e639cd",
+    "semantic_hash": "ee9f2ada15bc7fe711867c7854e639cd"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914031918_AddAuditLogs.cs": {
+    "mtime": 1789357130.092781,
+    "ast_hash": "5a7c8fcbab9e4336da5f75659b6e01b5",
+    "semantic_hash": "5a7c8fcbab9e4336da5f75659b6e01b5"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.Designer.cs": {
+    "mtime": 1789359550.1937654,
+    "ast_hash": "535f56bfa436696862fdb4d22f17bdf8",
+    "semantic_hash": "535f56bfa436696862fdb4d22f17bdf8"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/20260914041347_AddRefreshTokens.cs": {
+    "mtime": 1789359550.194891,
+    "ast_hash": "816e57a32168953f19abfd5dda873f54",
+    "semantic_hash": "816e57a32168953f19abfd5dda873f54"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/Migrations/AppDbContextModelSnapshot.cs": {
+    "mtime": 1789359550.1959016,
+    "ast_hash": "001e94570379a7f7599477bcc145c618",
+    "semantic_hash": "001e94570379a7f7599477bcc145c618"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/RefreshTokenRepository.cs": {
+    "mtime": 1789359550.197414,
+    "ast_hash": "72ccfbf2663f68054cd8080460e4e6d7",
+    "semantic_hash": "72ccfbf2663f68054cd8080460e4e6d7"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/SeedData.cs": {
+    "mtime": 1789324295.3657787,
+    "ast_hash": "e06a420d2a4e30a036074d81b9378a08",
+    "semantic_hash": "e06a420d2a4e30a036074d81b9378a08"
+  },
+  "excel-management-api/src/ExcelManagement.Infrastructure/Persistence/UserRepository.cs": {
+    "mtime": 1789324269.8201878,
+    "ast_hash": "3a4ded36021d7939376bf2986de65e5a",
+    "semantic_hash": "3a4ded36021d7939376bf2986de65e5a"
+  },
+  "excel-management-api/src/ExcelManagement.McpServer/DepartmentTools.cs": {
+    "mtime": 1789325735.0767863,
+    "ast_hash": "77bacbbfc9797bfe6c8cc0105b8204b5",
+    "semantic_hash": "77bacbbfc9797bfe6c8cc0105b8204b5"
+  },
+  "excel-management-api/src/ExcelManagement.McpServer/EmployeeTools.cs": {
+    "mtime": 1789325901.8099787,
+    "ast_hash": "94109152ac0baafb439df3b0a351d1eb",
+    "semantic_hash": "94109152ac0baafb439df3b0a351d1eb"
+  },
+  "excel-management-api/src/ExcelManagement.McpServer/ExcelManagement.McpServer.csproj": {
+    "mtime": 1789325735.0777836,
+    "ast_hash": "65748d071f5f7c5e89c79559a347256b",
+    "semantic_hash": "65748d071f5f7c5e89c79559a347256b"
+  },
+  "excel-management-api/src/ExcelManagement.McpServer/Program.cs": {
+    "mtime": 1789325735.0777836,
+    "ast_hash": "f66207c8f872c743b06bfd27ef7997b1",
+    "semantic_hash": "f66207c8f872c743b06bfd27ef7997b1"
+  },
+  "excel-management-api/src/ExcelManagement.McpServer/appsettings.json": {
+    "mtime": 1789325735.0787847,
+    "ast_hash": "1c3b8f138c8c0d072f9b472d524f8abc",
+    "semantic_hash": "1c3b8f138c8c0d072f9b472d524f8abc"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ApiWebApplicationFactory.cs": {
+    "mtime": 1789318133.8699992,
+    "ast_hash": "943098e2868a024f157e7947c0240489",
+    "semantic_hash": "943098e2868a024f157e7947c0240489"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuditLogTests.cs": {
+    "mtime": 1789357130.0957923,
+    "ast_hash": "fdcfe39421d0f58be42a515d3758d295",
+    "semantic_hash": "fdcfe39421d0f58be42a515d3758d295"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTestHelper.cs": {
+    "mtime": 1789324463.8956726,
+    "ast_hash": "1ab2a6b788eea436b7c76d04d32ffe69",
+    "semantic_hash": "1ab2a6b788eea436b7c76d04d32ffe69"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/AuthTests.cs": {
+    "mtime": 1789359550.1991124,
+    "ast_hash": "4a1790b0a5203a81061df372b0135ca2",
+    "semantic_hash": "4a1790b0a5203a81061df372b0135ca2"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/DepartmentCrudTests.cs": {
+    "mtime": 1789358891.0069487,
+    "ast_hash": "1bf0fd7f024ae8c2941de62e8b24dfc4",
+    "semantic_hash": "1bf0fd7f024ae8c2941de62e8b24dfc4"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeCrudTests.cs": {
+    "mtime": 1789324470.832469,
+    "ast_hash": "72e778bcd0bf8b9ef292df0aff56e69c",
+    "semantic_hash": "72e778bcd0bf8b9ef292df0aff56e69c"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeImportExportTests.cs": {
+    "mtime": 1789357122.4605663,
+    "ast_hash": "6c024d6c48b6ef4268c10b98969c3d65",
+    "semantic_hash": "6c024d6c48b6ef4268c10b98969c3d65"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeeSearchTests.cs": {
+    "mtime": 1789325967.0544238,
+    "ast_hash": "9db5727af89c49e4a0199f7134b283d2",
+    "semantic_hash": "9db5727af89c49e4a0199f7134b283d2"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/EmployeesEndpointTests.cs": {
+    "mtime": 1789324488.3141923,
+    "ast_hash": "bf64dafbd2929ce61c3377c757ac194e",
+    "semantic_hash": "bf64dafbd2929ce61c3377c757ac194e"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/ExcelManagement.Api.IntegrationTests.csproj": {
+    "mtime": 1789357122.4605663,
+    "ast_hash": "767e5e795db8167ca0f58348b3e9b10e",
+    "semantic_hash": "767e5e795db8167ca0f58348b3e9b10e"
+  },
+  "excel-management-api/tests/ExcelManagement.Api.IntegrationTests/McpToolsTests.cs": {
+    "mtime": 1789325735.0797822,
+    "ast_hash": "1ebf8b65bb1c752a6cb6219fec21f5a8",
+    "semantic_hash": "1ebf8b65bb1c752a6cb6219fec21f5a8"
+  },
+  "excel-management-web/.oxlintrc.json": {
+    "mtime": 1789308231.5751872,
+    "ast_hash": "029f4905006c1fffd96bc863e2d98d3e",
+    "semantic_hash": "029f4905006c1fffd96bc863e2d98d3e"
+  },
+  "excel-management-web/components.json": {
+    "mtime": 1789318534.6415346,
+    "ast_hash": "d2922b530154b9895e967519bcd21142",
+    "semantic_hash": "d2922b530154b9895e967519bcd21142"
+  },
+  "excel-management-web/package.json": {
+    "mtime": 1789354901.486867,
+    "ast_hash": "7b94623f1027b86c1a0067782a1c9770",
+    "semantic_hash": "7b94623f1027b86c1a0067782a1c9770"
+  },
+  "excel-management-web/src/components/layout/AppShell.tsx": {
+    "mtime": 1789376622.328659,
+    "ast_hash": "85f06a6575e00746547392c43274cb17",
+    "semantic_hash": "85f06a6575e00746547392c43274cb17"
+  },
+  "excel-management-web/src/components/ui/alert-dialog.tsx": {
+    "mtime": 1789320347.732274,
+    "ast_hash": "19a6167e9dc68d897c053f0d4000d281",
+    "semantic_hash": "19a6167e9dc68d897c053f0d4000d281"
+  },
+  "excel-management-web/src/components/ui/badge.tsx": {
+    "mtime": 1789318643.66288,
+    "ast_hash": "b2427bd0bd8c25c554f5a648c286e8e4",
+    "semantic_hash": "b2427bd0bd8c25c554f5a648c286e8e4"
+  },
+  "excel-management-web/src/components/ui/button.tsx": {
+    "mtime": 1789318591.157229,
+    "ast_hash": "2700bddde0ac66fc6f2fc1b56fcfdc2d",
+    "semantic_hash": "2700bddde0ac66fc6f2fc1b56fcfdc2d"
+  },
+  "excel-management-web/src/components/ui/calendar.tsx": {
+    "mtime": 1789382659.0953202,
+    "ast_hash": "5f189b326f233c14a0b26e3049d7d78e",
+    "semantic_hash": "5f189b326f233c14a0b26e3049d7d78e"
+  },
+  "excel-management-web/src/components/ui/card.tsx": {
+    "mtime": 1789377743.9415445,
+    "ast_hash": "ba89a03361e11da2ddf5ab6394c356dc",
+    "semantic_hash": "ba89a03361e11da2ddf5ab6394c356dc"
+  },
+  "excel-management-web/src/components/ui/checkbox.tsx": {
+    "mtime": 1789320347.2855854,
+    "ast_hash": "19e8e7cc3303b133dee5157c63e19610",
+    "semantic_hash": "19e8e7cc3303b133dee5157c63e19610"
+  },
+  "excel-management-web/src/components/ui/date-picker.tsx": {
+    "mtime": 1789382680.5229633,
+    "ast_hash": "c5a41900f0a962adaf48e9dc9e29a85b",
+    "semantic_hash": "c5a41900f0a962adaf48e9dc9e29a85b"
+  },
+  "excel-management-web/src/components/ui/input.tsx": {
+    "mtime": 1789320346.4355786,
+    "ast_hash": "7548c6f7aef9d450575ca4d25e378346",
+    "semantic_hash": "7548c6f7aef9d450575ca4d25e378346"
+  },
+  "excel-management-web/src/components/ui/label.tsx": {
+    "mtime": 1789320346.731487,
+    "ast_hash": "f98896f162a26f19af096827cbdda316",
+    "semantic_hash": "f98896f162a26f19af096827cbdda316"
+  },
+  "excel-management-web/src/components/ui/popover.tsx": {
+    "mtime": 1789382624.1963093,
+    "ast_hash": "8d5f568b0804de1e97f49207880def04",
+    "semantic_hash": "8d5f568b0804de1e97f49207880def04"
+  },
+  "excel-management-web/src/components/ui/select.tsx": {
+    "mtime": 1789320347.047424,
+    "ast_hash": "322d9648459387d781e8bdc2686e5f56",
+    "semantic_hash": "322d9648459387d781e8bdc2686e5f56"
+  },
+  "excel-management-web/src/components/ui/table.tsx": {
+    "mtime": 1789318643.4112067,
+    "ast_hash": "323570a2a4e0e18b7acef8f8609cf311",
+    "semantic_hash": "323570a2a4e0e18b7acef8f8609cf311"
+  },
+  "excel-management-web/src/features/auditLogs/AuditLogPage.tsx": {
+    "mtime": 1789382728.4317608,
+    "ast_hash": "285484760cd21258970e9ed2d091cf66",
+    "semantic_hash": "285484760cd21258970e9ed2d091cf66"
+  },
+  "excel-management-web/src/features/auditLogs/api.ts": {
+    "mtime": 1789357130.1030602,
+    "ast_hash": "c19d2382f58d783b0a2336bab97dd8ea",
+    "semantic_hash": "c19d2382f58d783b0a2336bab97dd8ea"
+  },
+  "excel-management-web/src/features/auth/AuthFlows.test.tsx": {
+    "mtime": 1789324757.466655,
+    "ast_hash": "64adc28b8abb7a3ff8870018539a02f1",
+    "semantic_hash": "64adc28b8abb7a3ff8870018539a02f1"
+  },
+  "excel-management-web/src/features/auth/api.ts": {
+    "mtime": 1789324964.6897452,
+    "ast_hash": "4e24b1056d373005982c8f6e4408b26b",
+    "semantic_hash": "4e24b1056d373005982c8f6e4408b26b"
+  },
+  "excel-management-web/src/features/auth/guards.ts": {
+    "mtime": 1789324620.3753798,
+    "ast_hash": "2b1ed5042e5518c4d570d5efa8c8935b",
+    "semantic_hash": "2b1ed5042e5518c4d570d5efa8c8935b"
+  },
+  "excel-management-web/src/features/auth/store.ts": {
+    "mtime": 1789325465.4795747,
+    "ast_hash": "74d0244ce64ce22ca70f82294fbb6cee",
+    "semantic_hash": "74d0244ce64ce22ca70f82294fbb6cee"
+  },
+  "excel-management-web/src/features/departments/DepartmentAdminPage.test.tsx": {
+    "mtime": 1789324740.8887193,
+    "ast_hash": "65cfd3516535e613dc3b2ed335bfcde0",
+    "semantic_hash": "65cfd3516535e613dc3b2ed335bfcde0"
+  },
+  "excel-management-web/src/features/departments/DepartmentAdminPage.tsx": {
+    "mtime": 1789377817.8364012,
+    "ast_hash": "95dd55d765b2826b2a5013fb559f9cb1",
+    "semantic_hash": "95dd55d765b2826b2a5013fb559f9cb1"
+  },
+  "excel-management-web/src/features/departments/api.ts": {
+    "mtime": 1789322336.2723162,
+    "ast_hash": "1e253b0cf793349bc81ba4b6aed591a3",
+    "semantic_hash": "1e253b0cf793349bc81ba4b6aed591a3"
+  },
+  "excel-management-web/src/features/employees/DeleteEmployeeDialog.tsx": {
+    "mtime": 1789376895.2369275,
+    "ast_hash": "59bac83414910f67ed2571406c3778c7",
+    "semantic_hash": "59bac83414910f67ed2571406c3778c7"
+  },
+  "excel-management-web/src/features/employees/EmployeeCrudFlows.test.tsx": {
+    "mtime": 1789355124.287439,
+    "ast_hash": "74d63269083a8d5564960c3cd6dfb828",
+    "semantic_hash": "74d63269083a8d5564960c3cd6dfb828"
+  },
+  "excel-management-web/src/features/employees/EmployeeForm.tsx": {
+    "mtime": 1789382845.8974624,
+    "ast_hash": "be1a9e0c011f5195a43db22c4ce3a491",
+    "semantic_hash": "be1a9e0c011f5195a43db22c4ce3a491"
+  },
+  "excel-management-web/src/features/employees/EmployeeListPage.test.tsx": {
+    "mtime": 1789381577.562979,
+    "ast_hash": "b7aa06b6ad42d2c23bcc1be1fcbda54f",
+    "semantic_hash": "b7aa06b6ad42d2c23bcc1be1fcbda54f"
+  },
+  "excel-management-web/src/features/employees/EmployeeListPage.tsx": {
+    "mtime": 1789382755.8038,
+    "ast_hash": "b5291c3c51cba4a01cc9890539bbfa26",
+    "semantic_hash": "b5291c3c51cba4a01cc9890539bbfa26"
+  },
+  "excel-management-web/src/features/employees/api.ts": {
+    "mtime": 1789381620.4129786,
+    "ast_hash": "0e3e9d4fec7350338070f2124528c901",
+    "semantic_hash": "0e3e9d4fec7350338070f2124528c901"
+  },
+  "excel-management-web/src/lib/api/client.ts": {
+    "mtime": 1789324585.5208101,
+    "ast_hash": "956d6eba84e0fb555295342fb3bb2161",
+    "semantic_hash": "956d6eba84e0fb555295342fb3bb2161"
+  },
+  "excel-management-web/src/lib/api/mutationError.ts": {
+    "mtime": 1789322308.9890666,
+    "ast_hash": "1c1f25f6057718fd98e7d91c66401ee9",
+    "semantic_hash": "1c1f25f6057718fd98e7d91c66401ee9"
+  },
+  "excel-management-web/src/lib/api/schema.d.ts": {
+    "mtime": 1789357130.1070745,
+    "ast_hash": "eb24be32fe58c7c9751522621acfcf9b",
+    "semantic_hash": "eb24be32fe58c7c9751522621acfcf9b"
+  },
+  "excel-management-web/src/lib/utils.ts": {
+    "mtime": 1789318591.9328277,
+    "ast_hash": "0482d21cfeab8cfcfe44f94927e45afb",
+    "semantic_hash": "0482d21cfeab8cfcfe44f94927e45afb"
+  },
+  "excel-management-web/src/main.tsx": {
+    "mtime": 1789318855.1339245,
+    "ast_hash": "57c8c0825eaf5530c81f540a134c9352",
+    "semantic_hash": "57c8c0825eaf5530c81f540a134c9352"
+  },
+  "excel-management-web/src/routes/__root.tsx": {
+    "mtime": 1789324626.3870738,
+    "ast_hash": "dbfe98101b0630a55eb60fa86566ef3a",
+    "semantic_hash": "dbfe98101b0630a55eb60fa86566ef3a"
+  },
+  "excel-management-web/src/routes/audit-log.tsx": {
+    "mtime": 1789376678.3536086,
+    "ast_hash": "3b6c6cf97bfe59a54c57b488a7377aed",
+    "semantic_hash": "3b6c6cf97bfe59a54c57b488a7377aed"
+  },
+  "excel-management-web/src/routes/departments.tsx": {
+    "mtime": 1789376663.6142917,
+    "ast_hash": "40584e0e043129383648d259d84127c2",
+    "semantic_hash": "40584e0e043129383648d259d84127c2"
+  },
+  "excel-management-web/src/routes/employees/$employeeId.tsx": {
+    "mtime": 1789377879.12167,
+    "ast_hash": "dbb6dfccd7faf20a0079f8dffe1f4738",
+    "semantic_hash": "dbb6dfccd7faf20a0079f8dffe1f4738"
+  },
+  "excel-management-web/src/routes/employees/new.tsx": {
+    "mtime": 1789377860.3698618,
+    "ast_hash": "6f1c423eaf1b55fb8b88a3d8b84c5f50",
+    "semantic_hash": "6f1c423eaf1b55fb8b88a3d8b84c5f50"
+  },
+  "excel-management-web/src/routes/index.tsx": {
+    "mtime": 1789376645.8377612,
+    "ast_hash": "7e33c74bb216563c0be25cc7f0dc72bf",
+    "semantic_hash": "7e33c74bb216563c0be25cc7f0dc72bf"
+  },
+  "excel-management-web/src/routes/login.tsx": {
+    "mtime": 1789376786.798595,
+    "ast_hash": "e134903c3c166bb0a966c02fd1db0a20",
+    "semantic_hash": "e134903c3c166bb0a966c02fd1db0a20"
+  },
+  "excel-management-web/src/test/renderApp.tsx": {
+    "mtime": 1789324725.100705,
+    "ast_hash": "e03d0851dbe70c9ba936bdf4db9dc2e3",
+    "semantic_hash": "e03d0851dbe70c9ba936bdf4db9dc2e3"
+  },
+  "excel-management-web/src/test/server.ts": {
+    "mtime": 1789326210.2874596,
+    "ast_hash": "d3ec95965cb4c2763b20c7f08992175f",
+    "semantic_hash": "d3ec95965cb4c2763b20c7f08992175f"
+  },
+  "excel-management-web/src/test/setup.ts": {
+    "mtime": 1789318871.4672744,
+    "ast_hash": "2845471b9e7f265eaeedbb3bcd29aa50",
+    "semantic_hash": "2845471b9e7f265eaeedbb3bcd29aa50"
+  },
+  "excel-management-web/tsconfig.app.json": {
+    "mtime": 1789319219.2420247,
+    "ast_hash": "3440ee6833e1eab8a6b35e55814c2128",
+    "semantic_hash": "3440ee6833e1eab8a6b35e55814c2128"
+  },
+  "excel-management-web/tsconfig.json": {
+    "mtime": 1789319223.3014657,
+    "ast_hash": "597111e0871da06310089fd23d923ad7",
+    "semantic_hash": "597111e0871da06310089fd23d923ad7"
+  },
+  "excel-management-web/tsconfig.node.json": {
+    "mtime": 1789308231.5904083,
+    "ast_hash": "f9cb81ddcea69ffdab672fc8c48dca66",
+    "semantic_hash": "f9cb81ddcea69ffdab672fc8c48dca66"
+  },
+  "excel-management-web/vite.config.ts": {
+    "mtime": 1789319260.4442885,
+    "ast_hash": "8ca04d7571e744fe45f608f753043914",
+    "semantic_hash": "8ca04d7571e744fe45f608f753043914"
+  },
+  ".agents/skills/beads/SKILL.md": {
+    "mtime": 1789301851.3709729,
+    "ast_hash": "4eba59bd27c18667fbbed3d5942b40ef",
+    "semantic_hash": "4eba59bd27c18667fbbed3d5942b40ef"
+  },
+  ".agents/skills/beads/agents/openai.yaml": {
+    "mtime": 1789301851.373693,
+    "ast_hash": "075f32133b20f796e271f03cd50cd03e",
+    "semantic_hash": "075f32133b20f796e271f03cd50cd03e"
+  },
+  ".beads/README.md": {
+    "mtime": 1789301566.5549788,
+    "ast_hash": "7b562344dfbbf12388c3032ba0aa4d4e",
+    "semantic_hash": "7b562344dfbbf12388c3032ba0aa4d4e"
+  },
+  ".beads/config.yaml": {
+    "mtime": 1789301851.1297288,
+    "ast_hash": "ab0009a8e267aeb5a724d90f555d7853",
+    "semantic_hash": "ab0009a8e267aeb5a724d90f555d7853"
+  },
+  ".github/workflows/backend-ci.yml": {
+    "mtime": 1789354901.4791522,
+    "ast_hash": "cac4b5e4dbb02fb5c38f78352d795699",
+    "semantic_hash": "cac4b5e4dbb02fb5c38f78352d795699"
+  },
+  ".github/workflows/frontend-ci.yml": {
+    "mtime": 1789354901.4811585,
+    "ast_hash": "931f64c7f247d59aaf8663c78b16679e",
+    "semantic_hash": "931f64c7f247d59aaf8663c78b16679e"
+  },
+  "AGENTS.md": {
+    "mtime": 1789320305.7232654,
+    "ast_hash": "5374e6258e4c853f707a1939cfd4fb3e",
+    "semantic_hash": "5374e6258e4c853f707a1939cfd4fb3e"
+  },
+  "CLAUDE.md": {
+    "mtime": 1789301851.3662124,
+    "ast_hash": "6e3c092ad818b965525089a33a0924d0",
+    "semantic_hash": "6e3c092ad818b965525089a33a0924d0"
+  },
+  "docs/architecture.html": {
+    "mtime": 1789376942.3181021,
+    "ast_hash": "35e10816bb716d23847336b616580e2d",
+    "semantic_hash": "35e10816bb716d23847336b616580e2d"
+  },
+  "docs/excel-management-api-architecture.html": {
+    "mtime": 1789380604.4880338,
+    "ast_hash": "ac7761357148d4f1e45666cba298ceee",
+    "semantic_hash": "ac7761357148d4f1e45666cba298ceee"
+  },
+  "docs/excel-management-api-architecture.visual-check.html": {
+    "mtime": 1789380618.4692128,
+    "ast_hash": "822975627d6a172d4b1fd6925f390958",
+    "semantic_hash": "822975627d6a172d4b1fd6925f390958"
+  },
+  "excel-management-web/README.md": {
+    "mtime": 1789308231.5741866,
+    "ast_hash": "10495bfcc6c568eca4dab6dd5df795d3",
+    "semantic_hash": "10495bfcc6c568eca4dab6dd5df795d3"
+  },
+  "excel-management-web/index.html": {
+    "mtime": 1789318236.9279008,
+    "ast_hash": "3a3fd4bf5e06ac7b1ad09d1691cf0a83",
+    "semantic_hash": "3a3fd4bf5e06ac7b1ad09d1691cf0a83"
+  },
+  "infra/README.md": {
+    "mtime": 1789357852.89508,
+    "ast_hash": "073e49402533587a246b99ab6a0fc358",
+    "semantic_hash": "073e49402533587a246b99ab6a0fc358"
+  },
+  "infra/docker-compose.yml": {
+    "mtime": 1789374523.9276676,
+    "ast_hash": "7760027ed14c6f2d1ec39397eb876e95",
+    "semantic_hash": "7760027ed14c6f2d1ec39397eb876e95"
+  },
+  "docs/excel-management-api-architecture.visual-check.1440x900.dark.png": {
+    "mtime": 1789380617.735184,
+    "ast_hash": "ee76d5ddac9b4a7a356f29000cd88fc2",
+    "semantic_hash": "ee76d5ddac9b4a7a356f29000cd88fc2"
+  },
+  "docs/excel-management-api-architecture.visual-check.1440x900.light.png": {
+    "mtime": 1789380615.2309754,
+    "ast_hash": "568a4f0735571d8811beec510f2a8199",
+    "semantic_hash": "568a4f0735571d8811beec510f2a8199"
+  },
+  "docs/excel-management-api-architecture.visual-check.2048x1320.dark.png": {
+    "mtime": 1789380618.463156,
+    "ast_hash": "b8bb54b4734e9c942d649543a9ee1abb",
+    "semantic_hash": "b8bb54b4734e9c942d649543a9ee1abb"
+  },
+  "docs/excel-management-api-architecture.visual-check.2048x1320.light.png": {
+    "mtime": 1789380617.1052947,
+    "ast_hash": "b0bb93631a7c5417a68c51b3dcb224fc",
+    "semantic_hash": "b0bb93631a7c5417a68c51b3dcb224fc"
+  },
+  "excel-management-web/public/favicon.svg": {
+    "mtime": 1789308231.578691,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": "7e840862161341271697daa99a40d76b"
+  },
+  "excel-management-web/public/icons.svg": {
+    "mtime": 1789308231.578691,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "excel-management-web/src/assets/chememan-logo.svg": {
+    "mtime": 1789376535.515059,
+    "ast_hash": "9c1ede985e5b640af5801a1ab4a82203",
+    "semantic_hash": "9c1ede985e5b640af5801a1ab4a82203"
+  }
+}
